@@ -1,0 +1,81 @@
+═══════════════════════════════════════════════════════════
+              BAYSIDE WELLNESS - FINAL VERSION
+          LOGO FIXED + JANE CALENDAR WITH YOUR SLOTS
+═══════════════════════════════════════════════════════════
+
+✅ WHAT'S IN THIS VERSION:
+
+1. LOGO DISPLAY - FIXED
+   - Logo paths updated to work on deployment
+   - Should show your bridge/bay image (not black box)
+
+2. JANE CALENDAR - UPDATED TO YOUR EXACT BOOKING PAGE
+   - Now points to:
+     https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1
+   - Shows YOUR available appointment slots
+   - 600px height full calendar view
+   - Visitors can book directly without leaving your site
+
+═══════════════════════════════════════════════════════════
+
+🚀 DEPLOY NOW:
+
+STEP 1: Download bayside-complete-site.zip
+
+STEP 2: Delete ALL old files from your GitHub repo
+
+STEP 3: Unzip the downloaded file
+
+STEP 4: Upload ALL files to your GitHub repo:
+   ├── index.html
+   ├── package.json
+   ├── vite.config.js
+   ├── src/
+   │   ├── main.jsx
+   │   └── App.jsx
+   └── public/
+       └── bayside-logo.png
+
+STEP 5: Commit and push
+
+STEP 6: Netlify auto-rebuilds (wait 1-2 minutes)
+
+STEP 7: CHECK YOUR LIVE SITE!
+
+═══════════════════════════════════════════════════════════
+
+✅ WHAT YOU SHOULD SEE:
+
+HEADER:
+  - Bridge/bay logo image (not black box)
+  - Navigation links
+  - "BOOK FREE CONSULT" button
+
+FOOTER:
+  - Bridge/bay logo image (white version)
+  - Links to all pages
+
+CONTACT PAGE:
+  - Left box: Full Jane calendar showing your available slots
+  - Right box: Contact form
+  - Both side by side
+
+═══════════════════════════════════════════════════════════
+
+❓ IF SOMETHING'S STILL WRONG:
+
+LOGO STILL BLACK BOX:
+  → Clear your browser cache
+  → Try incognito/private browsing
+  → Check browser console for errors (F12)
+
+JANE CALENDAR BLANK OR ERROR:
+  → Jane might block iframe embedding
+  → Check if your Jane account allows public booking
+  → Send me screenshot of what you see
+
+═══════════════════════════════════════════════════════════
+
+THIS IS YOUR COMPLETE SITE - READY TO GO! 🎉
+
+═══════════════════════════════════════════════════════════
