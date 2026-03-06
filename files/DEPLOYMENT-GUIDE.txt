@@ -1,0 +1,122 @@
+═══════════════════════════════════════════════════════════
+    BAYSIDE WELLNESS - VERCEL DEPLOYMENT (FRESH START)
+═══════════════════════════════════════════════════════════
+
+📦 YOU HAVE 4 FILES:
+  ✅ index.html (your complete website - 239KB)
+  ✅ bayside-logo.png (your logo)
+  ✅ package.json (tells Vercel this is a static site)
+  ✅ vercel.json (routing configuration)
+
+═══════════════════════════════════════════════════════════
+
+🚀 DEPLOYMENT STEPS:
+
+STEP 1: CREATE NEW GITHUB REPOSITORY
+──────────────────────────────────────
+1. Go to: https://github.com/new
+2. Repository name: bayside-wellness
+3. Description: Bayside Wellness & Counseling Website
+4. Choose: ○ Public  OR  ● Private (your choice)
+5. ☐ Do NOT check "Add a README file"
+6. ☐ Do NOT check "Add .gitignore"
+7. ☐ Do NOT check "Choose a license"
+8. Click "Create repository"
+
+
+STEP 2: UPLOAD ALL 4 FILES TO GITHUB
+──────────────────────────────────────
+You'll see a page that says "Quick setup" with a link:
+"uploading an existing file"
+
+1. Click that link
+2. Drag ALL 4 FILES into the upload area:
+   - index.html
+   - bayside-logo.png
+   - package.json
+   - vercel.json
+3. Scroll down and click "Commit changes"
+
+
+STEP 3: CREATE NEW VERCEL PROJECT
+──────────────────────────────────────
+1. Go to: https://vercel.com/dashboard
+2. Click "Add New..." → "Project"
+3. You'll see your GitHub repositories listed
+4. Find "bayside-wellness" and click "Import"
+
+
+STEP 4: CONFIGURE VERCEL PROJECT
+──────────────────────────────────────
+You'll see project settings. Set these:
+
+Framework Preset: "Other" (or leave it auto-detected)
+Root Directory: . (leave as default)
+Build Command: (leave EMPTY or use default)
+Output Directory: . (leave as default)
+Install Command: (leave as default)
+
+Click "Deploy" button at the bottom
+
+
+STEP 5: WAIT FOR DEPLOYMENT (30-60 seconds)
+──────────────────────────────────────
+Vercel will:
+✓ Clone your repository
+✓ Build your project
+✓ Deploy to production
+
+You'll see a success screen with confetti 🎉
+
+
+STEP 6: VIEW YOUR LIVE SITE!
+──────────────────────────────────────
+Click the URL Vercel gives you (looks like):
+https://bayside-wellness-xxxxx.vercel.app
+
+Your site is LIVE with:
+✅ All 136 SEO pages
+✅ Working logo in header and footer
+✅ Contact form
+✅ All blog posts
+✅ Everything working perfectly
+
+═══════════════════════════════════════════════════════════
+
+🔧 IF YOU GET A 404 ERROR:
+
+1. Go to your Vercel project
+2. Click "Settings" tab
+3. Look for "General" → "Framework Preset"
+4. Change it to "Other" if not already set
+5. Go to "Deployments" tab
+6. Click "..." on latest deployment → "Redeploy"
+
+═══════════════════════════════════════════════════════════
+
+📸 ADDING YOUR PHOTO LATER:
+
+After deployment works:
+1. Upload your headshot photo to GitHub repository
+2. Name it: marcus-photo.jpg
+3. Tell me in the chat
+4. I'll update the About page code to reference it
+
+═══════════════════════════════════════════════════════════
+
+🌐 CUSTOM DOMAIN (When Ready):
+
+To use baysidewellnesstherapy.com:
+1. Vercel project → Settings → Domains
+2. Add your domain
+3. Follow DNS instructions Vercel provides
+4. Domain goes live in ~24 hours
+
+═══════════════════════════════════════════════════════════
+
+✅ THIS WILL WORK!
+
+These files are configured specifically for Vercel.
+Follow the steps exactly and your site will deploy successfully.
+
+═══════════════════════════════════════════════════════════
