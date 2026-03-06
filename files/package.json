@@ -1,8 +1,0 @@
-{
-  "name": "bayside-wellness",
-  "version": "1.0.0",
-  "description": "Bayside Wellness & Counseling - Virtual Therapy",
-  "scripts": {
-    "build": "echo 'Static site - no build needed'"
-  }
-}
