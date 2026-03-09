@@ -1299,7 +1299,7 @@ const blogPosts = [
   excerpt: "In a world of constant distressing information, desensitization serves as protection. But when numbness becomes the default, how do we reconnect with what matters most?",
   date: "March 9, 2026",
   category: "Mental Health",
-  image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200&q=80",
+  image: "/desensitization-blog.jpg",
   content: `It has become increasingly normal to witness extraordinary suffering in ordinary moments. A person might scroll past footage of war while waiting in line for coffee, read about violence between meetings, or move from stories of economic hardship directly into images of curated luxury and success. The contrast is constant. So is the exposure.
 
 Many people notice a quiet change in themselves over time. Headlines that once felt shocking barely register. Tragedies blur together. Emotional reactions arrive slower, or sometimes not at all.
