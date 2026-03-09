@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Routes, Route, Link, useNavigate, useParams, useLocation } from 'react-router-dom';
 import logo from './assets/bayside-logo.png';
 import marcusHeadshot from './assets/marcus-headshot.jpg';
 import SEO from './SEO';
@@ -1293,49 +1294,6 @@ const faqs = [
 ];
 
 const blogPosts = [
-{
-  slug: "cost-of-constant-exposure-desensitization",
-  title: "The Cost of Constant Exposure: Understanding Desensitization",
-  excerpt: "In a world of constant distressing information, desensitization serves as protection. But when numbness becomes the default, how do we reconnect with what matters most?",
-  date: "March 9, 2026",
-  category: "Mental Health",
-  image: "/desensitization-blog.jpg",
-  content: `It has become increasingly normal to witness extraordinary suffering in ordinary moments. A person might scroll past footage of war while waiting in line for coffee, read about violence between meetings, or move from stories of economic hardship directly into images of curated luxury and success. The contrast is constant. So is the exposure.
-
-Many people notice a quiet change in themselves over time. Headlines that once felt shocking barely register. Tragedies blur together. Emotional reactions arrive slower, or sometimes not at all.
-
-Desensitization is often the reason.
-
-Adaptation, Not Failure
-
-At its core, desensitization is not a flaw. It is a form of adaptation. The human nervous system was never designed to absorb the volume of distressing information modern life delivers each day. Without some emotional distance, many people would struggle to function. Parents could not care for their families. Professionals could not focus. Helpers could not continue helping.
-
-In this way, desensitization serves an important purpose. Healthcare workers rely on it to make decisions in crisis. Therapists depend on it to sit with painful stories without becoming overwhelmed. Emotional buffering allows people to endure uncertainty, loss, and stress without collapsing under the weight of it.
-
-Protection, however, can quietly become disconnection.
-
-When Distance Becomes Numbness
-
-When exposure never truly stops, emotional numbing can extend beyond the news cycle. Conversations feel harder to enter emotionally. Relationships may feel flatter or more transactional. Some people notice irritability without understanding why, while others struggle to access joy with the same ease they once did.
-
-The nervous system does not always distinguish between what we choose to see and what we simply encounter. Constant stimulation encourages efficiency rather than depth. Feeling less becomes a way to keep moving forward.
-
-Yet desensitization is not entirely negative. Emotional distance allows people to regulate themselves and remain present for others. In therapy, gradual desensitization is even used intentionally to help individuals approach painful memories safely. The goal has never been to feel everything all at once.
-
-The challenge is noticing when numbness becomes the default rather than a temporary response.
-
-Recognizing the Shift
-
-Awareness often begins subtly. You may notice yourself scrolling longer without remembering what you saw. Silence feels uncomfortable without distraction. Conversations that once felt meaningful begin to feel rushed or surface level.
-
-Reconnection rarely requires dramatic change. Limiting constant exposure to distressing media, spending time in environments that engage the senses, or having conversations without distraction can gradually restore emotional presence. Therapy, creativity, movement, and moments of intentional stillness can help sensitivity return without overwhelm.
-
-Choosing to Feel Again
-
-Desensitization is not evidence that something is wrong with you. More often, it reflects a mind working hard to protect itself in a world that rarely pauses.
-
-Choosing to feel again does not mean abandoning protection. It means recognizing when distance is helping you and when it is quietly keeping you from the people, experiences, and parts of yourself that matter most. In a world constantly asking for your attention, reclaiming emotional presence may be one of the most meaningful ways to care for yourself and those around you.`
-},
   {
     slug: "master-trauma-or-die-trying",
     title: "Master Trauma, or Die Trying",
@@ -1810,9 +1768,11 @@ function useScrollReveal() {
 // NAVIGATION
 // ========================================
 
-function Nav({ currentPage, setCurrentPage }) {
+function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -1821,22 +1781,23 @@ function Nav({ currentPage, setCurrentPage }) {
   }, []);
 
   const navLinks = [
-    { name: "About", page: "about" },
-    { name: "Services", page: "services" },
-    { name: "FAQ", page: "faq" },
-    { name: "Blog", page: "blog" },
-    { name: "Contact", page: "contact" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Blog", path: "/blog" },
+    { name: "Contact", path: "/contact" },
   ];
 
-  const navigate = (page) => {
-    setCurrentPage(page);
+  const handleNavigate = (path) => {
+    navigate(path);
     setMenuOpen(false);
     window.scrollTo(0, 0);
   };
 
   // Dark background pages need solid nav background
-  const darkPages = ["about", "contact"];
-  const isDarkPage = darkPages.includes(currentPage) || currentPage.startsWith("blog-");
+  const currentPath = location.pathname;
+  const darkPages = ["/about", "/contact"];
+  const isDarkPage = darkPages.includes(currentPath) || currentPath.startsWith("/blog/");
   const needsSolidBg = scrolled || isDarkPage;
 
   return (
@@ -1853,9 +1814,9 @@ function Nav({ currentPage, setCurrentPage }) {
         display: "flex", alignItems: "center", justifyContent: "space-between",
         height: 72,
       }}>
-        <button onClick={() => navigate("home")} style={{ 
+        <Link to="/" onClick={() => window.scrollTo(0, 0)} style={{ 
           background: "none", border: "none", cursor: "pointer", padding: 0,
-          display: "flex", alignItems: "center", gap: 12,
+          display: "flex", alignItems: "center", gap: 12, textDecoration: "none",
         }}>
           {/* Bayside Logo */}
           <img 
@@ -1872,27 +1833,29 @@ function Nav({ currentPage, setCurrentPage }) {
             <div style={{ fontSize: 20, fontWeight: 600, letterSpacing: "0.08em", lineHeight: 1 }}>BAYSIDE</div>
             <div style={{ fontSize: 11, fontWeight: 300, letterSpacing: "0.2em", color: colors.tealMuted }}>WELLNESS & COUNSELING</div>
           </div>
-        </button>
+        </Link>
 
         {/* Desktop nav */}
         <div style={{ display: "flex", alignItems: "center", gap: 40 }} className="desktop-nav">
           {navLinks.map(link => (
-            <button key={link.name} onClick={() => navigate(link.page)} style={{
+            <Link key={link.name} to={link.path} onClick={() => window.scrollTo(0, 0)} style={{
               background: "none", border: "none", cursor: "pointer",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 400,
               letterSpacing: "0.12em",
-              color: currentPage === link.page ? colors.teal : colors.charcoalLight,
+              color: currentPath === link.path ? colors.teal : colors.charcoalLight,
               textTransform: "uppercase",
               transition: "color 0.2s",
-              borderBottom: currentPage === link.page ? `2px solid ${colors.teal}` : "2px solid transparent",
+              borderBottom: currentPath === link.path ? `2px solid ${colors.teal}` : "2px solid transparent",
               paddingBottom: 4,
+              textDecoration: "none",
+              display: "inline-block",
             }}
             onMouseEnter={e => e.target.style.color = colors.teal}
-            onMouseLeave={e => e.target.style.color = currentPage === link.page ? colors.teal : colors.charcoalLight}
-            >{link.name}</button>
+            onMouseLeave={e => e.target.style.color = currentPath === link.path ? colors.teal : colors.charcoalLight}
+            >{link.name}</Link>
           ))}
-          <button onClick={() => navigate("contact")} style={{
+          <button onClick={() => handleNavigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, fontWeight: 500,
             letterSpacing: "0.12em",
@@ -1924,7 +1887,7 @@ function Nav({ currentPage, setCurrentPage }) {
           padding: "20px 40px 30px",
         }}>
           {navLinks.map(link => (
-            <button key={link.name} onClick={() => navigate(link.page)}
+            <Link key={link.name} to={link.path} onClick={() => handleNavigate(link.path)}
               style={{
                 display: "block", padding: "12px 0", width: "100%",
                 fontFamily: "'DM Sans', sans-serif",
@@ -1933,11 +1896,12 @@ function Nav({ currentPage, setCurrentPage }) {
                 textAlign: "left", cursor: "pointer",
                 textTransform: "uppercase",
                 borderBottom: `1px solid ${colors.ivoryDark}`,
+                textDecoration: "none",
               }}>
               {link.name}
-            </button>
+            </Link>
           ))}
-          <button onClick={() => navigate("contact")}
+          <button onClick={() => handleNavigate("/contact")}
             style={{
               display: "block", padding: "12px 0", width: "100%",
               fontFamily: "'DM Sans', sans-serif",
@@ -1958,12 +1922,7 @@ function Nav({ currentPage, setCurrentPage }) {
 // FOOTER
 // ========================================
 
-function Footer({ setCurrentPage }) {
-  const navigate = (page) => {
-    setCurrentPage(page);
-    window.scrollTo(0, 0);
-  };
-
+function Footer() {
   return (
     <footer style={{
       background: "#1E2A2A",
@@ -1978,9 +1937,9 @@ function Footer({ setCurrentPage }) {
           alignItems: "start",
         }}>
           <div>
-            <button onClick={() => navigate("home")} style={{ 
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} style={{ 
               background: "none", border: "none", cursor: "pointer", padding: 0, textAlign: "left",
-              display: "flex", alignItems: "center", gap: 10, marginBottom: 12,
+              display: "flex", alignItems: "center", gap: 10, marginBottom: 12, textDecoration: "none",
             }}>
               <img 
                 src={logo} 
@@ -1996,7 +1955,7 @@ function Footer({ setCurrentPage }) {
                 <div style={{ fontFamily: "'Cormorant Garamond', serif", color: colors.white, fontSize: 18, fontWeight: 600, letterSpacing: "0.08em" }}>BAYSIDE</div>
                 <div style={{ fontFamily: "'DM Sans', sans-serif", color: colors.tealMuted, fontSize: 10, letterSpacing: "0.2em" }}>WELLNESS & COUNSELING</div>
               </div>
-            </button>
+            </Link>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", lineHeight: 1.6, margin: "0 0 12px" }}>
               Virtual therapy for adults, teens, and families across California.
             </p>
@@ -2015,13 +1974,13 @@ function Footer({ setCurrentPage }) {
             <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: colors.tealMuted, marginBottom: 16 }}>Services</div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 24px" }}>
               {services.map(s => (
-                <button key={s.slug} onClick={() => navigate(`service-${s.slug}`)} style={{ 
+                <Link key={s.slug} to={`/services/${s.slug}`} onClick={() => window.scrollTo(0, 0)} style={{ 
                   background: "none", border: "none", cursor: "pointer", padding: 0,
-                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", textAlign: "left"
+                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
                 }}
                 onMouseEnter={e => e.target.style.color = colors.tealLight}
                 onMouseLeave={e => e.target.style.color = "#6A8080"}
-                >{s.name}</button>
+                >{s.name}</Link>
               ))}
             </div>
           </div>
@@ -2029,19 +1988,19 @@ function Footer({ setCurrentPage }) {
           <div>
             <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: colors.tealMuted, marginBottom: 16 }}>Practice</div>
             {[
-              { name: "About Marcus", page: "about" },
-              { name: "FAQ", page: "faq" },
-              { name: "Blog", page: "blog" },
-              { name: "Contact", page: "contact" },
+              { name: "About Marcus", path: "/about" },
+              { name: "FAQ", path: "/faq" },
+              { name: "Blog", path: "/blog" },
+              { name: "Contact", path: "/contact" },
             ].map(link => (
               <div key={link.name} style={{ marginBottom: 8 }}>
-                <button onClick={() => navigate(link.page)} style={{ 
+                <Link to={link.path} onClick={() => window.scrollTo(0, 0)} style={{ 
                   background: "none", border: "none", cursor: "pointer", padding: 0,
-                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", textAlign: "left"
+                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
                 }}
                 onMouseEnter={e => e.target.style.color = colors.tealLight}
                 onMouseLeave={e => e.target.style.color = "#6A8080"}
-                >{link.name}</button>
+                >{link.name}</Link>
               </div>
             ))}
           </div>
@@ -2049,13 +2008,13 @@ function Footer({ setCurrentPage }) {
           <div>
             <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: colors.tealMuted, marginBottom: 16 }}>Resources</div>
             <div style={{ marginBottom: 8 }}>
-              <button onClick={() => navigate("crisis-resources")} style={{ 
+              <Link to="/crisis-resources" onClick={() => window.scrollTo(0, 0)} style={{ 
                 background: "none", border: "none", cursor: "pointer", padding: 0,
-                fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", textAlign: "left"
+                fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
               }}
                 onMouseEnter={e => e.target.style.color = colors.tealLight}
                 onMouseLeave={e => e.target.style.color = "#6A8080"}
-              >Crisis Resources</button>
+              >Crisis Resources</Link>
             </div>
           </div>
         </div>
@@ -2078,13 +2037,9 @@ function Footer({ setCurrentPage }) {
 // HOME PAGE
 // ========================================
 
-function HomePage({ setCurrentPage }) {
+function HomePage() {
   const [ref, visible] = useScrollReveal();
-
-  const navigate = (page) => {
-    setCurrentPage(page);
-    window.scrollTo(0, 0);
-  };
+  const navigate = useNavigate();
 
   return (
     <>
@@ -2158,7 +2113,7 @@ function HomePage({ setCurrentPage }) {
           </p>
 
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
-            <button onClick={() => navigate("contact")} style={{
+            <button onClick={() => navigate("/contact")} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -2170,7 +2125,7 @@ function HomePage({ setCurrentPage }) {
             onMouseEnter={e => e.target.style.background = colors.tealLight}
             onMouseLeave={e => e.target.style.background = colors.teal}
             >Book Free Consultation</button>
-            <button onClick={() => navigate("about")} style={{
+            <button onClick={() => navigate("/about")} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -2227,7 +2182,7 @@ function HomePage({ setCurrentPage }) {
             {services.map((service, i) => (
               <button
                 key={service.slug}
-                onClick={() => navigate(`service-${service.slug}`)}
+                onClick={() => navigate(`/services/${service.slug}`)}
                 style={{
                   background: colors.ivory,
                   padding: "36px 32px",
@@ -2282,7 +2237,7 @@ function HomePage({ setCurrentPage }) {
           </div>
 
           <div style={{ marginTop: 60 }}>
-            <button onClick={() => navigate("services")} style={{
+            <button onClick={() => navigate("/services")} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -2379,7 +2334,7 @@ function HomePage({ setCurrentPage }) {
           </div>
           
           <div>
-            <button onClick={() => navigate("contact")} style={{
+            <button onClick={() => navigate("/contact")} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 12, fontWeight: 400,
               letterSpacing: "0.08em",
@@ -2402,8 +2357,9 @@ function HomePage({ setCurrentPage }) {
 // ABOUT PAGE
 // ========================================
 
-function AboutPage({ setCurrentPage }) {
+function AboutPage() {
   const [ref, visible] = useScrollReveal();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -2511,7 +2467,7 @@ function AboutPage({ setCurrentPage }) {
             </p>
           </div>
 
-          <button onClick={() => setCurrentPage("contact")} style={{
+          <button onClick={() => navigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -2562,13 +2518,9 @@ function AboutPage({ setCurrentPage }) {
 // SERVICES HUB PAGE
 // ========================================
 
-function ServicesPage({ setCurrentPage }) {
+function ServicesPage() {
   const [ref, visible] = useScrollReveal();
-
-  const navigate = (page) => {
-    setCurrentPage(page);
-    window.scrollTo(0, 0);
-  };
+  const navigate = useNavigate();
 
   return (
     <>
@@ -2623,7 +2575,7 @@ function ServicesPage({ setCurrentPage }) {
             {services.map((service, i) => (
               <button
                 key={service.slug}
-                onClick={() => navigate(`service-${service.slug}`)}
+                onClick={() => navigate(`/services/${service.slug}`)}
                 style={{
                   background: colors.ivory,
                   padding: "40px 36px",
@@ -2702,7 +2654,7 @@ function ServicesPage({ setCurrentPage }) {
           }}>
             You don't need to figure it out alone. During your free consultation, we'll discuss what you're experiencing and recommend the best path forward.
           </p>
-          <button onClick={() => navigate("contact")} style={{
+          <button onClick={() => navigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -2724,8 +2676,9 @@ function ServicesPage({ setCurrentPage }) {
 // SERVICE DETAIL PAGE
 // ========================================
 
-function ServiceDetailPage({ slug, setCurrentPage }) {
+function ServiceDetailPage({ slug }) {
   const [ref, visible] = useScrollReveal();
+  const navigate = useNavigate();
   const service = services.find(s => s.slug === slug);
   const details = serviceDetails[slug];
 
@@ -2752,7 +2705,7 @@ function ServiceDetailPage({ slug, setCurrentPage }) {
         alignItems: "center",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <button onClick={() => setCurrentPage("services")} style={{
+          <button onClick={() => navigate("/services")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase",
             color: colors.tealMuted, background: "none", border: "none",
@@ -2859,7 +2812,7 @@ function ServiceDetailPage({ slug, setCurrentPage }) {
             }}>
               {details.ctaText}
             </p>
-            <button onClick={() => setCurrentPage("contact")} style={{
+            <button onClick={() => navigate("/contact")} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -2882,9 +2835,10 @@ function ServiceDetailPage({ slug, setCurrentPage }) {
 // FAQ PAGE
 // ========================================
 
-function FAQPage({ setCurrentPage }) {
+function FAQPage() {
   const [ref, visible] = useScrollReveal();
   const [openIndex, setOpenIndex] = useState(null);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -2991,7 +2945,7 @@ function FAQPage({ setCurrentPage }) {
             }}>
               Let's talk. Schedule a free 15-minute consultation and we can discuss anything else on your mind.
             </p>
-            <button onClick={() => setCurrentPage("contact")} style={{
+            <button onClick={() => navigate("/contact")} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -3306,7 +3260,9 @@ function ContactPage() {
 // BLOG PAGE
 // ========================================
 
-function BlogPage({ setCurrentPage }) {
+function BlogPage() {
+  const navigate = useNavigate();
+
   return (
     <>
       <SEO metadata={mainPages.blog} />
@@ -3352,7 +3308,7 @@ function BlogPage({ setCurrentPage }) {
           {blogPosts.map((post, i) => (
             <button
               key={post.slug}
-              onClick={() => setCurrentPage(`blog-${post.slug}`)}
+              onClick={() => navigate(`/blog/${post.slug}`)}
               style={{
                 width: "100%",
                 background: "none",
@@ -3432,8 +3388,9 @@ function BlogPage({ setCurrentPage }) {
 // BLOG POST PAGE
 // ========================================
 
-function BlogPostPage({ slug, setCurrentPage }) {
+function BlogPostPage({ slug }) {
   const [ref, visible] = useScrollReveal();
+  const navigate = useNavigate();
   const post = blogPosts.find(p => p.slug === slug);
 
   if (!post) return <div>Post not found</div>;
@@ -3446,7 +3403,7 @@ function BlogPostPage({ slug, setCurrentPage }) {
         padding: "160px 40px 60px",
       }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          <button onClick={() => setCurrentPage("blog")} style={{
+          <button onClick={() => navigate("/blog")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase",
             color: colors.tealMuted, background: "none", border: "none",
@@ -3549,7 +3506,7 @@ function BlogPostPage({ slug, setCurrentPage }) {
             }}>
               Schedule a free consultation to discuss how therapy can help you.
             </p>
-            <button onClick={() => setCurrentPage("contact")} style={{
+            <button onClick={() => navigate("/contact")} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -3572,16 +3529,12 @@ function BlogPostPage({ slug, setCurrentPage }) {
 // SEO LANDING PAGE
 // ========================================
 
-function SEOLandingPage({ slug, setCurrentPage }) {
+function SEOLandingPage({ slug }) {
   const [ref, visible] = useScrollReveal();
+  const navigate = useNavigate();
   const pageData = seoPages[slug];
 
   if (!pageData) return <div>Page not found</div>;
-
-  const navigate = (page) => {
-    setCurrentPage(page);
-    window.scrollTo(0, 0);
-  };
 
   return (
     <>
@@ -3613,7 +3566,7 @@ function SEOLandingPage({ slug, setCurrentPage }) {
             margin: "0 auto 40px",
             maxWidth: 700,
           }}>{pageData.intro}</p>
-          <button onClick={() => navigate("contact")} style={{
+          <button onClick={() => navigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -3798,7 +3751,7 @@ function SEOLandingPage({ slug, setCurrentPage }) {
                 Getting started is simple. Click the button below to schedule a free 15-minute consultation, or use the contact form to reach out with questions. I typically respond within 1-2 business days.
               </p>
               <div style={{ textAlign: "center" }}>
-                <button onClick={() => navigate("contact")} style={{
+                <button onClick={() => navigate("/contact")} style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 13, fontWeight: 500,
                   letterSpacing: "0.12em", textTransform: "uppercase",
@@ -3894,7 +3847,7 @@ function SEOLandingPage({ slug, setCurrentPage }) {
           }}>
             Schedule a free 15-minute consultation. No commitment, no pressure. Just a conversation about where you are and where you'd like to go.
           </p>
-          <button onClick={() => navigate("contact")} style={{
+          <button onClick={() => navigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -3916,7 +3869,7 @@ function SEOLandingPage({ slug, setCurrentPage }) {
 // CRISIS RESOURCES PAGE
 // ========================================
 
-function CrisisResourcesPage({ setCurrentPage }) {
+function CrisisResourcesPage() {
   const [ref, visible] = useScrollReveal();
 
   return (
@@ -4168,11 +4121,8 @@ function CrisisResourcesPage({ setCurrentPage }) {
 // SEO PAGES DIRECTORY (Temporary - For Testing)
 // ========================================
 
-function SEODirectory({ setCurrentPage }) {
-  const navigate = (page) => {
-    setCurrentPage(page);
-    window.scrollTo(0, 0);
-  };
+function SEODirectory() {
+  const navigate = useNavigate();
 
   const cityPages = Object.keys(seoPages).filter(slug => slug.startsWith("therapy-"));
   const servicePages = Object.keys(seoPages).filter(slug => !slug.startsWith("therapy-") && !slug.startsWith("anxiety-"));
@@ -4215,7 +4165,7 @@ function SEODirectory({ setCurrentPage }) {
             {cityPages.map(slug => (
               <button
                 key={slug}
-                onClick={() => navigate(`seo-${slug}`)}
+                onClick={() => navigate(`/seo/${slug}`)}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -4253,7 +4203,7 @@ function SEODirectory({ setCurrentPage }) {
             {servicePages.map(slug => (
               <button
                 key={slug}
-                onClick={() => navigate(`seo-${slug}`)}
+                onClick={() => navigate(`/seo/${slug}`)}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -4292,7 +4242,7 @@ function SEODirectory({ setCurrentPage }) {
               {conditionPages.map(slug => (
                 <button
                   key={slug}
-                  onClick={() => navigate(`seo-${slug}`)}
+                  onClick={() => navigate(`/seo/${slug}`)}
                   style={{
                     background: colors.white,
                     border: `1px solid ${colors.ivoryDark}`,
@@ -4349,45 +4299,29 @@ function SEODirectory({ setCurrentPage }) {
 }
 
 // ========================================
+// DYNAMIC ROUTE WRAPPERS
+// ========================================
+
+function ServiceDetailWrapper() {
+  const { slug } = useParams();
+  return <ServiceDetailPage slug={slug} />;
+}
+
+function BlogPostWrapper() {
+  const { slug } = useParams();
+  return <BlogPostPage slug={slug} />;
+}
+
+function SEOLandingWrapper() {
+  const { slug } = useParams();
+  return <SEOLandingPage slug={slug} />;
+}
+
+// ========================================
 // MAIN APP
 // ========================================
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState("home");
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentPage]);
-
-  let PageComponent;
-  
-  if (currentPage === "home") {
-    PageComponent = <HomePage setCurrentPage={setCurrentPage} />;
-  } else if (currentPage === "about") {
-    PageComponent = <AboutPage setCurrentPage={setCurrentPage} />;
-  } else if (currentPage === "services") {
-    PageComponent = <ServicesPage setCurrentPage={setCurrentPage} />;
-  } else if (currentPage.startsWith("service-")) {
-    const slug = currentPage.replace("service-", "");
-    PageComponent = <ServiceDetailPage slug={slug} setCurrentPage={setCurrentPage} />;
-  } else if (currentPage === "faq") {
-    PageComponent = <FAQPage setCurrentPage={setCurrentPage} />;
-  } else if (currentPage === "blog") {
-    PageComponent = <BlogPage setCurrentPage={setCurrentPage} />;
-  } else if (currentPage.startsWith("blog-")) {
-    const slug = currentPage.replace("blog-", "");
-    PageComponent = <BlogPostPage slug={slug} setCurrentPage={setCurrentPage} />;
-  } else if (currentPage === "seo-directory") {
-    PageComponent = <SEODirectory setCurrentPage={setCurrentPage} />;
-  } else if (currentPage.startsWith("seo-")) {
-    const slug = currentPage.replace("seo-", "");
-    PageComponent = <SEOLandingPage slug={slug} setCurrentPage={setCurrentPage} />;
-  } else if (currentPage === "crisis-resources") {
-    PageComponent = <CrisisResourcesPage setCurrentPage={setCurrentPage} />;
-  } else if (currentPage === "contact") {
-    PageComponent = <ContactPage />;
-  }
-
   return (
     <>
       <style>{`
@@ -4403,9 +4337,21 @@ export default function App() {
         }
       `}</style>
       
-      <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      {PageComponent}
-      <Footer setCurrentPage={setCurrentPage} />
+      <Nav />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/:slug" element={<ServiceDetailWrapper />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPostWrapper />} />
+        <Route path="/seo" element={<SEODirectory />} />
+        <Route path="/seo/:slug" element={<SEOLandingWrapper />} />
+        <Route path="/crisis-resources" element={<CrisisResourcesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <Footer />
     </>
   );
 }
