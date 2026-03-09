@@ -1306,7 +1306,7 @@ Many people notice a quiet change in themselves over time. Headlines that once f
 
 Desensitization is often the reason.
 
-## Adaptation, Not Failure
+Adaptation, Not Failure
 
 At its core, desensitization is not a flaw. It is a form of adaptation. The human nervous system was never designed to absorb the volume of distressing information modern life delivers each day. Without some emotional distance, many people would struggle to function. Parents could not care for their families. Professionals could not focus. Helpers could not continue helping.
 
@@ -1314,7 +1314,7 @@ In this way, desensitization serves an important purpose. Healthcare workers rel
 
 Protection, however, can quietly become disconnection.
 
-## When Distance Becomes Numbness
+When Distance Becomes Numbness
 
 When exposure never truly stops, emotional numbing can extend beyond the news cycle. Conversations feel harder to enter emotionally. Relationships may feel flatter or more transactional. Some people notice irritability without understanding why, while others struggle to access joy with the same ease they once did.
 
@@ -1324,13 +1324,13 @@ Yet desensitization is not entirely negative. Emotional distance allows people t
 
 The challenge is noticing when numbness becomes the default rather than a temporary response.
 
-## Recognizing the Shift
+Recognizing the Shift
 
 Awareness often begins subtly. You may notice yourself scrolling longer without remembering what you saw. Silence feels uncomfortable without distraction. Conversations that once felt meaningful begin to feel rushed or surface level.
 
 Reconnection rarely requires dramatic change. Limiting constant exposure to distressing media, spending time in environments that engage the senses, or having conversations without distraction can gradually restore emotional presence. Therapy, creativity, movement, and moments of intentional stillness can help sensitivity return without overwhelm.
 
-## Choosing to Feel Again
+Choosing to Feel Again
 
 Desensitization is not evidence that something is wrong with you. More often, it reflects a mind working hard to protect itself in a world that rarely pauses.
 
