@@ -4,6 +4,7 @@ import logo from './assets/bayside-logo.png';
 import marcusHeadshot from './assets/marcus-headshot.jpg';
 import SEO from './SEO';
 import { mainPages, servicePages, generateBlogMeta, generateSEOPageMeta } from './metadata';
+import { Analytics } from '@vercel/analytics/react';
 
 // ========================================
 // DESIGN SYSTEM
@@ -4400,6 +4401,7 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
+      <Analytics />
     </>
   );
 }
