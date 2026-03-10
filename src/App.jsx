@@ -2875,9 +2875,26 @@ function FAQPage() {
   const [openIndex, setOpenIndex] = useState(null);
   const navigate = useNavigate();
 
+  // FAQ Schema for AI search
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   return (
     <>
       <SEO metadata={mainPages.faq} />
+      {/* FAQ Schema for AI Search */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      
       <section style={{
         background: colors.ivory,
         padding: "160px 40px 80px",
@@ -3435,9 +3452,39 @@ function BlogPostPage({ slug }) {
 
   if (!post) return <div>Post not found</div>;
 
+  // Article Schema for AI search
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": post.image,
+    "datePublished": new Date(post.date).toISOString(),
+    "dateModified": new Date(post.date).toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": "Marcus Ghiasi",
+      "jobTitle": "Licensed Marriage and Family Therapist",
+      "credential": "LMFT"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bayside Wellness & Counseling",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://baysidewellnessandcounseling.com/og-image.jpg"
+      }
+    },
+    "articleSection": post.category,
+    "url": `https://baysidewellnessandcounseling.com/blog/${slug}`
+  };
+
   return (
     <>
       <SEO metadata={generateBlogMeta(post)} />
+      {/* Article Schema for AI Search */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      
       <section style={{
         background: colors.ivory,
         padding: "160px 40px 60px",
