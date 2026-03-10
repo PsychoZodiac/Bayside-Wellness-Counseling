@@ -2364,33 +2364,19 @@ function AboutPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Load Psychology Today verification script
-    const loadPTScript = () => {
-      // Remove any existing PT scripts first
-      const existingScripts = document.querySelectorAll('script[src*="verified-seal.js"]');
-      existingScripts.forEach(script => script.remove());
-
-      // Create and add new script
-      const script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = 'https://member.psychologytoday.com/verified-seal.js';
-      script.setAttribute('data-badge', '14');
-      script.setAttribute('data-id', '1134128');
-      script.setAttribute('data-code', 'aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xNC9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw==');
-      script.async = true;
-      
-      document.body.appendChild(script);
+    // Trigger PT badge rendering after component mounts
+    const checkAndRenderBadge = () => {
+      const badge = document.querySelector('.sx-verified-seal');
+      if (badge && typeof window.sxcallback === 'function') {
+        // PT callback exists, trigger it
+        window.sxcallback();
+      }
     };
 
-    // Wait a bit for DOM to be ready, then load script
-    const timer = setTimeout(loadPTScript, 100);
-
-    return () => {
-      clearTimeout(timer);
-      // Cleanup scripts on unmount
-      const scripts = document.querySelectorAll('script[src*="verified-seal.js"]');
-      scripts.forEach(script => script.remove());
-    };
+    // Wait a bit for PT script to be ready
+    const timer = setTimeout(checkAndRenderBadge, 500);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   return (
