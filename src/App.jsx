@@ -2363,22 +2363,6 @@ function AboutPage() {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // Trigger PT badge rendering after component mounts
-    const checkAndRenderBadge = () => {
-      const badge = document.querySelector('.sx-verified-seal');
-      if (badge && typeof window.sxcallback === 'function') {
-        // PT callback exists, trigger it
-        window.sxcallback();
-      }
-    };
-
-    // Wait a bit for PT script to be ready
-    const timer = setTimeout(checkAndRenderBadge, 500);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
       <SEO metadata={mainPages.about} />
@@ -2485,7 +2469,7 @@ function AboutPage() {
             </p>
           </div>
 
-          {/* Buttons Row - Work With Marcus + Psychology Today Badge */}
+          {/* Buttons Row - Work With Marcus + Psychology Today */}
           <div className="about-buttons" style={{ display: 'flex', gap: 16, alignItems: 'stretch' }}>
             <button onClick={() => navigate("/contact")} style={{
               fontFamily: "'DM Sans', sans-serif",
@@ -2505,27 +2489,34 @@ function AboutPage() {
             onMouseLeave={e => { e.target.style.background = "transparent"; }}
             >Work With Marcus</button>
 
-            <div style={{
-              flex: 1,
-              minHeight: 48,
-              background: '#FFFFFF',
-              border: `1px solid ${colors.teal}33`,
-              borderRadius: 2,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '4px',
-            }}>
-              <a 
-                href="https://www.psychologytoday.com/profile/1134128" 
-                className="sx-verified-seal"
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  textAlign: 'center',
-                }}
-              ></a>
-            </div>
+            <a 
+              href="https://www.psychologytoday.com/profile/1134128"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 13, fontWeight: 500,
+                letterSpacing: "0.12em", textTransform: "uppercase",
+                color: colors.teal, background: "transparent",
+                border: `1px solid ${colors.teal}66`, cursor: "pointer",
+                padding: "14px 32px", borderRadius: 2,
+                transition: "all 0.2s",
+                flex: 1,
+                minHeight: 48,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textDecoration: 'none',
+              }}
+              onMouseEnter={e => { 
+                e.target.style.background = 'rgba(61, 158, 154, 0.1)'; 
+                e.target.style.borderColor = colors.teal;
+              }}
+              onMouseLeave={e => { 
+                e.target.style.background = "transparent"; 
+                e.target.style.borderColor = `${colors.teal}66`;
+              }}
+            >Psychology Today →</a>
           </div>
           <div style={{ marginTop: 20 }}>
             <a href="https://www.marcusghiasitherapy.com" target="_blank" rel="noopener noreferrer" style={{
