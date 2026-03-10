@@ -2363,6 +2363,36 @@ function AboutPage() {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // Load Psychology Today verification script
+    const loadPTScript = () => {
+      // Remove any existing PT scripts first
+      const existingScripts = document.querySelectorAll('script[src*="verified-seal.js"]');
+      existingScripts.forEach(script => script.remove());
+
+      // Create and add new script
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://member.psychologytoday.com/verified-seal.js';
+      script.setAttribute('data-badge', '14');
+      script.setAttribute('data-id', '1134128');
+      script.setAttribute('data-code', 'aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xNC9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw==');
+      script.async = true;
+      
+      document.body.appendChild(script);
+    };
+
+    // Wait a bit for DOM to be ready, then load script
+    const timer = setTimeout(loadPTScript, 100);
+
+    return () => {
+      clearTimeout(timer);
+      // Cleanup scripts on unmount
+      const scripts = document.querySelectorAll('script[src*="verified-seal.js"]');
+      scripts.forEach(script => script.remove());
+    };
+  }, []);
+
   return (
     <>
       <SEO metadata={mainPages.about} />
@@ -2489,67 +2519,27 @@ function AboutPage() {
             onMouseLeave={e => { e.target.style.background = "transparent"; }}
             >Work With Marcus</button>
 
-            <a 
-              href="https://www.psychologytoday.com/profile/1134128"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                flex: 1,
-                minHeight: 48,
-                background: '#FFFFFF',
-                border: `1px solid ${colors.teal}33`,
-                borderRadius: 2,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textDecoration: 'none',
-                padding: '8px',
-                gap: 2,
-                transition: 'all 0.2s',
-                cursor: 'pointer',
-              }}
-              onMouseEnter={e => { 
-                e.currentTarget.style.background = '#F8F8F8';
-                e.currentTarget.style.borderColor = colors.teal + '66';
-              }}
-              onMouseLeave={e => { 
-                e.currentTarget.style.background = '#FFFFFF';
-                e.currentTarget.style.borderColor = colors.teal + '33';
-              }}
-            >
-              <div style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 9,
-                fontWeight: 600,
-                letterSpacing: '0.05em',
-                color: '#666666',
-                textTransform: 'uppercase',
-              }}>Verified by</div>
-              <div style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 14,
-                fontWeight: 700,
-                color: '#3D9E9A',
-                letterSpacing: '-0.02em',
-              }}>Psychology Today</div>
-              <div style={{
-                width: 20,
-                height: 20,
-                borderRadius: '50%',
-                background: '#3D9E9A',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginTop: 2,
-              }}>
-                <span style={{ 
-                  color: 'white', 
-                  fontSize: 12, 
-                  fontWeight: 'bold',
-                }}>✓</span>
-              </div>
-            </a>
+            <div style={{
+              flex: 1,
+              minHeight: 48,
+              background: '#FFFFFF',
+              border: `1px solid ${colors.teal}33`,
+              borderRadius: 2,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '4px',
+            }}>
+              <a 
+                href="https://www.psychologytoday.com/profile/1134128" 
+                className="sx-verified-seal"
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  textAlign: 'center',
+                }}
+              ></a>
+            </div>
           </div>
           <div style={{ marginTop: 20 }}>
             <a href="https://www.marcusghiasitherapy.com" target="_blank" rel="noopener noreferrer" style={{
