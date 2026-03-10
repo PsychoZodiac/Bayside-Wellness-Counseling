@@ -4320,6 +4320,20 @@ function SEOLandingWrapper() {
 }
 
 // ========================================
+// SCROLL TO TOP ON ROUTE CHANGE
+// ========================================
+
+function ScrollToTop() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+  
+  return null;
+}
+
+// ========================================
 // MAIN APP
 // ========================================
 
@@ -4371,6 +4385,7 @@ export default function App() {
       `}</style>
       
       <Nav />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
