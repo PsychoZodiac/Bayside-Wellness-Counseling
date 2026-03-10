@@ -2363,6 +2363,28 @@ function AboutPage() {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
 
+  // Load Psychology Today verification badge
+  useEffect(() => {
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src*="verified-seal.js"]');
+    if (existingScript) return;
+
+    // Create script element
+    const script = document.createElement('script');
+    script.src = 'https://member.psychologytoday.com/verified-seal.js';
+    script.setAttribute('data-badge', '13');
+    script.setAttribute('data-id', '1134128');
+    script.setAttribute('data-code', 'aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw==');
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup
+      const scripts = document.querySelectorAll('script[src*="verified-seal.js"]');
+      scripts.forEach(s => document.body.removeChild(s));
+    };
+  }, []);
+
   return (
     <>
       <SEO metadata={mainPages.about} />
@@ -2469,7 +2491,7 @@ function AboutPage() {
             </p>
           </div>
 
-          {/* Buttons Row - Work With Marcus + Psychology Today */}
+          {/* Buttons Row - Work With Marcus + Psychology Today Badge */}
           <div className="about-buttons" style={{ display: 'flex', gap: 16, alignItems: 'stretch' }}>
             <button onClick={() => navigate("/contact")} style={{
               fontFamily: "'DM Sans', sans-serif",
@@ -2489,34 +2511,31 @@ function AboutPage() {
             onMouseLeave={e => { e.target.style.background = "transparent"; }}
             >Work With Marcus</button>
 
-            <a 
-              href="https://www.psychologytoday.com/profile/1134128"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 13, fontWeight: 500,
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                color: colors.teal, background: "transparent",
-                border: `1px solid ${colors.teal}66`, cursor: "pointer",
-                padding: "14px 32px", borderRadius: 2,
-                transition: "all 0.2s",
-                flex: 1,
-                minHeight: 48,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textDecoration: 'none',
-              }}
-              onMouseEnter={e => { 
-                e.target.style.background = 'rgba(61, 158, 154, 0.1)'; 
-                e.target.style.borderColor = colors.teal;
-              }}
-              onMouseLeave={e => { 
-                e.target.style.background = "transparent"; 
-                e.target.style.borderColor = `${colors.teal}66`;
-              }}
-            >Psychology Today →</a>
+            <div style={{
+              flex: 1,
+              minHeight: 48,
+              border: `1px solid ${colors.teal}33`,
+              borderRadius: 2,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: colors.white,
+              padding: '4px',
+            }}>
+              <a 
+                href="https://www.psychologytoday.com/profile/1134128" 
+                className="sx-verified-seal"
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  height: '100%',
+                }}
+              ></a>
+            </div>
           </div>
           <div style={{ marginTop: 20 }}>
             <a href="https://www.marcusghiasitherapy.com" target="_blank" rel="noopener noreferrer" style={{
