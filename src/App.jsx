@@ -3310,6 +3310,7 @@ function BlogPage() {
             <button
               key={post.slug}
               onClick={() => navigate(`/blog/${post.slug}`)}
+              className="blog-post-item"
               style={{
                 width: "100%",
                 background: "none",
@@ -4347,6 +4348,14 @@ export default function App() {
           .contact-grid > div {
             max-width: 520px;
             width: calc(100% - 40px);
+          }
+          .blog-post-item {
+            grid-template-columns: 1fr !important;
+            padding: 32px 0 !important;
+            gap: 20px !important;
+          }
+          .blog-post-item h2 {
+            font-size: 28px !important;
           }
         }
       `}</style>
