@@ -4332,12 +4332,20 @@ export default function App() {
         html { scroll-behavior: smooth; }
         body { background: ${colors.ivory}; }
         .contact-grid { grid-template-columns: 1fr 1fr; }
+        .contact-grid > div { width: 100%; }
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
           section > div { grid-template-columns: 1fr !important; }
           footer > div > div:first-child { grid-template-columns: 1fr !important; }
-          .contact-grid { grid-template-columns: 1fr !important; }
+          .contact-grid { 
+            grid-template-columns: 1fr !important;
+            justify-items: center;
+          }
+          .contact-grid > div {
+            max-width: 500px;
+            width: 100%;
+          }
         }
       `}</style>
       
