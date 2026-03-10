@@ -3033,7 +3033,7 @@ function ContactPage() {
             background: "rgba(255,255,255,0.05)",
             border: `1px solid ${colors.teal}44`,
             borderRadius: 4, 
-            padding: "40px",
+            padding: "clamp(24px, 5vw, 40px)",
           }}>
             <h3 style={{
               fontFamily: "'Cormorant Garamond', serif",
@@ -3055,7 +3055,7 @@ function ContactPage() {
               background: colors.ivory,
               border: `2px solid ${colors.teal}`,
               borderRadius: 2, 
-              padding: "56px 48px",
+              padding: "clamp(32px, 8vw, 56px) clamp(24px, 6vw, 48px)",
               textAlign: "center",
               boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
             }}>
@@ -3065,18 +3065,19 @@ function ContactPage() {
                 rel="noopener noreferrer"
                 style={{
                   display: "inline-block",
-                  padding: "18px 48px",
+                  padding: "16px clamp(20px, 5vw, 48px)",
                   background: colors.teal,
                   color: colors.white,
                   textDecoration: "none",
                   borderRadius: 2,
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13,
+                  fontSize: "clamp(11px, 2.8vw, 13px)",
                   fontWeight: 500,
-                  letterSpacing: "0.12em",
+                  letterSpacing: "0.08em",
                   textTransform: "uppercase",
                   transition: "all 0.3s ease",
                   boxShadow: "0 2px 8px rgba(46, 125, 122, 0.2)",
+                  whiteSpace: "nowrap",
                 }}
                 onMouseEnter={(e) => { 
                   e.target.style.background = colors.tealLight;
@@ -3109,7 +3110,7 @@ function ContactPage() {
             background: "rgba(255,255,255,0.05)",
             border: `1px solid ${colors.teal}44`,
             borderRadius: 4, 
-            padding: "40px",
+            padding: "clamp(24px, 5vw, 40px)",
           }}>
             <h3 style={{
               fontFamily: "'Cormorant Garamond', serif",
@@ -4344,8 +4345,8 @@ export default function App() {
             gap: 40px;
           }
           .contact-grid > div {
-            max-width: 85%;
-            width: 85%;
+            max-width: 520px;
+            width: calc(100% - 40px);
           }
         }
       `}</style>
