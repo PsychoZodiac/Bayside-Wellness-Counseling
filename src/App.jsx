@@ -1962,8 +1962,8 @@ function Footer() {
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#4A6060", margin: "0 0 6px" }}>
               2323 Broadway, Oakland, CA 94612
             </p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: colors.teal, margin: 0, fontWeight: 500 }}>
-              <a href="tel:415-857-5799" style={{ color: colors.teal, textDecoration: "none" }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#4A6060", margin: 0 }}>
+              <a href="tel:415-857-5799" style={{ color: "#4A6060", textDecoration: "none" }}>
                 415-857-5799
               </a>
             </p>
@@ -2528,8 +2528,8 @@ function ServicesPage() {
       <SEO metadata={mainPages.services} />
       <section style={{
         background: colors.ivory,
-        padding: "160px 40px 80px",
-        minHeight: "60vh",
+        padding: "140px 40px 60px",
+        minHeight: "auto",
         display: "flex",
         alignItems: "center",
       }}>
@@ -3058,6 +3058,10 @@ function ContactPage() {
               padding: "clamp(32px, 8vw, 56px) clamp(24px, 6vw, 48px)",
               textAlign: "center",
               boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
             }}>
               <a
                 href="https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1"
@@ -3247,8 +3251,8 @@ function ContactPage() {
           textAlign: "center",
         }}>
           Or email us directly at{" "}
-          <a href="mailto:info@baysidewellnessandcounseling.com" style={{ color: colors.tealLight }}>
-            info@baysidewellnessandcounseling.com
+          <a href="mailto:hello@baysidewellnessandcounseling.com" style={{ color: colors.tealLight }}>
+            hello@baysidewellnessandcounseling.com
           </a>
         </p>
       </div>
