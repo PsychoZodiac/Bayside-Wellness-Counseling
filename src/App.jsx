@@ -3027,10 +3027,9 @@ function ContactPage() {
 
         <div style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
           gap: 40,
           marginBottom: 40,
-        }}>
+        }} className="contact-grid">
           {/* Jane App Booking */}
           <div style={{
             background: "rgba(255,255,255,0.05)",
@@ -4332,11 +4331,13 @@ export default function App() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body { background: ${colors.ivory}; }
+        .contact-grid { grid-template-columns: 1fr 1fr; }
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
           section > div { grid-template-columns: 1fr !important; }
           footer > div > div:first-child { grid-template-columns: 1fr !important; }
+          .contact-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
       
