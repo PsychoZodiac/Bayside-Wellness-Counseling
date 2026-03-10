@@ -2568,7 +2568,7 @@ function ServicesPage() {
         transition: "all 0.8s ease",
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{
+          <div className="services-grid" style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
             gap: 40,
@@ -4356,6 +4356,16 @@ export default function App() {
           }
           .blog-post-item h2 {
             font-size: 28px !important;
+          }
+          .services-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 32px !important;
+          }
+          .services-grid > button {
+            max-width: 420px !important;
+            width: 90% !important;
           }
         }
       `}</style>
