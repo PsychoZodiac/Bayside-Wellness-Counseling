@@ -2279,15 +2279,13 @@ function HomePage() {
           </p>
           
           {/* Jane App booking embed */}
-          <div style={{
+          <div className="home-booking-box" style={{
             background: colors.ivory,
             border: `2px solid ${colors.teal}`,
             borderRadius: 2, 
             padding: "clamp(24px, 5vw, 56px) clamp(20px, 5vw, 48px)",
             marginBottom: 24,
             display: "inline-block",
-            maxWidth: "100%",
-            width: "auto",
             boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
           }}>
             <a
@@ -4340,11 +4338,14 @@ export default function App() {
           footer > div > div:first-child { grid-template-columns: 1fr !important; }
           .contact-grid { 
             grid-template-columns: 1fr !important;
-            justify-items: center;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
           }
           .contact-grid > div {
-            max-width: 500px;
-            width: 100%;
+            max-width: 85%;
+            width: 85%;
           }
         }
       `}</style>
