@@ -2520,7 +2520,6 @@ function AboutPage() {
 // ========================================
 
 function ServicesPage() {
-  const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
 
   return (
@@ -2560,12 +2559,9 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section ref={ref} style={{
+      <section style={{
         background: colors.white,
         padding: "80px 40px 120px",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "none" : "translateY(30px)",
-        transition: "all 0.8s ease",
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div className="services-grid" style={{
