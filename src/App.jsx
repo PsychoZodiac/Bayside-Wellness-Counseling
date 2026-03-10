@@ -2470,7 +2470,7 @@ function AboutPage() {
           </div>
 
           {/* Buttons Row - Work With Marcus + Psychology Today */}
-          <div style={{ display: 'flex', gap: 16, alignItems: 'stretch' }}>
+          <div className="about-buttons" style={{ display: 'flex', gap: 16, alignItems: 'stretch' }}>
             <button onClick={() => navigate("/contact")} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
@@ -4418,6 +4418,18 @@ export default function App() {
           .services-grid > button {
             max-width: 420px !important;
             width: 90% !important;
+          }
+          .about-buttons {
+            flex-direction: column !important;
+            width: 100% !important;
+            align-items: stretch !important;
+          }
+          .about-buttons > button,
+          .about-buttons > a {
+            width: 100% !important;
+            max-width: 100% !important;
+            flex: 0 0 auto !important;
+            min-width: 0 !important;
           }
         }
       `}</style>
