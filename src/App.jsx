@@ -2257,6 +2257,7 @@ function HomePage() {
       <section style={{
         background: colors.charcoal,
         padding: "100px 40px",
+        overflow: "hidden",
       }}>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{
@@ -2282,10 +2283,11 @@ function HomePage() {
             background: colors.ivory,
             border: `2px solid ${colors.teal}`,
             borderRadius: 2, 
-            padding: "56px 48px",
+            padding: "clamp(24px, 5vw, 56px) clamp(20px, 5vw, 48px)",
             marginBottom: 24,
             display: "inline-block",
-            minWidth: 420,
+            maxWidth: "100%",
+            width: "auto",
             boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
           }}>
             <a
@@ -2294,7 +2296,7 @@ function HomePage() {
               rel="noopener noreferrer"
               style={{
                 display: "inline-block",
-                padding: "18px 48px",
+                padding: "18px clamp(24px, 5vw, 48px)",
                 background: colors.teal,
                 color: colors.white,
                 textDecoration: "none",
@@ -2306,6 +2308,7 @@ function HomePage() {
                 textTransform: "uppercase",
                 transition: "all 0.3s ease",
                 boxShadow: "0 2px 8px rgba(46, 125, 122, 0.2)",
+                whiteSpace: "nowrap",
               }}
               onMouseEnter={(e) => { 
                 e.target.style.background = colors.tealLight;
