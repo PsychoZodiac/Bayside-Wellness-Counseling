@@ -1,420 +1,886 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
   <!-- Main Pages -->
   <url>
     <loc>https://baysidewellnessandcounseling.com/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/about</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/services</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/faq</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/contact</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/blog</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/contact</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/crisis-resources</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/faq</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/crisis-resources</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   
   <!-- Service Detail Pages -->
   <url>
     <loc>https://baysidewellnessandcounseling.com/services/emdr</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/services/ifs</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/services/cbt</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/services/psychodynamic</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/services/mens-therapy</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/services/family-therapy</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/services/anxiety-depression</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/services/trauma</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/cost-of-constant-exposure-desensitization</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://baysidewellnessandcounseling.com/blog/master-trauma-or-die-trying</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/5-lies-suicide-tells-us</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/blog/the-5-lies-suicide-tells-us</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/emdr-trauma-therapy-guide</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/blog/ai-and-therapy</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/rupture-and-repair</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/valentines-day-and-men</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/rethinking-therapy-2026</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/beginning-again</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/low-mood-depression</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/dream-bigger-2026</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/starting-new-year-with-intention</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/blog/beginners-guide-to-ifs</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/attachment-styles-in-relationships</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/blog/beginners-guide-to-emdr</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/signs-you-need-therapy</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/managing-holiday-stress</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/setting-boundaries-in-relationships</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/mindfulness-for-anxiety</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/understanding-depression</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/family-therapy-benefits</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/mens-mental-health</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/blog/holiday-stress-loneliness</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- SEO Landing Pages - Bay Area Cities -->
+  <!-- SEO Landing Pages - All Bay Area Cities & Services -->
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-oakland</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-san-francisco</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/emdr-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-berkeley</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/anxiety-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-alameda</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-emeryville</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-piedmont</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-alameda</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-walnut-creek</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-emeryville</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-concord</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-piedmont</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-richmond</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-san-leandro</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-san-leandro</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-hayward</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-hayward</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-fremont</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-fremont</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-pleasanton</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-san-jose</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-walnut-creek</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-palo-alto</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-concord</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-mountain-view</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-richmond</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-sunnyvale</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-pleasant-hill</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-santa-clara</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-milpitas</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-pleasanton</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-mountain-view</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-dublin</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-sunnyvale</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/therapy-livermore</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-redwood-city</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- EMDR Therapy Landing Pages -->
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/emdr-therapy-san-francisco</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/emdr-therapy-oakland</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-san-mateo</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/emdr-therapy-berkeley</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-san-carlos</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/emdr-therapy-san-jose</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-burlingame</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/emdr-therapy-palo-alto</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-millbrae</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Anxiety Therapy Landing Pages -->
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/anxiety-therapy-berkeley</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/anxiety-therapy-oakland</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-pacifica</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/anxiety-therapy-san-francisco</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-daly-city</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/anxiety-therapy-san-jose</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-south-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/anxiety-therapy-palo-alto</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-menlo-park</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- IFS Therapy Landing Pages -->
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/ifs-therapy-oakland</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/ifs-therapy-san-francisco</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-los-altos</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/ifs-therapy-berkeley</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-san-rafael</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Couples Therapy Landing Pages -->
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/couples-therapy-oakland</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/couples-therapy-san-francisco</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-sausalito</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/couples-therapy-berkeley</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-mill-valley</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- College Student Therapy Landing Pages -->
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/college-student-therapy-berkeley</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/seo/college-student-therapy-stanford</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/therapy-novato</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Note: This sitemap includes the top 50+ SEO pages. The remaining 60+ SEO pages follow the same pattern with different city/service combinations. For the complete list of all 114 SEO pages, you can generate them programmatically or add them manually following this format. -->
-
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/therapy-vallejo</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/therapy-petaluma</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/therapy-marin-city</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/emdr-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/emdr-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/emdr-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/emdr-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/ifs-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/ifs-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/ifs-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/ifs-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/ifs-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/cbt-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/cbt-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/cbt-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/cbt-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/cbt-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/psychodynamic-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/psychodynamic-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/psychodynamic-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/psychodynamic-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/psychodynamic-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/family-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/family-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/family-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/family-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/family-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/mens-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/mens-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/mens-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/mens-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/mens-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/anxiety-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/anxiety-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/anxiety-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/anxiety-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/depression-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/depression-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/depression-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/depression-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/depression-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/trauma-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/trauma-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/trauma-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/trauma-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/trauma-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/anger-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/anger-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/anger-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/anger-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/anger-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/teen-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/teen-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/teen-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/teen-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/teen-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/college-student-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/college-student-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/college-student-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/college-student-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/college-student-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/lgbtq-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/lgbtq-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/lgbtq-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/lgbtq-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/lgbtq-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/relationship-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/relationship-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/relationship-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/relationship-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/relationship-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-san-francisco</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-oakland</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-berkeley</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-san-jose</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-palo-alto</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-fremont</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-hayward</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-walnut-creek</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-san-mateo</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-redwood-city</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-mountain-view</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-sunnyvale</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-daly-city</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-alameda</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/online-therapy-san-rafael</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
