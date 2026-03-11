@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, createContext, useContext } from "react";
 import { Routes, Route, Link, useNavigate, useParams, useLocation } from 'react-router-dom';
 import logo from './assets/bayside-logo.png';
 import marcusHeadshot from './assets/marcus-headshot.jpg';
@@ -6,11 +6,16 @@ import SEO from './SEO';
 import { mainPages, servicePages, generateBlogMeta, generateSEOPageMeta } from './metadata';
 import { Analytics } from '@vercel/analytics/react';
 
+// Dark Mode Context
+const DarkModeContext = createContext();
+export const useDarkMode = () => useContext(DarkModeContext);
+
 // ========================================
 // DESIGN SYSTEM
 // ========================================
 
 const colors = {
+  // Light mode colors
   ivory: "#FAF7F4",
   ivoryDark: "#F2EDE8",
   teal: "#2E7D7A",
@@ -22,7 +27,28 @@ const colors = {
   warmGray: "#8A9090",
   white: "#FFFFFF",
   accent: "#C17B4E",
+  
+  // Dark mode colors
+  darkBg: "#1A2424",
+  darkBgLight: "#243333",
+  darkBgLighter: "#2E4040",
+  darkText: "#E8F4F4",
+  darkTextMuted: "#A8C0C0",
+  darkTeal: "#4DBDB7",
+  darkTealMuted: "#6B9E9A",
 };
+
+// Get theme colors based on mode
+const getTheme = (isDark) => ({
+  bg: isDark ? colors.darkBg : colors.ivory,
+  bgAlt: isDark ? colors.darkBgLight : colors.white,
+  bgLighter: isDark ? colors.darkBgLighter : colors.ivoryDark,
+  text: isDark ? colors.darkText : colors.charcoal,
+  textMuted: isDark ? colors.darkTextMuted : colors.charcoalLight,
+  accent: isDark ? colors.darkTeal : colors.teal,
+  accentMuted: isDark ? colors.darkTealMuted : colors.tealMuted,
+  border: isDark ? colors.darkBgLighter : colors.ivoryDark,
+});
 
 const fonts = `
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
@@ -1774,6 +1800,7 @@ function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const { darkMode, toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -1800,14 +1827,16 @@ function Nav() {
   const darkPages = ["/about", "/contact"];
   const isDarkPage = darkPages.includes(currentPath) || currentPath.startsWith("/blog/");
   const needsSolidBg = scrolled || isDarkPage;
+  
+  const theme = getTheme(darkMode);
 
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: needsSolidBg ? "rgba(250,247,244,0.96)" : "transparent",
+      background: needsSolidBg ? (darkMode ? "rgba(26,36,36,0.96)" : "rgba(250,247,244,0.96)") : "transparent",
       backdropFilter: needsSolidBg ? "blur(12px)" : "none",
-      borderBottom: needsSolidBg ? `1px solid ${colors.ivoryDark}` : "none",
-      transition: "all 0.4s ease",
+      borderBottom: needsSolidBg ? `1px solid ${theme.border}` : "none",
+      transition: "all 0.3s ease",
       padding: "0 40px",
     }}>
       <div style={{
@@ -1815,26 +1844,58 @@ function Nav() {
         display: "flex", alignItems: "center", justifyContent: "space-between",
         height: 72,
       }}>
-        <Link to="/" onClick={() => window.scrollTo(0, 0)} style={{ 
-          background: "none", border: "none", cursor: "pointer", padding: 0,
-          display: "flex", alignItems: "center", gap: 12, textDecoration: "none",
-        }}>
-          {/* Bayside Logo */}
-          <img 
-            src={logo} 
-            alt="Bayside Wellness & Counseling"
-            style={{ 
-              height: 42,
-              width: "auto",
-              display: "block",
-            }}
-          />
-          
-          <div style={{ fontFamily: "'Cormorant Garamond', serif", color: colors.charcoal }}>
-            <div style={{ fontSize: 20, fontWeight: 600, letterSpacing: "0.08em", lineHeight: 1 }}>BAYSIDE</div>
-            <div style={{ fontSize: 11, fontWeight: 300, letterSpacing: "0.2em", color: colors.tealMuted }}>WELLNESS & COUNSELING</div>
+        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+          <Link to="/" onClick={() => window.scrollTo(0, 0)} style={{ 
+            background: "none", border: "none", cursor: "pointer", padding: 0,
+            display: "flex", alignItems: "center", gap: 12, textDecoration: "none",
+          }}>
+            {/* Bayside Logo */}
+            <img 
+              src={logo} 
+              alt="Bayside Wellness & Counseling"
+              style={{ 
+                height: 42,
+                width: "auto",
+                display: "block",
+              }}
+            />
+            
+            <div style={{ fontFamily: "'Cormorant Garamond', serif", color: theme.text, transition: "color 0.3s ease" }}>
+              <div style={{ fontSize: 20, fontWeight: 600, letterSpacing: "0.08em", lineHeight: 1 }}>BAYSIDE</div>
+            <div style={{ fontSize: 11, fontWeight: 300, letterSpacing: "0.2em", color: theme.accentMuted, transition: "color 0.3s ease" }}>WELLNESS & COUNSELING</div>
           </div>
         </Link>
+
+        {/* Dark Mode Toggle */}
+        <button
+          onClick={toggleDarkMode}
+          aria-label="Toggle dark mode"
+          style={{
+            position: "relative",
+            width: 24,
+            height: 40,
+            background: darkMode ? theme.accent : "#E0E0E0",
+            borderRadius: 24,
+            border: "none",
+            cursor: "pointer",
+            transition: "background 0.3s ease",
+            padding: 0,
+          }}
+        >
+          <div style={{
+            position: "absolute",
+            top: darkMode ? 19 : 3,
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: 18,
+            height: 18,
+            background: "white",
+            borderRadius: "50%",
+            transition: "top 0.3s ease",
+            boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
+          }} />
+        </button>
+        </div>
 
         {/* Desktop nav */}
         <div style={{ display: "flex", alignItems: "center", gap: 40 }} className="desktop-nav">
@@ -1844,30 +1905,30 @@ function Nav() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 400,
               letterSpacing: "0.12em",
-              color: currentPath === link.path ? colors.teal : colors.charcoalLight,
+              color: currentPath === link.path ? theme.accent : theme.textMuted,
               textTransform: "uppercase",
-              transition: "color 0.2s",
-              borderBottom: currentPath === link.path ? `2px solid ${colors.teal}` : "2px solid transparent",
+              transition: "color 0.3s ease",
+              borderBottom: currentPath === link.path ? `2px solid ${theme.accent}` : "2px solid transparent",
               paddingBottom: 4,
               textDecoration: "none",
               display: "inline-block",
             }}
-            onMouseEnter={e => e.target.style.color = colors.teal}
-            onMouseLeave={e => e.target.style.color = currentPath === link.path ? colors.teal : colors.charcoalLight}
+            onMouseEnter={e => e.target.style.color = theme.accent}
+            onMouseLeave={e => e.target.style.color = currentPath === link.path ? theme.accent : theme.textMuted}
             >{link.name}</Link>
           ))}
           <button onClick={() => handleNavigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, fontWeight: 500,
             letterSpacing: "0.12em",
-            color: colors.white,
+            color: darkMode ? theme.bg : colors.white,
             textTransform: "uppercase",
-            background: colors.teal,
+            background: theme.accent,
             padding: "10px 22px",
             borderRadius: 2,
             border: "none",
             cursor: "pointer",
-            transition: "background 0.2s",
+            transition: "all 0.3s ease",
           }}
           onMouseEnter={e => e.target.style.background = colors.tealLight}
           onMouseLeave={e => e.target.style.background = colors.teal}
@@ -1877,15 +1938,17 @@ function Nav() {
         {/* Mobile menu button */}
         <button onClick={() => setMenuOpen(!menuOpen)} style={{
           display: "none", background: "none", border: "none",
-          cursor: "pointer", color: colors.charcoal, fontSize: 24,
+          cursor: "pointer", color: theme.text, fontSize: 24,
+          transition: "color 0.3s ease",
         }} className="mobile-menu-btn">☰</button>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
         <div style={{
-          background: colors.ivory, borderTop: `1px solid ${colors.ivoryDark}`,
+          background: theme.bg, borderTop: `1px solid ${theme.border}`,
           padding: "20px 40px 30px",
+          transition: "all 0.3s ease",
         }}>
           {navLinks.map(link => (
             <Link key={link.name} to={link.path} onClick={() => handleNavigate(link.path)}
@@ -1893,11 +1956,12 @@ function Nav() {
                 display: "block", padding: "12px 0", width: "100%",
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 14, letterSpacing: "0.1em",
-                color: colors.charcoal, background: "none", border: "none",
+                color: theme.text, background: "none", border: "none",
                 textAlign: "left", cursor: "pointer",
                 textTransform: "uppercase",
-                borderBottom: `1px solid ${colors.ivoryDark}`,
+                borderBottom: `1px solid ${theme.border}`,
                 textDecoration: "none",
+                transition: "all 0.3s ease",
               }}>
               {link.name}
             </Link>
@@ -1907,9 +1971,10 @@ function Nav() {
               display: "block", padding: "12px 0", width: "100%",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 14, letterSpacing: "0.1em",
-              color: colors.charcoal, background: "none", border: "none",
+              color: theme.text, background: "none", border: "none",
               textAlign: "left", cursor: "pointer",
               textTransform: "uppercase",
+              transition: "color 0.3s ease",
             }}>
             Book Free Consult
           </button>
@@ -1924,11 +1989,15 @@ function Nav() {
 // ========================================
 
 function Footer() {
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
+  
   return (
     <footer style={{
-      background: "#1E2A2A",
+      background: darkMode ? colors.darkBgLight : "#1E2A2A",
       padding: "40px 40px 30px",
-      borderTop: `1px solid ${colors.teal}22`,
+      borderTop: `1px solid ${theme.accent}22`,
+      transition: "all 0.3s ease",
     }}>
       <div style={{ maxWidth: 1400, margin: "0 auto" }}>
         <div style={{
@@ -1954,17 +2023,17 @@ function Footer() {
               />
               <div>
                 <div style={{ fontFamily: "'Cormorant Garamond', serif", color: colors.white, fontSize: 18, fontWeight: 600, letterSpacing: "0.08em" }}>BAYSIDE</div>
-                <div style={{ fontFamily: "'DM Sans', sans-serif", color: colors.tealMuted, fontSize: 10, letterSpacing: "0.2em" }}>WELLNESS & COUNSELING</div>
+                <div style={{ fontFamily: "'DM Sans', sans-serif", color: theme.accentMuted, fontSize: 10, letterSpacing: "0.2em", transition: "color 0.3s ease" }}>WELLNESS & COUNSELING</div>
               </div>
             </Link>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", lineHeight: 1.6, margin: "0 0 12px" }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", lineHeight: 1.6, margin: "0 0 12px", transition: "color 0.3s ease" }}>
               Virtual therapy for adults, teens, and families across California.
             </p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#4A6060", margin: "0 0 6px" }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: darkMode ? "#6A8888" : "#4A6060", margin: "0 0 6px", transition: "color 0.3s ease" }}>
               2323 Broadway, Oakland, CA 94612
             </p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#4A6060", margin: 0 }}>
-              <a href="tel:415-857-5799" style={{ color: "#4A6060", textDecoration: "none" }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: darkMode ? "#6A8888" : "#4A6060", margin: 0, transition: "color 0.3s ease" }}>
+              <a href="tel:415-857-5799" style={{ color: darkMode ? "#6A8888" : "#4A6060", textDecoration: "none", transition: "color 0.3s ease" }}>
                 415-857-5799
               </a>
             </p>
@@ -1972,22 +2041,23 @@ function Footer() {
           
           {/* Services in 2 columns */}
           <div>
-            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: colors.tealMuted, marginBottom: 16 }}>Services</div>
+            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accentMuted, marginBottom: 16, transition: "color 0.3s ease" }}>Services</div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 24px" }}>
               {services.map(s => (
                 <Link key={s.slug} to={`/services/${s.slug}`} onClick={() => window.scrollTo(0, 0)} style={{ 
                   background: "none", border: "none", cursor: "pointer", padding: 0,
-                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
+                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
+                  transition: "color 0.3s ease",
                 }}
-                onMouseEnter={e => e.target.style.color = colors.tealLight}
-                onMouseLeave={e => e.target.style.color = "#6A8080"}
+                onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
+                onMouseLeave={e => e.target.style.color = darkMode ? "#8A9E9E" : "#6A8080"}
                 >{s.name}</Link>
               ))}
             </div>
           </div>
           
           <div>
-            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: colors.tealMuted, marginBottom: 16 }}>Practice</div>
+            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accentMuted, marginBottom: 16, transition: "color 0.3s ease" }}>Practice</div>
             {[
               { name: "About Marcus", path: "/about" },
               { name: "FAQ", path: "/faq" },
@@ -1997,35 +2067,38 @@ function Footer() {
               <div key={link.name} style={{ marginBottom: 8 }}>
                 <Link to={link.path} onClick={() => window.scrollTo(0, 0)} style={{ 
                   background: "none", border: "none", cursor: "pointer", padding: 0,
-                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
+                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
+                  transition: "color 0.3s ease",
                 }}
-                onMouseEnter={e => e.target.style.color = colors.tealLight}
-                onMouseLeave={e => e.target.style.color = "#6A8080"}
+                onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
+                onMouseLeave={e => e.target.style.color = darkMode ? "#8A9E9E" : "#6A8080"}
                 >{link.name}</Link>
               </div>
             ))}
           </div>
           
           <div>
-            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: colors.tealMuted, marginBottom: 16 }}>Resources</div>
+            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accentMuted, marginBottom: 16, transition: "color 0.3s ease" }}>Resources</div>
             <div style={{ marginBottom: 8 }}>
               <Link to="/crisis-resources" onClick={() => window.scrollTo(0, 0)} style={{ 
                 background: "none", border: "none", cursor: "pointer", padding: 0,
-                fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
+                fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
+                transition: "color 0.3s ease",
               }}
-                onMouseEnter={e => e.target.style.color = colors.tealLight}
-                onMouseLeave={e => e.target.style.color = "#6A8080"}
+                onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
+                onMouseLeave={e => e.target.style.color = darkMode ? "#8A9E9E" : "#6A8080"}
               >Crisis Resources</Link>
             </div>
           </div>
         </div>
         
         <div style={{
-          borderTop: `1px solid ${colors.teal}22`,
+          borderTop: `1px solid ${theme.accent}22`,
           paddingTop: 20,
           textAlign: "center",
+          transition: "border-color 0.3s ease",
         }}>
-          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#4A6060", margin: 0 }}>
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: darkMode ? "#6A8888" : "#4A6060", margin: 0, transition: "color 0.3s ease" }}>
             © 2026 Bayside Wellness & Counseling · All rights reserved
           </p>
         </div>
@@ -2041,6 +2114,8 @@ function Footer() {
 function HomePage() {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
 
   return (
     <>
@@ -2048,16 +2123,20 @@ function HomePage() {
       {/* Hero */}
       <section style={{
         minHeight: "100vh",
-        background: colors.ivory,
+        background: theme.bg,
         display: "flex", alignItems: "center",
         position: "relative", overflow: "hidden",
         paddingTop: 72,
+        transition: "background 0.3s ease",
       }}>
         {/* Background texture */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: `radial-gradient(circle at 70% 50%, ${colors.tealPale} 0%, transparent 60%)`,
+          backgroundImage: darkMode 
+            ? `radial-gradient(circle at 70% 50%, ${colors.darkBgLighter} 0%, transparent 60%)`
+            : `radial-gradient(circle at 70% 50%, ${colors.tealPale} 0%, transparent 60%)`,
           opacity: 0.6,
+          transition: "opacity 0.3s ease",
         }} />
         
         {/* Decorative circle */}
@@ -2065,8 +2144,11 @@ function HomePage() {
           position: "absolute", right: "-10%", top: "10%",
           width: 600, height: 600,
           borderRadius: "50%",
-          border: `1px solid ${colors.teal}15`,
-          background: `radial-gradient(circle, ${colors.tealPale}40 0%, transparent 70%)`,
+          border: darkMode ? `1px solid ${colors.darkTeal}15` : `1px solid ${colors.teal}15`,
+          background: darkMode 
+            ? `radial-gradient(circle, ${colors.darkBgLighter}40 0%, transparent 70%)`
+            : `radial-gradient(circle, ${colors.tealPale}40 0%, transparent 70%)`,
+          transition: "all 0.3s ease",
         }} />
 
         <div style={{ 
@@ -2081,11 +2163,12 @@ function HomePage() {
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, fontWeight: 500,
             letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.teal, marginBottom: 24,
+            color: theme.accent, marginBottom: 24,
             display: "flex", alignItems: "center", gap: 12,
             justifyContent: "center",
+            transition: "color 0.3s ease",
           }}>
-            <span style={{ width: 32, height: 1, background: colors.teal, display: "inline-block" }} />
+            <span style={{ width: 32, height: 1, background: theme.accent, display: "inline-block", transition: "background 0.3s ease" }} />
             Oakland, CA · Telehealth Across California
           </div>
 
@@ -2094,21 +2177,23 @@ function HomePage() {
             fontSize: "clamp(48px, 6vw, 80px)",
             fontWeight: 300,
             lineHeight: 1.1,
-            color: colors.charcoal,
+            color: theme.text,
             margin: "0 0 32px",
             letterSpacing: "-0.01em",
+            transition: "color 0.3s ease",
           }}>
             Therapy that<br />
-            <em style={{ color: colors.teal, fontStyle: "italic" }}>meets you</em><br />
+            <em style={{ color: theme.accent, fontStyle: "italic", transition: "color 0.3s ease" }}>meets you</em><br />
             where you are.
           </h1>
 
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 17, fontWeight: 300,
-            lineHeight: 1.8, color: colors.charcoalLight,
+            lineHeight: 1.8, color: theme.textMuted,
             margin: "0 auto 48px",
             maxWidth: 600,
+            transition: "color 0.3s ease",
           }}>
             Compassionate, evidence-based therapy for adults, teens, and families navigating trauma, anxiety, depression, and life's hardest moments.
           </p>
@@ -2118,24 +2203,24 @@ function HomePage() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
-              color: colors.white, border: "none", cursor: "pointer",
-              background: colors.teal,
+              color: darkMode ? theme.bg : colors.white, border: "none", cursor: "pointer",
+              background: theme.accent,
               padding: "16px 40px", borderRadius: 2,
-              transition: "background 0.2s",
+              transition: "all 0.3s ease",
             }}
-            onMouseEnter={e => e.target.style.background = colors.tealLight}
-            onMouseLeave={e => e.target.style.background = colors.teal}
+            onMouseEnter={e => e.target.style.opacity = "0.9"}
+            onMouseLeave={e => e.target.style.opacity = "1"}
             >Book Free Consultation</button>
             <button onClick={() => navigate("/about")} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
-              color: colors.teal, background: "transparent",
-              border: `1px solid ${colors.teal}`, cursor: "pointer",
+              color: theme.accent, background: "transparent",
+              border: `1px solid ${theme.accent}`, cursor: "pointer",
               padding: "16px 40px", borderRadius: 2,
-              transition: "all 0.2s",
+              transition: "all 0.3s ease",
             }}
-            onMouseEnter={e => { e.target.style.background = colors.tealPale; }}
+            onMouseEnter={e => { e.target.style.background = darkMode ? `${theme.accent}20` : colors.tealPale; }}
             onMouseLeave={e => { e.target.style.background = "transparent"; }}
             >Learn More</button>
           </div>
@@ -2144,33 +2229,36 @@ function HomePage() {
 
       {/* Quick Services Overview */}
       <section ref={ref} style={{
-        background: colors.white,
+        background: theme.bgAlt,
         padding: "100px 40px",
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(30px)",
-        transition: "all 0.8s ease",
+        transition: "all 0.3s ease",
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.tealMuted, marginBottom: 24,
+            color: theme.accentMuted, marginBottom: 24,
+            transition: "color 0.3s ease",
           }}>Our Approach</div>
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(36px, 4vw, 56px)",
             fontWeight: 300, lineHeight: 1.2,
-            color: colors.charcoal, margin: "0 0 24px",
+            color: theme.text, margin: "0 0 24px",
+            transition: "color 0.3s ease",
           }}>
             Evidence-based therapies<br />
-            <em style={{ color: colors.teal, fontStyle: "italic" }}>tailored to you.</em>
+            <em style={{ color: theme.accent, fontStyle: "italic", transition: "color 0.3s ease" }}>tailored to you.</em>
           </h2>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
-            color: colors.charcoalLight, lineHeight: 1.8,
+            color: theme.textMuted, lineHeight: 1.8,
             margin: "0 auto 60px",
             maxWidth: 680,
+            transition: "color 0.3s ease",
           }}>
             At Bayside Wellness & Counseling, we believe therapy should be grounded in what's been proven to work while remaining flexible enough to meet you where you are. We integrate evidence-based approaches like EMDR, IFS, CBT, and psychodynamic therapy—not as rigid methods, but as tools tailored to your specific needs. Whether you're navigating trauma, relational challenges, anxiety, or patterns that feel stuck, our approach centers on understanding what's keeping you from moving forward and building sustainable change that lasts.
           </p>
@@ -2185,53 +2273,57 @@ function HomePage() {
                 key={service.slug}
                 onClick={() => navigate(`/services/${service.slug}`)}
                 style={{
-                  background: colors.ivory,
+                  background: theme.bg,
                   padding: "36px 32px",
                   borderRadius: 4,
-                  border: `1px solid ${colors.ivoryDark}`,
+                  border: `1px solid ${theme.border}`,
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                   textAlign: "left",
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow = "0 12px 40px rgba(46,125,122,0.12)";
-                  e.currentTarget.style.borderColor = colors.teal;
+                  e.currentTarget.style.boxShadow = darkMode ? "0 12px 40px rgba(77,189,183,0.15)" : "0 12px 40px rgba(46,125,122,0.12)";
+                  e.currentTarget.style.borderColor = theme.accent;
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.transform = "none";
                   e.currentTarget.style.boxShadow = "none";
-                  e.currentTarget.style.borderColor = colors.ivoryDark;
+                  e.currentTarget.style.borderColor = theme.border;
                 }}
               >
                 <div style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 26, fontWeight: 500,
-                  color: colors.charcoal,
+                  color: theme.text,
                   marginBottom: 12,
+                  transition: "color 0.3s ease",
                 }}>{service.name}</div>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 13, fontWeight: 500,
                   letterSpacing: "0.08em",
-                  color: colors.teal,
+                  color: theme.accent,
                   textTransform: "uppercase",
                   marginBottom: 16,
+                  transition: "color 0.3s ease",
                 }}>{service.shortDesc}</div>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 14, fontWeight: 300,
-                  color: colors.charcoalLight,
+                  color: theme.textMuted,
                   lineHeight: 1.7,
                   margin: 0,
+                  transition: "color 0.3s ease",
                 }}>{service.desc}</p>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 12, fontWeight: 500,
                   letterSpacing: "0.1em",
-                  color: colors.teal,
+                  color: theme.accent,
                   textTransform: "uppercase",
                   marginTop: 20,
+                  transition: "color 0.3s ease",
                 }}>Learn More →</div>
               </button>
             ))}
@@ -2242,12 +2334,12 @@ function HomePage() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
-              color: colors.teal, background: "transparent",
-              border: `1px solid ${colors.teal}`, cursor: "pointer",
+              color: theme.accent, background: "transparent",
+              border: `1px solid ${theme.accent}`, cursor: "pointer",
               padding: "14px 32px", borderRadius: 2,
-              transition: "all 0.2s",
+              transition: "all 0.3s ease",
             }}
-            onMouseEnter={e => { e.target.style.background = colors.tealPale; }}
+            onMouseEnter={e => { e.target.style.background = darkMode ? `${theme.accent}20` : colors.tealPale; }}
             onMouseLeave={e => { e.target.style.background = "transparent"; }}
             >View All Services</button>
           </div>
@@ -2256,9 +2348,10 @@ function HomePage() {
 
       {/* CTA Section */}
       <section style={{
-        background: colors.charcoal,
+        background: darkMode ? colors.darkBgLight : colors.charcoal,
         padding: "100px 40px",
         overflow: "hidden",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{
@@ -2268,26 +2361,28 @@ function HomePage() {
             color: colors.white, margin: "0 0 24px",
           }}>
             Ready to take<br />
-            <em style={{ color: colors.tealLight }}>the first step?</em>
+            <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight }}>the first step?</em>
           </h2>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
-            color: "#A8B8B8", lineHeight: 1.8,
+            color: darkMode ? colors.darkTextMuted : "#A8B8B8", lineHeight: 1.8,
             margin: "0 0 40px", maxWidth: 520, marginLeft: "auto", marginRight: "auto",
+            transition: "color 0.3s ease",
           }}>
             Schedule a free 15-minute consultation. No commitment, no pressure. Just a conversation about where you are and where you'd like to go.
           </p>
           
           {/* Jane App booking embed */}
           <div className="home-booking-box" style={{
-            background: colors.ivory,
-            border: `2px solid ${colors.teal}`,
+            background: theme.bgAlt,
+            border: `2px solid ${theme.accent}`,
             borderRadius: 2, 
             padding: "clamp(24px, 5vw, 56px) clamp(20px, 5vw, 48px)",
             marginBottom: 24,
             display: "inline-block",
-            boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+            boxShadow: darkMode ? "0 4px 16px rgba(0,0,0,0.3)" : "0 4px 16px rgba(0,0,0,0.08)",
+            transition: "all 0.3s ease",
           }}>
             <a
               href="https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1"
@@ -2296,8 +2391,8 @@ function HomePage() {
               style={{
                 display: "inline-block",
                 padding: "18px clamp(24px, 5vw, 48px)",
-                background: colors.teal,
-                color: colors.white,
+                background: theme.accent,
+                color: darkMode ? theme.bg : colors.white,
                 textDecoration: "none",
                 borderRadius: 2,
                 fontFamily: "'DM Sans', sans-serif",
@@ -2306,18 +2401,17 @@ function HomePage() {
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 transition: "all 0.3s ease",
-                boxShadow: "0 2px 8px rgba(46, 125, 122, 0.2)",
+                boxShadow: darkMode ? "0 2px 8px rgba(77,189,183,0.3)" : "0 2px 8px rgba(46, 125, 122, 0.2)",
                 whiteSpace: "nowrap",
+                transition: "all 0.3s ease",
               }}
               onMouseEnter={(e) => { 
-                e.target.style.background = colors.tealLight;
+                e.target.style.opacity = "0.9";
                 e.target.style.transform = "translateY(-2px)";
-                e.target.style.boxShadow = "0 4px 12px rgba(46, 125, 122, 0.3)";
               }}
               onMouseLeave={(e) => { 
-                e.target.style.background = colors.teal;
+                e.target.style.opacity = "1";
                 e.target.style.transform = "translateY(0)";
-                e.target.style.boxShadow = "0 2px 8px rgba(46, 125, 122, 0.2)";
               }}
             >
               See Available Times →
@@ -2325,11 +2419,12 @@ function HomePage() {
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 11,
-              color: colors.tealMuted,
+              color: theme.accentMuted,
               marginTop: 24,
               lineHeight: 1.6,
               textAlign: "center",
               letterSpacing: "0.03em",
+              transition: "color 0.3s ease",
             }}>
               Real-time availability • Opens in new tab
             </p>
@@ -2340,13 +2435,13 @@ function HomePage() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 12, fontWeight: 400,
               letterSpacing: "0.08em",
-              color: colors.tealLight, border: "none", cursor: "pointer",
+              color: darkMode ? colors.darkTeal : colors.tealLight, border: "none", cursor: "pointer",
               background: "transparent",
               textDecoration: "underline",
-              transition: "color 0.2s",
+              transition: "color 0.3s ease",
             }}
             onMouseEnter={e => e.target.style.color = colors.white}
-            onMouseLeave={e => e.target.style.color = colors.tealLight}
+            onMouseLeave={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
             >Or visit our contact page →</button>
           </div>
         </div>
@@ -2362,17 +2457,19 @@ function HomePage() {
 function AboutPage() {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
 
   return (
     <>
       <SEO metadata={mainPages.about} />
       <section ref={ref} style={{
-      background: colors.charcoal,
+      background: darkMode ? colors.darkBgLight : colors.charcoal,
       padding: "160px 40px 120px",
       minHeight: "100vh",
       opacity: visible ? 1 : 0,
       transform: visible ? "none" : "translateY(30px)",
-      transition: "all 0.8s ease",
+      transition: "all 0.3s ease",
     }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
         <div>
@@ -2380,10 +2477,11 @@ function AboutPage() {
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, fontWeight: 500,
             letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.tealMuted, marginBottom: 24,
+            color: theme.accentMuted, marginBottom: 24,
             display: "flex", alignItems: "center", gap: 12,
+            transition: "color 0.3s ease",
           }}>
-            <span style={{ width: 32, height: 1, background: colors.tealMuted, display: "inline-block" }} />
+            <span style={{ width: 32, height: 1, background: theme.accentMuted, display: "inline-block", transition: "background 0.3s ease" }} />
             About & Team
           </div>
           <h2 style={{
@@ -2393,28 +2491,30 @@ function AboutPage() {
             color: colors.white, margin: "0 0 32px",
           }}>
             Healing happens<br />
-            <em style={{ color: colors.tealLight, fontStyle: "italic" }}>on multiple levels.</em>
+            <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight, fontStyle: "italic", transition: "color 0.3s ease" }}>on multiple levels.</em>
           </h2>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
-            lineHeight: 1.9, color: "#A8B8B8",
+            lineHeight: 1.9, color: darkMode ? colors.darkTextMuted : "#A8B8B8",
             margin: "0 0 24px",
+            transition: "color 0.3s ease",
           }}>
             I'm Marcus Ghiasi, a Licensed Marriage and Family Therapist, founder of Bayside Wellness & Counseling, and a Bay Area native. As a second-generation Persian American, I value curiosity, creativity, and connection as tools for healing.
           </p>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
-            lineHeight: 1.9, color: "#A8B8B8",
+            lineHeight: 1.9, color: darkMode ? colors.darkTextMuted : "#A8B8B8",
             margin: "0 0 24px",
+            transition: "color 0.3s ease",
           }}>
             I tailor my approach based on what you're dealing with, drawing from EMDR, IFS, CBT, and psychodynamic work. Whether it's trauma, anxiety, relationship patterns, or anger that's hurting your life, the goal is the same: understand what's keeping you stuck and build changes that actually last.
           </p>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
-            lineHeight: 1.9, color: "#A8B8B8",
+            lineHeight: 1.9, color: darkMode ? colors.darkTextMuted : "#A8B8B8",
             margin: "0 0 40px",
           }}>
             Therapy works when you're honest about what's going on and willing to do something different. My job is to help you see what you can't see on your own and give you tools to move forward.
@@ -2425,7 +2525,8 @@ function AboutPage() {
             <div style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-              color: colors.tealMuted, marginBottom: 16,
+              color: theme.accentMuted, marginBottom: 16,
+              transition: "color 0.3s ease",
             }}>I work with</div>
             {[
               "Men working on anger, relationships, and emotional expression",
@@ -2439,11 +2540,12 @@ function AboutPage() {
                 display: "flex", gap: 12, alignItems: "flex-start",
                 marginBottom: 10,
               }}>
-                <span style={{ color: colors.teal, marginTop: 4, flexShrink: 0 }}>—</span>
+                <span style={{ color: theme.accent, marginTop: 4, flexShrink: 0, transition: "color 0.3s ease" }}>—</span>
                 <span style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 14, fontWeight: 300,
-                  color: "#A8B8B8", lineHeight: 1.7,
+                  color: darkMode ? colors.darkTextMuted : "#A8B8B8", lineHeight: 1.7,
+                  transition: "color 0.3s ease",
                 }}>{item}</span>
               </div>
             ))}
@@ -2451,19 +2553,21 @@ function AboutPage() {
 
           {/* Affirming statement */}
           <div style={{
-            background: "rgba(61, 158, 154, 0.08)",
-            border: `1px solid ${colors.teal}33`,
+            background: darkMode ? "rgba(77, 189, 183, 0.12)" : "rgba(61, 158, 154, 0.08)",
+            border: `1px solid ${theme.accent}33`,
             borderRadius: 2,
             padding: "20px 24px",
             marginBottom: 32,
+            transition: "all 0.3s ease",
           }}>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 14, fontWeight: 400,
-              color: colors.tealLight,
+              color: darkMode ? colors.darkTeal : colors.tealLight,
               lineHeight: 1.7,
               margin: 0,
               letterSpacing: "0.02em",
+              transition: "color 0.3s ease",
             }}>
               Bayside Wellness & Counseling is LGBTQ+ and BIPOC affirming. All identities, experiences, and backgrounds are welcomed here.
             </p>
@@ -2476,16 +2580,16 @@ function AboutPage() {
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
               color: colors.white, background: "transparent",
-              border: `1px solid ${colors.teal}`, cursor: "pointer",
+              border: `1px solid ${theme.accent}`, cursor: "pointer",
               padding: "14px 32px", borderRadius: 2,
-              transition: "all 0.2s",
+              transition: "all 0.3s ease",
               flex: 1,
               minHeight: 48,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}
-            onMouseEnter={e => { e.target.style.background = colors.teal; }}
+            onMouseEnter={e => { e.target.style.background = theme.accent; }}
             onMouseLeave={e => { e.target.style.background = "transparent"; }}
             >Work With Marcus</button>
 
@@ -2497,10 +2601,10 @@ function AboutPage() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13, fontWeight: 500,
                 letterSpacing: "0.12em", textTransform: "uppercase",
-                color: colors.teal, background: "transparent",
-                border: `1px solid ${colors.teal}66`, cursor: "pointer",
+                color: theme.accent, background: "transparent",
+                border: `1px solid ${theme.accent}66`, cursor: "pointer",
                 padding: "14px 32px", borderRadius: 2,
-                transition: "all 0.2s",
+                transition: "all 0.3s ease",
                 flex: 1,
                 minHeight: 48,
                 display: 'flex',
@@ -2509,12 +2613,12 @@ function AboutPage() {
                 textDecoration: 'none',
               }}
               onMouseEnter={e => { 
-                e.target.style.background = 'rgba(61, 158, 154, 0.1)'; 
-                e.target.style.borderColor = colors.teal;
+                e.target.style.background = darkMode ? 'rgba(77, 189, 183, 0.15)' : 'rgba(61, 158, 154, 0.1)'; 
+                e.target.style.borderColor = theme.accent;
               }}
               onMouseLeave={e => { 
                 e.target.style.background = "transparent"; 
-                e.target.style.borderColor = `${colors.teal}66`;
+                e.target.style.borderColor = `${theme.accent}66`;
               }}
             >Psychology Today →</a>
           </div>
@@ -2522,23 +2626,24 @@ function AboutPage() {
             <a href="https://www.marcusghiasitherapy.com" target="_blank" rel="noopener noreferrer" style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 300,
-              color: colors.tealMuted, textDecoration: "none",
+              color: theme.accentMuted, textDecoration: "none",
               letterSpacing: "0.05em",
-              borderBottom: `1px solid ${colors.tealMuted}44`,
+              borderBottom: `1px solid ${theme.accentMuted}44`,
               paddingBottom: 2,
-              transition: "color 0.2s",
+              transition: "color 0.3s ease",
             }}
-            onMouseEnter={e => e.target.style.color = colors.tealLight}
-            onMouseLeave={e => e.target.style.color = colors.tealMuted}
+            onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
+            onMouseLeave={e => e.target.style.color = theme.accentMuted}
             >Visit marcusghiasitherapy.com →</a>
           </div>
         </div>
         <div style={{ position: "relative" }}>
           <div style={{
             width: "100%", aspectRatio: "3/4",
-            background: colors.tealPale,
+            background: darkMode ? colors.darkBgLighter : colors.tealPale,
             borderRadius: "80px 2px 80px 2px",
             overflow: "hidden",
+            transition: "background 0.3s ease",
           }}>
             <img
               src={marcusHeadshot}
@@ -2559,38 +2664,44 @@ function AboutPage() {
 
 function ServicesPage() {
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
 
   return (
     <>
       <SEO metadata={mainPages.services} />
       <section style={{
-        background: colors.ivory,
+        background: theme.bg,
         padding: "140px 40px 60px",
         minHeight: "auto",
         display: "flex",
         alignItems: "center",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.tealMuted, marginBottom: 24,
+            color: theme.accentMuted, marginBottom: 24,
+            transition: "color 0.3s ease",
           }}>Our Services</div>
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
             fontWeight: 300, lineHeight: 1.1,
-            color: colors.charcoal, margin: "0 0 32px",
+            color: theme.text, margin: "0 0 32px",
+            transition: "color 0.3s ease",
           }}>
             Evidence-based therapy<br />
-            <em style={{ color: colors.teal, fontStyle: "italic" }}>that works.</em>
+            <em style={{ color: theme.accent, fontStyle: "italic", transition: "color 0.3s ease" }}>that works.</em>
           </h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 17, fontWeight: 300,
-            color: colors.charcoalLight, lineHeight: 1.8,
+            color: theme.textMuted, lineHeight: 1.8,
             margin: "0 auto",
             maxWidth: 640,
+            transition: "color 0.3s ease",
           }}>
             Every person is different. That's why I offer multiple therapeutic approaches and create a personalized plan based on your unique needs, goals, and what you're experiencing.
           </p>
@@ -2598,8 +2709,9 @@ function ServicesPage() {
       </section>
 
       <section style={{
-        background: colors.white,
+        background: theme.bgAlt,
         padding: "80px 40px 120px",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div className="services-grid" style={{
@@ -2612,53 +2724,57 @@ function ServicesPage() {
                 key={service.slug}
                 onClick={() => navigate(`/services/${service.slug}`)}
                 style={{
-                  background: colors.ivory,
+                  background: theme.bg,
                   padding: "40px 36px",
                   borderRadius: 4,
-                  border: `1px solid ${colors.ivoryDark}`,
+                  border: `1px solid ${theme.border}`,
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                   textAlign: "left",
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.transform = "translateY(-8px)";
-                  e.currentTarget.style.boxShadow = "0 16px 48px rgba(46,125,122,0.15)";
-                  e.currentTarget.style.borderColor = colors.teal;
+                  e.currentTarget.style.boxShadow = darkMode ? "0 16px 48px rgba(77,189,183,0.2)" : "0 16px 48px rgba(46,125,122,0.15)";
+                  e.currentTarget.style.borderColor = theme.accent;
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.transform = "none";
                   e.currentTarget.style.boxShadow = "none";
-                  e.currentTarget.style.borderColor = colors.ivoryDark;
+                  e.currentTarget.style.borderColor = theme.border;
                 }}
               >
                 <div style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 32, fontWeight: 500,
-                  color: colors.charcoal,
+                  color: theme.text,
                   marginBottom: 12,
                   lineHeight: 1.2,
+                  transition: "color 0.3s ease",
                 }}>{service.name}</div>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 13, fontWeight: 500,
                   letterSpacing: "0.08em",
-                  color: colors.teal,
+                  color: theme.accent,
                   textTransform: "uppercase",
                   marginBottom: 20,
+                  transition: "color 0.3s ease",
                 }}>{service.shortDesc}</div>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
-                  color: colors.charcoalLight,
+                  color: theme.textMuted,
                   lineHeight: 1.8,
                   margin: "0 0 24px",
+                  transition: "color 0.3s ease",
                 }}>{service.desc}</p>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 13, fontWeight: 500,
                   letterSpacing: "0.1em",
-                  color: colors.teal,
+                  color: theme.accent,
                   textTransform: "uppercase",
+                  transition: "color 0.3s ease",
                 }}>Learn More →</div>
               </button>
             ))}
@@ -2668,8 +2784,9 @@ function ServicesPage() {
 
       {/* CTA */}
       <section style={{
-        background: colors.charcoal,
+        background: darkMode ? colors.darkBgLight : colors.charcoal,
         padding: "100px 40px",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{
@@ -2679,13 +2796,14 @@ function ServicesPage() {
             color: colors.white, margin: "0 0 24px",
           }}>
             Not sure which approach<br />
-            <em style={{ color: colors.tealLight }}>is right for you?</em>
+            <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight, transition: "color 0.3s ease" }}>is right for you?</em>
           </h2>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
-            color: "#A8B8B8", lineHeight: 1.8,
+            color: darkMode ? colors.darkTextMuted : "#A8B8B8", lineHeight: 1.8,
             margin: "0 0 40px", maxWidth: 560, marginLeft: "auto", marginRight: "auto",
+            transition: "color 0.3s ease",
           }}>
             You don't need to figure it out alone. During your free consultation, we'll discuss what you're experiencing and recommend the best path forward.
           </p>
@@ -2693,13 +2811,13 @@ function ServicesPage() {
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
-            color: colors.white, border: "none", cursor: "pointer",
-            background: colors.teal,
+            color: darkMode ? theme.bg : colors.white, border: "none", cursor: "pointer",
+            background: theme.accent,
             padding: "16px 40px", borderRadius: 2,
-            transition: "background 0.2s",
+            transition: "all 0.3s ease",
           }}
-          onMouseEnter={e => e.target.style.background = colors.tealLight}
-          onMouseLeave={e => e.target.style.background = colors.teal}
+          onMouseEnter={e => e.target.style.opacity = "0.9"}
+          onMouseLeave={e => e.target.style.opacity = "1"}
           >Schedule Free Consultation</button>
         </div>
       </section>
@@ -2714,6 +2832,8 @@ function ServicesPage() {
 function ServiceDetailPage({ slug }) {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
   const service = services.find(s => s.slug === slug);
   const details = serviceDetails[slug];
 
@@ -2733,75 +2853,83 @@ function ServiceDetailPage({ slug }) {
     <>
       <SEO metadata={metadataKeyMap[slug]} />
       <section style={{
-        background: colors.ivory,
+        background: theme.bg,
         padding: "160px 40px 80px",
         minHeight: "60vh",
         display: "flex",
         alignItems: "center",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <button onClick={() => navigate("/services")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase",
-            color: colors.tealMuted, background: "none", border: "none",
+            color: theme.accentMuted, background: "none", border: "none",
             cursor: "pointer", padding: 0,
             display: "inline-flex", alignItems: "center", gap: 8,
             marginBottom: 32,
+            transition: "color 0.3s ease",
           }}>
             ← Back to Services
           </button>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.teal, marginBottom: 24,
+            color: theme.accent, marginBottom: 24,
             fontWeight: 500,
+            transition: "color 0.3s ease",
           }}>{service.shortDesc}</div>
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
             fontWeight: 300, lineHeight: 1.1,
-            color: colors.charcoal, margin: "0 0 32px",
+            color: theme.text, margin: "0 0 32px",
+            transition: "color 0.3s ease",
           }}>{service.name}</h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 19, fontWeight: 300,
-            color: colors.charcoalLight, lineHeight: 1.8,
+            color: theme.textMuted, lineHeight: 1.8,
             margin: 0,
             maxWidth: 740,
+            transition: "color 0.3s ease",
           }}>{service.desc}</p>
         </div>
       </section>
 
       <section ref={ref} style={{
-        background: colors.white,
+        background: theme.bgAlt,
         padding: "100px 40px",
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(30px)",
-        transition: "all 0.8s ease",
+        transition: "all 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(32px, 4vw, 48px)",
             fontWeight: 400,
-            color: colors.charcoal,
+            color: theme.text,
             margin: "0 0 40px",
+            transition: "color 0.3s ease",
           }}>What to Expect</h2>
           
           <div style={{ marginBottom: 48 }}>
             <h3 style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 18, fontWeight: 500,
-              color: colors.charcoal,
+              color: theme.text,
               margin: "0 0 16px",
               letterSpacing: "0.02em",
+              transition: "color 0.3s ease",
             }}>How It Works</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 16, fontWeight: 300,
-              color: colors.charcoalLight,
+              color: theme.textMuted,
               lineHeight: 1.8,
               margin: 0,
+              transition: "color 0.3s ease",
             }}>
               {details.howItWorks}
             </p>
@@ -2811,39 +2939,44 @@ function ServiceDetailPage({ slug }) {
             <h3 style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 18, fontWeight: 500,
-              color: colors.charcoal,
+              color: theme.text,
               margin: "0 0 16px",
               letterSpacing: "0.02em",
+              transition: "color 0.3s ease",
             }}>Who This Helps</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 16, fontWeight: 300,
-              color: colors.charcoalLight,
+              color: theme.textMuted,
               lineHeight: 1.8,
               margin: 0,
+              transition: "color 0.3s ease",
             }}>
               {details.whoThisHelps}
             </p>
           </div>
 
           <div style={{
-            background: colors.tealPale,
+            background: darkMode ? `${theme.accent}15` : colors.tealPale,
             padding: "40px",
             borderRadius: 4,
-            border: `1px solid ${colors.teal}30`,
+            border: `1px solid ${theme.accent}30`,
+            transition: "all 0.3s ease",
           }}>
             <h3 style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: 28, fontWeight: 500,
-              color: colors.charcoal,
+              color: theme.text,
               margin: "0 0 16px",
+              transition: "color 0.3s ease",
             }}>{details.ctaHeading}</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 15, fontWeight: 300,
-              color: colors.charcoalLight,
+              color: theme.textMuted,
               lineHeight: 1.7,
               margin: "0 0 28px",
+              transition: "color 0.3s ease",
             }}>
               {details.ctaText}
             </p>
@@ -2851,13 +2984,13 @@ function ServiceDetailPage({ slug }) {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
-              color: colors.white, border: "none", cursor: "pointer",
-              background: colors.teal,
+              color: darkMode ? theme.bg : colors.white, border: "none", cursor: "pointer",
+              background: theme.accent,
               padding: "14px 32px", borderRadius: 2,
-              transition: "background 0.2s",
+              transition: "all 0.3s ease",
             }}
-            onMouseEnter={e => e.target.style.background = colors.tealLight}
-            onMouseLeave={e => e.target.style.background = colors.teal}
+            onMouseEnter={e => e.target.style.opacity = "0.9"}
+            onMouseLeave={e => e.target.style.opacity = "1"}
             >Book Free Consultation</button>
           </div>
         </div>
@@ -2874,6 +3007,8 @@ function FAQPage() {
   const [ref, visible] = useScrollReveal();
   const [openIndex, setOpenIndex] = useState(null);
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
 
   // FAQ Schema for AI search
   const faqSchema = {
@@ -2896,42 +3031,46 @@ function FAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <section style={{
-        background: colors.ivory,
+        background: theme.bg,
         padding: "160px 40px 80px",
         minHeight: "50vh",
         display: "flex",
         alignItems: "center",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.tealMuted, marginBottom: 24,
+            color: theme.accentMuted, marginBottom: 24,
+            transition: "color 0.3s ease",
           }}>Common Questions</div>
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
             fontWeight: 300, lineHeight: 1.1,
-            color: colors.charcoal, margin: "0 0 32px",
+            color: theme.text, margin: "0 0 32px",
+            transition: "color 0.3s ease",
           }}>
             Frequently Asked<br />
-            <em style={{ color: colors.teal, fontStyle: "italic" }}>Questions</em>
+            <em style={{ color: theme.accent, fontStyle: "italic", transition: "color 0.3s ease" }}>Questions</em>
           </h1>
         </div>
       </section>
 
       <section ref={ref} style={{
-        background: colors.white,
+        background: theme.bgAlt,
         padding: "60px 40px 120px",
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(30px)",
-        transition: "all 0.8s ease",
+        transition: "all 0.3s ease",
       }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           {faqs.map((faq, i) => (
             <div key={i} style={{
-              borderBottom: `1px solid ${colors.ivoryDark}`,
+              borderBottom: `1px solid ${theme.border}`,
               paddingBottom: 32, marginBottom: 32,
+              transition: "border-color 0.3s ease",
             }}>
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
@@ -2951,16 +3090,17 @@ function FAQPage() {
                 <h3 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 24, fontWeight: 500,
-                  color: colors.charcoal,
+                  color: theme.text,
                   margin: 0,
                   flex: 1,
+                  transition: "color 0.3s ease",
                 }}>{faq.q}</h3>
                 <span style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 24,
-                  color: colors.teal,
+                  color: theme.accent,
                   marginLeft: 16,
-                  transition: "transform 0.3s",
+                  transition: "transform 0.3s, color 0.3s ease",
                   transform: openIndex === i ? "rotate(45deg)" : "none",
                 }}>+</span>
               </button>
@@ -2968,32 +3108,36 @@ function FAQPage() {
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
-                  color: colors.charcoalLight, lineHeight: 1.8,
+                  color: theme.textMuted, lineHeight: 1.8,
                   margin: 0,
+                  transition: "color 0.3s ease",
                 }}>{faq.a}</p>
               )}
             </div>
           ))}
 
           <div style={{
-            background: colors.ivory,
+            background: theme.bg,
             padding: "40px",
             borderRadius: 4,
             marginTop: 60,
             textAlign: "center",
+            transition: "background 0.3s ease",
           }}>
             <h3 style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: 28, fontWeight: 500,
-              color: colors.charcoal,
+              color: theme.text,
               margin: "0 0 16px",
+              transition: "color 0.3s ease",
             }}>Have more questions?</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 15, fontWeight: 300,
-              color: colors.charcoalLight,
+              color: theme.textMuted,
               lineHeight: 1.7,
               margin: "0 0 28px",
+              transition: "color 0.3s ease",
             }}>
               Let's talk. Schedule a free 15-minute consultation and we can discuss anything else on your mind.
             </p>
@@ -3001,13 +3145,13 @@ function FAQPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
-              color: colors.white, border: "none", cursor: "pointer",
-              background: colors.teal,
+              color: darkMode ? theme.bg : colors.white, border: "none", cursor: "pointer",
+              background: theme.accent,
               padding: "14px 32px", borderRadius: 2,
-              transition: "background 0.2s",
+              transition: "all 0.3s ease",
             }}
-            onMouseEnter={e => e.target.style.background = colors.tealLight}
-            onMouseLeave={e => e.target.style.background = colors.teal}
+            onMouseEnter={e => e.target.style.opacity = "0.9"}
+            onMouseLeave={e => e.target.style.opacity = "1"}
             >Schedule Consultation</button>
           </div>
         </div>
@@ -3023,6 +3167,8 @@ function FAQPage() {
 function ContactPage() {
   const [ref, visible] = useScrollReveal();
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
 
   // For Formspree, we'll use traditional form submission
   // The success message will be handled by checking the URL
@@ -3041,19 +3187,20 @@ function ContactPage() {
     <>
       <SEO metadata={mainPages.contact} />
       <section ref={ref} style={{
-      background: colors.charcoal,
+      background: darkMode ? colors.darkBgLight : colors.charcoal,
       padding: "160px 40px 120px",
       minHeight: "100vh",
       opacity: visible ? 1 : 0,
       transform: visible ? "none" : "translateY(30px)",
-      transition: "all 0.8s ease",
+      transition: "all 0.3s ease",
     }}>
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: 60 }}>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.tealMuted, marginBottom: 24,
+            color: theme.accentMuted, marginBottom: 24,
+            transition: "color 0.3s ease",
           }}>Get Started</div>
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
@@ -3062,13 +3209,14 @@ function ContactPage() {
             color: colors.white, margin: "0 0 24px",
           }}>
             Ready to take<br />
-            <em style={{ color: colors.tealLight }}>the first step?</em>
+            <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight, transition: "color 0.3s ease" }}>the first step?</em>
           </h2>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
-            color: "#A8B8B8", lineHeight: 1.8,
+            color: darkMode ? colors.darkTextMuted : "#A8B8B8", lineHeight: 1.8,
             margin: "0 auto", maxWidth: 520,
+            transition: "color 0.3s ease",
           }}>
             Schedule a free 15-minute consultation or send us a message. No commitment, no pressure.
           </p>
@@ -3081,10 +3229,11 @@ function ContactPage() {
         }} className="contact-grid">
           {/* Jane App Booking */}
           <div style={{
-            background: "rgba(255,255,255,0.05)",
-            border: `1px solid ${colors.teal}44`,
+            background: darkMode ? "rgba(77,189,183,0.08)" : "rgba(255,255,255,0.05)",
+            border: `1px solid ${theme.accent}44`,
             borderRadius: 4, 
             padding: "clamp(24px, 5vw, 40px)",
+            transition: "all 0.3s ease",
           }}>
             <h3 style={{
               fontFamily: "'Cormorant Garamond', serif",
@@ -3095,24 +3244,26 @@ function ContactPage() {
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 14, fontWeight: 300,
-              color: "#A8B8B8",
+              color: darkMode ? colors.darkTextMuted : "#A8B8B8",
               lineHeight: 1.7,
               margin: "0 0 32px",
+              transition: "color 0.3s ease",
             }}>
               Schedule your free 15-minute consultation directly through our calendar.
             </p>
             
             <div style={{ 
-              background: colors.ivory,
-              border: `2px solid ${colors.teal}`,
+              background: theme.bgAlt,
+              border: `2px solid ${theme.accent}`,
               borderRadius: 2, 
               padding: "clamp(32px, 8vw, 56px) clamp(24px, 6vw, 48px)",
               textAlign: "center",
-              boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+              boxShadow: darkMode ? "0 4px 16px rgba(0,0,0,0.3)" : "0 4px 16px rgba(0,0,0,0.08)",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
+              transition: "all 0.3s ease",
             }}>
               <a
                 href="https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1"
@@ -3121,8 +3272,8 @@ function ContactPage() {
                 style={{
                   display: "inline-block",
                   padding: "16px clamp(20px, 5vw, 48px)",
-                  background: colors.teal,
-                  color: colors.white,
+                  background: theme.accent,
+                  color: darkMode ? theme.bg : colors.white,
                   textDecoration: "none",
                   borderRadius: 2,
                   fontFamily: "'DM Sans', sans-serif",
@@ -3131,18 +3282,16 @@ function ContactPage() {
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
                   transition: "all 0.3s ease",
-                  boxShadow: "0 2px 8px rgba(46, 125, 122, 0.2)",
+                  boxShadow: darkMode ? "0 2px 8px rgba(77,189,183,0.3)" : "0 2px 8px rgba(46, 125, 122, 0.2)",
                   whiteSpace: "nowrap",
                 }}
                 onMouseEnter={(e) => { 
-                  e.target.style.background = colors.tealLight;
+                  e.target.style.opacity = "0.9";
                   e.target.style.transform = "translateY(-2px)";
-                  e.target.style.boxShadow = "0 4px 12px rgba(46, 125, 122, 0.3)";
                 }}
                 onMouseLeave={(e) => { 
-                  e.target.style.background = colors.teal;
+                  e.target.style.opacity = "1";
                   e.target.style.transform = "translateY(0)";
-                  e.target.style.boxShadow = "0 2px 8px rgba(46, 125, 122, 0.2)";
                 }}
               >
                 See Available Times →
@@ -3150,10 +3299,11 @@ function ContactPage() {
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 11,
-                color: colors.tealMuted,
+                color: theme.accentMuted,
                 marginTop: 24,
                 lineHeight: 1.6,
                 letterSpacing: "0.03em",
+                transition: "color 0.3s ease",
               }}>
                 Real-time availability • Opens in new tab
               </p>
@@ -3162,10 +3312,11 @@ function ContactPage() {
 
           {/* Contact Form */}
           <div style={{
-            background: "rgba(255,255,255,0.05)",
-            border: `1px solid ${colors.teal}44`,
+            background: darkMode ? "rgba(77,189,183,0.08)" : "rgba(255,255,255,0.05)",
+            border: `1px solid ${theme.accent}44`,
             borderRadius: 4, 
             padding: "clamp(24px, 5vw, 40px)",
+            transition: "all 0.3s ease",
           }}>
             <h3 style={{
               fontFamily: "'Cormorant Garamond', serif",
@@ -3176,26 +3327,29 @@ function ContactPage() {
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 14, fontWeight: 300,
-              color: "#A8B8B8",
+              color: darkMode ? colors.darkTextMuted : "#A8B8B8",
               lineHeight: 1.7,
               margin: "0 0 32px",
+              transition: "color 0.3s ease",
             }}>
               Have questions? Reach out and we'll get back to you within 1-2 business days.
             </p>
 
             {formSubmitted ? (
               <div style={{
-                background: colors.tealPale,
-                border: `1px solid ${colors.teal}`,
+                background: darkMode ? `${theme.accent}20` : colors.tealPale,
+                border: `1px solid ${theme.accent}`,
                 borderRadius: 4,
                 padding: "20px",
                 textAlign: "center",
+                transition: "all 0.3s ease",
               }}>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15,
-                  color: colors.teal,
+                  color: theme.accent,
                   margin: 0,
+                  transition: "color 0.3s ease",
                 }}>✓ Message sent! We'll be in touch soon.</p>
               </div>
             ) : (
@@ -3212,12 +3366,13 @@ function ContactPage() {
                     width: "100%",
                     padding: "12px 16px",
                     marginBottom: 16,
-                    background: "rgba(255,255,255,0.08)",
-                    border: `1px solid ${colors.teal}33`,
+                    background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
+                    border: `1px solid ${theme.accent}33`,
                     borderRadius: 2,
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: 14,
                     color: colors.white,
+                    transition: "all 0.3s ease",
                   }}
                 />
                 <input
@@ -3229,12 +3384,13 @@ function ContactPage() {
                     width: "100%",
                     padding: "12px 16px",
                     marginBottom: 16,
-                    background: "rgba(255,255,255,0.08)",
-                    border: `1px solid ${colors.teal}33`,
+                    background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
+                    border: `1px solid ${theme.accent}33`,
                     borderRadius: 2,
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: 14,
                     color: colors.white,
+                    transition: "all 0.3s ease",
                   }}
                 />
                 <input
@@ -3245,12 +3401,13 @@ function ContactPage() {
                     width: "100%",
                     padding: "12px 16px",
                     marginBottom: 16,
-                    background: "rgba(255,255,255,0.08)",
-                    border: `1px solid ${colors.teal}33`,
+                    background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
+                    border: `1px solid ${theme.accent}33`,
                     borderRadius: 2,
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: 14,
                     color: colors.white,
+                    transition: "all 0.3s ease",
                   }}
                 />
                 <textarea
@@ -3262,13 +3419,14 @@ function ContactPage() {
                     width: "100%",
                     padding: "12px 16px",
                     marginBottom: 20,
-                    background: "rgba(255,255,255,0.08)",
-                    border: `1px solid ${colors.teal}33`,
+                    background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
+                    border: `1px solid ${theme.accent}33`,
                     borderRadius: 2,
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: 14,
                     color: colors.white,
                     resize: "vertical",
+                    transition: "all 0.3s ease",
                   }}
                 />
                 <button
@@ -3278,16 +3436,16 @@ function ContactPage() {
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: 13, fontWeight: 500,
                     letterSpacing: "0.12em", textTransform: "uppercase",
-                    color: colors.white,
-                    background: colors.teal,
+                    color: darkMode ? theme.bg : colors.white,
+                    background: theme.accent,
                     border: "none",
                     padding: "14px 32px",
                     borderRadius: 2,
                     cursor: "pointer",
-                    transition: "background 0.2s",
+                    transition: "all 0.3s ease",
                   }}
-                  onMouseEnter={e => e.target.style.background = colors.tealLight}
-                  onMouseLeave={e => e.target.style.background = colors.teal}
+                  onMouseEnter={e => e.target.style.opacity = "0.9"}
+                  onMouseLeave={e => e.target.style.opacity = "1"}
                 >
                   Send Message
                 </button>
@@ -3318,38 +3476,44 @@ function ContactPage() {
 
 function BlogPage() {
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
 
   return (
     <>
       <SEO metadata={mainPages.blog} />
       <section style={{
-        background: colors.ivory,
+        background: theme.bg,
         padding: "160px 40px 80px",
         minHeight: "50vh",
         display: "flex",
         alignItems: "center",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.tealMuted, marginBottom: 24,
+            color: theme.accentMuted, marginBottom: 24,
+            transition: "color 0.3s ease",
           }}>Insights & Resources</div>
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
             fontWeight: 300, lineHeight: 1.1,
-            color: colors.charcoal, margin: "0 0 32px",
+            color: theme.text, margin: "0 0 32px",
+            transition: "color 0.3s ease",
           }}>
             The Bayside<br />
-            <em style={{ color: colors.teal, fontStyle: "italic" }}>Blog</em>
+            <em style={{ color: theme.accent, fontStyle: "italic", transition: "color 0.3s ease" }}>Blog</em>
           </h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 17, fontWeight: 300,
-            color: colors.charcoalLight, lineHeight: 1.8,
+            color: theme.textMuted, lineHeight: 1.8,
             margin: "0 auto",
             maxWidth: 640,
+            transition: "color 0.3s ease",
           }}>
             Practical insights on therapy, mental health, and personal growth.
           </p>
@@ -3357,8 +3521,9 @@ function BlogPage() {
       </section>
 
       <section style={{
-        background: colors.white,
+        background: theme.bgAlt,
         padding: "80px 40px 120px",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           {blogPosts.map((post, i) => (
@@ -3372,12 +3537,13 @@ function BlogPage() {
                 border: "none",
                 cursor: "pointer",
                 padding: "40px 0",
-                borderBottom: `1px solid ${colors.ivoryDark}`,
+                borderBottom: `1px solid ${theme.border}`,
                 textAlign: "left",
                 display: "grid",
                 gridTemplateColumns: "240px 1fr",
                 gap: 32,
                 alignItems: "center",
+                transition: "border-color 0.3s ease",
               }}
             >
               {/* Image thumbnail */}
@@ -3386,7 +3552,8 @@ function BlogPage() {
                 aspectRatio: "16/10",
                 borderRadius: 4,
                 overflow: "hidden",
-                background: colors.ivoryDark,
+                background: theme.border,
+                transition: "background 0.3s ease",
               }}>
                 <img 
                   src={post.image} 
@@ -3407,30 +3574,33 @@ function BlogPage() {
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-                  color: colors.teal, marginBottom: 12,
+                  color: theme.accent, marginBottom: 12,
                   fontWeight: 500,
+                  transition: "color 0.3s ease",
                 }}>{post.category}</div>
                 <h2 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 32, fontWeight: 500,
-                  color: colors.charcoal,
+                  color: theme.text,
                   margin: "0 0 12px",
-                  transition: "color 0.2s",
+                  transition: "color 0.3s ease",
                 }}
-                onMouseEnter={e => e.target.style.color = colors.teal}
-                onMouseLeave={e => e.target.style.color = colors.charcoal}
+                onMouseEnter={e => e.target.style.color = theme.accent}
+                onMouseLeave={e => e.target.style.color = theme.text}
                 >{post.title}</h2>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
-                  color: colors.charcoalLight,
+                  color: theme.textMuted,
                   lineHeight: 1.7,
                   margin: "0 0 12px",
+                  transition: "color 0.3s ease",
                 }}>{post.excerpt}</p>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 13,
-                  color: colors.warmGray,
+                  color: darkMode ? colors.darkTextMuted : colors.warmGray,
+                  transition: "color 0.3s ease",
                 }}>{post.date}</div>
               </div>
             </button>
@@ -3448,6 +3618,8 @@ function BlogPage() {
 function BlogPostPage({ slug }) {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
   const post = blogPosts.find(p => p.slug === slug);
 
   if (!post) return <div>Post not found</div>;
@@ -3486,39 +3658,44 @@ function BlogPostPage({ slug }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       
       <section style={{
-        background: colors.ivory,
+        background: theme.bg,
         padding: "160px 40px 60px",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <button onClick={() => navigate("/blog")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase",
-            color: colors.tealMuted, background: "none", border: "none",
+            color: theme.accentMuted, background: "none", border: "none",
             cursor: "pointer", padding: 0,
             display: "inline-flex", alignItems: "center", gap: 8,
             marginBottom: 32,
+            transition: "color 0.3s ease",
           }}>
             ← Back to Blog
           </button>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-            color: colors.teal, marginBottom: 24,
+            color: theme.accent, marginBottom: 24,
             fontWeight: 500,
+            transition: "color 0.3s ease",
           }}>{post.category} · {post.date}</div>
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(40px, 5vw, 56px)",
             fontWeight: 400, lineHeight: 1.2,
-            color: colors.charcoal, margin: "0",
+            color: theme.text, margin: "0",
+            transition: "color 0.3s ease",
           }}>{post.title}</h1>
         </div>
       </section>
 
       {/* Hero Image */}
       <section style={{
-        background: colors.white,
+        background: theme.bgAlt,
         padding: "0 40px 60px",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <div style={{
@@ -3526,7 +3703,8 @@ function BlogPostPage({ slug }) {
             aspectRatio: "16/9",
             borderRadius: 4,
             overflow: "hidden",
-            background: colors.ivoryDark,
+            background: theme.border,
+            transition: "background 0.3s ease",
           }}>
             <img 
               src={post.image} 
@@ -3542,18 +3720,19 @@ function BlogPostPage({ slug }) {
       </section>
 
       <section ref={ref} style={{
-        background: colors.white,
+        background: theme.bgAlt,
         padding: "0 40px 120px",
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(30px)",
-        transition: "all 0.8s ease",
+        transition: "all 0.3s ease",
       }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 17, fontWeight: 300,
-            color: colors.charcoalLight,
+            color: theme.textMuted,
             lineHeight: 1.9,
+            transition: "color 0.3s ease",
           }}>
             {post.content ? (
               // Display full blog content if available
@@ -3564,7 +3743,7 @@ function BlogPostPage({ slug }) {
                 <p style={{ margin: "0 0 24px" }}>
                   {post.excerpt}
                 </p>
-                <p style={{ margin: "0 0 24px", fontStyle: "italic", color: colors.warmGray }}>
+                <p style={{ margin: "0 0 24px", fontStyle: "italic", color: darkMode ? colors.darkTextMuted : colors.warmGray, transition: "color 0.3s ease" }}>
                   Full blog post content will be added here. For now, check out the original post on your current site.
                 </p>
               </>
@@ -3572,24 +3751,27 @@ function BlogPostPage({ slug }) {
           </div>
 
           <div style={{
-            background: colors.ivory,
+            background: theme.bg,
             padding: "40px",
             borderRadius: 4,
             marginTop: 80,
             textAlign: "center",
+            transition: "background 0.3s ease",
           }}>
             <h3 style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: 28, fontWeight: 500,
-              color: colors.charcoal,
+              color: theme.text,
               margin: "0 0 16px",
+              transition: "color 0.3s ease",
             }}>Want to learn more?</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 15, fontWeight: 300,
-              color: colors.charcoalLight,
+              color: theme.textMuted,
               lineHeight: 1.7,
               margin: "0 0 28px",
+              transition: "color 0.3s ease",
             }}>
               Schedule a free consultation to discuss how therapy can help you.
             </p>
@@ -3597,13 +3779,13 @@ function BlogPostPage({ slug }) {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
-              color: colors.white, border: "none", cursor: "pointer",
-              background: colors.teal,
+              color: darkMode ? theme.bg : colors.white, border: "none", cursor: "pointer",
+              background: theme.accent,
               padding: "14px 32px", borderRadius: 2,
-              transition: "background 0.2s",
+              transition: "all 0.3s ease",
             }}
-            onMouseEnter={e => e.target.style.background = colors.tealLight}
-            onMouseLeave={e => e.target.style.background = colors.teal}
+            onMouseEnter={e => e.target.style.opacity = "0.9"}
+            onMouseLeave={e => e.target.style.opacity = "1"}
             >Get Started</button>
           </div>
         </div>
@@ -3619,6 +3801,8 @@ function BlogPostPage({ slug }) {
 function SEOLandingPage({ slug }) {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
   const pageData = seoPages[slug];
 
   if (!pageData) return <div>Page not found</div>;
@@ -3628,64 +3812,69 @@ function SEOLandingPage({ slug }) {
       <SEO metadata={generateSEOPageMeta({ title: pageData.title, slug: slug })} />
       {/* Hero Section */}
       <section style={{
-        background: colors.ivory,
+        background: theme.bg,
         padding: "160px 40px 80px",
         minHeight: "60vh",
         display: "flex",
         alignItems: "center",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.tealMuted, marginBottom: 24,
+            color: theme.accentMuted, marginBottom: 24,
+            transition: "color 0.3s ease",
           }}>{pageData.city}, {pageData.state}</div>
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
             fontWeight: 300, lineHeight: 1.1,
-            color: colors.charcoal, margin: "0 0 32px",
+            color: theme.text, margin: "0 0 32px",
+            transition: "color 0.3s ease",
           }}>{pageData.h1}</h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 19, fontWeight: 300,
-            color: colors.charcoalLight, lineHeight: 1.8,
+            color: theme.textMuted, lineHeight: 1.8,
             margin: "0 auto 40px",
             maxWidth: 700,
+            transition: "color 0.3s ease",
           }}>{pageData.intro}</p>
           <button onClick={() => navigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
-            color: colors.white, border: "none", cursor: "pointer",
-            background: colors.teal,
+            color: darkMode ? theme.bg : colors.white, border: "none", cursor: "pointer",
+            background: theme.accent,
             padding: "16px 40px", borderRadius: 2,
-            transition: "background 0.2s",
+            transition: "all 0.3s ease",
           }}
-          onMouseEnter={e => e.target.style.background = colors.tealLight}
-          onMouseLeave={e => e.target.style.background = colors.teal}
+          onMouseEnter={e => e.target.style.opacity = "0.9"}
+          onMouseLeave={e => e.target.style.opacity = "1"}
           >Book Free Consultation</button>
         </div>
       </section>
 
       {/* Local Content */}
       <section ref={ref} style={{
-        background: colors.white,
+        background: theme.bgAlt,
         padding: "100px 40px",
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(30px)",
-        transition: "all 0.8s ease",
+        transition: "all 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 17, fontWeight: 300,
-            color: colors.charcoalLight,
+            color: theme.textMuted,
             lineHeight: 1.9,
             margin: "0 0 60px",
             textAlign: "center",
             maxWidth: 700,
             marginLeft: "auto",
+            transition: "color 0.3s ease",
             marginRight: "auto",
           }}>{pageData.localContent}</p>
 
@@ -3694,7 +3883,7 @@ function SEOLandingPage({ slug }) {
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(36px, 4vw, 48px)",
             fontWeight: 400,
-            color: colors.charcoal,
+            color: theme.text,
             margin: "0 0 40px",
             textAlign: "center",
           }}>Why Choose Bayside Wellness</h2>
@@ -3707,10 +3896,10 @@ function SEOLandingPage({ slug }) {
           }}>
             {pageData.whyChoose.map((item, i) => (
               <div key={i} style={{
-                background: colors.ivory,
+                background: theme.bg,
                 padding: "32px 28px",
                 borderRadius: 4,
-                border: `1px solid ${colors.ivoryDark}`,
+                border: `1px solid ${theme.border}`}`,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -3719,7 +3908,7 @@ function SEOLandingPage({ slug }) {
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 400,
-                  color: colors.charcoal,
+                  color: theme.text,
                   lineHeight: 1.7,
                   margin: 0,
                   textAlign: "center",
@@ -3734,7 +3923,7 @@ function SEOLandingPage({ slug }) {
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(36px, 4vw, 48px)",
               fontWeight: 400,
-              color: colors.charcoal,
+              color: theme.text,
               margin: "0 0 24px",
               textAlign: "center",
             }}>What to Expect in Therapy</h2>
@@ -3745,7 +3934,7 @@ function SEOLandingPage({ slug }) {
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16, fontWeight: 300,
-                color: colors.charcoalLight,
+                color: theme.textLight,
                 lineHeight: 1.9,
                 margin: "0 0 20px",
               }}>
@@ -3754,7 +3943,7 @@ function SEOLandingPage({ slug }) {
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16, fontWeight: 300,
-                color: colors.charcoalLight,
+                color: theme.textLight,
                 lineHeight: 1.9,
                 margin: "0 0 20px",
               }}>
@@ -3763,7 +3952,7 @@ function SEOLandingPage({ slug }) {
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16, fontWeight: 300,
-                color: colors.charcoalLight,
+                color: theme.textLight,
                 lineHeight: 1.9,
                 margin: 0,
               }}>
@@ -3778,7 +3967,7 @@ function SEOLandingPage({ slug }) {
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(36px, 4vw, 48px)",
               fontWeight: 400,
-              color: colors.charcoal,
+              color: theme.text,
               margin: "0 0 40px",
               textAlign: "center",
             }}>Frequently Asked Questions</h2>
@@ -3798,13 +3987,13 @@ function SEOLandingPage({ slug }) {
                   <h3 style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: 17, fontWeight: 500,
-                    color: colors.charcoal,
+                    color: theme.text,
                     margin: "0 0 12px",
                   }}>{faq.q}</h3>
                   <p style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: 15, fontWeight: 300,
-                    color: colors.charcoalLight,
+                    color: theme.textLight,
                     lineHeight: 1.8,
                     margin: 0,
                   }}>{faq.a}</p>
@@ -3819,7 +4008,7 @@ function SEOLandingPage({ slug }) {
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(36px, 4vw, 48px)",
               fontWeight: 400,
-              color: colors.charcoal,
+              color: theme.text,
               margin: "0 0 24px",
               textAlign: "center",
             }}>How to Get Started</h2>
@@ -3830,7 +4019,7 @@ function SEOLandingPage({ slug }) {
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16, fontWeight: 300,
-                color: colors.charcoalLight,
+                color: theme.textLight,
                 lineHeight: 1.9,
                 margin: "0 0 20px",
                 textAlign: "center",
@@ -3843,12 +4032,12 @@ function SEOLandingPage({ slug }) {
                   fontSize: 13, fontWeight: 500,
                   letterSpacing: "0.12em", textTransform: "uppercase",
                   color: colors.white, border: "none", cursor: "pointer",
-                  background: colors.teal,
+                  background: theme.accent,
                   padding: "16px 40px", borderRadius: 2,
                   transition: "background 0.2s",
                 }}
-                onMouseEnter={e => e.target.style.background = colors.tealLight}
-                onMouseLeave={e => e.target.style.background = colors.teal}
+                onMouseEnter={e => e.target.style.background = theme.accentLight}
+                onMouseLeave={e => e.target.style.background = theme.accent}
                 >Book Free Consultation</button>
               </div>
             </div>
@@ -3859,7 +4048,7 @@ function SEOLandingPage({ slug }) {
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(36px, 4vw, 48px)",
             fontWeight: 400,
-            color: colors.charcoal,
+            color: theme.text,
             margin: "0 0 40px",
             textAlign: "center",
           }}>Therapy Services in {pageData.city}</h2>
@@ -3874,10 +4063,10 @@ function SEOLandingPage({ slug }) {
                 key={service.slug}
                 onClick={() => navigate(`service-${service.slug}`)}
                 style={{
-                  background: colors.ivory,
+                  background: theme.bg,
                   padding: "28px 24px",
                   borderRadius: 4,
-                  border: `1px solid ${colors.ivoryDark}`,
+                  border: `1px solid ${theme.border}`}`,
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                   textAlign: "left",
@@ -3885,25 +4074,25 @@ function SEOLandingPage({ slug }) {
                 onMouseEnter={e => {
                   e.currentTarget.style.transform = "translateY(-4px)";
                   e.currentTarget.style.boxShadow = "0 12px 40px rgba(46,125,122,0.12)";
-                  e.currentTarget.style.borderColor = colors.teal;
+                  e.currentTarget.style.borderColor = theme.accent;
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.transform = "none";
                   e.currentTarget.style.boxShadow = "none";
-                  e.currentTarget.style.borderColor = colors.ivoryDark;
+                  e.currentTarget.style.border: `1px solid ${theme.border}`;
                 }}
               >
                 <div style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 24, fontWeight: 500,
-                  color: colors.charcoal,
+                  color: theme.text,
                   marginBottom: 8,
                 }}>{service.name}</div>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 12, fontWeight: 500,
                   letterSpacing: "0.08em",
-                  color: colors.teal,
+                  color: theme.accent,
                   textTransform: "uppercase",
                 }}>Learn More →</div>
               </button>
@@ -3939,12 +4128,12 @@ function SEOLandingPage({ slug }) {
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
             color: colors.white, border: "none", cursor: "pointer",
-            background: colors.teal,
+            background: theme.accent,
             padding: "16px 40px", borderRadius: 2,
             transition: "background 0.2s",
           }}
-          onMouseEnter={e => e.target.style.background = colors.tealLight}
-          onMouseLeave={e => e.target.style.background = colors.teal}
+          onMouseEnter={e => e.target.style.background = theme.accentLight}
+          onMouseLeave={e => e.target.style.background = theme.accent}
           >Book Free Consultation</button>
         </div>
       </section>
@@ -3958,36 +4147,42 @@ function SEOLandingPage({ slug }) {
 
 function CrisisResourcesPage() {
   const [ref, visible] = useScrollReveal();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
 
   return (
     <>
       <SEO metadata={mainPages.crisisResources} />
       {/* Hero */}
       <section style={{
-        background: colors.ivory,
+        background: theme.bg,
         padding: "160px 40px 80px",
         minHeight: "50vh",
         display: "flex",
         alignItems: "center",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: colors.tealMuted, marginBottom: 24,
+            color: theme.accentMuted, marginBottom: 24,
+            transition: "color 0.3s ease",
           }}>Emergency Support</div>
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
             fontWeight: 300, lineHeight: 1.1,
-            color: colors.charcoal, margin: "0 0 32px",
+            color: theme.text, margin: "0 0 32px",
+            transition: "color 0.3s ease",
           }}>Crisis Resources</h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 17, fontWeight: 300,
-            color: colors.charcoalLight, lineHeight: 1.8,
+            color: theme.textMuted, lineHeight: 1.8,
             margin: "0 auto",
             maxWidth: 640,
+            transition: "color 0.3s ease",
           }}>
             If you're in crisis, you're not alone. Help is available 24/7.
           </p>
@@ -3996,19 +4191,20 @@ function CrisisResourcesPage() {
 
       {/* Resources */}
       <section ref={ref} style={{
-        background: colors.white,
+        background: theme.bgAlt,
         padding: "80px 40px 120px",
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(30px)",
-        transition: "all 0.8s ease",
+        transition: "all 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           
           {/* Immediate Emergency */}
           <div style={{
-            background: "#FFF4E6",
-            border: "2px solid #FF6B6B",
+            background: darkMode ? "#4A2F2F" : "#FFF4E6",
+            border: darkMode ? "2px solid #CC5555" : "2px solid #FF6B6B",
             padding: "32px",
+            transition: "all 0.3s ease",
             borderRadius: 4,
             marginBottom: 60,
             textAlign: "center",
@@ -4016,13 +4212,13 @@ function CrisisResourcesPage() {
             <h2 style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: 32, fontWeight: 500,
-              color: colors.charcoal,
+              color: theme.text,
               margin: "0 0 16px",
             }}>If You're in Immediate Danger</h2>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 17, fontWeight: 400,
-              color: colors.charcoal,
+              color: theme.text,
               lineHeight: 1.7,
               margin: "0 0 24px",
             }}>
@@ -4040,7 +4236,7 @@ function CrisisResourcesPage() {
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 40, fontWeight: 400,
-            color: colors.charcoal,
+            color: theme.text,
             margin: "0 0 32px",
           }}>24/7 National Crisis Lines</h2>
 
@@ -4053,21 +4249,21 @@ function CrisisResourcesPage() {
               { name: "SAMHSA National Helpline", phone: "1-800-662-4357", text: "", description: "Substance abuse and mental health referrals", url: "https://www.samhsa.gov" },
             ].map((resource, i) => (
               <div key={i} style={{
-                background: colors.ivory,
+                background: theme.bg,
                 padding: "28px 32px",
                 borderRadius: 4,
-                border: `1px solid ${colors.ivoryDark}`,
+                border: `1px solid ${theme.border}`}`,
               }}>
                 <h3 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 24, fontWeight: 500,
-                  color: colors.charcoal,
+                  color: theme.text,
                   margin: "0 0 12px",
                 }}>{resource.name}</h3>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
-                  color: colors.charcoalLight,
+                  color: theme.textLight,
                   lineHeight: 1.7,
                   margin: "0 0 16px",
                 }}>{resource.description}</p>
@@ -4096,7 +4292,7 @@ function CrisisResourcesPage() {
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 40, fontWeight: 400,
-            color: colors.charcoal,
+            color: theme.text,
             margin: "0 0 32px",
           }}>Bay Area Crisis Resources</h2>
 
@@ -4110,16 +4306,16 @@ function CrisisResourcesPage() {
               { name: "San Mateo County Crisis Line", phone: "1-650-579-0350", description: "24/7 crisis support for San Mateo County", location: "San Mateo County" },
             ].map((resource, i) => (
               <div key={i} style={{
-                background: colors.ivory,
+                background: theme.bg,
                 padding: "28px 32px",
                 borderRadius: 4,
-                border: `1px solid ${colors.ivoryDark}`,
+                border: `1px solid ${theme.border}`}`,
               }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
                   <h3 style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontSize: 24, fontWeight: 500,
-                    color: colors.charcoal,
+                    color: theme.text,
                     margin: 0,
                   }}>{resource.name}</h3>
                   <span style={{
@@ -4133,7 +4329,7 @@ function CrisisResourcesPage() {
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
-                  color: colors.charcoalLight,
+                  color: theme.textLight,
                   lineHeight: 1.7,
                   margin: "0 0 16px",
                 }}>{resource.description}</p>
@@ -4151,7 +4347,7 @@ function CrisisResourcesPage() {
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 40, fontWeight: 400,
-            color: colors.charcoal,
+            color: theme.text,
             margin: "0 0 32px",
           }}>Additional Support</h2>
 
@@ -4162,21 +4358,21 @@ function CrisisResourcesPage() {
               { name: "Disaster Distress Helpline", phone: "1-800-985-5990", text: "Text TalkWithUs to 66746", description: "Crisis counseling for disaster survivors" },
             ].map((resource, i) => (
               <div key={i} style={{
-                background: colors.ivory,
+                background: theme.bg,
                 padding: "28px 32px",
                 borderRadius: 4,
-                border: `1px solid ${colors.ivoryDark}`,
+                border: `1px solid ${theme.border}`}`,
               }}>
                 <h3 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 24, fontWeight: 500,
-                  color: colors.charcoal,
+                  color: theme.text,
                   margin: "0 0 12px",
                 }}>{resource.name}</h3>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
-                  color: colors.charcoalLight,
+                  color: theme.textLight,
                   lineHeight: 1.7,
                   margin: "0 0 16px",
                 }}>{resource.description}</p>
@@ -4423,13 +4619,29 @@ function ScrollToTop() {
 // ========================================
 
 export default function App() {
+  const [darkMode, setDarkMode] = useState(() => {
+    // Check localStorage for saved preference
+    const saved = localStorage.getItem('darkMode');
+    return saved === 'true';
+  });
+
+  useEffect(() => {
+    // Save preference to localStorage
+    localStorage.setItem('darkMode', darkMode);
+  }, [darkMode]);
+
+  const toggleDarkMode = () => setDarkMode(!darkMode);
+
   return (
-    <>
+    <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
       <style>{`
         ${fonts}
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body { background: ${colors.ivory}; }
+        body { 
+          background: ${darkMode ? colors.darkBg : colors.ivory}; 
+          transition: background 0.3s ease;
+        }
         .contact-grid { grid-template-columns: 1fr 1fr; }
         .contact-grid > div { width: 100%; }
         @media (max-width: 768px) {
@@ -4498,6 +4710,6 @@ export default function App() {
       </Routes>
       <Footer />
       <Analytics />
-    </>
+    </DarkModeContext.Provider>
   );
 }
