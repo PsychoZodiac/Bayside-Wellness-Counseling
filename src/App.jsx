@@ -4461,7 +4461,7 @@ function SEODirectory() {
             {cityPages.map(slug => (
               <button
                 key={slug}
-                onClick={() => navigate(`/seo/${slug}`)}
+                onClick={() => navigate(`/${slug}`)}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -4499,7 +4499,7 @@ function SEODirectory() {
             {servicePages.map(slug => (
               <button
                 key={slug}
-                onClick={() => navigate(`/seo/${slug}`)}
+                onClick={() => navigate(`/${slug}`)}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -4538,7 +4538,7 @@ function SEODirectory() {
               {conditionPages.map(slug => (
                 <button
                   key={slug}
-                  onClick={() => navigate(`/seo/${slug}`)}
+                  onClick={() => navigate(`/${slug}`)}
                   style={{
                     background: colors.white,
                     border: `1px solid ${colors.ivoryDark}`,
@@ -4716,10 +4716,10 @@ export default function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostWrapper />} />
-        <Route path="/seo" element={<SEODirectory />} />
-        <Route path="/seo/:slug" element={<SEOLandingWrapper />} />
         <Route path="/crisis-resources" element={<CrisisResourcesPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        {/* SEO landing pages - catch-all at end */}
+        <Route path="/:slug" element={<SEOLandingWrapper />} />
       </Routes>
       <Footer />
       <Analytics />
