@@ -1,17 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.baysidewellnessandcounseling.com"
-        }
-      ],
-      "destination": "https://baysidewellnessandcounseling.com/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
