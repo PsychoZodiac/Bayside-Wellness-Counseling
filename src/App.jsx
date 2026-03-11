@@ -4061,12 +4061,12 @@ function SEOLandingPage({ slug }) {
             {services.map((service) => (
               <button
                 key={service.slug}
-                onClick={() => navigate(`service-${service.slug}`)}
+                onClick={() => navigate(`/services/${service.slug}`)}
                 style={{
                   background: theme.bg,
                   padding: "28px 24px",
                   borderRadius: 4,
-                  border: `1px solid ${theme.border}`}`,
+                  border: `1px solid ${theme.border}`,
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                   textAlign: "left",
