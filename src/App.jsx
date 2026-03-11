@@ -2271,7 +2271,7 @@ function HomePage() {
             {services.map((service, i) => (
               <button
                 key={service.slug}
-                onClick={() => navigate("/services/" + service.slug)}
+                onClick={() => navigate(`/services/${service.slug}`)}
                 style={{
                   background: theme.bg,
                   padding: "36px 32px",
@@ -2722,7 +2722,7 @@ function ServicesPage() {
             {services.map((service, i) => (
               <button
                 key={service.slug}
-                onClick={() => navigate("/services/" + service.slug)}
+                onClick={() => navigate(`/services/${service.slug}`)}
                 style={{
                   background: theme.bg,
                   padding: "40px 36px",
@@ -3529,7 +3529,7 @@ function BlogPage() {
           {blogPosts.map((post, i) => (
             <button
               key={post.slug}
-              onClick={() => navigate("/blog/" + post.slug)}
+              onClick={() => navigate(`/blog/${post.slug}`)}
               className="blog-post-item"
               style={{
                 width: "100%",
@@ -3883,7 +3883,7 @@ function SEOLandingPage({ slug }) {
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(36px, 4vw, 48px)",
             fontWeight: 400,
-            color: theme.text,
+            color: colors.charcoal,
             margin: "0 0 40px",
             textAlign: "center",
           }}>Why Choose Bayside Wellness</h2>
@@ -3896,10 +3896,10 @@ function SEOLandingPage({ slug }) {
           }}>
             {pageData.whyChoose.map((item, i) => (
               <div key={i} style={{
-                background: theme.bg,
+                background: colors.ivory,
                 padding: "32px 28px",
                 borderRadius: 4,
-                border: `1px solid ${theme.border}`}`,
+                border: `1px solid ${colors.ivoryDark}`,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -3908,7 +3908,7 @@ function SEOLandingPage({ slug }) {
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 400,
-                  color: theme.text,
+                  color: colors.charcoal,
                   lineHeight: 1.7,
                   margin: 0,
                   textAlign: "center",
@@ -3923,7 +3923,7 @@ function SEOLandingPage({ slug }) {
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(36px, 4vw, 48px)",
               fontWeight: 400,
-              color: theme.text,
+              color: colors.charcoal,
               margin: "0 0 24px",
               textAlign: "center",
             }}>What to Expect in Therapy</h2>
@@ -3934,7 +3934,7 @@ function SEOLandingPage({ slug }) {
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16, fontWeight: 300,
-                color: theme.textLight,
+                color: colors.charcoalLight,
                 lineHeight: 1.9,
                 margin: "0 0 20px",
               }}>
@@ -3943,7 +3943,7 @@ function SEOLandingPage({ slug }) {
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16, fontWeight: 300,
-                color: theme.textLight,
+                color: colors.charcoalLight,
                 lineHeight: 1.9,
                 margin: "0 0 20px",
               }}>
@@ -3952,7 +3952,7 @@ function SEOLandingPage({ slug }) {
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16, fontWeight: 300,
-                color: theme.textLight,
+                color: colors.charcoalLight,
                 lineHeight: 1.9,
                 margin: 0,
               }}>
@@ -3967,7 +3967,7 @@ function SEOLandingPage({ slug }) {
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(36px, 4vw, 48px)",
               fontWeight: 400,
-              color: theme.text,
+              color: colors.charcoal,
               margin: "0 0 40px",
               textAlign: "center",
             }}>Frequently Asked Questions</h2>
@@ -3987,13 +3987,13 @@ function SEOLandingPage({ slug }) {
                   <h3 style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: 17, fontWeight: 500,
-                    color: theme.text,
+                    color: colors.charcoal,
                     margin: "0 0 12px",
                   }}>{faq.q}</h3>
                   <p style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: 15, fontWeight: 300,
-                    color: theme.textLight,
+                    color: colors.charcoalLight,
                     lineHeight: 1.8,
                     margin: 0,
                   }}>{faq.a}</p>
@@ -4008,7 +4008,7 @@ function SEOLandingPage({ slug }) {
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(36px, 4vw, 48px)",
               fontWeight: 400,
-              color: theme.text,
+              color: colors.charcoal,
               margin: "0 0 24px",
               textAlign: "center",
             }}>How to Get Started</h2>
@@ -4019,7 +4019,7 @@ function SEOLandingPage({ slug }) {
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16, fontWeight: 300,
-                color: theme.textLight,
+                color: colors.charcoalLight,
                 lineHeight: 1.9,
                 margin: "0 0 20px",
                 textAlign: "center",
@@ -4032,12 +4032,12 @@ function SEOLandingPage({ slug }) {
                   fontSize: 13, fontWeight: 500,
                   letterSpacing: "0.12em", textTransform: "uppercase",
                   color: colors.white, border: "none", cursor: "pointer",
-                  background: theme.accent,
+                  background: colors.teal,
                   padding: "16px 40px", borderRadius: 2,
                   transition: "background 0.2s",
                 }}
-                onMouseEnter={e => e.target.style.background = theme.accentLight}
-                onMouseLeave={e => e.target.style.background = theme.accent}
+                onMouseEnter={e => e.target.style.background = colors.tealLight}
+                onMouseLeave={e => e.target.style.background = colors.teal}
                 >Book Free Consultation</button>
               </div>
             </div>
@@ -4051,6 +4051,7 @@ function SEOLandingPage({ slug }) {
             color: theme.text,
             margin: "0 0 40px",
             textAlign: "center",
+            transition: "color 0.3s ease",
           }}>Therapy Services in {pageData.city}</h2>
 
           <div style={{
@@ -4061,7 +4062,7 @@ function SEOLandingPage({ slug }) {
             {services.map((service) => (
               <button
                 key={service.slug}
-                onClick={() => navigate("/services/" + service.slug)}
+                onClick={() => navigate(`/services/${service.slug}`)}
                 style={{
                   background: theme.bg,
                   padding: "28px 24px",
@@ -4073,13 +4074,13 @@ function SEOLandingPage({ slug }) {
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow = "0 12px 40px rgba(46,125,122,0.12)";
+                  e.currentTarget.style.boxShadow = darkMode ? "0 12px 40px rgba(77,189,183,0.15)" : "0 12px 40px rgba(46,125,122,0.12)";
                   e.currentTarget.style.borderColor = theme.accent;
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.transform = "none";
                   e.currentTarget.style.boxShadow = "none";
-                  e.currentTarget.style.border: `1px solid ${theme.border}`;
+                  e.currentTarget.style.borderColor = theme.border;
                 }}
               >
                 <div style={{
@@ -4087,6 +4088,7 @@ function SEOLandingPage({ slug }) {
                   fontSize: 24, fontWeight: 500,
                   color: theme.text,
                   marginBottom: 8,
+                  transition: "color 0.3s ease",
                 }}>{service.name}</div>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
@@ -4094,6 +4096,7 @@ function SEOLandingPage({ slug }) {
                   letterSpacing: "0.08em",
                   color: theme.accent,
                   textTransform: "uppercase",
+                  transition: "color 0.3s ease",
                 }}>Learn More →</div>
               </button>
             ))}
@@ -4103,8 +4106,9 @@ function SEOLandingPage({ slug }) {
 
       {/* CTA Section */}
       <section style={{
-        background: colors.charcoal,
+        background: darkMode ? colors.darkBgLight : colors.charcoal,
         padding: "100px 40px",
+        transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{
@@ -4118,8 +4122,9 @@ function SEOLandingPage({ slug }) {
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
-            color: "#A8B8B8", lineHeight: 1.8,
+            color: darkMode ? colors.darkTextMuted : "#A8B8B8", lineHeight: 1.8,
             margin: "0 0 40px", maxWidth: 520, marginLeft: "auto", marginRight: "auto",
+            transition: "color 0.3s ease",
           }}>
             Schedule a free 15-minute consultation. No commitment, no pressure. Just a conversation about where you are and where you'd like to go.
           </p>
@@ -4127,13 +4132,13 @@ function SEOLandingPage({ slug }) {
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
-            color: colors.white, border: "none", cursor: "pointer",
+            color: darkMode ? theme.bg : colors.white, border: "none", cursor: "pointer",
             background: theme.accent,
             padding: "16px 40px", borderRadius: 2,
-            transition: "background 0.2s",
+            transition: "all 0.3s ease",
           }}
-          onMouseEnter={e => e.target.style.background = theme.accentLight}
-          onMouseLeave={e => e.target.style.background = theme.accent}
+          onMouseEnter={e => e.target.style.opacity = "0.9"}
+          onMouseLeave={e => e.target.style.opacity = "1"}
           >Book Free Consultation</button>
         </div>
       </section>
@@ -4204,22 +4209,24 @@ function CrisisResourcesPage() {
             background: darkMode ? "#4A2F2F" : "#FFF4E6",
             border: darkMode ? "2px solid #CC5555" : "2px solid #FF6B6B",
             padding: "32px",
-            transition: "all 0.3s ease",
             borderRadius: 4,
             marginBottom: 60,
             textAlign: "center",
+            transition: "all 0.3s ease",
           }}>
             <h2 style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: 32, fontWeight: 500,
               color: theme.text,
               margin: "0 0 16px",
+              transition: "color 0.3s ease",
             }}>If You're in Immediate Danger</h2>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 17, fontWeight: 400,
               color: theme.text,
               lineHeight: 1.7,
+              transition: "color 0.3s ease",
               margin: "0 0 24px",
             }}>
               Call 911 or go to your nearest emergency room
@@ -4238,6 +4245,7 @@ function CrisisResourcesPage() {
             fontSize: 40, fontWeight: 400,
             color: theme.text,
             margin: "0 0 32px",
+            transition: "color 0.3s ease",
           }}>24/7 National Crisis Lines</h2>
 
           <div style={{ display: "grid", gap: 24, marginBottom: 60 }}>
@@ -4252,35 +4260,40 @@ function CrisisResourcesPage() {
                 background: theme.bg,
                 padding: "28px 32px",
                 borderRadius: 4,
-                border: `1px solid ${theme.border}`}`,
+                border: `1px solid ${theme.border}`,
+                transition: "all 0.3s ease",
               }}>
                 <h3 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 24, fontWeight: 500,
                   color: theme.text,
                   margin: "0 0 12px",
+                  transition: "color 0.3s ease",
                 }}>{resource.name}</h3>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
-                  color: theme.textLight,
+                  color: theme.textMuted,
                   lineHeight: 1.7,
                   margin: "0 0 16px",
+                  transition: "color 0.3s ease",
                 }}>{resource.description}</p>
                 <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
                   {resource.phone && (
                     <a href={`tel:${resource.phone.replace(/[^0-9]/g, '')}`} style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: 16, fontWeight: 500,
-                      color: colors.teal,
+                      color: theme.accent,
                       textDecoration: "none",
+                      transition: "color 0.3s ease",
                     }}>Call: {resource.phone}</a>
                   )}
                   {resource.text && (
                     <span style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: 16, fontWeight: 500,
-                      color: colors.teal,
+                      color: theme.accent,
+                      transition: "color 0.3s ease",
                     }}>{resource.text}</span>
                   )}
                 </div>
@@ -4292,7 +4305,7 @@ function CrisisResourcesPage() {
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 40, fontWeight: 400,
-            color: theme.text,
+            color: colors.charcoal,
             margin: "0 0 32px",
           }}>Bay Area Crisis Resources</h2>
 
@@ -4306,16 +4319,16 @@ function CrisisResourcesPage() {
               { name: "San Mateo County Crisis Line", phone: "1-650-579-0350", description: "24/7 crisis support for San Mateo County", location: "San Mateo County" },
             ].map((resource, i) => (
               <div key={i} style={{
-                background: theme.bg,
+                background: colors.ivory,
                 padding: "28px 32px",
                 borderRadius: 4,
-                border: `1px solid ${theme.border}`}`,
+                border: `1px solid ${colors.ivoryDark}`,
               }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
                   <h3 style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontSize: 24, fontWeight: 500,
-                    color: theme.text,
+                    color: colors.charcoal,
                     margin: 0,
                   }}>{resource.name}</h3>
                   <span style={{
@@ -4329,7 +4342,7 @@ function CrisisResourcesPage() {
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
-                  color: theme.textLight,
+                  color: colors.charcoalLight,
                   lineHeight: 1.7,
                   margin: "0 0 16px",
                 }}>{resource.description}</p>
@@ -4347,7 +4360,7 @@ function CrisisResourcesPage() {
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 40, fontWeight: 400,
-            color: theme.text,
+            color: colors.charcoal,
             margin: "0 0 32px",
           }}>Additional Support</h2>
 
@@ -4358,21 +4371,21 @@ function CrisisResourcesPage() {
               { name: "Disaster Distress Helpline", phone: "1-800-985-5990", text: "Text TalkWithUs to 66746", description: "Crisis counseling for disaster survivors" },
             ].map((resource, i) => (
               <div key={i} style={{
-                background: theme.bg,
+                background: colors.ivory,
                 padding: "28px 32px",
                 borderRadius: 4,
-                border: `1px solid ${theme.border}`}`,
+                border: `1px solid ${colors.ivoryDark}`,
               }}>
                 <h3 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 24, fontWeight: 500,
-                  color: theme.text,
+                  color: colors.charcoal,
                   margin: "0 0 12px",
                 }}>{resource.name}</h3>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
-                  color: theme.textLight,
+                  color: colors.charcoalLight,
                   lineHeight: 1.7,
                   margin: "0 0 16px",
                 }}>{resource.description}</p>
@@ -4448,7 +4461,7 @@ function SEODirectory() {
             {cityPages.map(slug => (
               <button
                 key={slug}
-                onClick={() => navigate("/seo/" + slug)}
+                onClick={() => navigate(`/seo/${slug}`)}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -4486,7 +4499,7 @@ function SEODirectory() {
             {servicePages.map(slug => (
               <button
                 key={slug}
-                onClick={() => navigate("/seo/" + slug)}
+                onClick={() => navigate(`/seo/${slug}`)}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -4525,7 +4538,7 @@ function SEODirectory() {
               {conditionPages.map(slug => (
                 <button
                   key={slug}
-                  onClick={() => navigate("/seo/" + slug)}
+                  onClick={() => navigate(`/seo/${slug}`)}
                   style={{
                     background: colors.white,
                     border: `1px solid ${colors.ivoryDark}`,
