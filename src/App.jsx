@@ -2271,7 +2271,7 @@ function HomePage() {
             {services.map((service, i) => (
               <button
                 key={service.slug}
-                onClick={() => navigate(`/services/${service.slug}`)}
+                onClick={() => navigate("/services/" + service.slug)}
                 style={{
                   background: theme.bg,
                   padding: "36px 32px",
@@ -2722,7 +2722,7 @@ function ServicesPage() {
             {services.map((service, i) => (
               <button
                 key={service.slug}
-                onClick={() => navigate(`/services/${service.slug}`)}
+                onClick={() => navigate("/services/" + service.slug)}
                 style={{
                   background: theme.bg,
                   padding: "40px 36px",
@@ -3529,7 +3529,7 @@ function BlogPage() {
           {blogPosts.map((post, i) => (
             <button
               key={post.slug}
-              onClick={() => navigate(`/blog/${post.slug}`)}
+              onClick={() => navigate("/blog/" + post.slug)}
               className="blog-post-item"
               style={{
                 width: "100%",
@@ -4061,7 +4061,7 @@ function SEOLandingPage({ slug }) {
             {services.map((service) => (
               <button
                 key={service.slug}
-                onClick={() => navigate(`/services/${service.slug}`)}
+                onClick={() => navigate("/services/" + service.slug)}
                 style={{
                   background: theme.bg,
                   padding: "28px 24px",
@@ -4448,7 +4448,7 @@ function SEODirectory() {
             {cityPages.map(slug => (
               <button
                 key={slug}
-                onClick={() => navigate(`/seo/${slug}`)}
+                onClick={() => navigate("/seo/" + slug)}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -4486,7 +4486,7 @@ function SEODirectory() {
             {servicePages.map(slug => (
               <button
                 key={slug}
-                onClick={() => navigate(`/seo/${slug}`)}
+                onClick={() => navigate("/seo/" + slug)}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -4525,7 +4525,7 @@ function SEODirectory() {
               {conditionPages.map(slug => (
                 <button
                   key={slug}
-                  onClick={() => navigate(`/seo/${slug}`)}
+                  onClick={() => navigate("/seo/" + slug)}
                   style={{
                     background: colors.white,
                     border: `1px solid ${colors.ivoryDark}`,
