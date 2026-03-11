@@ -3805,7 +3805,57 @@ function SEOLandingPage({ slug }) {
   const theme = getTheme(darkMode);
   const pageData = seoPages[slug];
 
-  if (!pageData) return <div>Page not found</div>;
+  // If page doesn't exist, show proper 404
+  if (!pageData) {
+    return (
+      <>
+        <SEO metadata={mainPages.home} />
+        <section style={{
+          background: theme.bg,
+          padding: "160px 40px",
+          minHeight: "60vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          transition: "background 0.3s ease",
+        }}>
+          <div style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
+            <h1 style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: "clamp(48px, 6vw, 72px)",
+              fontWeight: 300,
+              color: theme.text,
+              margin: "0 0 24px",
+              transition: "color 0.3s ease",
+            }}>Page Not Found</h1>
+            <p style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 17,
+              color: theme.textMuted,
+              lineHeight: 1.8,
+              margin: "0 0 40px",
+              transition: "color 0.3s ease",
+            }}>
+              The page you're looking for doesn't exist.
+            </p>
+            <button onClick={() => navigate("/")} style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 13, fontWeight: 500,
+              letterSpacing: "0.12em", textTransform: "uppercase",
+              color: darkMode ? theme.bg : colors.white,
+              background: theme.accent,
+              border: "none", cursor: "pointer",
+              padding: "16px 40px", borderRadius: 2,
+              transition: "all 0.3s ease",
+            }}
+            onMouseEnter={e => e.target.style.opacity = "0.9"}
+            onMouseLeave={e => e.target.style.opacity = "1"}
+            >Return Home</button>
+          </div>
+        </section>
+      </>
+    );
+  }
 
   return (
     <>
