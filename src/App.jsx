@@ -1831,13 +1831,42 @@ function Nav() {
   const theme = getTheme(darkMode);
 
   return (
-    <nav style={{
-      position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: needsSolidBg ? (darkMode ? "rgba(26,36,36,0.96)" : "rgba(250,247,244,0.96)") : "transparent",
-      backdropFilter: needsSolidBg ? "blur(12px)" : "none",
-      borderBottom: needsSolidBg ? `1px solid ${theme.border}` : "none",
-      transition: "all 0.3s ease",
-      padding: "0 40px",
+    <>
+      {/* Skip to main content link for keyboard navigation */}
+      <a 
+        href="#main-content"
+        style={{
+          position: "absolute",
+          left: "-9999px",
+          zIndex: 999,
+          padding: "8px 16px",
+          background: theme.accent,
+          color: darkMode ? theme.bg : colors.white,
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: 14,
+          fontWeight: 500,
+          textDecoration: "none",
+          borderRadius: 2,
+          transition: "all 0.3s ease",
+        }}
+        onFocus={(e) => {
+          e.target.style.left = "16px";
+          e.target.style.top = "16px";
+        }}
+        onBlur={(e) => {
+          e.target.style.left = "-9999px";
+        }}
+      >
+        Skip to main content
+      </a>
+      
+      <nav style={{
+        position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
+        background: needsSolidBg ? (darkMode ? "rgba(26,36,36,0.96)" : "rgba(250,247,244,0.96)") : "transparent",
+        backdropFilter: needsSolidBg ? "blur(12px)" : "none",
+        borderBottom: needsSolidBg ? `1px solid ${theme.border}` : "none",
+        transition: "all 0.3s ease",
+        padding: "0 40px",
     }}>
       <div style={{
         maxWidth: 1200, margin: "0 auto",
@@ -1981,6 +2010,7 @@ function Nav() {
         </div>
       )}
     </nav>
+    </>
   );
 }
 
@@ -3336,14 +3366,17 @@ function ContactPage() {
             </p>
 
             {formSubmitted ? (
-              <div style={{
-                background: darkMode ? `${theme.accent}20` : colors.tealPale,
-                border: `1px solid ${theme.accent}`,
-                borderRadius: 4,
-                padding: "20px",
-                textAlign: "center",
-                transition: "all 0.3s ease",
-              }}>
+              <div 
+                role="alert"
+                aria-live="polite"
+                style={{
+                  background: darkMode ? `${theme.accent}20` : colors.tealPale,
+                  border: `1px solid ${theme.accent}`,
+                  borderRadius: 4,
+                  padding: "20px",
+                  textAlign: "center",
+                  transition: "all 0.3s ease",
+                }}>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15,
@@ -3356,79 +3389,167 @@ function ContactPage() {
               <form 
                 action="https://formspree.io/f/mykngokr" 
                 method="POST"
+                aria-label="Contact form"
               >
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name *"
-                  required
-                  style={{
-                    width: "100%",
-                    padding: "12px 16px",
-                    marginBottom: 16,
-                    background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
-                    border: `1px solid ${theme.accent}33`,
-                    borderRadius: 2,
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 14,
-                    color: colors.white,
-                    transition: "all 0.3s ease",
-                  }}
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email *"
-                  required
-                  style={{
-                    width: "100%",
-                    padding: "12px 16px",
-                    marginBottom: 16,
-                    background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
-                    border: `1px solid ${theme.accent}33`,
-                    borderRadius: 2,
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 14,
-                    color: colors.white,
-                    transition: "all 0.3s ease",
-                  }}
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone (optional)"
-                  style={{
-                    width: "100%",
-                    padding: "12px 16px",
-                    marginBottom: 16,
-                    background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
-                    border: `1px solid ${theme.accent}33`,
-                    borderRadius: 2,
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 14,
-                    color: colors.white,
-                    transition: "all 0.3s ease",
-                  }}
-                />
-                <textarea
-                  name="message"
-                  placeholder="Your Message *"
-                  required
-                  rows="4"
-                  style={{
-                    width: "100%",
-                    padding: "12px 16px",
-                    marginBottom: 20,
-                    background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
-                    border: `1px solid ${theme.accent}33`,
-                    borderRadius: 2,
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 14,
-                    color: colors.white,
-                    resize: "vertical",
-                    transition: "all 0.3s ease",
-                  }}
-                />
+                <div style={{ marginBottom: 16 }}>
+                  <label htmlFor="contact-name" style={{
+                    position: "absolute",
+                    width: 1,
+                    height: 1,
+                    padding: 0,
+                    margin: -1,
+                    overflow: "hidden",
+                    clip: "rect(0,0,0,0)",
+                    whiteSpace: "nowrap",
+                    borderWidth: 0
+                  }}>Your Name (required)</label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    name="name"
+                    placeholder="Your Name *"
+                    required
+                    aria-required="true"
+                    style={{
+                      width: "100%",
+                      padding: "12px 16px",
+                      background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
+                      border: `1px solid ${theme.accent}33`,
+                      borderRadius: 2,
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: 14,
+                      color: colors.white,
+                      transition: "all 0.3s ease",
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.outline = `2px solid ${colors.teal}`;
+                      e.target.style.outlineOffset = "2px";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.outline = "none";
+                    }}
+                  />
+                </div>
+                
+                <div style={{ marginBottom: 16 }}>
+                  <label htmlFor="contact-email" style={{
+                    position: "absolute",
+                    width: 1,
+                    height: 1,
+                    padding: 0,
+                    margin: -1,
+                    overflow: "hidden",
+                    clip: "rect(0,0,0,0)",
+                    whiteSpace: "nowrap",
+                    borderWidth: 0
+                  }}>Your Email (required)</label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    name="email"
+                    placeholder="Your Email *"
+                    required
+                    aria-required="true"
+                    style={{
+                      width: "100%",
+                      padding: "12px 16px",
+                      background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
+                      border: `1px solid ${theme.accent}33`,
+                      borderRadius: 2,
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: 14,
+                      color: colors.white,
+                      transition: "all 0.3s ease",
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.outline = `2px solid ${colors.teal}`;
+                      e.target.style.outlineOffset = "2px";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.outline = "none";
+                    }}
+                  />
+                </div>
+                
+                <div style={{ marginBottom: 16 }}>
+                  <label htmlFor="contact-phone" style={{
+                    position: "absolute",
+                    width: 1,
+                    height: 1,
+                    padding: 0,
+                    margin: -1,
+                    overflow: "hidden",
+                    clip: "rect(0,0,0,0)",
+                    whiteSpace: "nowrap",
+                    borderWidth: 0
+                  }}>Phone (optional)</label>
+                  <input
+                    id="contact-phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone (optional)"
+                    style={{
+                      width: "100%",
+                      padding: "12px 16px",
+                      background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
+                      border: `1px solid ${theme.accent}33`,
+                      borderRadius: 2,
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: 14,
+                      color: colors.white,
+                      transition: "all 0.3s ease",
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.outline = `2px solid ${colors.teal}`;
+                      e.target.style.outlineOffset = "2px";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.outline = "none";
+                    }}
+                  />
+                </div>
+                
+                <div style={{ marginBottom: 20 }}>
+                  <label htmlFor="contact-message" style={{
+                    position: "absolute",
+                    width: 1,
+                    height: 1,
+                    padding: 0,
+                    margin: -1,
+                    overflow: "hidden",
+                    clip: "rect(0,0,0,0)",
+                    whiteSpace: "nowrap",
+                    borderWidth: 0
+                  }}>Your Message (required)</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    placeholder="Your Message *"
+                    required
+                    aria-required="true"
+                    rows="4"
+                    style={{
+                      width: "100%",
+                      padding: "12px 16px",
+                      background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
+                      border: `1px solid ${theme.accent}33`,
+                      borderRadius: 2,
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: 14,
+                      color: colors.white,
+                      resize: "vertical",
+                      transition: "all 0.3s ease",
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.outline = `2px solid ${colors.teal}`;
+                      e.target.style.outlineOffset = "2px";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.outline = "none";
+                    }}
+                  />
+                </div>
+                
                 <button
                   type="submit"
                   style={{
@@ -3446,6 +3567,13 @@ function ContactPage() {
                   }}
                   onMouseEnter={e => e.target.style.opacity = "0.9"}
                   onMouseLeave={e => e.target.style.opacity = "1"}
+                  onFocus={(e) => {
+                    e.target.style.outline = `2px solid ${colors.teal}`;
+                    e.target.style.outlineOffset = "2px";
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.outline = "none";
+                  }}
                 >
                   Send Message
                 </button>
@@ -4754,23 +4882,45 @@ export default function App() {
             min-width: 0 !important;
           }
         }
+        
+        /* Accessibility: Focus indicators for keyboard navigation */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible,
+        select:focus-visible,
+        [role="button"]:focus-visible {
+          outline: 2px solid #2E7D7A !important;
+          outline-offset: 2px !important;
+        }
+        
+        /* Ensure focus is visible on dark mode too */
+        body.dark-mode a:focus-visible,
+        body.dark-mode button:focus-visible,
+        body.dark-mode input:focus-visible,
+        body.dark-mode textarea:focus-visible {
+          outline: 2px solid #4DBDB7 !important;
+          outline-offset: 2px !important;
+        }
       `}</style>
       
       <Nav />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/services/:slug" element={<ServiceDetailWrapper />} />
-        <Route path="/faq" element={<FAQPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<BlogPostWrapper />} />
-        <Route path="/crisis-resources" element={<CrisisResourcesPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        {/* SEO landing pages - catch-all at end */}
-        <Route path="/:slug" element={<SEOLandingWrapper />} />
-      </Routes>
+      <main id="main-content" role="main">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/:slug" element={<ServiceDetailWrapper />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostWrapper />} />
+          <Route path="/crisis-resources" element={<CrisisResourcesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          {/* SEO landing pages - catch-all at end */}
+          <Route path="/:slug" element={<SEOLandingWrapper />} />
+        </Routes>
+      </main>
       <Footer />
       <Analytics />
     </DarkModeContext.Provider>
