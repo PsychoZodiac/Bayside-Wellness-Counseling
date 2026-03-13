@@ -1899,6 +1899,7 @@ function Nav() {
         <button
           onClick={toggleDarkMode}
           aria-label="Toggle dark mode"
+          className="dark-mode-toggle"
           style={{
             position: "relative",
             width: 24,
@@ -4880,6 +4881,10 @@ export default function App() {
             max-width: 100% !important;
             flex: 0 0 auto !important;
             min-width: 0 !important;
+          }
+          /* Add space between dark mode toggle and hamburger menu on mobile */
+          .dark-mode-toggle {
+            margin-right: 20px !important;
           }
         }
         
