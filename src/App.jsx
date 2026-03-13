@@ -2869,20 +2869,49 @@ function ServiceDetailPage({ slug }) {
   const details = serviceDetails[slug];
 
   if (!service) return <div>Service not found</div>;
+  
+  // Add safety check for details
+  if (!details) {
+    return (
+      <div style={{ 
+        background: theme.bg, 
+        padding: "160px 40px", 
+        textAlign: "center",
+        minHeight: "60vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }}>
+        <div>
+          <h1 style={{ 
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: 48,
+            color: theme.text,
+            marginBottom: 24
+          }}>Service details coming soon</h1>
+          <button onClick={() => navigate("/services")} style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 13,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: theme.accent,
+            background: "transparent",
+            border: `1px solid ${theme.accent}`,
+            padding: "14px 32px",
+            borderRadius: 2,
+            cursor: "pointer"
+          }}>← Back to Services</button>
+        </div>
+      </div>
+    );
+  }
 
-  // Map slug to metadata key
-  const metadataKeyMap = {
-    'emdr': servicePages.emdr,
-    'ifs': servicePages.ifs,
-    'mens-therapy': servicePages.mensTherapy,
-    'family-therapy': servicePages.familyTherapy,
-    'anxiety-depression': servicePages.anxietyDepression,
-    'trauma': servicePages.trauma,
-  };
+  // Get metadata directly using slug - keys now match
+  const pageMetadata = servicePages[slug];
 
   return (
     <>
-      <SEO metadata={metadataKeyMap[slug]} />
+      <SEO metadata={pageMetadata} />
       <section style={{
         background: theme.bg,
         padding: "160px 40px 80px",
