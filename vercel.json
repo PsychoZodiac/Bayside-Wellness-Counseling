@@ -9,6 +9,21 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/services/mens-therapy",
+      "destination": "/services/mens",
+      "permanent": true
+    },
+    {
+      "source": "/seo/therapy-walnut-creek",
+      "destination": "/therapy-walnut-creek",
+      "permanent": true
+    },
+    {
+      "source": "/seo/college-student-therapy-stanford",
+      "destination": "/college-student-therapy-palo-alto",
+      "permanent": true
     }
   ],
   "rewrites": [
