@@ -16,16 +16,22 @@
       "permanent": true
     },
     {
-      "source": "/seo/therapy-walnut-creek",
-      "destination": "/therapy-walnut-creek",
+      "source": "/seo",
+      "destination": "/",
       "permanent": true
     },
     {
-      "source": "/seo/college-student-therapy-stanford",
-      "destination": "/college-student-therapy-palo-alto",
+      "source": "/seo/:path*",
+      "destination": "/:path*",
       "permanent": true
     }
   ],
+  "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
