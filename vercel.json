@@ -34,6 +34,11 @@
       "source": "/blog/5-lies-suicide-tells-us",
       "destination": "/blog/the-5-lies-suicide-tells-us",
       "permanent": true
+    },
+    {
+      "source": "/services/family",
+      "destination": "/services/teen",
+      "permanent": true
     }
   ],
   "rewrites": [
