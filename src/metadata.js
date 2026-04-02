@@ -125,16 +125,12 @@ export const servicePages = {
   }),
   
 // Aliases for backward compatibility and slug matching
-  teen: {
-  title: "Teen Therapy | Bayside Wellness & Counseling",
-  description: "Teen therapy for high schoolers and college students (14+) dealing with anxiety, depression, identity, academic pressure, and social struggles. Virtual therapy across California.",
-  canonical: "https://baysidewellnessandcounseling.com/services/teen",
-  og: {
-    title: "Teen Therapy | Bayside Wellness & Counseling",
-    description: "A low-pressure space for teens to work through anxiety, identity, academic stress, and social struggles. No lectures, no judgment.",
-    url: "https://baysidewellnessandcounseling.com/services/teen",
-  }
-},
+  teen: generateMetadata({
+    title: "Teen Therapy Oakland | High School & College Students | LMFT",
+    description: "Teen therapy for high schoolers and college students (14+) dealing with anxiety, depression, identity, academic pressure, athletic stress, and social struggles. Virtual therapy across California with Marcus Ghiasi, LMFT.",
+    keywords: ["teen therapy Oakland", "therapy for teenagers", "high school therapy", "college student therapy", "teen anxiety", "teen depression", "adolescent counseling"],
+    path: "/services/teen",
+  }),
   
   mens: generateMetadata({
     title: "Men's Therapy Oakland | Counseling for Men | Anger, Relationships",
