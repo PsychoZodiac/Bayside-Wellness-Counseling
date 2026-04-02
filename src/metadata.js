@@ -123,8 +123,7 @@ export const servicePages = {
     keywords: ["psychodynamic therapy Oakland", "insight therapy", "depth psychology", "relationship patterns", "unconscious patterns"],
     path: "/services/psychodynamic",
   }),
-  
-// Aliases for backward compatibility and slug matching
+
   teen: generateMetadata({
     title: "Teen Therapy Oakland | High School & College Students | LMFT",
     description: "Teen therapy for high schoolers and college students (14+) dealing with anxiety, depression, identity, academic pressure, athletic stress, and social struggles. Virtual therapy across California with Marcus Ghiasi, LMFT.",
@@ -137,20 +136,6 @@ export const servicePages = {
     description: "Therapy for men addressing anger, emotional expression, relationship issues, and masculinity. Safe space to process feelings with Marcus Ghiasi, LMFT.",
     keywords: ["men's therapy Oakland", "therapy for men", "anger management", "men's mental health", "masculinity counseling"],
     path: "/services/mens",
-  }),
-  
-  mensTherapy: generateMetadata({
-    title: "Men's Therapy Oakland | Counseling for Men | Anger, Relationships",
-    description: "Therapy for men addressing anger, emotional expression, relationship issues, and masculinity. Safe space to process feelings with Marcus Ghiasi, LMFT.",
-    keywords: ["men's therapy Oakland", "therapy for men", "anger management", "men's mental health", "masculinity counseling"],
-    path: "/services/mens-therapy",
-  }),
-  
-teen: generateMetadata({
-    title: "Teen Therapy Oakland | High School & College Students | LMFT",
-    description: "Teen therapy for high schoolers and college students (14+) dealing with anxiety, depression, identity, academic pressure, athletic stress, and social struggles. Virtual therapy across California with Marcus Ghiasi, LMFT.",
-    keywords: ["teen therapy Oakland", "therapy for teenagers", "high school therapy", "college student therapy", "teen anxiety", "teen depression", "adolescent counseling"],
-    path: "/services/teen",
   }),
   
   anxietyDepression: generateMetadata({
