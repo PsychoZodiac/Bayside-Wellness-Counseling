@@ -84,10 +84,10 @@ const services = [
     desc: "Psychodynamic therapy explores how your past experiences, relationships, and unconscious patterns shape how you feel and behave today. It's a deeper approach that gets at root causes rather than surface symptoms." 
   },
   { 
-    name: "Family Therapy", 
-    slug: "family", 
-    shortDesc: "Healing family relationships",
-    desc: "Family therapy helps parents, teens, and families improve communication, resolve conflicts, and strengthen relationships. Whether you're navigating parenting challenges, supporting a college-aged student through transitions, or working through family dynamics, we create healthier patterns together." 
+    name: "Teen Therapy", 
+    slug: "teen", 
+    shortDesc: "A space built for teens",
+    desc: "Teen therapy offers high schoolers and college students a low-pressure space to work through anxiety, identity, academic stress, and social struggles. No lectures, no judgment. Just honest, skill-building work with a therapist who actually gets what it's like to be a teenager right now." 
   },
   { 
     name: "Men's Therapy", 
@@ -123,11 +123,11 @@ const serviceDetails = {
     ctaHeading: "Looking for deeper understanding?",
     ctaText: "If you're interested in exploring the 'why' behind your patterns, book a consultation to see if this approach fits."
   },
-  family: {
-    howItWorks: "Family therapy involves bringing together the people in your relational system to work on communication, conflict resolution, and connection. Sessions might include you and your teen, you and your college-aged child, or your whole family. We create a safe space where everyone can be heard, explore patterns that aren't working, and practice new ways of relating. I help facilitate conversations that might feel impossible to have on your own. Sometimes I'll see individuals separately, other times we'll work together as a unit. For teens and college students, this often focuses on navigating transitions, family communication, and building healthier dynamics during critical developmental phases.",
-    whoThisHelps: "Family therapy is effective for parents communicating with teens and college students around identity, autonomy, mental health, or life direction. It's valuable for families dealing with grief, addiction concerns, or simply wanting to improve how they relate to each other. I work with teens (high school age and up) and college students, focusing on relational and emotional issues rather than learning or developmental assessments. If your family relationships feel stuck or strained, this approach can help everyone move forward together.",
-    ctaHeading: "Ready to work on it together?",
-    ctaText: "Whether it's your family or your teen, let's discuss how therapy can help you reconnect."
+  teen: {
+    howItWorks: "Teen therapy is individual therapy — the teen is the client. Sessions are casual, low-pressure, and built around what actually matters to them. We use a mix of skill-building, psychoeducation, and honest conversation to work through what's getting in the way. There's humor, there's directness, and there's zero expectation that you have to have it all figured out before walking in. Parents play a collaborative role. I'm open to a monthly check-in with parents to keep everyone aligned, and I occasionally offer parent coaching when family support is needed — but this stays teen-focused, not family therapy.",
+    whoThisHelps: "Teen therapy is for high schoolers and college students (roughly 14 and up) dealing with anxiety, depression, academic pressure, identity questions, social struggles, or athletic stress. I have a background coaching high school swimming, so I understand the specific weight that comes with competitive sports, team dynamics, and performance expectations. If your teen is shutting down, burning out, or just seems stuck, this is a space where they can actually talk — without feeling like they're being analyzed or managed.",
+    ctaHeading: "Is your teen ready to talk?",
+    ctaText: "No pressure, no lecture. Let's have a conversation about whether this feels like the right fit for your teen."
   },
   mens: {
     howItWorks: "Men's therapy is a space where you don't have to perform or have all the answers. We work on whatever's getting in your way: anger that's hurting your relationships, stress that's affecting your performance, difficulty expressing emotions beyond frustration, or patterns that keep repeating. Sessions are direct, practical, and focused on real change. We use a blend of approaches depending on what fits: CBT for managing anger and stress, EMDR for processing past experiences, IFS for internal conflict, and psychodynamic work for understanding patterns. No fluff, no judgment, just honest work.",
