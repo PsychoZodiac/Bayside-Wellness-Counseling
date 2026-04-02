@@ -1334,7 +1334,7 @@ Many people notice a quiet change in themselves over time. Headlines that once f
 
 Desensitization is often the reason.
 
-## Adaptation, Not Failure
+Adaptation, Not Failure
 
 At its core, desensitization is not a flaw. It is a form of adaptation. The human nervous system was never designed to absorb the volume of distressing information modern life delivers each day. Without some emotional distance, many people would struggle to function. Parents could not care for their families. Professionals could not focus. Helpers could not continue helping.
 
@@ -1342,7 +1342,7 @@ In this way, desensitization serves an important purpose. Healthcare workers rel
 
 Protection, however, can quietly become disconnection.
 
-## When Distance Becomes Numbness
+When Distance Becomes Numbness
 
 When exposure never truly stops, emotional numbing can extend beyond the news cycle. Conversations feel harder to enter emotionally. Relationships may feel flatter or more transactional. Some people notice irritability without understanding why, while others struggle to access joy with the same ease they once did.
 
@@ -1352,13 +1352,13 @@ Yet desensitization is not entirely negative. Emotional distance allows people t
 
 The challenge is noticing when numbness becomes the default rather than a temporary response.
 
-## Recognizing the Shift
+Recognizing the Shift
 
 Awareness often begins subtly. You may notice yourself scrolling longer without remembering what you saw. Silence feels uncomfortable without distraction. Conversations that once felt meaningful begin to feel rushed or surface level.
 
 Reconnection rarely requires dramatic change. Limiting constant exposure to distressing media, spending time in environments that engage the senses, or having conversations without distraction can gradually restore emotional presence. Therapy, creativity, movement, and moments of intentional stillness can help sensitivity return without overwhelm.
 
-## Choosing to Feel Again
+Choosing to Feel Again
 
 Desensitization is not evidence that something is wrong with you. More often, it reflects a mind working hard to protect itself in a world that rarely pauses.
 
@@ -1400,40 +1400,40 @@ Early in my career, I volunteered with a suicide prevention hotline. Every shift
 
 Here are five common lies suicide tells people, followed by the truths that help loosen their grip.
 
-**The 5 Lies of Suicide**
+The 5 Lies of Suicide
 
-**1. I have to deal with this alone.**
+1. I have to deal with this alone.
 Isolation convinces people that no one could understand their pain. Shame and fear often reinforce silence. Yet suffering tends to grow louder when it is hidden.
 
-**2. I do not want to burden others.**
+2. I do not want to burden others.
 Many people believe their struggles will overwhelm loved ones. They worry about being "too much." In reality, most families and friends would rather know someone is struggling than lose the opportunity to help.
 
-**3. Talking about it makes it worse.**
+3. Talking about it makes it worse.
 There is a persistent myth that speaking openly about suicidal thoughts plants dangerous ideas. Research and clinical experience consistently show the opposite. Silence increases risk. Conversation creates relief and connection.
 
-**4. Nothing will ever change.**
+4. Nothing will ever change.
 Hopelessness narrows perspective. Depression and trauma can make the future feel fixed and permanent. Pain begins to look like a life sentence rather than a moment in time.
 
-**5. It is the only option.**
+5. It is the only option.
 When distress peaks, the brain shifts into survival mode. Choices appear limited. Suicide can begin to feel like the only escape from unbearable emotion, even when other paths exist.
 
 If you are reading this, suicide may not be an abstract topic. You may have lost someone. You may be worried about a partner, a child, a friend, or a colleague. Or perhaps parts of these lies sound familiar because you have quietly wrestled with them yourself. Suicide does not exist in isolation. Its impact ripples through families, friendships, and communities. Recognizing these beliefs is often the first step toward interrupting them, whether you are supporting someone you love or learning how to support yourself.
 
-**The 5 Truths About Suicide**
+The 5 Truths About Suicide
 
-**1. You do not have to deal with it alone.**
+1. You do not have to deal with it alone.
 Support changes outcomes. Therapists, friends, family members, peer groups, and crisis counselors exist because connection saves lives.
 
-**2. You are not a burden to others.**
+2. You are not a burden to others.
 Human relationships are built on mutual care. Allowing someone to support you often deepens connection rather than damaging it.
 
-**3. Talking about it makes it easier.**
+3. Talking about it makes it easier.
 Naming pain reduces its intensity. Many people experience immediate relief simply by being heard without judgment.
 
-**4. Feelings and circumstances can change.**
+4. Feelings and circumstances can change.
 Hopelessness tells a convincing story, but emotions are not permanent states. Treatment, community, medication, meaningful change, and time itself can reshape what once felt impossible.
 
-**5. It is not the only option.**
+5. It is not the only option.
 Crisis narrows vision. Support expands it again. There are always additional steps, even small ones, that can move someone toward safety and healing.
 
 Suicidal thoughts often grow in secrecy, shame, and isolation. They weaken when met with compassion, honesty, and connection. Hope does not always arrive as a dramatic turning point. Sometimes it begins with a single conversation, a moment of honesty, or the decision to reach out when everything inside says not to.
