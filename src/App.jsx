@@ -1364,7 +1364,6 @@ Desensitization is not evidence that something is wrong with you. More often, it
 
 Choosing to feel again does not mean abandoning protection. It means recognizing when distance is helping you and when it is quietly keeping you from the people, experiences, and parts of yourself that matter most. In a world constantly asking for your attention, reclaiming emotional presence may be one of the most meaningful ways to care for yourself and those around you.`,
   },
-    slug: "master-trauma-or-die-trying",
   {
     slug: "master-trauma-or-die-trying",
     title: "Master Trauma, or Die Trying",
