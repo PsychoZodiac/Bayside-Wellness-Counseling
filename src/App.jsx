@@ -1321,50 +1321,6 @@ const faqs = [
 ];
 
 const blogPosts = [
-  const blogPosts = [
-  {
-    slug: "cost-of-constant-exposure-desensitization",
-    title: "The Cost of Constant Exposure: Understanding Desensitization",
-    excerpt: "In a world of constant distressing information, desensitization serves as protection. But when numbness becomes the default, how do we reconnect with what matters most?",
-    date: "April 1, 2026",
-    category: "Mental Health",
-    image: "/desensitization-blog.jpg",
-    content: `It has become increasingly normal to witness extraordinary suffering in ordinary moments. A person might scroll past footage of war while waiting in line for coffee, read about violence between meetings, or move from stories of economic hardship directly into images of curated luxury and success. The contrast is constant. So is the exposure.
-
-Many people notice a quiet change in themselves over time. Headlines that once felt shocking barely register. Tragedies blur together. Emotional reactions arrive slower, or sometimes not at all.
-
-Desensitization is often the reason.
-
-## Adaptation, Not Failure
-
-At its core, desensitization is not a flaw. It is a form of adaptation. The human nervous system was never designed to absorb the volume of distressing information modern life delivers each day. Without some emotional distance, many people would struggle to function. Parents could not care for their families. Professionals could not focus. Helpers could not continue helping.
-
-In this way, desensitization serves an important purpose. Healthcare workers rely on it to make decisions in crisis. Therapists depend on it to sit with painful stories without becoming overwhelmed. Emotional buffering allows people to endure uncertainty, loss, and stress without collapsing under the weight of it.
-
-Protection, however, can quietly become disconnection.
-
-## When Distance Becomes Numbness
-
-When exposure never truly stops, emotional numbing can extend beyond the news cycle. Conversations feel harder to enter emotionally. Relationships may feel flatter or more transactional. Some people notice irritability without understanding why, while others struggle to access joy with the same ease they once did.
-
-The nervous system does not always distinguish between what we choose to see and what we simply encounter. Constant stimulation encourages efficiency rather than depth. Feeling less becomes a way to keep moving forward.
-
-Yet desensitization is not entirely negative. Emotional distance allows people to regulate themselves and remain present for others. In therapy, gradual desensitization is even used intentionally to help individuals approach painful memories safely. The goal has never been to feel everything all at once.
-
-The challenge is noticing when numbness becomes the default rather than a temporary response.
-
-## Recognizing the Shift
-
-Awareness often begins subtly. You may notice yourself scrolling longer without remembering what you saw. Silence feels uncomfortable without distraction. Conversations that once felt meaningful begin to feel rushed or surface level.
-
-Reconnection rarely requires dramatic change. Limiting constant exposure to distressing media, spending time in environments that engage the senses, or having conversations without distraction can gradually restore emotional presence. Therapy, creativity, movement, and moments of intentional stillness can help sensitivity return without overwhelm.
-
-## Choosing to Feel Again
-
-Desensitization is not evidence that something is wrong with you. More often, it reflects a mind working hard to protect itself in a world that rarely pauses.
-
-Choosing to feel again does not mean abandoning protection. It means recognizing when distance is helping you and when it is quietly keeping you from the people, experiences, and parts of yourself that matter most. In a world constantly asking for your attention, reclaiming emotional presence may be one of the most meaningful ways to care for yourself and those around you.`,
-  },
   {
     slug: "master-trauma-or-die-trying",
   {
