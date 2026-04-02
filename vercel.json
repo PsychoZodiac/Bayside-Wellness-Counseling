@@ -24,6 +24,11 @@
       "source": "/seo/:path*",
       "destination": "/:path*",
       "permanent": true
+    },
+    {
+      "source": "/blog/tag/:tag*",
+      "destination": "/blog",
+      "permanent": true
     }
   ],
   "rewrites": [
