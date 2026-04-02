@@ -125,12 +125,16 @@ export const servicePages = {
   }),
   
   // Aliases for backward compatibility and slug matching
-  family: generateMetadata({
-    title: "Family Therapy Oakland | Parent-Teen Counseling | LMFT",
-    description: "Family therapy focused on parent-teen relationships, communication, and conflict resolution. Strengthen family dynamics with evidence-based approaches.",
-    keywords: ["family therapy Oakland", "parent teen therapy", "family counseling", "teen therapy", "family communication"],
-    path: "/services/family",
-  }),
+  teen: {
+  title: "Teen Therapy | Bayside Wellness & Counseling",
+  description: "Teen therapy for high schoolers and college students (14+) dealing with anxiety, depression, identity, academic pressure, and social struggles. Virtual therapy across California.",
+  canonical: "https://baysidewellnessandcounseling.com/services/teen",
+  og: {
+    title: "Teen Therapy | Bayside Wellness & Counseling",
+    description: "A low-pressure space for teens to work through anxiety, identity, academic stress, and social struggles. No lectures, no judgment.",
+    url: "https://baysidewellnessandcounseling.com/services/teen",
+  }
+},
   
   mens: generateMetadata({
     title: "Men's Therapy Oakland | Counseling for Men | Anger, Relationships",
