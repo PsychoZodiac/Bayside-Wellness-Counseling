@@ -29,6 +29,11 @@
       "source": "/blog/tag/:tag*",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/blog/5-lies-suicide-tells-us",
+      "destination": "/blog/the-5-lies-suicide-tells-us",
+      "permanent": true
     }
   ],
   "rewrites": [
