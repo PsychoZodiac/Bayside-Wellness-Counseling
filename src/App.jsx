@@ -1090,38 +1090,6 @@ const seoPages = {
     whyChoose: ["Licensed LMFT specializing in anger work", "Work on anger and stress management", "Build healthier communication patterns", "Free 15-minute consultation call"],
   },
 
-  // Teen Therapy
-  "teen-therapy-san-francisco": {
-    city: "San Francisco", state: "CA", slug: "teen-therapy-san-francisco",
-    title: "Teen Therapy in San Francisco, CA", metaTitle: "Teen Therapist San Francisco | LMFT | $240/session | Free Consultation", metaDescription: "Licensed teen therapist in San Francisco (LMFT). High school age+. Anxiety, depression, identity, relationships. $240/45min. Free consultation.",
-    h1: "Teen Therapist in San Francisco, CA | LMFT | Counseling for Teens", intro: "SF teens (high school age and up) dealing with anxiety, depression, identity questions, or relationship struggles can find support. We specialize in helping teens navigate the unique pressures of adolescence and young adulthood.", localContent: "Serving teens throughout San Francisco through convenient telehealth sessions. No need to miss school or navigate SF traffic.",
-    whyChoose: ["Licensed LMFT specializing in teen therapy", "Focus on identity, relationships, and transitions", "High school age and up", "Free 15-minute consultation call"],
-  },
-  "teen-therapy-oakland": {
-    city: "Oakland", state: "CA", slug: "teen-therapy-oakland",
-    title: "Teen Therapy in Oakland, CA", metaTitle: "Teen Therapist Oakland | LMFT | $240/session | Free Consultation", metaDescription: "Licensed teen therapist in Oakland (LMFT). High school age+. Anxiety, depression, identity, transitions. $240/45min. Free consultation.",
-    h1: "Teen Therapist in Oakland, CA | LMFT | Counseling for Teens", intro: "Oakland teens (high school age and up) navigating anxiety, depression, identity, or family dynamics can get help. We work with teens on emotional and relational issues, not learning assessments.", localContent: "Serving Oakland teens from Piedmont High to Skyline through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT with teen experience", "Focus on emotional and relational issues", "Individual therapy available for parent-teen work", "Free 15-minute consultation call"],
-  },
-  "teen-therapy-san-jose": {
-    city: "San Jose", state: "CA", slug: "teen-therapy-san-jose",
-    title: "Teen Therapy in San Jose, CA", metaTitle: "Teen Therapist San Jose | LMFT | $240/session | Free Consultation", metaDescription: "Licensed teen therapist in San Jose (LMFT). High school age+. Anxiety, depression, academic pressure. $240/45min. Free consultation.",
-    h1: "Teen Therapist in San Jose, CA | LMFT | Counseling for Teens", intro: "San Jose teens (high school age and up) dealing with academic pressure, anxiety, or identity questions can find support. We help teens navigate the unique challenges of growing up in Silicon Valley.", localContent: "Serving teens throughout San Jose through convenient telehealth sessions that work around school schedules.",
-    whyChoose: ["Licensed LMFT specializing in teen therapy", "Teen anxiety and depression specialization", "Individual therapy available", "Free 15-minute consultation call"],
-  },
-  "teen-therapy-berkeley": {
-    city: "Berkeley", state: "CA", slug: "teen-therapy-berkeley",
-    title: "Teen Therapy in Berkeley, CA", metaTitle: "Teen Therapist Berkeley | LMFT | $240/session | Free Consultation", metaDescription: "Licensed teen therapist in Berkeley (LMFT). High school age+. Anxiety, depression, identity. $240/45min. Free consultation.",
-    h1: "Teen Therapist in Berkeley, CA | LMFT | Counseling for Teens", intro: "Berkeley teens (high school age and up) navigating anxiety, depression, identity, or family dynamics can get help. We specialize in helping teens work through emotional and relational challenges.", localContent: "Serving Berkeley High students and East Bay teens through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT with teen expertise", "Focus on identity and life transitions", "Individual therapy for parent-teen work", "Free 15-minute consultation call"],
-  },
-  "teen-therapy-palo-alto": {
-    city: "Palo Alto", state: "CA", slug: "teen-therapy-palo-alto",
-    title: "Teen Therapy in Palo Alto, CA", metaTitle: "Teen Therapist Palo Alto | LMFT | $240/session | Free Consultation", metaDescription: "Licensed teen therapist in Palo Alto (LMFT). High school age+. Anxiety, depression, achievement pressure. $240/45min. Free consultation.",
-    h1: "Teen Therapist in Palo Alto, CA | LMFT | Counseling for Teens", intro: "Palo Alto teens (high school age and up) dealing with achievement pressure, anxiety, or identity questions can find support. We help teens navigate the intense academic and social pressures of the Peninsula.", localContent: "Serving Palo Alto High, Gunn, and Peninsula teens through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT specializing in teen therapy", "Teen anxiety and perfectionism specialization", "Individual therapy available", "Free 15-minute consultation call"],
-  },
-
   // College Student Therapy
   "college-student-therapy-san-francisco": {
     city: "San Francisco", state: "CA", slug: "college-student-therapy-san-francisco",
