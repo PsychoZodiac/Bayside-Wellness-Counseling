@@ -903,35 +903,35 @@ const seoPages = {
   },
 
   // Family Therapy
-  "family-therapy-san-francisco": {
-    city: "San Francisco", state: "CA", slug: "family-therapy-san-francisco",
-    title: "Family Therapy in San Francisco, CA", metaTitle: "Family Therapist San Francisco | LMFT | $240/session | Parent-Teen | Free Consultation", metaDescription: "Licensed family therapist in San Francisco (LMFT). Parent-teen counseling, family communication. High school age+. $240/45min. Free consultation.",
-    h1: "Family Therapist in San Francisco, CA | LMFT | Parent-Teen Counseling", intro: "SF families struggling with communication can benefit from family therapy. We work with parents and teens (high school age+) to improve relationships and resolve conflicts. This is not couples therapy.", localContent: "From the Richmond to the Mission, our telehealth platform brings family therapy to San Francisco families.",
-    whyChoose: ["Licensed LMFT specializing in family therapy", "Improve communication and dynamics", "Support for college students and families", "Free 15-minute consultation call"],
+"teen-therapy-san-francisco": {
+    city: "San Francisco", state: "CA", slug: "teen-therapy-san-francisco",
+    title: "Teen Therapy in San Francisco, CA", metaTitle: "Teen Therapist San Francisco | LMFT | $240/session | High School & College | Free Consultation", metaDescription: "Licensed teen therapist in San Francisco (LMFT). Therapy for high schoolers and college students dealing with anxiety, depression, identity, and stress. $240/45min. Free consultation.",
+    h1: "Teen Therapist in San Francisco, CA | LMFT | Counseling for Teens & Young Adults", intro: "SF teens and college students navigating anxiety, depression, identity questions, or social struggles can find real support. Teen therapy is a low-pressure space where high schoolers and college students can actually talk — without feeling managed, lectured, or analyzed.", localContent: "From the Richmond to the Mission, our telehealth platform brings teen therapy to San Francisco families. No commute, no parking. Just honest, practical work with a therapist who understands what it actually feels like to be a teenager right now.",
+    whyChoose: ["Licensed LMFT specializing in teen and young adult therapy", "High school age and up (roughly 14+)", "Works on anxiety, depression, identity, and social stress", "Free 15-minute consultation call"],
   },
-  "family-therapy-oakland": {
-    city: "Oakland", state: "CA", slug: "family-therapy-oakland",
-    title: "Family Therapy in Oakland, CA", metaTitle: "Family Therapist Oakland | LMFT | $240/session | Parent-Teen | Free Consultation", metaDescription: "Licensed family therapist in Oakland (LMFT). Parent-teen counseling, family communication. High school age+. $240/45min. Serving East Bay. Free consultation.",
-    h1: "Family Therapist in Oakland, CA | LMFT | Parent-Teen Counseling", intro: "Oakland families struggling with teen communication can benefit from family therapy. We work with parents and high school or college-aged children to improve relationships.", localContent: "Serving Oakland families from Rockridge to the Hills through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT specializing in family therapy", "Improve family communication", "Support through transitions", "Free 15-minute consultation call"],
+  "teen-therapy-oakland": {
+    city: "Oakland", state: "CA", slug: "teen-therapy-oakland",
+    title: "Teen Therapy in Oakland, CA", metaTitle: "Teen Therapist Oakland | LMFT | $240/session | High School & College | Free Consultation", metaDescription: "Licensed teen therapist in Oakland (LMFT). Therapy for high schoolers and college students dealing with anxiety, depression, identity, and transitions. $240/45min. Free consultation.",
+    h1: "Teen Therapist in Oakland, CA | LMFT | Counseling for Teens & Young Adults", intro: "Oakland teens and college students dealing with anxiety, depression, identity, or the pressure of figuring out who they are can find support here. No lectures, no judgment. Just honest work with a therapist who actually gets what it's like to be a young person right now.", localContent: "Serving teens and young adults throughout Oakland from Piedmont High to Skyline through convenient telehealth sessions. No need to fight East Bay traffic to get quality mental health care.",
+    whyChoose: ["Licensed LMFT specializing in teen and young adult therapy", "High school age and up (roughly 14+)", "Works on anxiety, depression, identity, and social struggles", "Free 15-minute consultation call"],
   },
-  "family-therapy-san-jose": {
-    city: "San Jose", state: "CA", slug: "family-therapy-san-jose",
-    title: "Family Therapy in San Jose, CA", metaTitle: "Family Therapist San Jose | LMFT | $240/session | Parent-Teen | Free Consultation", metaDescription: "Licensed family therapist in San Jose (LMFT). Parent-teen counseling, family dynamics. High school age+. $240/45min. Serving Silicon Valley. Free consultation.",
-    h1: "Family Therapist in San Jose, CA | LMFT | Parent-Teen Counseling", intro: "San Jose families dealing with parent-teen conflict can benefit from family therapy. We help families improve communication and navigate transitions together.", localContent: "From Willow Glen to Evergreen, telehealth brings family therapy to Silicon Valley families.",
-    whyChoose: ["Licensed LMFT with family therapy expertise", "Navigate academic pressure together", "Improve family communication", "Free 15-minute consultation call"],
+  "teen-therapy-san-jose": {
+    city: "San Jose", state: "CA", slug: "teen-therapy-san-jose",
+    title: "Teen Therapy in San Jose, CA", metaTitle: "Teen Therapist San Jose | LMFT | $240/session | High School & College | Free Consultation", metaDescription: "Licensed teen therapist in San Jose (LMFT). Therapy for high schoolers and college students dealing with anxiety, academic pressure, and identity. $240/45min. Free consultation.",
+    h1: "Teen Therapist in San Jose, CA | LMFT | Counseling for Teens & Young Adults", intro: "San Jose teens navigating academic pressure, anxiety, identity questions, or the specific weight of growing up in Silicon Valley deserve real support. Teen therapy is a low-pressure space built around what actually matters to them.", localContent: "Serving teens and college students throughout San Jose through convenient telehealth sessions that work around school and activity schedules. Quality mental health support without adding to your commute.",
+    whyChoose: ["Licensed LMFT specializing in teen and young adult therapy", "High school age and up (roughly 14+)", "Understands Silicon Valley achievement pressure", "Free 15-minute consultation call"],
   },
-  "family-therapy-berkeley": {
-    city: "Berkeley", state: "CA", slug: "family-therapy-berkeley",
-    title: "Family Therapy in Berkeley, CA", metaTitle: "Family Therapist Berkeley | LMFT | $240/session | Parent-Teen | Free Consultation", metaDescription: "Licensed family therapist in Berkeley (LMFT). Parent-teen counseling, family communication. High school age+. $240/45min. Serving UC Berkeley families. Free consultation.",
-    h1: "Family Therapist in Berkeley, CA | LMFT | Parent-Teen Counseling", intro: "Berkeley families navigating parent-teen relationships can benefit from family therapy. We work with high school and college-aged students and their families.", localContent: "Whether your teen attends Berkeley High or UC Berkeley, our telehealth platform brings family therapy to you.",
-    whyChoose: ["Licensed LMFT specializing in family therapy", "Navigate academic stress together", "Improve family dynamics", "Free 15-minute consultation call"],
+  "teen-therapy-berkeley": {
+    city: "Berkeley", state: "CA", slug: "teen-therapy-berkeley",
+    title: "Teen Therapy in Berkeley, CA", metaTitle: "Teen Therapist Berkeley | LMFT | $240/session | High School & College Students | Free Consultation", metaDescription: "Licensed teen therapist in Berkeley (LMFT). Therapy for high schoolers and college students dealing with anxiety, depression, identity. $240/45min. Free consultation.",
+    h1: "Teen Therapist in Berkeley, CA | LMFT | Counseling for Teens & Young Adults", intro: "Berkeley teens and college students — including UC Berkeley students — dealing with anxiety, depression, identity, or academic stress can find real support. A space to work through what's actually going on, without the performance.", localContent: "Serving Berkeley High students, UC Berkeley students, and East Bay teens through convenient telehealth sessions. Flexible scheduling that fits around classes, extracurriculars, and everything else.",
+    whyChoose: ["Licensed LMFT specializing in teen and young adult therapy", "High school age and up (roughly 14+)", "Experience with UC Berkeley student stress", "Free 15-minute consultation call"],
   },
-  "family-therapy-palo-alto": {
-    city: "Palo Alto", state: "CA", slug: "family-therapy-palo-alto",
-    title: "Family Therapy in Palo Alto, CA", metaTitle: "Family Therapist Palo Alto | LMFT | $240/session | Parent-Teen | Free Consultation", metaDescription: "Licensed family therapist in Palo Alto (LMFT). Parent-teen counseling, family communication. High school age+. $240/45min. Serving Stanford families. Free consultation.",
-    h1: "Family Therapist in Palo Alto, CA | LMFT | Parent-Teen Counseling", intro: "Palo Alto families dealing with achievement pressure can benefit from family therapy. We help parents and teens improve communication and navigate high-pressure environments together.", localContent: "Serving Palo Alto and Stanford families through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT with family therapy expertise", "Navigate achievement pressure", "Improve family communication", "Free 15-minute consultation call"],
+  "teen-therapy-palo-alto": {
+    city: "Palo Alto", state: "CA", slug: "teen-therapy-palo-alto",
+    title: "Teen Therapy in Palo Alto, CA", metaTitle: "Teen Therapist Palo Alto | LMFT | $240/session | High School & College | Free Consultation", metaDescription: "Licensed teen therapist in Palo Alto (LMFT). Therapy for high schoolers and college students dealing with anxiety, achievement pressure, and identity. $240/45min. Free consultation.",
+    h1: "Teen Therapist in Palo Alto, CA | LMFT | Counseling for Teens & Young Adults", intro: "Palo Alto teens face some of the most intense academic and social pressure anywhere in the country. Teen therapy is a low-pressure space where high schoolers and college students can work through anxiety, identity, burnout, and everything that comes with growing up in a high-stakes environment.", localContent: "Serving Palo Alto High, Gunn, and Peninsula teens through convenient telehealth sessions that work around demanding school schedules. Real support without adding to the pressure.",
+    whyChoose: ["Licensed LMFT specializing in teen and young adult therapy", "High school age and up (roughly 14+)", "Understands Peninsula achievement culture", "Free 15-minute consultation call"],
   },
 
   // Men's Therapy
