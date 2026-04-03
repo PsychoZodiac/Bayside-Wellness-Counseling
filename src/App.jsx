@@ -205,7 +205,7 @@ const seoPages = {
     localContent: "From the Marina to the Mission, Nob Hill to the Outer Sunset, our telehealth platform brings quality mental health care directly to you. No Muni delays, no parking nightmares. Just effective therapy that works with your SF lifestyle.",
     whyChoose: [
       "Licensed California therapist (LMFT)",
-      "EMDR, IFS, CBT, and family therapy approaches",
+      "EMDR, IFS, CBT, and personalized therapy approaches",
       "Virtual sessions across all of California",
       "Free 15-minute consultation call",
     ],
@@ -235,14 +235,14 @@ const seoPages = {
     slug: "therapy-alameda",
     title: "Therapy in Alameda, CA",
     metaTitle: "Alameda Therapist | LMFT | $240/session | Virtual Therapy | Free Consultation",
-    metaDescription: "Licensed Alameda therapist (LMFT). Virtual EMDR, CBT, family therapy. $240/45min. Serving the island and East Bay. Free consultation. Book today.",
+    metaDescription: "Licensed Alameda therapist (LMFT). Virtual EMDR, CBT, individual therapy. $240/45min. Serving the island and East Bay. Free consultation. Book today.",
     h1: "Licensed Therapist in Alameda, CA | LMFT | Virtual Therapy",
     intro: "Alameda residents deserve accessible, quality mental health care. Bayside Wellness & Counseling provides virtual therapy to adultsand teens on the island and beyond.",
     localContent: "From the West End to Bay Farm Island, our telehealth platform brings therapy to your home. No bridge traffic, no searching for parking. Just effective mental health support when you need it.",
     whyChoose: [
       "Licensed California LMFT",
       "EMDR, IFS, and CBT for trauma, anxiety, and depression",
-      "Family therapy for parents and teens",
+      "Individual therapy for adults and teens",
       "Free 15-minute consultation call",
     ],
   },
@@ -274,7 +274,7 @@ const seoPages = {
     intro: "Piedmont families deserve compassionate, effective mental health support. We provide virtual therapy to teens and adults throughout Piedmont and the Oakland hills.",
     localContent: "Our telehealth platform makes it easy for Piedmont residents to access quality therapy without leaving home. Whether you're working on teenage developmental issues, or personal growth, we're here to help.",
     whyChoose: [
-      "Licensed LMFT specializing in family therapy",
+      "Licensed LMFT specializing in trauma therapy",
       "Experience with academic pressure and achievement stress",
       "EMDR for trauma and anxiety disorders",
       "Free 15-minute consultation call",
@@ -293,7 +293,7 @@ const seoPages = {
     whyChoose: [
       "Licensed California LMFT",
       "Treatment for anxiety, depression, and relationship issues",
-      "Men's therapy and family therapy available",
+      "Men's therapy and individual therapy available",
       "Free 15-minute consultation call",
     ],
   },
@@ -337,7 +337,7 @@ const seoPages = {
     slug: "therapy-pleasanton",
     title: "Therapy in Pleasanton, CA",
     metaTitle: "Pleasanton Therapist | LMFT | $240/session | Family & Teen Therapy | Free Consultation",
-    metaDescription: "Licensed Pleasanton therapist (LMFT). Virtual family therapy, teen counseling, anxiety treatment. $240/45min. Serving Tri-Valley. Free consultation.",
+    metaDescription: "Licensed Pleasanton therapist (LMFT). Virtual individual therapy, teen counseling, anxiety treatment. $240/45min. Serving Tri-Valley. Free consultation.",
     h1: "Licensed Therapist in Pleasanton, CA | LMFT | Virtual Therapy",
     intro: "Pleasanton families and professionals deserve accessible mental health support. We offer virtual therapy for adults and teens throughout the Tri-Valley.",
     localContent: "From Downtown Pleasanton to Ruby Hill, our telehealth platform brings quality therapy to you. Work with a licensed therapist without the drive to Oakland or San Francisco.",
@@ -377,7 +377,7 @@ const seoPages = {
     localContent: "From Downtown Concord to Monument Corridor, our telehealth services bring quality therapy to your home. Accessible mental health care for the entire family.",
     whyChoose: [
       "Licensed California LMFT",
-      "Family therapy and teen counseling available",
+      "Individual therapy and teen counseling available",
       "Men's therapy specializing in anger and relationships",
       "Free 15-minute consultation call",
     ],
@@ -481,7 +481,7 @@ const seoPages = {
     localContent: "Whether you're in Murphy Ranch, the Heritage District, or near Moffett Park, telehealth makes therapy convenient. Quality mental health care without the commute.",
     whyChoose: [
       "Licensed California LMFT",
-      "Family therapy and relationship counseling",
+      "Individual therapy and relationship counseling",
       "EMDR for trauma and anxiety disorders",
       "Free 15-minute consultation call",
     ],
@@ -499,7 +499,7 @@ const seoPages = {
     whyChoose: [
       "Licensed LMFT serving the Peninsula",
       "Treatment for anxiety, depression, and trauma",
-      "Family therapy for individuals and teens",
+      "Personalized therapy for individuals and teens",
       "Free 15-minute consultation call",
     ],
   },
@@ -525,13 +525,13 @@ const seoPages = {
     state: "CA",
     slug: "therapy-san-carlos",
     title: "Therapy in San Carlos, CA",
-    metaTitle: "San Carlos Therapist | LMFT | $240/session | Family Therapy | Free Consultation",
+    metaTitle: "San Carlos Therapist | LMFT | $240/session | Trauma Therapy | Free Consultation",
     metaDescription: "Licensed San Carlos therapist (LMFT). Virtual individual therapy, teen counseling, anxiety treatment. $240/45min. Free 15-minute consultation.",
     h1: "Licensed Therapist in San Carlos, CA | LMFT | Virtual Therapy",
     intro: "San Carlos is a close-knit community, and mental health matters here. We offer virtual therapy to adults and teens throughout San Carlos and the mid-Peninsula.",
     localContent: "Our telehealth platform makes it easy for San Carlos residents to access quality therapy. Whether you're working through life transitions, teen anxiety, or personal growth, we're here to help.",
     whyChoose: [
-      "Licensed LMFT specializing in family therapy",
+      "Licensed LMFT specializing in trauma therapy",
       "Treatment for anxiety, depression, and life transitions",
       "EMDR for trauma processing",
       "Free 15-minute consultation call",
@@ -644,13 +644,13 @@ const seoPages = {
     state: "CA",
     slug: "therapy-los-altos",
     title: "Therapy in Los Altos, CA",
-    metaTitle: "Los Altos Therapist | LMFT | $240/session | Family Therapy | Free Consultation",
+    metaTitle: "Los Altos Therapist | LMFT | $240/session | Individual Therapy | Free Consultation",
     metaDescription: "Licensed Los Altos therapist (LMFT). Virtual individual therapy, teen therapy, anxiety treatment. $240/45min. Free 15-minute consultation.",
     h1: "Licensed Therapist in Los Altos, CA | LMFT | Virtual Therapy",
     intro: "Los Altos families deserve mental health support that matches the quality of their community. We offer virtual therapy to adults, teens, and professionals throughout Los Altos.",
     localContent: "Our telehealth platform makes therapy convenient for Los Altos residents. Whether you're working on work dynamics, teen stress, or personal growth, we're here to help.",
     whyChoose: [
-      "Licensed LMFT specializing in family therapy",
+      "Licensed LMFT specializing in trauma therapy",
       "Treatment for academic pressure and perfectionism",
       "EMDR for anxiety and trauma",
       "Free 15-minute consultation call",
@@ -703,7 +703,7 @@ const seoPages = {
     intro: "Mill Valley is known for its natural beauty and strong community. We provide virtual therapy that honors both, serving adults, teens, and founders throughout Mill Valley.",
     localContent: "Whether you're in downtown Mill Valley or up on the slopes of Mount Tam, telehealth brings quality therapy to you. Mental health support that fits Marin living.",
     whyChoose: [
-      "Licensed LMFT specializing in family therapy",
+      "Licensed LMFT specializing in trauma therapy",
       "Treatment for anxiety, stress, and life balance",
       "Individual therapy and parent support",
       "Free 15-minute consultation call",
@@ -755,7 +755,7 @@ const seoPages = {
     localContent: "Our telehealth platform makes mental health care accessible to Petaluma residents. Quality therapy without the drive to Santa Rosa or SF.",
     whyChoose: [
       "Licensed California LMFT",
-      "Family therapy and teen support",
+      "Individual therapy and teen support",
       "EMDR for trauma processing",
       "Free 15-minute consultation call",
     ],
@@ -810,7 +810,7 @@ const seoPages = {
   "ifs-therapy-san-francisco": {
     city: "San Francisco", state: "CA", slug: "ifs-therapy-san-francisco",
     title: "IFS Therapy in San Francisco, CA", metaTitle: "IFS Therapist San Francisco | LMFT | $240/session | Parts Work | Free Consultation", metaDescription: "Licensed IFS therapist in San Francisco (LMFT). Individual therapy for internal conflict, self-criticism, perfectionism. $240/45min. Free consultation.",
-    h1: "IFS Therapist in San Francisco, CA | LMFT | Parts Work Therapy", intro: "IFS (Internal Family Systems) helps SF residents work with their internal parts. This is individual therapy about your inner world, not family therapy. Effective for self-criticism, perfectionism, and feeling at war with yourself.", localContent: "From the Mission to Pacific Heights, our telehealth platform brings IFS therapy to San Francisco residents dealing with internal conflict.",
+    h1: "IFS Therapist in San Francisco, CA | LMFT | Parts Work Therapy", intro: "IFS (Internal Family Systems) helps SF residents work with their internal parts. This is individual therapy about your inner world, not individual therapy. Effective for self-criticism, perfectionism, and feeling at war with yourself.", localContent: "From the Mission to Pacific Heights, our telehealth platform brings IFS therapy to San Francisco residents dealing with internal conflict.",
     whyChoose: ["Licensed LMFT specializing in IFS", "Effective for self-criticism and perfectionism", "Gentle approach to complex trauma", "Free 15-minute consultation call"],
   },
   "ifs-therapy-oakland": {
@@ -828,7 +828,7 @@ const seoPages = {
   "ifs-therapy-berkeley": {
     city: "Berkeley", state: "CA", slug: "ifs-therapy-berkeley",
     title: "IFS Therapy in Berkeley, CA", metaTitle: "IFS Therapist Berkeley | LMFT | $240/session | Parts Work | Free Consultation", metaDescription: "Licensed IFS therapist in Berkeley (LMFT). Individual therapy for internal conflict, self-criticism. $240/45min. Serving UC Berkeley students. Free consultation.",
-    h1: "IFS Therapist in Berkeley, CA | LMFT | Parts Work Therapy", intro: "IFS helps Berkeley residents work with their internal parts. Effective for self-criticism, perfectionism, and feeling at war with yourself. This is individual therapy, not family therapy.", localContent: "Whether you're a UC Berkeley student or Berkeley professional, our telehealth platform brings parts work therapy to you.",
+    h1: "IFS Therapist in Berkeley, CA | LMFT | Parts Work Therapy", intro: "IFS helps Berkeley residents work with their internal parts. Effective for self-criticism, perfectionism, and feeling at war with yourself. This is individual therapy, not individual therapy.", localContent: "Whether you're a UC Berkeley student or Berkeley professional, our telehealth platform brings parts work therapy to you.",
     whyChoose: ["Licensed LMFT specializing in IFS", "Helpful for academic perfectionism", "Effective for complex trauma", "Free 15-minute consultation call"],
   },
   "ifs-therapy-palo-alto": {
@@ -902,7 +902,7 @@ const seoPages = {
     whyChoose: ["Licensed LMFT with psychodynamic training", "Effective for chronic issues", "Gets at root causes", "Free 15-minute consultation call"],
   },
 
-  // Family Therapy
+  // Teen Therapy
 "teen-therapy-san-francisco": {
     city: "San Francisco", state: "CA", slug: "teen-therapy-san-francisco",
     title: "Teen Therapy in San Francisco, CA", metaTitle: "Teen Therapist San Francisco | LMFT | $240/session | High School & College | Free Consultation", metaDescription: "Licensed teen therapist in San Francisco (LMFT). Therapy for high schoolers and college students dealing with anxiety, depression, identity, and stress. $240/45min. Free consultation.",
@@ -1101,25 +1101,25 @@ const seoPages = {
     city: "Oakland", state: "CA", slug: "teen-therapy-oakland",
     title: "Teen Therapy in Oakland, CA", metaTitle: "Teen Therapist Oakland | LMFT | $240/session | Free Consultation", metaDescription: "Licensed teen therapist in Oakland (LMFT). High school age+. Anxiety, depression, identity, transitions. $240/45min. Free consultation.",
     h1: "Teen Therapist in Oakland, CA | LMFT | Counseling for Teens", intro: "Oakland teens (high school age and up) navigating anxiety, depression, identity, or family dynamics can get help. We work with teens on emotional and relational issues, not learning assessments.", localContent: "Serving Oakland teens from Piedmont High to Skyline through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT with teen experience", "Focus on emotional and relational issues", "Family therapy available for parent-teen work", "Free 15-minute consultation call"],
+    whyChoose: ["Licensed LMFT with teen experience", "Focus on emotional and relational issues", "Individual therapy available for parent-teen work", "Free 15-minute consultation call"],
   },
   "teen-therapy-san-jose": {
     city: "San Jose", state: "CA", slug: "teen-therapy-san-jose",
     title: "Teen Therapy in San Jose, CA", metaTitle: "Teen Therapist San Jose | LMFT | $240/session | Free Consultation", metaDescription: "Licensed teen therapist in San Jose (LMFT). High school age+. Anxiety, depression, academic pressure. $240/45min. Free consultation.",
     h1: "Teen Therapist in San Jose, CA | LMFT | Counseling for Teens", intro: "San Jose teens (high school age and up) dealing with academic pressure, anxiety, or identity questions can find support. We help teens navigate the unique challenges of growing up in Silicon Valley.", localContent: "Serving teens throughout San Jose through convenient telehealth sessions that work around school schedules.",
-    whyChoose: ["Licensed LMFT specializing in teen therapy", "Teen anxiety and depression specialization", "Family therapy available", "Free 15-minute consultation call"],
+    whyChoose: ["Licensed LMFT specializing in teen therapy", "Teen anxiety and depression specialization", "Individual therapy available", "Free 15-minute consultation call"],
   },
   "teen-therapy-berkeley": {
     city: "Berkeley", state: "CA", slug: "teen-therapy-berkeley",
     title: "Teen Therapy in Berkeley, CA", metaTitle: "Teen Therapist Berkeley | LMFT | $240/session | Free Consultation", metaDescription: "Licensed teen therapist in Berkeley (LMFT). High school age+. Anxiety, depression, identity. $240/45min. Free consultation.",
     h1: "Teen Therapist in Berkeley, CA | LMFT | Counseling for Teens", intro: "Berkeley teens (high school age and up) navigating anxiety, depression, identity, or family dynamics can get help. We specialize in helping teens work through emotional and relational challenges.", localContent: "Serving Berkeley High students and East Bay teens through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT with teen expertise", "Focus on identity and life transitions", "Family therapy for parent-teen work", "Free 15-minute consultation call"],
+    whyChoose: ["Licensed LMFT with teen expertise", "Focus on identity and life transitions", "Individual therapy for parent-teen work", "Free 15-minute consultation call"],
   },
   "teen-therapy-palo-alto": {
     city: "Palo Alto", state: "CA", slug: "teen-therapy-palo-alto",
     title: "Teen Therapy in Palo Alto, CA", metaTitle: "Teen Therapist Palo Alto | LMFT | $240/session | Free Consultation", metaDescription: "Licensed teen therapist in Palo Alto (LMFT). High school age+. Anxiety, depression, achievement pressure. $240/45min. Free consultation.",
     h1: "Teen Therapist in Palo Alto, CA | LMFT | Counseling for Teens", intro: "Palo Alto teens (high school age and up) dealing with achievement pressure, anxiety, or identity questions can find support. We help teens navigate the intense academic and social pressures of the Peninsula.", localContent: "Serving Palo Alto High, Gunn, and Peninsula teens through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT specializing in teen therapy", "Teen anxiety and perfectionism specialization", "Family therapy available", "Free 15-minute consultation call"],
+    whyChoose: ["Licensed LMFT specializing in teen therapy", "Teen anxiety and perfectionism specialization", "Individual therapy available", "Free 15-minute consultation call"],
   },
 
   // College Student Therapy
@@ -1165,7 +1165,7 @@ const seoPages = {
     city: "Oakland", state: "CA", slug: "lgbtq-therapy-oakland",
     title: "LGBTQ+ Affirming Therapy in Oakland, CA", metaTitle: "LGBTQ+ Therapist Oakland | LMFT | $240/session | Free Consultation", metaDescription: "LGBTQ+ affirming therapist in Oakland (LMFT). Gender identity, coming out, relationship issues. $240/45min. Free consultation.",
     h1: "LGBTQ+ Affirming Therapist in Oakland, CA | LMFT", intro: "Oakland's LGBTQ+ community can find affirming mental health support. We work with individuals on identity, relationships, family dynamics, and transitions in a fully affirming space.", localContent: "Serving Oakland's diverse LGBTQ+ community through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT with LGBTQ+ affirming therapy", "Support for identity and relationship issues", "Family therapy for coming out and family dynamics", "Free 15-minute consultation call"],
+    whyChoose: ["Licensed LMFT with LGBTQ+ affirming therapy", "Support for identity and relationship issues", "Supportive therapy for coming out and family dynamics", "Free 15-minute consultation call"],
   },
   "lgbtq-therapy-san-jose": {
     city: "San Jose", state: "CA", slug: "lgbtq-therapy-san-jose",
@@ -1222,8 +1222,8 @@ const seoPages = {
   "online-therapy-san-francisco": {
     city: "San Francisco", state: "CA", slug: "online-therapy-san-francisco",
     title: "Online Therapy in San Francisco, CA", metaTitle: "Online Therapist San Francisco | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in San Francisco (LMFT). EMDR, CBT, IFS virtual therapy. $240/45min. Free 15-min consultation. Book today.",
-    h1: "Online Therapist in San Francisco, CA | LMFT", intro: "Looking for online therapy in San Francisco? As a licensed therapist (LMFT), I provide virtual therapy to SF residents across all neighborhoods. Telehealth means you get quality mental health care without commuting, parking, or leaving your home.", localContent: "Whether you're in the Financial District, the Mission, Pacific Heights, or the Outer Sunset, online therapy brings professional mental health support directly to you. I specialize in EMDR, IFS, CBT, and family therapy for adults, teens, and families dealing with anxiety, depression, trauma, and relationship issues.",
-    whyChoose: ["Licensed California therapist (LMFT)", "EMDR, IFS, CBT, and family therapy", "Virtual sessions eliminate SF commute stress", "Free 15-minute consultation"],
+    h1: "Online Therapist in San Francisco, CA | LMFT", intro: "Looking for online therapy in San Francisco? As a licensed therapist (LMFT), I provide virtual therapy to SF residents across all neighborhoods. Telehealth means you get quality mental health care without commuting, parking, or leaving your home.", localContent: "Whether you're in the Financial District, the Mission, Pacific Heights, or the Outer Sunset, online therapy brings professional mental health support directly to you. I specialize in EMDR, IFS, CBT, and trauma therapy for adults, teens, and families dealing with anxiety, depression, trauma, and relationship issues.",
+    whyChoose: ["Licensed California therapist (LMFT)", "EMDR, IFS, CBT, and indiviidual therapy", "Virtual sessions eliminate SF commute stress", "Free 15-minute consultation"],
   },
   "online-therapy-oakland": {
     city: "Oakland", state: "CA", slug: "online-therapy-oakland",
@@ -1257,9 +1257,9 @@ const seoPages = {
   },
   "online-therapy-hayward": {
     city: "Hayward", state: "CA", slug: "online-therapy-hayward",
-    title: "Online Therapy in Hayward, CA", metaTitle: "Online Therapist Hayward | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in Hayward (LMFT). Virtual therapy for East Bay residents. EMDR, CBT, family therapy. Book free consultation.",
+    title: "Online Therapy in Hayward, CA", metaTitle: "Online Therapist Hayward | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in Hayward (LMFT). Virtual therapy for East Bay residents. EMDR, CBT, individual therapy. Book free consultation.",
     h1: "Online Therapist in Hayward, CA | LMFT", intro: "Hayward residents can access licensed online therapy (LMFT) for anxiety, depression, trauma, and family issues. Virtual sessions bring quality mental health care to you without the drive to Oakland or San Francisco.", localContent: "From Downtown Hayward to the Southgate area, online therapy provides professional mental health support that's accessible and convenient. Telehealth eliminates transportation barriers.",
-    whyChoose: ["Licensed LMFT serving Hayward", "Virtual EMDR, CBT, family therapy", "No commute required", "Free 15-minute consultation"],
+    whyChoose: ["Licensed LMFT serving Hayward", "Virtual EMDR, CBT, truama therapy", "No commute required", "Free 15-minute consultation"],
   },
   "online-therapy-walnut-creek": {
     city: "Walnut Creek", state: "CA", slug: "online-therapy-walnut-creek",
@@ -1269,15 +1269,15 @@ const seoPages = {
   },
   "online-therapy-san-mateo": {
     city: "San Mateo", state: "CA", slug: "online-therapy-san-mateo",
-    title: "Online Therapy in San Mateo, CA", metaTitle: "Online Therapist San Mateo | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in San Mateo (LMFT). Virtual therapy for Peninsula residents. EMDR, CBT, family therapy. Book today.",
+    title: "Online Therapy in San Mateo, CA", metaTitle: "Online Therapist San Mateo | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in San Mateo (LMFT). Virtual therapy for Peninsula residents. EMDR, CBT, trauma therapy. Book today.",
     h1: "Online Therapist in San Mateo, CA | LMFT", intro: "San Mateo residents and families can access online therapy from a licensed therapist (LMFT). Virtual sessions provide professional mental health support without fighting Peninsula traffic.", localContent: "From Downtown San Mateo to Hillsdale and Baywood, online therapy brings quality mental health care to you. Work with a licensed therapist on anxiety, depression, family issues, and more.",
-    whyChoose: ["Licensed LMFT serving San Mateo County", "Virtual EMDR, CBT, family therapy", "No Peninsula traffic or parking hassles", "Free 15-minute consultation"],
+    whyChoose: ["Licensed LMFT serving San Mateo County", "Virtual EMDR, CBT, trauma therapy", "No Peninsula traffic or parking hassles", "Free 15-minute consultation"],
   },
   "online-therapy-redwood-city": {
     city: "Redwood City", state: "CA", slug: "online-therapy-redwood-city",
     title: "Online Therapy in Redwood City, CA", metaTitle: "Online Therapist Redwood City | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in Redwood City (LMFT). Virtual therapy for Peninsula families. EMDR, CBT, IFS. Book free consultation.",
     h1: "Online Therapist in Redwood City, CA | LMFT", intro: "Redwood City residents can access licensed online therapy (LMFT) for anxiety, depression, trauma, and family issues. Virtual sessions eliminate the commute and bring therapy to your home.", localContent: "From Downtown Redwood City to Emerald Hills, online therapy provides professional mental health support that fits Peninsula living. Work with a licensed therapist from the comfort of home.",
-    whyChoose: ["Licensed California LMFT", "Virtual sessions for Peninsula residents", "EMDR, CBT, family therapy", "Free 15-minute consultation"],
+    whyChoose: ["Licensed California LMFT", "Virtual sessions for Peninsula residents", "EMDR, CBT, individual therapy", "Free 15-minute consultation"],
   },
   "online-therapy-mountain-view": {
     city: "Mountain View", state: "CA", slug: "online-therapy-mountain-view",
@@ -1287,27 +1287,27 @@ const seoPages = {
   },
   "online-therapy-sunnyvale": {
     city: "Sunnyvale", state: "CA", slug: "online-therapy-sunnyvale",
-    title: "Online Therapy in Sunnyvale, CA", metaTitle: "Online Therapist Sunnyvale | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in Sunnyvale (LMFT). Virtual therapy for Silicon Valley residents. EMDR, CBT, family therapy. Book today.",
+    title: "Online Therapy in Sunnyvale, CA", metaTitle: "Online Therapist Sunnyvale | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in Sunnyvale (LMFT). Virtual therapy for Silicon Valley residents. EMDR, CBT, trauma therapy. Book today.",
     h1: "Online Therapist in Sunnyvale, CA | LMFT", intro: "Sunnyvale residents can access licensed online therapy (LMFT) for anxiety, work stress, family issues, and more. Virtual sessions eliminate the commute and bring professional mental health care to you.", localContent: "Whether you're in Murphy Ranch, the Heritage District, or near Moffett Park, online therapy provides convenient mental health support for Silicon Valley residents and families.",
     whyChoose: ["Licensed California LMFT", "Experience with tech industry burnout", "Virtual family and individual therapy", "Free 15-minute consultation"],
   },
   "online-therapy-daly-city": {
     city: "Daly City", state: "CA", slug: "online-therapy-daly-city",
-    title: "Online Therapy in Daly City, CA", metaTitle: "Online Therapist Daly City | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in Daly City (LMFT). Virtual therapy for diverse communities. EMDR, CBT, family therapy. Book free consultation.",
+    title: "Online Therapy in Daly City, CA", metaTitle: "Online Therapist Daly City | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in Daly City (LMFT). Virtual therapy for diverse communities. EMDR, CBT, individual therapy. Book free consultation.",
     h1: "Online Therapist in Daly City, CA | LMFT", intro: "Daly City residents can access culturally responsive online therapy from a licensed therapist (LMFT). Virtual sessions provide professional mental health support for one of California's most diverse communities.", localContent: "From Westlake to Serramonte and St. Francis Heights, online therapy brings licensed mental health care to you. Culturally sensitive therapy for anxiety, depression, family issues, and trauma.",
     whyChoose: ["Licensed LMFT serving Daly City", "Culturally responsive online therapy", "Virtual EMDR, CBT, family sessions", "Free 15-minute consultation"],
   },
   "online-therapy-alameda": {
     city: "Alameda", state: "CA", slug: "online-therapy-alameda",
-    title: "Online Therapy in Alameda, CA", metaTitle: "Online Therapist Alameda | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in Alameda (LMFT). Virtual therapy for island residents. EMDR, CBT, family therapy. Book free consultation.",
+    title: "Online Therapy in Alameda, CA", metaTitle: "Online Therapist Alameda | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in Alameda (LMFT). Virtual therapy for island residents. EMDR, CBT, trauma therapy. Book free consultation.",
     h1: "Online Therapist in Alameda, CA | LMFT", intro: "Alameda residents can access licensed online therapy (LMFT) without leaving the island. Virtual sessions provide professional mental health support for anxiety, depression, family issues, and trauma.", localContent: "From the West End to Bay Farm Island, online therapy brings quality mental health care to Alameda residents. No bridge traffic, no parking hassles, just effective therapy from home.",
-    whyChoose: ["Licensed California LMFT", "Virtual sessions eliminate bridge traffic", "EMDR, CBT, family therapy", "Free 15-minute consultation"],
+    whyChoose: ["Licensed California LMFT", "Virtual sessions eliminate bridge traffic", "EMDR, CBT, trauma therapy", "Free 15-minute consultation"],
   },
   "online-therapy-san-rafael": {
     city: "San Rafael", state: "CA", slug: "online-therapy-san-rafael",
-    title: "Online Therapy in San Rafael, CA", metaTitle: "Online Therapist San Rafael | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in San Rafael (LMFT). Virtual therapy for Marin County. EMDR, CBT, family therapy. Book free consultation.",
+    title: "Online Therapy in San Rafael, CA", metaTitle: "Online Therapist San Rafael | LMFT | $240/session | Free Consultation", metaDescription: "Licensed online therapist in San Rafael (LMFT). Virtual therapy for Marin County. EMDR, CBT, trauma therapy. Book free consultation.",
     h1: "Online Therapist in San Rafael, CA | LMFT", intro: "San Rafael residents can access licensed online therapy (LMFT) for anxiety, depression, family issues, and life transitions. Virtual sessions bring professional mental health care to Marin County without the drive to SF.", localContent: "From Downtown San Rafael to Terra Linda, online therapy provides convenient mental health support for Marin County residents. Work with a licensed therapist from the comfort of home.",
-    whyChoose: ["Licensed LMFT serving Marin County", "Virtual EMDR, CBT, family therapy", "No need to drive to San Francisco", "Free 15-minute consultation"],
+    whyChoose: ["Licensed LMFT serving Marin County", "Virtual EMDR, CBT, trauma therapy", "No need to drive to San Francisco", "Free 15-minute consultation"],
   },
 };
 
