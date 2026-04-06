@@ -4028,7 +4028,7 @@ function SEOLandingPage({ slug }) {
 
   return (
     <>
-      <SEO metadata={generateSEOPageMeta({ title: pageData.title, slug: slug })} />
+      <SEO metadata={generateSEOPageMeta(pageData)} />
       {/* Hero Section */}
       <section style={{
         background: theme.bg,
