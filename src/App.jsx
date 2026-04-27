@@ -4076,253 +4076,278 @@ function SEOLandingPage({ slug }) {
       </section>
 
       {/* Local Content */}
-      <section ref={ref} style={{
-        background: theme.bgAlt,
-        padding: "100px 40px",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "none" : "translateY(30px)",
-        transition: "all 0.3s ease",
-      }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+<section ref={ref} style={{
+  background: theme.bgAlt,
+  padding: "100px 40px",
+  opacity: visible ? 1 : 0,
+  transform: visible ? "none" : "translateY(30px)",
+  transition: "all 0.3s ease",
+}}>
+  <div style={{ maxWidth: 900, margin: "0 auto" }}>
+
+    {/* Intro local content */}
+    <p style={{
+      fontFamily: "'DM Sans', sans-serif",
+      fontSize: 17, fontWeight: 300,
+      color: theme.textMuted,
+      lineHeight: 1.9,
+      margin: "0 0 80px",
+      textAlign: "center",
+      maxWidth: 700,
+      marginLeft: "auto",
+      marginRight: "auto",
+      transition: "color 0.3s ease",
+    }}>{pageData.localContent}</p>
+
+    {/* Unique city/service content */}
+    {pageData.uniqueContent && (
+      <div style={{ marginBottom: 80 }}>
+        <h2 style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: "clamp(32px, 4vw, 44px)",
+          fontWeight: 400,
+          color: theme.text,
+          margin: "0 0 32px",
+          textAlign: "center",
+          transition: "color 0.3s ease",
+        }}>{pageData.title}</h2>
+        <div style={{ maxWidth: 700, margin: "0 auto" }}>
+          {pageData.uniqueContent.map((para, i) => (
+            <p key={i} style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 16, fontWeight: 300,
+              color: theme.textMuted,
+              lineHeight: 1.9,
+              margin: "0 0 24px",
+              transition: "color 0.3s ease",
+            }}>{para}</p>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {/* Why Choose */}
+    <h2 style={{
+      fontFamily: "'Cormorant Garamond', serif",
+      fontSize: "clamp(36px, 4vw, 48px)",
+      fontWeight: 400,
+      color: theme.text,
+      margin: "0 0 40px",
+      textAlign: "center",
+      transition: "color 0.3s ease",
+    }}>Why Choose Bayside Wellness</h2>
+
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(2, 1fr)",
+      gap: 32,
+      marginBottom: 80,
+    }}>
+      {pageData.whyChoose.map((item, i) => (
+        <div key={i} style={{
+          background: theme.bg,
+          padding: "32px 28px",
+          borderRadius: 4,
+          border: `1px solid ${theme.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: 120,
+          transition: "all 0.3s ease",
+        }}>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: 17, fontWeight: 300,
-            color: theme.textMuted,
-            lineHeight: 1.9,
-            margin: "0 0 60px",
-            textAlign: "center",
-            maxWidth: 700,
-            marginLeft: "auto",
-            transition: "color 0.3s ease",
-            marginRight: "auto",
-          }}>{pageData.localContent}</p>
-
-          {/* Why Choose Us */}
-          <h2 style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(36px, 4vw, 48px)",
-            fontWeight: 400,
-            color: colors.charcoal,
-            margin: "0 0 40px",
-            textAlign: "center",
-          }}>Why Choose Bayside Wellness</h2>
-
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: 32,
-            marginBottom: 60,
-          }}>
-            {pageData.whyChoose.map((item, i) => (
-              <div key={i} style={{
-                background: colors.ivory,
-                padding: "32px 28px",
-                borderRadius: 4,
-                border: `1px solid ${colors.ivoryDark}`,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                minHeight: 120,
-              }}>
-                <p style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 15, fontWeight: 400,
-                  color: colors.charcoal,
-                  lineHeight: 1.7,
-                  margin: 0,
-                  textAlign: "center",
-                }}>{item}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* What to Expect Section */}
-          <div style={{ marginBottom: 80 }}>
-            <h2 style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(36px, 4vw, 48px)",
-              fontWeight: 400,
-              color: colors.charcoal,
-              margin: "0 0 24px",
-              textAlign: "center",
-            }}>What to Expect in Therapy</h2>
-            <div style={{
-              maxWidth: 700,
-              margin: "0 auto",
-            }}>
-              <p style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 16, fontWeight: 300,
-                color: colors.charcoalLight,
-                lineHeight: 1.9,
-                margin: "0 0 20px",
-              }}>
-                Starting therapy can feel uncertain. Here's what the process actually looks like: We'll begin with a free 15-minute consultation to discuss what brings you to therapy and whether we're a good fit. No commitment, no pressure.
-              </p>
-              <p style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 16, fontWeight: 300,
-                color: colors.charcoalLight,
-                lineHeight: 1.9,
-                margin: "0 0 20px",
-              }}>
-                If you decide to move forward, we'll schedule your first full session. In that first meeting, we'll dive deeper into what you're experiencing, your goals for therapy, and which approach might work best. Some people know exactly what they want to work on; others just know something needs to change. Both are fine.
-              </p>
-              <p style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 16, fontWeight: 300,
-                color: colors.charcoalLight,
-                lineHeight: 1.9,
-                margin: 0,
-              }}>
-                Sessions are 45 or 60 minutes and can be scheduled weekly or biweekly, depending on what works for you. All sessions are virtual via secure telehealth, so you can meet from wherever you're comfortable. The length of therapy varies—some people come for a few months to work through a specific issue, while others find ongoing support helpful.
-              </p>
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div style={{ marginBottom: 80 }}>
-            <h2 style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(36px, 4vw, 48px)",
-              fontWeight: 400,
-              color: colors.charcoal,
-              margin: "0 0 40px",
-              textAlign: "center",
-            }}>Frequently Asked Questions</h2>
-            <div style={{
-              maxWidth: 700,
-              margin: "0 auto",
-              display: "grid",
-              gap: 32,
-            }}>
-              {[
-                { q: "How much does therapy cost?", a: "Sessions are $240 for 45 minutes or $320 for 60 minutes. I can provide a superbill that you can submit to your insurance company for potential out-of-network reimbursement if you have a PPO plan, HSA, or FSA." },
-                { q: "Do you take insurance?", a: "I don't accept insurance directly, but I can provide a superbill (detailed receipt) at the end of each month that you can submit to your insurance for potential reimbursement." },
-                { q: "Are sessions really virtual?", a: "Yes. All sessions are conducted via secure telehealth video. This means you can meet from your home, office, or anywhere private in California. Virtual therapy is just as effective as in-person therapy and eliminates commute time." },
-                { q: "How do I know if we're a good fit?", a: "That's what the free 15-minute consultation is for. We'll discuss what you're looking for and I'll let you know if I think I can help. If I'm not the right fit, I'll do my best to point you in the right direction." },
-              ].map((faq, i) => (
-                <div key={i}>
-                  <h3 style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 17, fontWeight: 500,
-                    color: colors.charcoal,
-                    margin: "0 0 12px",
-                  }}>{faq.q}</h3>
-                  <p style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 15, fontWeight: 300,
-                    color: colors.charcoalLight,
-                    lineHeight: 1.8,
-                    margin: 0,
-                  }}>{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* How to Get Started */}
-          <div style={{ marginBottom: 60 }}>
-            <h2 style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(36px, 4vw, 48px)",
-              fontWeight: 400,
-              color: colors.charcoal,
-              margin: "0 0 24px",
-              textAlign: "center",
-            }}>How to Get Started</h2>
-            <div style={{
-              maxWidth: 700,
-              margin: "0 auto 40px",
-            }}>
-              <p style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 16, fontWeight: 300,
-                color: colors.charcoalLight,
-                lineHeight: 1.9,
-                margin: "0 0 20px",
-                textAlign: "center",
-              }}>
-                Getting started is simple. Click the button below to schedule a free 15-minute consultation, or use the contact form to reach out with questions. I typically respond within 1-2 business days.
-              </p>
-              <div style={{ textAlign: "center" }}>
-                <button onClick={() => navigate("/contact")} style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13, fontWeight: 500,
-                  letterSpacing: "0.12em", textTransform: "uppercase",
-                  color: colors.white, border: "none", cursor: "pointer",
-                  background: colors.teal,
-                  padding: "16px 40px", borderRadius: 2,
-                  transition: "background 0.2s",
-                }}
-                onMouseEnter={e => e.target.style.background = colors.tealLight}
-                onMouseLeave={e => e.target.style.background = colors.teal}
-                >Book Free Consultation</button>
-              </div>
-            </div>
-          </div>
-
-          {/* Services Offered */}
-          <h2 style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(36px, 4vw, 48px)",
-            fontWeight: 400,
+            fontSize: 15, fontWeight: 400,
             color: theme.text,
-            margin: "0 0 40px",
+            lineHeight: 1.7,
+            margin: 0,
             textAlign: "center",
             transition: "color 0.3s ease",
-          }}>Therapy Services in {pageData.city}</h2>
-
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: 24,
-          }}>
-            {services.map((service) => (
-              <button
-                key={service.slug}
-                onClick={() => navigate(`/services/${service.slug}`)}
-                style={{
-                  background: theme.bg,
-                  padding: "28px 24px",
-                  borderRadius: 4,
-                  border: `1px solid ${theme.border}`,
-                  transition: "all 0.3s ease",
-                  cursor: "pointer",
-                  textAlign: "left",
-                }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow = darkMode ? "0 12px 40px rgba(77,189,183,0.15)" : "0 12px 40px rgba(46,125,122,0.12)";
-                  e.currentTarget.style.borderColor = theme.accent;
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = "none";
-                  e.currentTarget.style.boxShadow = "none";
-                  e.currentTarget.style.borderColor = theme.border;
-                }}
-              >
-                <div style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: 24, fontWeight: 500,
-                  color: theme.text,
-                  marginBottom: 8,
-                  transition: "color 0.3s ease",
-                }}>{service.name}</div>
-                <div style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 12, fontWeight: 500,
-                  letterSpacing: "0.08em",
-                  color: theme.accent,
-                  textTransform: "uppercase",
-                  transition: "color 0.3s ease",
-                }}>Learn More →</div>
-              </button>
-            ))}
-          </div>
+          }}>{item}</p>
         </div>
-      </section>
+      ))}
+    </div>
 
+    {/* What to Expect */}
+    <div style={{ marginBottom: 80 }}>
+      <h2 style={{
+        fontFamily: "'Cormorant Garamond', serif",
+        fontSize: "clamp(36px, 4vw, 48px)",
+        fontWeight: 400,
+        color: theme.text,
+        margin: "0 0 32px",
+        textAlign: "center",
+        transition: "color 0.3s ease",
+      }}>What to Expect in Therapy</h2>
+      <div style={{ maxWidth: 700, margin: "0 auto" }}>
+        {pageData.uniqueWhatToExpect ? (
+          pageData.uniqueWhatToExpect.map((para, i) => (
+            <p key={i} style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 16, fontWeight: 300,
+              color: theme.textMuted,
+              lineHeight: 1.9,
+              margin: "0 0 20px",
+              transition: "color 0.3s ease",
+            }}>{para}</p>
+          ))
+        ) : (
+          <>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 300, color: theme.textMuted, lineHeight: 1.9, margin: "0 0 20px", transition: "color 0.3s ease" }}>
+              Starting therapy can feel uncertain. Here's what the process actually looks like: We'll begin with a free 15-minute consultation to discuss what brings you to therapy and whether we're a good fit. No commitment, no pressure.
+            </p>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 300, color: theme.textMuted, lineHeight: 1.9, margin: "0 0 20px", transition: "color 0.3s ease" }}>
+              If you decide to move forward, we'll schedule your first full session. In that first meeting, we'll dive deeper into what you're experiencing, your goals for therapy, and which approach might work best.
+            </p>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 300, color: theme.textMuted, lineHeight: 1.9, margin: 0, transition: "color 0.3s ease" }}>
+              Sessions are 45 or 60 minutes and can be scheduled weekly or biweekly. All sessions are virtual via secure telehealth.
+            </p>
+          </>
+        )}
+      </div>
+    </div>
+
+    {/* FAQ */}
+    <div style={{ marginBottom: 80 }}>
+      <h2 style={{
+        fontFamily: "'Cormorant Garamond', serif",
+        fontSize: "clamp(36px, 4vw, 48px)",
+        fontWeight: 400,
+        color: theme.text,
+        margin: "0 0 40px",
+        textAlign: "center",
+        transition: "color 0.3s ease",
+      }}>Frequently Asked Questions</h2>
+      <div style={{ maxWidth: 700, margin: "0 auto", display: "grid", gap: 32 }}>
+        {(pageData.uniqueFaqs || [
+          { q: "How much does therapy cost?", a: "Sessions are $240 for 45 minutes or $320 for 60 minutes. I can provide a superbill for potential out-of-network reimbursement." },
+          { q: "Do you take insurance?", a: "I don't accept insurance directly, but I can provide a superbill you can submit to your insurance for potential reimbursement." },
+          { q: "Are sessions really virtual?", a: "Yes. All sessions are conducted via secure telehealth video from anywhere private in California." },
+          { q: "How do I know if we're a good fit?", a: "That's what the free 15-minute consultation is for. No commitment, no pressure." },
+        ]).map((faq, i) => (
+          <div key={i}>
+            <h3 style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 17, fontWeight: 500,
+              color: theme.text,
+              margin: "0 0 12px",
+              transition: "color 0.3s ease",
+            }}>{faq.q}</h3>
+            <p style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 15, fontWeight: 300,
+              color: theme.textMuted,
+              lineHeight: 1.8,
+              margin: 0,
+              transition: "color 0.3s ease",
+            }}>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* How to Get Started */}
+    <div style={{ marginBottom: 80 }}>
+      <h2 style={{
+        fontFamily: "'Cormorant Garamond', serif",
+        fontSize: "clamp(36px, 4vw, 48px)",
+        fontWeight: 400,
+        color: theme.text,
+        margin: "0 0 24px",
+        textAlign: "center",
+        transition: "color 0.3s ease",
+      }}>How to Get Started</h2>
+      <div style={{ maxWidth: 700, margin: "0 auto 40px" }}>
+        <p style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: 16, fontWeight: 300,
+          color: theme.textMuted,
+          lineHeight: 1.9,
+          margin: "0 0 20px",
+          textAlign: "center",
+          transition: "color 0.3s ease",
+        }}>
+          Getting started is simple. Click the button below to schedule a free 15-minute consultation, or use the contact form to reach out with questions. I typically respond within 1-2 business days.
+        </p>
+        <div style={{ textAlign: "center" }}>
+          <button onClick={() => navigate("/contact")} style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 13, fontWeight: 500,
+            letterSpacing: "0.12em", textTransform: "uppercase",
+            color: darkMode ? theme.bg : colors.white,
+            border: "none", cursor: "pointer",
+            background: theme.accent,
+            padding: "16px 40px", borderRadius: 2,
+            transition: "all 0.3s ease",
+          }}
+          onMouseEnter={e => e.target.style.opacity = "0.9"}
+          onMouseLeave={e => e.target.style.opacity = "1"}
+          >Book Free Consultation</button>
+        </div>
+      </div>
+    </div>
+
+    {/* Services Grid */}
+    <h2 style={{
+      fontFamily: "'Cormorant Garamond', serif",
+      fontSize: "clamp(36px, 4vw, 48px)",
+      fontWeight: 400,
+      color: theme.text,
+      margin: "0 0 40px",
+      textAlign: "center",
+      transition: "color 0.3s ease",
+    }}>Therapy Services in {pageData.city}</h2>
+
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: 24,
+    }}>
+      {services.map((service) => (
+        <button
+          key={service.slug}
+          onClick={() => navigate(`/services/${service.slug}`)}
+          style={{
+            background: theme.bg,
+            padding: "28px 24px",
+            borderRadius: 4,
+            border: `1px solid ${theme.border}`,
+            transition: "all 0.3s ease",
+            cursor: "pointer",
+            textAlign: "left",
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.transform = "translateY(-4px)";
+            e.currentTarget.style.boxShadow = darkMode ? "0 12px 40px rgba(77,189,183,0.15)" : "0 12px 40px rgba(46,125,122,0.12)";
+            e.currentTarget.style.borderColor = theme.accent;
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.transform = "none";
+            e.currentTarget.style.boxShadow = "none";
+            e.currentTarget.style.borderColor = theme.border;
+          }}
+        >
+          <div style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: 24, fontWeight: 500,
+            color: theme.text,
+            marginBottom: 8,
+            transition: "color 0.3s ease",
+          }}>{service.name}</div>
+          <div style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 12, fontWeight: 500,
+            letterSpacing: "0.08em",
+            color: theme.accent,
+            textTransform: "uppercase",
+            transition: "color 0.3s ease",
+          }}>Learn More →</div>
+        </button>
+      ))}
+    </div>
+
+  </div>
+</section>
       {/* CTA Section */}
       <section style={{
         background: darkMode ? colors.darkBgLight : colors.charcoal,
