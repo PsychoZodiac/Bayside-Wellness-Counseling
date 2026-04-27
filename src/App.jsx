@@ -781,30 +781,164 @@ const seoPages = {
   // ===== SERVICE + CITY COMBOS (Top 5 Cities) =====
   
   // EMDR Therapy
-  "emdr-therapy-oakland": {
-    city: "Oakland", state: "CA", slug: "emdr-therapy-oakland",
-    title: "EMDR Therapy in Oakland, CA", metaTitle: "EMDR Therapist Oakland | LMFT | $240/session | Trauma Treatment | Free Consultation", metaDescription: "Licensed EMDR therapist in Oakland (LMFT). EMDR training for trauma, PTSD, anxiety. $240/45min. Serving East Bay. Free 15-minute consultation.",
-    h1: "EMDR Therapist in Oakland, CA | LMFT | Trauma Treatment", intro: "EMDR helps Oakland residents process trauma and reduce anxiety. Whether you're dealing with a specific traumatic event or ongoing PTSD symptoms, EMDR offers a research-backed path forward.", localContent: "Serving clients throughout Oakland from Temescal to Lake Merritt. Our telehealth platform means you can access EMDR therapy without navigating East Bay traffic.",
-    whyChoose: ["Licensed LMFT with EMDR training", "Effective for PTSD, phobias, and panic attacks", "Often faster than traditional talk therapy", "Free 15-minute consultation call"],
-  },
-  "emdr-therapy-san-jose": {
-    city: "San Jose", state: "CA", slug: "emdr-therapy-san-jose",
-    title: "EMDR Therapy in San Jose, CA", metaTitle: "EMDR Therapist San Jose | LMFT | $240/session | Trauma Treatment | Free Consultation", metaDescription: "Licensed EMDR therapist in San Jose (LMFT). EMDR training for trauma, PTSD, performance anxiety. $240/45min. Serving Silicon Valley. Free consultation.",
-    h1: "EMDR Therapist in San Jose, CA | LMFT | Trauma Treatment", intro: "San Jose professionals and families struggling with trauma can find relief through EMDR. This evidence-based approach helps process traumatic memories and reduce their emotional impact.", localContent: "From Willow Glen to Almaden Valley, our telehealth services bring specialized EMDR treatment to Silicon Valley residents.",
-    whyChoose: ["Licensed LMFT with EMDR training", "Treatment for work-related trauma and stress", "Effective for PTSD and performance anxiety", "Free 15-minute consultation call"],
-  },
-  "emdr-therapy-berkeley": {
-    city: "Berkeley", state: "CA", slug: "emdr-therapy-berkeley",
-    title: "EMDR Therapy in Berkeley, CA", metaTitle: "EMDR Therapist Berkeley | LMFT | $240/session | Trauma Treatment | Free Consultation", metaDescription: "Licensed EMDR therapist in Berkeley (LMFT). EMDR training for trauma, PTSD, anxiety. $240/45min. Serving UC Berkeley students and East Bay. Free consultation.",
-    h1: "EMDR Therapist in Berkeley, CA | LMFT | Trauma Treatment", intro: "Berkeley residents dealing with trauma, PTSD, or stuck memories can benefit from EMDR. This research-backed approach helps your brain reprocess difficult experiences.", localContent: "Whether you're a UC Berkeley student or Berkeley professional, our telehealth platform brings EMDR therapy directly to you.",
-    whyChoose: ["Licensed LMFT with EMDR training", "Effective for single-incident and complex trauma", "Works well alongside other therapies", "Free 15-minute consultation call"],
-  },
-  "emdr-therapy-palo-alto": {
-    city: "Palo Alto", state: "CA", slug: "emdr-therapy-palo-alto",
-    title: "EMDR Therapy in Palo Alto, CA", metaTitle: "EMDR Therapist Palo Alto | LMFT | $240/session | Trauma Treatment | Free Consultation", metaDescription: "Licensed EMDR therapist in Palo Alto (LMFT). EMDR training for trauma, PTSD, performance anxiety. $240/45min. Serving Stanford and Peninsula. Free consultation.",
-    h1: "EMDR Therapist in Palo Alto, CA | LMFT | Trauma Treatment", intro: "EMDR helps Palo Alto residents process trauma and reduce performance anxiety. Whether you're dealing with a specific event or ongoing anxiety, EMDR offers relief.", localContent: "Serving Stanford students and Palo Alto professionals through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT with EMDR training", "Effective for performance and achievement anxiety", "Research-backed trauma treatment", "Free 15-minute consultation call"],
-  },
+ // ===== SERVICE + CITY COMBOS (Top 5 Cities) =====
+
+// EMDR Therapy
+"emdr-therapy-san-francisco": {
+  city: "San Francisco", state: "CA", slug: "emdr-therapy-san-francisco",
+  title: "EMDR Therapy in San Francisco, CA",
+  metaTitle: "EMDR Therapist San Francisco | Trauma Therapy | LMFT | Free Consultation",
+  metaDescription: "Licensed EMDR therapist in San Francisco (LMFT). EMDR for trauma, PTSD, anxiety, and stuck memories. $240/45min. Telehealth across California. Free 15-minute consultation.",
+  h1: "EMDR Therapist in San Francisco, CA | Trauma & Anxiety Treatment",
+  intro: "EMDR is one of the most researched and effective treatments for trauma, PTSD, and the memories that stay stuck long after the events that caused them. In San Francisco — a city that moves fast and expects people to move with it — EMDR offers a way to process what hasn't processed on its own, so you can actually move forward.",
+  localContent: "San Francisco residents dealing with trauma often find talk therapy insufficient. Understanding what happened doesn't always change how the body responds to it. EMDR works differently — it targets the neurological storage of traumatic memory directly, reducing emotional charge without requiring you to narrate your story in detail. Virtual sessions make specialized trauma treatment accessible from anywhere in the city.",
+  whyChoose: [
+    "Licensed LMFT with EMDR training and trauma specialization",
+    "Effective for PTSD, single-incident trauma, anxiety, and phobias",
+    "Often produces faster results than traditional talk therapy for trauma",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "San Francisco's density and pace create specific trauma contexts. First responders, healthcare workers, and social service professionals in the city carry secondary trauma that accumulates quietly over years. Tech workers who have survived multiple rounds of layoffs carry a particular kind of chronic stress response that can look and function like trauma. People who have experienced assault, accidents, or sudden loss in a city where mental health resources are expensive and hard to access often spend years managing symptoms without ever addressing their source. EMDR is designed for exactly these presentations.",
+    "What makes EMDR distinct from other trauma approaches is that it doesn't require extensive verbal processing of painful events. Many San Francisco clients — particularly those in high-performance roles who have built their identity around competence and control — find it easier to engage with EMDR than with approaches that require detailed narration. The bilateral stimulation does a significant portion of the therapeutic work, often moving clients through material that years of talk therapy hadn't touched.",
+    "Telehealth EMDR has strong evidence behind it and works well for the San Francisco lifestyle. You don't need to commute to a therapist's office in a different neighborhood, find parking, or carve 90 minutes out of a packed day. Sessions happen wherever you have privacy and a reliable connection — which for most SF residents means from home, which is often exactly where traumatic memories are most activated anyway.",
+  ],
+  uniqueWhatToExpect: [
+    "EMDR treatment begins with preparation, not processing. The first two to four sessions focus on history-taking, identifying target memories, and building stabilization skills — grounding techniques and resourcing exercises that ensure you have the capacity to process difficult material safely. No one goes into the deep end before they're ready. This phase is particularly important for San Francisco clients managing high-stakes professional lives alongside trauma treatment.",
+    "Active EMDR processing sessions involve holding a target memory in mind while following bilateral stimulation — typically eye movements tracked on screen in telehealth sessions. The experience is less dramatic than most people expect. Many describe it as a kind of accelerated reflection where associations arise naturally and the emotional weight of the memory gradually decreases. Sessions end with stabilization to ensure you're grounded before returning to your day.",
+    "The number of sessions required depends on the complexity of what you're processing. Single-incident trauma often resolves in 6 to 12 sessions of active processing. Complex or developmental trauma typically requires longer treatment. Most clients notice meaningful reduction in symptoms within the first few processing sessions — which is often different from what they've experienced in prior therapy.",
+  ],
+  uniqueFaqs: [
+    { q: "How is EMDR different from talking about trauma in regular therapy?", a: "Traditional talk therapy works primarily through narrative and insight. EMDR works more directly with how the nervous system stores traumatic memory. You don't need to describe events in detail or build elaborate insight about why something affected you. The bilateral stimulation facilitates a neurological reprocessing that reduces the emotional charge of the memory directly. Many clients find it more efficient and less re-traumatizing than narrative approaches." },
+    { q: "Can EMDR be done effectively over telehealth?", a: "Yes. Telehealth EMDR has a strong evidence base. I use a specialized tool for bilateral stimulation that works through your screen. Most clients adapt quickly and find the virtual format equally effective. Some actually prefer it — being in their own space can feel safer when processing difficult material." },
+    { q: "I'm a first responder or healthcare worker in SF. Is EMDR relevant for cumulative occupational trauma?", a: "Yes, and this is one of the most important applications of EMDR. Cumulative occupational trauma — the kind that builds up from repeated exposure to suffering, crisis, and loss — responds well to EMDR. We can work systematically through the incidents that have had the most lasting impact." },
+    { q: "Will I have to relive my trauma during EMDR sessions?", a: "Not in the way most people fear. EMDR doesn't require detailed narration or re-experiencing of traumatic events. You maintain dual awareness — one foot in the present, one foot in the memory — which is different from being flooded by it. Most clients find EMDR less activating than they expected." },
+  ],
+},
+"emdr-therapy-oakland": {
+  city: "Oakland", state: "CA", slug: "emdr-therapy-oakland",
+  title: "EMDR Therapy in Oakland, CA",
+  metaTitle: "EMDR Therapist Oakland | Trauma Therapy | LMFT | East Bay | Free Consultation",
+  metaDescription: "Licensed EMDR therapist in Oakland (LMFT). EMDR for trauma, PTSD, anxiety, and community violence. $240/45min. Serving East Bay. Free 15-minute consultation.",
+  h1: "EMDR Therapist in Oakland, CA | Trauma Treatment for East Bay Residents",
+  intro: "EMDR therapy helps Oakland residents process trauma, reduce PTSD symptoms, and move past experiences that have stayed stuck. Whether the source is a specific incident or the accumulated weight of living in a high-stress environment, EMDR works directly with the nervous system to reduce the impact of what you've been carrying.",
+  localContent: "Oakland's history with community violence, economic displacement, and racial stress means many residents carry trauma that has never been named or treated as such. EMDR is one of the few approaches specifically designed to address trauma at a neurological level — not just cognitively, but in the body. Virtual sessions make specialized trauma care accessible across the East Bay without requiring a trip across the bridge.",
+  whyChoose: [
+    "Licensed LMFT with EMDR training and trauma-informed approach",
+    "Experience with community trauma, racial stress, and cumulative adversity",
+    "Effective for PTSD, anxiety, phobias, and grief",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "Oakland has its own trauma landscape. Community violence, housing instability, police encounters, and the specific stress of navigating systemic inequity create trauma presentations that don't always fit the clinical templates developed in other contexts. EMDR is flexible enough to work with these presentations — it doesn't require a single dramatic incident to be effective. It works with complex, cumulative trauma just as well as it works with discrete events.",
+    "For many Oakland residents, trauma has been normalized. You've adapted to it, worked around it, built a functioning life alongside it. That doesn't mean the nervous system isn't still carrying the weight. EMDR works with the body's stored responses — the hypervigilance, the avoidance, the reactivity — not just the cognitive understanding of what happened. Clients often describe a physical sense of release that talk therapy hadn't produced.",
+    "Being in Oakland and working with an Oakland-based therapist via telehealth means the cultural and geographic context of your experience doesn't get lost in translation. The specific stressors of East Bay life — the commutes, the costs, the community dynamics — are part of the therapeutic frame, not something you have to explain from scratch.",
+  ],
+  uniqueWhatToExpect: [
+    "EMDR treatment in Oakland starts with an honest assessment of what you're carrying and what you're ready to work on. The first phase involves building a clear picture of your trauma history, identifying which memories or experiences are having the most ongoing impact, and developing stabilization skills that create a foundation for processing. This isn't rushing — it's building the safety that makes real processing possible.",
+    "Processing sessions use bilateral stimulation while you hold a target memory in mind. For Oakland clients working with complex or community-based trauma, processing often moves through networks of related memories rather than a single event. The experience is different for everyone, but most describe a gradual lightening — the memory becoming less charged, less present, less likely to intrude.",
+    "Virtual EMDR eliminates the access barriers that have historically kept East Bay residents from specialized trauma care. Sessions happen on your schedule, in your space, without a commute. For clients managing work, family, and community obligations alongside trauma treatment, that flexibility matters.",
+  ],
+  uniqueFaqs: [
+    { q: "Can EMDR help with trauma from community violence or chronic neighborhood stress?", a: "Yes. EMDR was originally developed for discrete traumatic events but has a strong evidence base for complex and cumulative trauma as well. Community violence, chronic stress, and the specific trauma of living in high-adversity environments all respond to EMDR treatment, though the process may take longer than single-incident trauma." },
+    { q: "I've never thought of my experiences as trauma. Can EMDR still help?", a: "Many people who benefit most from EMDR don't initially identify as trauma survivors. If you have persistent anxiety, reactivity that feels disproportionate to current situations, avoidance patterns, or physical stress responses that don't make sense to you, there's a good chance EMDR can help — regardless of how you label what you've been through." },
+    { q: "Is EMDR culturally responsive?", a: "EMDR is a flexible framework, not a rigid protocol. The application is always shaped by the client's cultural context, worldview, and lived experience. A good EMDR therapist adapts the approach to the person, not the other way around." },
+    { q: "How many sessions will I need?", a: "It depends on what you're working on. Single-incident trauma typically resolves in 6 to 12 processing sessions. Complex or developmental trauma takes longer. After the first few sessions I'll have a clearer sense of what a realistic timeline looks like for your specific situation." },
+  ],
+},
+"emdr-therapy-berkeley": {
+  city: "Berkeley", state: "CA", slug: "emdr-therapy-berkeley",
+  title: "EMDR Therapy in Berkeley, CA",
+  metaTitle: "EMDR Therapist Berkeley | Trauma Therapy | LMFT | UC Berkeley | Free Consultation",
+  metaDescription: "Licensed EMDR therapist in Berkeley (LMFT). EMDR for trauma, PTSD, anxiety, and stuck memories. $240/45min. Serving UC Berkeley students and East Bay. Free consultation.",
+  h1: "EMDR Therapist in Berkeley, CA | Trauma Treatment for Berkeley Residents",
+  intro: "EMDR therapy helps Berkeley residents and UC Berkeley students process trauma, reduce anxiety, and move past experiences that haven't resolved on their own. In a community that values insight and self-awareness, EMDR offers something different — a neurologically-based approach that produces change at a level that intellectual understanding alone rarely reaches.",
+  localContent: "Berkeley's intellectual culture can make traditional talk therapy feel natural and yet insufficient. Understanding your trauma doesn't always change how your body responds to it. EMDR works at a different level — directly with the nervous system's stored responses to overwhelming experience. For UC Berkeley students navigating academic pressure alongside personal trauma, and for East Bay residents carrying years of unprocessed stress, telehealth EMDR makes specialized treatment accessible without disrupting a demanding life.",
+  whyChoose: [
+    "Licensed LMFT with EMDR training and experience with UC Berkeley students",
+    "Works beyond insight — addresses trauma at a neurological level",
+    "Effective for PTSD, anxiety, phobias, and complex trauma",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "Berkeley attracts people who have done significant work on themselves — therapy, meditation, personal development, somatic practices. Many Berkeley residents arrive at EMDR having already developed sophisticated self-awareness. What brings them is the recognition that awareness hasn't been enough. The trauma or anxiety is still there, still reactive, still affecting relationships and daily functioning. EMDR addresses what insight hasn't reached.",
+    "For UC Berkeley students, trauma often intersects with the specific pressures of elite academic life. Students who experienced difficult childhoods, sexual assault, racial discrimination, or other significant adverse events often find that the Berkeley environment — competitive, isolating, and relentless in its demands — keeps the nervous system in a chronic state of activation. EMDR can reduce that baseline activation and help students engage more fully with their academic and social lives.",
+    "Berkeley's progressive culture means most residents are already oriented toward healing and self-development. EMDR fits that orientation well. It's an evidence-based, trauma-informed approach with decades of research behind it and a clear mechanism of action. It respects the intelligence of the people it works with while doing something that pure intellectual approaches can't.",
+  ],
+  uniqueWhatToExpect: [
+    "EMDR treatment in Berkeley typically begins with clients who arrive informed and curious about the process. Early sessions involve thorough history-taking, identifying the memories and experiences that have had the most lasting impact, and building stabilization skills. For Berkeley clients managing demanding academic or professional lives, this preparation phase also establishes how to pace the work so that processing sessions don't disrupt your functioning.",
+    "Active processing involves holding a target memory in awareness while following bilateral stimulation — in telehealth sessions, this is typically eye movements tracked on screen. The process is experiential rather than analytical. Many Berkeley clients who are skilled at verbal processing find EMDR activates different material — body sensations, images, and associative connections that don't arise in conversation.",
+    "The timeline depends on what you're working on. A discrete traumatic event often resolves in 6 to 12 processing sessions. Complex or developmental trauma takes longer but typically produces change faster than years of talk therapy. Most clients notice meaningful symptom reduction within the first several processing sessions.",
+  ],
+  uniqueFaqs: [
+    { q: "I've done a lot of therapy and self-development work. Will EMDR offer something new?", a: "Often yes. EMDR works at a neurological level that verbal therapy doesn't access in the same way. Many clients who have done significant insight-oriented work find that EMDR moves something that years of analysis didn't. If you've built good self-awareness but still have reactive symptoms, EMDR may be exactly what's missing." },
+    { q: "Is EMDR appropriate for UC Berkeley students?", a: "Yes. Berkeley students dealing with trauma, anxiety, or the cumulative stress of academic pressure respond well to EMDR. The telehealth format is particularly practical for students — sessions can be scheduled around classes and don't require commuting to an off-campus office." },
+    { q: "Does EMDR work for anxiety that isn't clearly connected to a specific traumatic event?", a: "Yes. Anxiety often has roots in experiences that weren't overtly traumatic but were overwhelming for the nervous system at the time — early attachment disruptions, chronic stress, or repeated experiences of failure or humiliation. EMDR can work with these experiences even when they don't fit a traditional trauma narrative." },
+    { q: "What does bilateral stimulation feel like during a session?", a: "In telehealth sessions, bilateral stimulation is typically delivered through eye movements — following a moving stimulus on screen — or through auditory tones alternating between ears. Most people find it mildly activating at first and then increasingly relaxing as processing proceeds. It's not hypnosis and you remain fully conscious and in control throughout." },
+  ],
+},
+"emdr-therapy-san-jose": {
+  city: "San Jose", state: "CA", slug: "emdr-therapy-san-jose",
+  title: "EMDR Therapy in San Jose, CA",
+  metaTitle: "EMDR Therapist San Jose | Trauma Therapy | LMFT | Silicon Valley | Free Consultation",
+  metaDescription: "Licensed EMDR therapist in San Jose (LMFT). EMDR for trauma, PTSD, performance anxiety, and work stress. $240/45min. Serving Silicon Valley. Free consultation.",
+  h1: "EMDR Therapist in San Jose, CA | Trauma Treatment for Silicon Valley Residents",
+  intro: "EMDR therapy helps San Jose professionals and families process trauma, reduce anxiety, and address the experiences that keep the nervous system in a state of chronic activation. In Silicon Valley's largest city — where performance pressure is constant and vulnerability is rarely modeled — EMDR offers a path to genuine relief that doesn't require years in therapy.",
+  localContent: "San Jose residents carry a specific combination of stressors. Work pressure, immigration stress, family expectations, and the particular anxiety of living in one of the most expensive and competitive environments in the world create a trauma load that often goes unaddressed. EMDR works directly with the nervous system's stored responses to these experiences — not just the cognitive understanding of them. Virtual sessions make specialized care accessible without adding to an already demanding schedule.",
+  whyChoose: [
+    "Licensed LMFT with EMDR training and Silicon Valley cultural context",
+    "Effective for work trauma, immigration stress, PTSD, and performance anxiety",
+    "Neurologically-based approach that works faster than traditional talk therapy",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "San Jose has one of the largest immigrant and first-generation populations in California, and immigration-related trauma is one of the most undertreated mental health issues in the South Bay. The stress of navigating a new country, maintaining visa status, supporting family across borders, and building a life in an environment that is often hostile to that process creates real and lasting nervous system dysregulation. EMDR is one of the most effective approaches for this population precisely because it doesn't require extensive verbal processing — it works with the body's stored responses to overwhelming experience.",
+    "For Silicon Valley professionals in San Jose, EMDR addresses the specific ways that high-pressure work environments create trauma-like responses. Repeated experiences of intense pressure, public failure, toxic management, or workplace harassment can produce PTSD symptoms without ever being labeled as trauma. EMDR can process these experiences directly, reducing the reactivity and avoidance patterns that are quietly affecting performance and relationships.",
+    "San Jose's diversity means the trauma landscape here is genuinely complex. Cultural expectations around stoicism, family obligation, and not seeking help create barriers to treatment that need to be acknowledged and worked with. EMDR's relatively low verbal demand makes it accessible for clients who carry significant distress but struggle with the expectation that therapy means talking about painful things at length.",
+  ],
+  uniqueWhatToExpect: [
+    "EMDR treatment in San Jose begins with a thorough assessment of your trauma history and current symptoms. For many clients this is the first time anyone has mapped the connections between their current anxiety, reactivity, or avoidance and the specific experiences that generated those responses. The first phase also involves building stabilization skills that ensure you can process difficult material without being destabilized in your daily life.",
+    "Processing sessions involve focused attention on a target memory or experience while following bilateral stimulation on screen. For San Jose clients working with work-related trauma or immigration stress, processing often moves through clusters of related experiences — similar events that share an emotional theme. The bilateral stimulation helps the brain reprocess these experiences at a neurological level, reducing their emotional charge and shifting the beliefs associated with them.",
+    "Most clients working on specific traumatic events see meaningful change within 8 to 12 processing sessions. Complex presentations take longer. Virtual sessions fit naturally into the work-from-home or hybrid schedules many San Jose professionals already maintain, making consistent attendance more realistic than in-person therapy.",
+  ],
+  uniqueFaqs: [
+    { q: "Can EMDR help with immigration-related stress and trauma?", a: "Yes, and this is an important and underserved application of EMDR. Immigration stress — including the trauma of leaving home, navigating hostile systems, maintaining uncertain status, and supporting family across borders — produces real nervous system dysregulation that EMDR addresses directly. The approach works well for clients who prefer not to process painful experiences primarily through verbal narration." },
+    { q: "I work in tech and my stress feels more like burnout than trauma. Is EMDR relevant?", a: "Burnout and trauma exist on a continuum, and many tech workers experiencing burnout are also carrying workplace trauma they haven't named as such. EMDR can work with the specific experiences — a brutal performance review, a public failure, a toxic management relationship — that are maintaining the chronic stress response. It's often more effective than coaching or general stress management for these presentations." },
+    { q: "How does EMDR work over telehealth?", a: "I use a specialized tool for bilateral stimulation that works through your screen. You follow a moving object with your eyes while holding a target memory in mind. The setup takes a few minutes and most clients adapt to it quickly. Telehealth EMDR has strong research support and is equivalent in effectiveness to in-person delivery." },
+    { q: "My trauma happened years ago. Can EMDR still help?", a: "Yes. The age of a traumatic memory doesn't determine its treatability. EMDR works with old memories just as effectively as recent ones — often more so, because there's been time for the associated beliefs and body responses to become well-established patterns that EMDR can target clearly." },
+  ],
+},
+"emdr-therapy-palo-alto": {
+  city: "Palo Alto", state: "CA", slug: "emdr-therapy-palo-alto",
+  title: "EMDR Therapy in Palo Alto, CA",
+  metaTitle: "EMDR Therapist Palo Alto | Trauma Therapy | LMFT | Stanford | Free Consultation",
+  metaDescription: "Licensed EMDR therapist in Palo Alto (LMFT). EMDR for trauma, PTSD, performance anxiety, and achievement stress. $240/45min. Serving Stanford and Peninsula. Free consultation.",
+  h1: "EMDR Therapist in Palo Alto, CA | Trauma Treatment for Peninsula Residents",
+  intro: "EMDR therapy helps Palo Alto residents and Stanford students process trauma, reduce performance anxiety, and address the experiences that are quietly limiting their ability to function at their best. In a community built around achievement and forward motion, EMDR offers a way to clear the psychological weight of the past so the present stops feeling like a battle.",
+  localContent: "Palo Alto's achievement culture creates specific psychological costs that EMDR is particularly well-suited to address. The trauma of chronic performance pressure, early experiences of failure in high-stakes environments, and the specific weight of growing up or working in a community where everyone else appears to have it figured out can produce lasting nervous system dysregulation. EMDR works directly with those stored responses — not just the conscious understanding of them.",
+  whyChoose: [
+    "Licensed LMFT with EMDR training and experience with Stanford students and Peninsula professionals",
+    "Addresses performance anxiety and achievement-related trauma directly",
+    "Evidence-based approach with faster results than traditional talk therapy",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "Palo Alto produces a specific kind of trauma that rarely gets named. The cumulative effect of growing up or working in an environment where failure is catastrophized, where comparison is constant, and where worth is relentlessly tied to achievement creates nervous system patterns that function like trauma even when no single dramatic event occurred. EMDR is one of the few approaches designed to work with this kind of chronic, low-grade traumatization — the kind that shows up as persistent anxiety, perfectionism that's become paralyzing, or a baseline sense of not being enough.",
+    "For Stanford students, EMDR addresses the specific experiences that tend to accumulate during an elite university experience — the first significant academic failure, the social isolation that can come with intense academic pressure, the sexual assault or harassment that occurs at rates higher than most institutions acknowledge, and the particular distress of being surrounded by people who appear to be succeeding effortlessly. These experiences have real neurological impact and respond well to EMDR treatment.",
+    "Peninsula professionals often come to EMDR having already tried talk therapy and found it insufficient. They understand their patterns, they can articulate their history, but something hasn't shifted. EMDR typically addresses this gap directly — working at a level that verbal processing doesn't reach, producing changes in reactivity and baseline anxiety that years of insight-oriented work hadn't achieved.",
+  ],
+  uniqueWhatToExpect: [
+    "EMDR in Palo Alto typically begins with clients who are high-functioning and have often already done significant therapeutic work. The preparation phase involves assessing what that prior work has and hasn't addressed, identifying the specific memories or experiences that are still generating symptoms, and building any stabilization skills that aren't already in place. For most Palo Alto clients this phase moves relatively quickly.",
+    "Processing sessions are experiential rather than analytical. Many high-achieving clients who are skilled at verbal processing find EMDR activates different material — physical sensations, images, and emotional responses that weren't accessible through conversation. The bilateral stimulation facilitates a kind of processing that feels different from insight-oriented work and often produces faster change.",
+    "Most clients working on specific experiences see meaningful symptom reduction within 8 to 16 sessions. For clients with more complex histories, treatment takes longer but typically produces change at a pace that surprises people who have been in therapy for years without similar movement.",
+  ],
+  uniqueFaqs: [
+    { q: "Can EMDR help with anxiety that comes from chronic achievement pressure rather than a single traumatic event?", a: "Yes. EMDR was originally developed for single-incident trauma but has strong evidence for complex and developmental trauma as well. Chronic achievement pressure, persistent performance anxiety, and the cumulative effect of growing up in a high-stakes environment all respond to EMDR treatment. The process targets the experiences and beliefs underlying the anxiety rather than the anxiety itself." },
+    { q: "I'm a Stanford student who experienced sexual assault. Can EMDR help?", a: "Yes. EMDR is one of the most effective evidence-based treatments for sexual assault trauma and is recommended by major trauma treatment guidelines. It works without requiring detailed verbal narration of the assault, which many survivors find important. Please reach out — this is something I can help with." },
+    { q: "I've done years of therapy and understand my patterns well. Why hasn't my anxiety changed?", a: "This is one of the most common reasons people come to EMDR. Insight doesn't always produce symptom change because traumatic memories are stored differently in the brain than ordinary memories — they remain emotionally charged regardless of how well you understand them cognitively. EMDR works directly with that storage, which is why it often produces change that years of talk therapy hasn't." },
+    { q: "Will EMDR affect my ability to function at work or school during treatment?", a: "This is an important practical question. EMDR processing can occasionally stir up material between sessions, and we pace the work carefully to minimize disruption to your daily functioning. Most clients maintain full professional and academic performance throughout treatment. We discuss pacing explicitly and adjust based on what your schedule can accommodate." },
+  ],
+},
 
   // IFS Therapy
   "ifs-therapy-san-francisco": {
