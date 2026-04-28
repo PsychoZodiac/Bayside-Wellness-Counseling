@@ -1728,62 +1728,161 @@ const seoPages = {
   // ===== CONDITION + CITY COMBOS (Top 5 Cities) =====
   
   // Anxiety Therapy (adding 4 more - Berkeley already exists)
-  "anxiety-therapy-san-francisco": {
-    city: "San Francisco", state: "CA", slug: "anxiety-therapy-san-francisco",
-    title: "Anxiety Therapy in San Francisco, CA", metaTitle: "Anxiety Therapist San Francisco | LMFT | $240/session | Free Consultation", metaDescription: "Licensed anxiety therapist in San Francisco (LMFT). CBT, EMDR for generalized anxiety, social anxiety, panic. $240/45min. Free 15-minute consultation.",
-    h1: "Anxiety Therapist in San Francisco, CA | LMFT | Treatment for Anxiety", intro: "Anxiety is one of the most common struggles SF residents face. Whether it's constant worry, social anxiety, panic attacks, or feeling on edge, we use evidence-based approaches like CBT and EMDR to help you manage it.", localContent: "From the Financial District to the Outer Sunset, our telehealth platform brings anxiety treatment to San Francisco residents. Quality care without adding commute stress to your day.",
-    whyChoose: ["Licensed LMFT specializing in anxiety treatment", "Treatment for social anxiety and panic", "Practical tools you can use immediately", "Free 15-minute consultation call"],
-  },
-  "anxiety-therapy-oakland": {
-    city: "Oakland", state: "CA", slug: "anxiety-therapy-oakland",
-    title: "Anxiety Therapy in Oakland, CA", metaTitle: "Anxiety Therapist Oakland | LMFT | $240/session | Free Consultation", metaDescription: "Licensed anxiety therapist in Oakland (LMFT). CBT, EMDR for anxiety, panic, worry. $240/45min. Serving East Bay. Free 15-minute consultation.",
-    h1: "Anxiety Therapist in Oakland, CA | LMFT | Treatment for Anxiety", intro: "Oakland residents struggling with anxiety don't have to manage it alone. We use CBT and EMDR to help you understand what's driving your anxiety and build real tools to manage it.", localContent: "From Downtown to the Oakland Hills, our telehealth services bring anxiety treatment directly to you.",
-    whyChoose: ["Licensed LMFT with anxiety expertise", "CBT and EMDR approaches", "Effective for panic and social anxiety", "Free 15-minute consultation call"],
-  },
-  "anxiety-therapy-san-jose": {
-    city: "San Jose", state: "CA", slug: "anxiety-therapy-san-jose",
-    title: "Anxiety Therapy in San Jose, CA", metaTitle: "Anxiety Therapist San Jose | LMFT | $240/session | Free Consultation", metaDescription: "Licensed anxiety therapist in San Jose (LMFT). CBT, EMDR for work anxiety, social anxiety, panic. $240/45min. Serving Silicon Valley. Free consultation.",
-    h1: "Anxiety Therapist in San Jose, CA | LMFT | Treatment for Anxiety", intro: "San Jose professionals and families dealing with anxiety can find relief. We use evidence-based approaches to help you manage worry, panic, and social anxiety.", localContent: "From Willow Glen to Evergreen, telehealth brings anxiety treatment to Silicon Valley residents without adding to your stress.",
-    whyChoose: ["Licensed LMFT specializing in anxiety", "CBT and EMDR for anxiety disorders", "Practical tools for managing panic", "Free 15-minute consultation call"],
-  },
-  "anxiety-therapy-palo-alto": {
-    city: "Palo Alto", state: "CA", slug: "anxiety-therapy-palo-alto",
-    title: "Anxiety Therapy in Palo Alto, CA", metaTitle: "Anxiety Therapist Palo Alto | LMFT | $240/session | Free Consultation", metaDescription: "Licensed anxiety therapist in Palo Alto (LMFT). CBT, EMDR for performance anxiety, social anxiety. $240/45min. Serving Stanford. Free consultation.",
-    h1: "Anxiety Therapist in Palo Alto, CA | LMFT | Treatment for Anxiety", intro: "Palo Alto residents dealing with performance anxiety, social anxiety, or constant worry can get help. We use CBT and EMDR to target what's driving your anxiety.", localContent: "Serving Stanford students and Palo Alto professionals through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT with anxiety specialization", "Treatment for performance and achievement anxiety", "Effective for social anxiety", "Free 15-minute consultation call"],
-  },
-
-  // Depression Therapy
-  "depression-therapy-san-francisco": {
-    city: "San Francisco", state: "CA", slug: "depression-therapy-san-francisco",
-    title: "Depression Therapy in San Francisco, CA", metaTitle: "Depression Therapist San Francisco | LMFT | $240/session | Free Consultation", metaDescription: "Licensed depression therapist in San Francisco (LMFT). CBT, psychodynamic therapy for depression. $240/45min. Free 15-minute consultation.",
-    h1: "Depression Therapist in San Francisco, CA | LMFT | Treatment for Depression", intro: "If you're struggling with depression in San Francisco, you don't have to push through it alone. We use evidence-based approaches like CBT and psychodynamic therapy to help you understand what's keeping you stuck and build a path forward.", localContent: "From the Mission to Pacific Heights, our telehealth platform brings depression treatment to SF residents. Quality mental health care without the commute.",
-    whyChoose: ["Licensed LMFT specializing in depression", "CBT and psychodynamic approaches", "Address root causes, not just symptoms", "Free 15-minute consultation call"],
-  },
-  "depression-therapy-oakland": {
-    city: "Oakland", state: "CA", slug: "depression-therapy-oakland",
-    title: "Depression Therapy in Oakland, CA", metaTitle: "Depression Therapist Oakland | LMFT | $240/session | Free Consultation", metaDescription: "Licensed depression therapist in Oakland (LMFT). CBT, psychodynamic therapy for depression. $240/45min. Serving East Bay. Free 15-minute consultation.",
-    h1: "Depression Therapist in Oakland, CA | LMFT | Treatment for Depression", intro: "Oakland residents struggling with depression can find help. We use CBT and psychodynamic therapy to help you understand what's keeping you stuck and build momentum toward change.", localContent: "Serving Oakland from Temescal to the Hills through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT with depression expertise", "Evidence-based CBT and psychodynamic work", "Address underlying patterns", "Free 15-minute consultation call"],
-  },
-  "depression-therapy-san-jose": {
-    city: "San Jose", state: "CA", slug: "depression-therapy-san-jose",
-    title: "Depression Therapy in San Jose, CA", metaTitle: "Depression Therapist San Jose | LMFT | $240/session | Free Consultation", metaDescription: "Licensed depression therapist in San Jose (LMFT). CBT, psychodynamic therapy for depression. $240/45min. Serving Silicon Valley. Free consultation.",
-    h1: "Depression Therapist in San Jose, CA | LMFT | Treatment for Depression", intro: "San Jose residents dealing with depression deserve effective help. We use evidence-based approaches to help you understand what's contributing to your depression and build practical tools for change.", localContent: "From Downtown to Almaden, telehealth brings depression treatment to Silicon Valley residents.",
-    whyChoose: ["Licensed LMFT specializing in depression", "CBT for skill-building and behavioral activation", "Psychodynamic work for deeper patterns", "Free 15-minute consultation call"],
-  },
-  "depression-therapy-berkeley": {
-    city: "Berkeley", state: "CA", slug: "depression-therapy-berkeley",
-    title: "Depression Therapy in Berkeley, CA", metaTitle: "Depression Therapist Berkeley | LMFT | $240/session | Free Consultation", metaDescription: "Licensed depression therapist in Berkeley (LMFT). CBT, psychodynamic therapy for depression. $240/45min. Serving UC Berkeley students. Free consultation.",
-    h1: "Depression Therapist in Berkeley, CA | LMFT | Treatment for Depression", intro: "Berkeley residents struggling with depression can find support. We use CBT and psychodynamic therapy to help you understand what's contributing to your depression and build tools to move forward.", localContent: "Whether you're a UC Berkeley student or Berkeley professional, our telehealth platform brings depression treatment to you.",
-    whyChoose: ["Licensed LMFT with depression specialization", "CBT and psychodynamic approaches", "Support for students and professionals", "Free 15-minute consultation call"],
-  },
-  "depression-therapy-palo-alto": {
-    city: "Palo Alto", state: "CA", slug: "depression-therapy-palo-alto",
-    title: "Depression Therapy in Palo Alto, CA", metaTitle: "Depression Therapist Palo Alto | LMFT | $240/session | Free Consultation", metaDescription: "Licensed depression therapist in Palo Alto (LMFT). CBT, psychodynamic therapy for depression. $240/45min. Serving Stanford. Free consultation.",
-    h1: "Depression Therapist in Palo Alto, CA | LMFT | Treatment for Depression", intro: "Palo Alto residents dealing with depression can get effective help. We use evidence-based therapy to help you understand what's keeping you stuck and build a path toward feeling better.", localContent: "Serving Stanford students and Palo Alto professionals through convenient telehealth sessions.",
-    whyChoose: ["Licensed LMFT specializing in depression", "CBT and psychodynamic work", "Address achievement burnout and disconnection", "Free 15-minute consultation call"],
-  },
+  "mens-therapy-san-francisco": {
+  city: "San Francisco", state: "CA", slug: "mens-therapy-san-francisco",
+  title: "Men's Therapy in San Francisco, CA",
+  metaTitle: "Men's Therapist San Francisco | Therapy for Men | Anger & Relationships | LMFT | Free Consultation",
+  metaDescription: "Licensed men's therapist in San Francisco (LMFT). Direct therapy for men dealing with anger, relationships, emotional expression, and work stress. $240/45min. Free consultation.",
+  h1: "Men's Therapist in San Francisco, CA | Therapy Built for Men",
+  intro: "Men's therapy in San Francisco is direct, practical, and built around what men actually need — not what therapy culture thinks they should need. If something in your life isn't working and you're tired of managing it alone, this is the place to do something about it.",
+  localContent: "San Francisco men face a particular version of the cultural pressure around masculinity — a city that is ostensibly progressive about mental health but where the actual experience of being a man struggling is still largely privatized. Men here are often fluent in the language of therapy and still not doing it. Men's therapy cuts through that gap — a space where the actual issues can be addressed without performance.",
+  whyChoose: [
+    "Licensed LMFT with specific focus on men's mental health and relationships",
+    "Direct, no-nonsense approach that respects how men actually engage",
+    "Works on anger, emotional expression, relationships, and work stress",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "San Francisco has a cultural contradiction around men and mental health. The city is more openly progressive about therapy than most, and yet the men who most need it often find the available frameworks don't quite fit. The emphasis on emotional processing, the expectation of vulnerability as the entry point, the therapeutic language that feels alien to many men — these create a barrier that keeps capable, struggling men away from help that would actually work for them. Men's therapy here is built differently.",
+    "SF men in their 30s and 40s are often navigating a specific constellation of pressures. The cost of living that makes financial stress constant regardless of income level. The relationship strain that comes from careers that consume enormous time and energy. The identity questions that arise when the things you achieved don't produce the satisfaction you expected. The anger that has nowhere to go in a city that has very little tolerance for male frustration. These are real and deserve direct attention.",
+    "Men's therapy in San Francisco uses whatever approach is most useful for the specific person — CBT for patterns that are clearly cognitive and behavioral, EMDR for experiences that have left lasting marks, IFS for internal conflicts that are driving behavior, psychodynamic work for patterns that have deep roots. The approach follows the man, not the other way around.",
+  ],
+  uniqueWhatToExpect: [
+    "The first session is a direct conversation — what's not working, what you've tried, what you actually want from therapy. No lengthy intake paperwork, no warming up for several sessions before getting to the point. Men who come to therapy are usually coming because something specific is causing real problems, and that's where we start.",
+    "Sessions are structured around what matters. If you're working on anger, we work on anger — understanding what's underneath it, what triggers it, what it's costing you, and what actually helps. If you're working on relationships, we work on the specific dynamics that keep playing out and what you're bringing to them. The work is direct, practical, and focused on real change rather than indefinite processing.",
+    "Progress in men's therapy often shows up first in specific situations — a conflict that went differently than it usually does, a conversation that actually landed, a response to stress that didn't cost the same toll it used to. Over time these specific changes accumulate into something more fundamental — a different quality of being a man in the world.",
+  ],
+  uniqueFaqs: [
+    { q: "I've never been to therapy and I'm not sure it's for me. How do I know if this is worth trying?", a: "If something is costing you in a way you can't fix on your own — relationships, work, your own internal experience — then it's worth trying. The free consultation is exactly for this: a direct conversation about whether this is the right fit, no commitment to anything beyond that." },
+    { q: "I have a lot of anger and I'm worried about what that means. Can therapy help?", a: "Yes. Anger is almost always the surface layer of something else — hurt, fear, grief, shame — that hasn't had a way to be expressed. Men's therapy works on both the anger itself and what's underneath it. Understanding what's driving your anger tends to change how it comes out." },
+    { q: "My partner thinks I need therapy but I'm not sure I agree. Should I come anyway?", a: "Come and see for yourself. You don't have to agree with your partner's assessment to try a single session. If it's not useful, you'll know quickly. If something lands, you'll also know quickly. The free consultation is a low-stakes way to find out." },
+    { q: "Do you work with men going through divorce or relationship breakdown?", a: "Yes. Relationship breakdown is one of the most destabilizing experiences men face, and one they're often least prepared for because the cultural script doesn't give men much to work with. Men's therapy addresses the grief, the anger, the identity disruption, and the practical rebuilding that separation requires." },
+  ],
+},
+"mens-therapy-oakland": {
+  city: "Oakland", state: "CA", slug: "mens-therapy-oakland",
+  title: "Men's Therapy in Oakland, CA",
+  metaTitle: "Men's Therapist Oakland | Therapy for Men | Anger & Relationships | LMFT | East Bay | Free Consultation",
+  metaDescription: "Licensed men's therapist in Oakland (LMFT). Direct therapy for men dealing with anger, relationships, work stress, and emotional expression. $240/45min. East Bay. Free consultation.",
+  h1: "Men's Therapist in Oakland, CA | Therapy Built for Men",
+  intro: "Men's therapy in Oakland is direct, practical, and takes seriously the actual conditions men are navigating. If something in your life isn't working — your relationships, your anger, your ability to be present — this is the place to do something real about it.",
+  localContent: "Oakland men are dealing with real pressure. Economic stress, the specific weight of navigating race and masculinity in a city with deep contradictions, the relationship strain that comes from carrying more than most people see, and a cultural environment that doesn't always give men useful tools for dealing with any of it. Men's therapy here starts from the actual context of Oakland men's lives.",
+  whyChoose: [
+    "Licensed LMFT with men's therapy focus and East Bay cultural understanding",
+    "Direct approach that respects the real pressures Oakland men are managing",
+    "Works on anger, relationships, emotional expression, and identity",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "Oakland men carry a specific combination of pressures that men's therapy needs to actually engage with. The economic instability that is real regardless of income level in a city where costs keep rising. The specific experience of being a Black man, a Latino man, or a man of color in a city that is simultaneously progressive and deeply inequitable. The family obligations that extend beyond nuclear household. The masculinity expectations that come from community and culture alongside those that come from broader society. Men's therapy in Oakland holds all of this.",
+    "For Oakland men, anger is often the most accessible emotion because it's the one that the culture has allowed. Underneath the anger is usually something more vulnerable — grief for what's been lost, fear about what's not stable, hurt from relationships that haven't gone well. Men's therapy works on both: the anger that's causing immediate problems and the underlying material that's generating it. This is different from anger management, which addresses symptoms without touching the source.",
+    "Men's therapy in Oakland also addresses the specific isolation that many men experience — the cultural expectation of self-sufficiency that makes asking for help feel like weakness, the social world that gets smaller as men age and the informal support networks that sustained them in earlier life fall away. Many Oakland men arrive at therapy not in crisis but simply carrying more than any person should carry alone.",
+  ],
+  uniqueWhatToExpect: [
+    "Men's therapy in Oakland begins with a direct conversation about what's actually going on. No lengthy history-taking before getting to the point. We identify what's not working, what you've tried, and what you actually want from the work. The first session is a genuine assessment — not a performance of readiness.",
+    "Sessions are practical and focused. If the issue is anger, we work on anger directly — not just managing it but understanding what's driving it and changing the pattern. If the issue is relationships, we work on the specific dynamics you're bringing to them. If the issue is identity and meaning, we work on that. The approach adapts to the man.",
+    "Virtual sessions eliminate the logistical friction that often keeps Oakland men from consistent care. Sessions happen on your schedule, in your space, without a commute. Consistency matters in men's therapy — the work compounds over time in ways that sporadic sessions don't produce.",
+  ],
+  uniqueFaqs: [
+    { q: "Is therapy useful for men who are dealing with racial stress and its impact on mental health?", a: "Yes, and this is important. The specific psychological impact of navigating systemic racism — the hypervigilance, the code-switching, the anger, the grief, the specific exhaustion of it — is real and deserves direct attention. Men's therapy here takes this seriously rather than treating it as peripheral to the main work." },
+    { q: "I'm a Black man and I'm skeptical that therapy is designed for me. What would you say to that?", a: "That your skepticism is reasonable and based on real history. The mental health field has a complicated relationship with Black men specifically. What I can tell you is that my approach starts from where you actually are, takes the context of your life seriously, and doesn't impose a framework that doesn't fit. Whether that translates to something useful for you is something a single conversation could clarify." },
+    { q: "Can therapy help with the stress of providing for a family in Oakland's economy?", a: "Yes. Financial stress and the identity weight of provider role are real and often unaddressed in men. Therapy doesn't solve the economics but it addresses what the economics are doing to your internal experience, your relationships, and your capacity to be present with the people who matter to you." },
+    { q: "I'm not good at talking about feelings. Will that be a problem?", a: "No. Many of the men who benefit most from therapy don't arrive fluent in emotional language. We work with whatever you can bring — situations, behaviors, physical sensations, things that are bothering you even if you can't name why. The language develops through the work, not as a prerequisite for it." },
+  ],
+},
+"mens-therapy-berkeley": {
+  city: "Berkeley", state: "CA", slug: "mens-therapy-berkeley",
+  title: "Men's Therapy in Berkeley, CA",
+  metaTitle: "Men's Therapist Berkeley | Therapy for Men | Anger & Relationships | LMFT | Free Consultation",
+  metaDescription: "Licensed men's therapist in Berkeley (LMFT). Direct therapy for men dealing with anger, relationships, identity, and emotional expression. $240/45min. East Bay. Free consultation.",
+  h1: "Men's Therapist in Berkeley, CA | Therapy Built for Men",
+  intro: "Men's therapy in Berkeley is direct and practical — built for men who want to actually change something, not just understand it better. If your relationships are suffering, your anger is getting in the way, or something important is missing and you can't quite name it, this is the place to work on it.",
+  localContent: "Berkeley men often arrive at therapy with more self-awareness than average — they've read the books, they understand the concepts, and they still find themselves in the same patterns. Men's therapy here works with that foundation and takes it somewhere more useful — from understanding to actual change in the specific relationships and situations that matter.",
+  whyChoose: [
+    "Licensed LMFT with men's therapy focus suited to Berkeley's self-aware population",
+    "Moves from insight into actual behavioral and relational change",
+    "Works on anger, relationships, identity, and emotional expression",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "Berkeley men occupy an interesting position in the cultural landscape around masculinity. The city's progressive culture creates more explicit permission to engage with therapy and emotional life than most places, and yet many Berkeley men find that the available frameworks still don't quite fit. The expectation that emotional processing looks a particular way, that vulnerability means disclosure, that masculinity itself is primarily a problem to be deconstructed — these create their own form of alienation. Men's therapy here works with men as they actually are, not as a cultural critique wants them to be.",
+    "For Berkeley men in academia or the arts, therapy often addresses the specific pressures of creative and intellectual work — the imposter syndrome that persists despite external recognition, the identity entanglement with work that makes any failure personal, the difficulty of maintaining intimate relationships when most of your energy is absorbed by work you care about. These are real and specific experiences that men's therapy addresses directly.",
+    "Men in Berkeley who are partners and fathers often come to therapy to work on the gap between who they want to be in their family relationships and who they actually show up as. The father who loses patience. The partner who shuts down emotionally under stress. The man who is present in body and absent in attention. Men's therapy works on these patterns concretely — not through character critique but through understanding what's driving them and building different responses.",
+  ],
+  uniqueWhatToExpect: [
+    "Berkeley men often arrive with a clear sense of what they want to work on and a good deal of background knowledge. Early sessions move relatively quickly to the actual work — the specific relationship dynamics, the anger patterns, the identity questions, or the emotional unavailability that has been causing problems. The foundation of self-awareness that most Berkeley men bring is genuinely useful.",
+    "The challenge for many Berkeley men in therapy is moving from analysis to experience — from talking about patterns to actually feeling what drives them and working with it at that level. Men's therapy here uses whatever approach is most effective for the specific man: CBT for behavioral patterns, EMDR for experiences that have left lasting marks, IFS for internal conflicts, or direct relational work for the interpersonal dynamics that keep repeating.",
+    "Progress often shows up in the relationships that matter most — a different quality of presence with a partner, more patience with children, the ability to repair after conflict rather than withdrawing. These changes are quiet and significant and tend to matter more to Berkeley men than any abstract sense of having done good work.",
+  ],
+  uniqueFaqs: [
+    { q: "I understand masculinity is a construct but I still find therapy uncomfortable. Is that normal?", a: "Yes, and it's useful information. The discomfort most men feel with therapy isn't just socialization — it's also a real response to environments that haven't historically felt safe for male vulnerability. Men's therapy here works with that discomfort rather than treating it as a problem to be overcome before the real work starts." },
+    { q: "Can men's therapy help with the specific emotional dynamics of academic or creative partnerships?", a: "Yes. The specific interpersonal dynamics that arise in collaborative intellectual and creative work — competition, credit, vulnerability around ideas, the entanglement of professional and personal — are things that come up frequently in men's therapy with Berkeley clients. They're worth addressing directly." },
+    { q: "I want to be a better father. Is that something men's therapy can help with?", a: "Yes, and it's one of the most meaningful pieces of work men do in therapy. Understanding what you're bringing to your parenting — the patterns you absorbed from your own father, the parts of yourself you haven't worked through — tends to change the relationship in ways that no parenting book produces." },
+    { q: "How is men's therapy different from general individual therapy?", a: "The focus and the frame. Men's therapy is structured around how men actually engage — more direct, less focused on emotional disclosure as the primary vehicle, more oriented toward behavioral and relational change. It takes the specific cultural pressures on men seriously rather than treating gender as irrelevant to the work." },
+  ],
+},
+"mens-therapy-san-jose": {
+  city: "San Jose", state: "CA", slug: "mens-therapy-san-jose",
+  title: "Men's Therapy in San Jose, CA",
+  metaTitle: "Men's Therapist San Jose | Therapy for Men | Anger & Work Stress | LMFT | Silicon Valley | Free Consultation",
+  metaDescription: "Licensed men's therapist in San Jose (LMFT). Direct therapy for men dealing with anger, work stress, relationships, and burnout. $240/45min. Serving Silicon Valley. Free consultation.",
+  h1: "Men's Therapist in San Jose, CA | Therapy Built for Men",
+  intro: "Men's therapy in San Jose is built for men who are managing a lot and getting diminishing returns — the work stress that bleeds into everything, the anger that's getting in the way of the relationships that matter, the sense that something important is missing despite doing everything right. Direct, practical work on what's actually going on.",
+  localContent: "Silicon Valley produces a specific kind of pressure on men. The expectation of relentless performance, the identity entanglement with career success, the particular exhaustion of working in an industry that demands everything and offers job security to no one. San Jose men in therapy are often dealing with the downstream effects of this culture — on their relationships, their health, their capacity to be present in their own lives.",
+  whyChoose: [
+    "Licensed LMFT with specific experience treating Silicon Valley work stress and burnout",
+    "Direct approach focused on the specific pressures San Jose men are navigating",
+    "Works on anger, work stress, relationships, and identity",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "San Jose men in the tech industry are often carrying a specific combination of pressures that don't get named as mental health issues: the chronic low-level anxiety of working in an industry with no stability, the identity disruption that comes from layoffs or role changes, the performance pressure that never fully turns off, and the relationship strain that comes from having most of your energy absorbed by work. Men's therapy in San Jose takes these seriously as real problems with real consequences — not as symptoms of a weak character.",
+    "For San Jose men from immigrant or first-generation backgrounds, the pressure is often compounded by family expectations that were themselves the product of significant sacrifice. The man who is supporting extended family while managing the demands of a Silicon Valley career while trying to maintain a marriage and be present for his children — this isn't a time management problem. It's an unsustainable load that therapy helps to acknowledge and address.",
+    "San Jose men often come to therapy not because of a single crisis but because the slow accumulation of unaddressed stress has finally produced something that can't be ignored — a relationship near collapse, an anger episode that went too far, a depression that has made it hard to function. Men's therapy addresses both the immediate presenting issue and the underlying patterns that allowed it to develop.",
+  ],
+  uniqueWhatToExpect: [
+    "Men's therapy in San Jose begins with a direct conversation — what's broken, what you've already tried, what you actually want from this. Silicon Valley professionals appreciate efficiency and clarity, and the first session delivers both. No lengthy warming-up period before we get to the actual issue.",
+    "Sessions are structured around what matters most. For many San Jose men that means work stress and its effects on relationships first, then the deeper patterns that are sustaining it. The approach is practical — concrete tools, behavioral change, and understanding that's actionable rather than purely conceptual.",
+    "Virtual sessions fit the way San Jose professionals already work. The session happens on your schedule, from your space, without adding commute time. For men who are already stretched thin, removing that friction makes the difference between consistent therapy and sporadic attendance — and consistency is what produces results.",
+  ],
+  uniqueFaqs: [
+    { q: "Can therapy help with the stress of potential layoffs and tech industry instability?", a: "Yes. The specific anxiety of working in an industry that can eliminate your role without warning — and what that does to your sense of identity, security, and self-worth — is exactly what therapy addresses. The goal is building the internal stability that doesn't depend on external job security." },
+    { q: "I'm dealing with anger that's affecting my relationship and possibly my career. Can men's therapy help?", a: "Yes, and this is one of the most common reasons men come to therapy. Anger that's affecting relationships and work has specific drivers — usually accumulated stress, unaddressed hurt, or situations where you feel powerless — that men's therapy addresses directly. The goal isn't to eliminate anger but to change its quality and expression." },
+    { q: "I support my family financially and feel responsible for everything. Can therapy help with this pressure?", a: "Yes. The weight of being the financial anchor, particularly in a city as expensive as San Jose, is real. Therapy doesn't solve the economics but it addresses what that pressure is doing to you internally — the anxiety, the resentment that can build, the impact on your capacity to be present in your relationships." },
+    { q: "I work long hours and don't have time for therapy. How do I make this work?", a: "45 minutes, virtual, on your schedule. Most men who thought they didn't have time find that removing the commute makes weekly sessions genuinely manageable. The question is whether the cost of not addressing what's happening is higher than 45 minutes a week — and for most men who come to therapy, it clearly is." },
+  ],
+},
+"mens-therapy-palo-alto": {
+  city: "Palo Alto", state: "CA", slug: "mens-therapy-palo-alto",
+  title: "Men's Therapy in Palo Alto, CA",
+  metaTitle: "Men's Therapist Palo Alto | Therapy for Men | Work Stress & Relationships | LMFT | Stanford | Free Consultation",
+  metaDescription: "Licensed men's therapist in Palo Alto (LMFT). Direct therapy for men dealing with work pressure, relationships, anger, and achievement stress. $240/45min. Serving Stanford and Peninsula. Free consultation.",
+  h1: "Men's Therapist in Palo Alto, CA | Therapy Built for Men",
+  intro: "Men's therapy in Palo Alto is direct and built for men who have achieved a great deal and find that it hasn't produced what they expected — or who are paying a price in their relationships and health that the achievement doesn't justify. No fluff. Just honest work on what's actually going on.",
+  localContent: "Palo Alto men operate in one of the highest-pressure environments in the world. The professional expectations are extraordinary, the social comparison is constant, and the cultural script around success and masculinity is particularly rigid. Men's therapy here works with the specific reality of being a man in this environment — the pressure that never turns off, the relationships that suffer under it, and the identity questions that arise when the success you worked for doesn't feel like enough.",
+  whyChoose: [
+    "Licensed LMFT with specific experience working with Peninsula professionals and Stanford men",
+    "Addresses the specific cost of Palo Alto's achievement culture on men",
+    "Works on work pressure, relationships, anger, and identity",
+    "Free 15-minute consultation — no commitment required",
+  ],
+  uniqueContent: [
+    "Palo Alto produces a specific kind of male pressure. The expectation that you will achieve at the highest level professionally, be fully present as a partner and father, maintain physical health, and never show strain is not sustainable — and the men who try to sustain it often end up in therapy when the cracks become impossible to manage privately. Men's therapy here doesn't add another standard to meet. It addresses the cost of the standards already in place.",
+    "For Stanford men and Peninsula professionals, the identity entanglement with achievement is particularly intense. When your sense of who you are is built primarily around what you accomplish, any threat to that accomplishment becomes a threat to your entire sense of self. The anxiety that produces, the rigidity it creates in relationships, the way it makes failure existential rather than instructive — these are patterns that men's therapy addresses directly.",
+    "Palo Alto fathers often come to therapy because they recognize a gap between who they want to be with their children and who they actually show up as. The impatience that comes from chronic stress. The emotional unavailability that comes from a mind that never fully leaves work. The perfectionism they're inadvertently transmitting to their kids. Men's therapy works on these patterns concretely, with genuine understanding of the pressures that generate them.",
+  ],
+  uniqueWhatToExpect: [
+    "Men's therapy in Palo Alto often starts with men who are skeptical and efficient — they want to know what this actually is, how it works, and what they can expect to get from it. The first session is a direct answer to those questions: a clear conversation about what's not working, what the work would involve, and whether this is the right fit.",
+    "Sessions are focused and don't waste time. For Peninsula professionals with demanding schedules, 45 minutes of direct work on a specific issue tends to be more valuable than open-ended conversation. The approach adapts to what's most useful — cognitive and behavioral work for patterns that are clearly driving problems, deeper exploratory work for patterns that have roots in early experience, practical relationship work for the interpersonal dynamics causing the most damage.",
+    "Progress for Palo Alto men often shows up as a reduction in the driven quality that has always run the show — not a loss of ambition or effectiveness, but a different and more sustainable relationship to it. More presence at home. Less reactivity in professional relationships. A growing capacity to be okay when things don't go perfectly. These changes are quiet and significant.",
+  ],
+  uniqueFaqs: [
+    { q: "I'm a high performer and I don't want therapy to make me less effective. Will men's therapy interfere with my work?", a: "No. Men's therapy addresses what's undermining your effectiveness — the anxiety that's costing you sleep, the relationship stress that's dividing your attention, the anger that's creating problems with people you need. Addressing these things tends to improve professional functioning, not compromise it." },
+    { q: "I've built my identity around being successful. Therapy feels like admitting failure. How do I get past that?", a: "Notice that what you just described is exactly what therapy can help with — the equation of seeking support with personal failure. Men who seek help when they need it aren't failing. They're making a rational decision that the cost of continuing without it is higher than the cost of getting it. That's not a weakness. It's clear thinking." },
+    { q: "My marriage is in real trouble. Can men's therapy help even if my partner isn't coming?", a: "Yes. Individual therapy for relationship problems works by changing what you're bringing to the relationship — the reactivity, the avoidance, the communication patterns, the unresolved material that keeps you stuck in the same dynamics. You can't control your partner's behavior but you have significant influence over the relational dynamic, and that influence changes when you change." },
+    { q: "I'm a Stanford student or faculty member dealing with significant pressure. Is men's therapy appropriate?", a: "Yes. Stanford men — whether students, faculty, or staff — face specific pressures that men's therapy addresses directly. The imposter syndrome, the performance anxiety, the relationship strain that comes from living inside one of the most demanding intellectual environments in the world. This is exactly the kind of thing therapy is for." },
+  ],
+},
 
   // Trauma Therapy
   "trauma-therapy-san-francisco": {
