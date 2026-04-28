@@ -3135,6 +3135,7 @@ const seoPages = {
     { q: "What's the process for starting?", a: "Free 15-minute consultation, scheduling, first session within a week typically. The process is designed to be low-friction from the beginning." },
   ],
 },
+};
 
 const faqs = [
   { q: "Are you accepting new clients?", a: "Yes! I'm currently accepting new clients and would love to hear what brings you to therapy. Schedule a free consultation so we can discuss whether we're a good fit and go over current availability." },
