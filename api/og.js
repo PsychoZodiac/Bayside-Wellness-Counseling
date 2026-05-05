@@ -2,13 +2,15 @@ export const config = { runtime: "edge" };
 
 const SITE_URL = "https://baysidewellnessandcounseling.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
-const DEFAULT_TITLE = "Bayside Wellness & Counseling | Licensed Therapist Oakland, CA";
+const DEFAULT_TITLE = "Bayside Wellness & Counseling | Virtual Therapy in California";
 const DEFAULT_DESCRIPTION =
   "Compassionate, evidence-based virtual therapy for adults, teens, and families across California. EMDR, IFS, CBT, and more. Free 15-minute consultation.";
 
+// All 14 blog posts with their actual image paths from App.jsx
 const BLOG_POSTS = {
   "cost-of-constant-exposure-desensitization": {
     title: "The Cost of Constant Exposure: Understanding Desensitization",
+    // Local image — served from Bayside's own public folder
     image: `${SITE_URL}/desensitization-blog.jpg`,
     description:
       "What happens when we become desensitized to the constant stream of distressing content in our lives.",
@@ -115,6 +117,7 @@ export default async function handler(req) {
   let ogImage = DEFAULT_OG_IMAGE;
   let canonicalUrl = `${SITE_URL}${pathname}`;
 
+  // Match /blog/:slug
   const blogMatch = pathname.match(/^\/blog\/([^/]+)\/?$/);
   if (blogMatch) {
     const slug = blogMatch[1];
@@ -126,30 +129,58 @@ export default async function handler(req) {
     }
   }
 
-  const origin = url.origin;
-  const indexRes = await fetch(`${origin}/index.html`);
-  let html = await indexRes.text();
+  // Build a minimal HTML shell directly — no fetch, no loop.
+  // Browsers ignore this shell and render via the JS bundle.
+  // Social crawlers read the OG tags and stop there.
+  const html = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}" />
 
-  const ogTags = `
-  <meta property="og:title" content="${escapeHtml(title)}" />
-  <meta property="og:description" content="${escapeHtml(description)}" />
-  <meta property="og:image" content="${escapeHtml(ogImage)}" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="${escapeHtml(canonicalUrl)}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Bayside Wellness &amp; Counseling" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="${escapeHtml(title)}" />
-  <meta name="twitter:description" content="${escapeHtml(description)}" />
-  <meta name="twitter:image" content="${escapeHtml(ogImage)}" />
-  <link rel="canonical" href="${escapeHtml(canonicalUrl)}" />`;
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bayside Wellness &amp; Counseling" />
+    <meta property="og:url" content="${escapeHtml(canonicalUrl)}" />
+    <meta property="og:title" content="${escapeHtml(title)}" />
+    <meta property="og:description" content="${escapeHtml(description)}" />
+    <meta property="og:image" content="${escapeHtml(ogImage)}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-  html = html
-    .replace(/<meta\s+property="og:[^"]*"[^>]*>/gi, "")
-    .replace(/<meta\s+name="twitter:[^"]*"[^>]*>/gi, "")
-    .replace(/<link\s+rel="canonical"[^>]*>/gi, "")
-    .replace("</head>", `${ogTags}\n</head>`);
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${escapeHtml(title)}" />
+    <meta name="twitter:description" content="${escapeHtml(description)}" />
+    <meta name="twitter:image" content="${escapeHtml(ogImage)}" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="${escapeHtml(canonicalUrl)}" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J6FXEZVPHX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J6FXEZVPHX');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>`;
 
   return new Response(html, {
     status: 200,
