@@ -1,74 +1,26 @@
 {
   "redirects": [
-    {
-      "source": "/mindfulness",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/home",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/services/mens-therapy",
-      "destination": "/services/mens",
-      "permanent": true
-    },
-    {
-      "source": "/seo",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/seo/:path*",
-      "destination": "/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/blog/tag/:tag*",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
-      "source": "/blog/5-lies-suicide-tells-us",
-      "destination": "/blog/the-5-lies-suicide-tells-us",
-      "permanent": true
-    },
-    {
-      "source": "/services/family",
-      "destination": "/services/teen",
-      "permanent": true
-    },
-    {
-      "source": "/family-therapy-san-francisco",
-      "destination": "/teen-therapy-san-francisco",
-      "permanent": true
-    },
-    {
-      "source": "/family-therapy-oakland",
-      "destination": "/teen-therapy-oakland",
-      "permanent": true
-    },
-    {
-      "source": "/family-therapy-san-jose",
-      "destination": "/teen-therapy-san-jose",
-      "permanent": true
-    },
-    {
-      "source": "/family-therapy-berkeley",
-      "destination": "/teen-therapy-berkeley",
-      "permanent": true
-    },
-    {
-      "source": "/family-therapy-palo-alto",
-      "destination": "/teen-therapy-palo-alto",
-      "permanent": true
-    }
+    { "source": "/mindfulness", "destination": "/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/services/mens-therapy", "destination": "/services/mens", "permanent": true },
+    { "source": "/seo", "destination": "/", "permanent": true },
+    { "source": "/seo/:path*", "destination": "/:path*", "permanent": true },
+    { "source": "/blog/tag/:tag*", "destination": "/blog", "permanent": true },
+    { "source": "/blog/5-lies-suicide-tells-us", "destination": "/blog/the-5-lies-suicide-tells-us", "permanent": true },
+    { "source": "/services/family", "destination": "/services/teen", "permanent": true },
+    { "source": "/family-therapy-san-francisco", "destination": "/teen-therapy-san-francisco", "permanent": true },
+    { "source": "/family-therapy-oakland", "destination": "/teen-therapy-oakland", "permanent": true },
+    { "source": "/family-therapy-san-jose", "destination": "/teen-therapy-san-jose", "permanent": true },
+    { "source": "/family-therapy-berkeley", "destination": "/teen-therapy-berkeley", "permanent": true },
+    { "source": "/family-therapy-palo-alto", "destination": "/teen-therapy-palo-alto", "permanent": true }
   ],
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/favicon.png", "destination": "/favicon.png" },
+    { "source": "/og-image.png", "destination": "/og-image.png" },
+    { "source": "/desensitization-blog.jpg", "destination": "/desensitization-blog.jpg" },
     { "source": "/(.*)", "destination": "/api/og?path=/$1" }
   ]
 }
