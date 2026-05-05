@@ -31,7 +31,118 @@
       gtag('config', 'G-J6FXEZVPHX');
     </script>
 
-    <!-- all your existing schema JSON blocks stay here unchanged -->
+    <!-- SCHEMA 1: MedicalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "@id": "https://baysidewellnessandcounseling.com/#organization",
+      "name": "Bayside Wellness & Counseling",
+      "description": "Licensed therapist offering EMDR, IFS, and CBT therapy for trauma, anxiety, depression, and relationship issues. Virtual therapy across California.",
+      "url": "https://baysidewellnessandcounseling.com",
+      "telephone": "+1-415-857-5799",
+      "email": "hello@baysidewellnessandcounseling.com",
+      "priceRange": "$$",
+      "image": "https://baysidewellnessandcounseling.com/og-image.jpg",
+      "medicalSpecialty": ["MentalHealth"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2323 Broadway",
+        "addressLocality": "Oakland",
+        "addressRegion": "CA",
+        "postalCode": "94612",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.8119,
+        "longitude": -122.2644
+      },
+      "areaServed": [
+        { "@type": "State", "name": "California" },
+        { "@type": "City", "name": "Oakland", "sameAs": "https://en.wikipedia.org/wiki/Oakland,_California" },
+        { "@type": "City", "name": "San Francisco", "sameAs": "https://en.wikipedia.org/wiki/San_Francisco" },
+        { "@type": "City", "name": "Berkeley", "sameAs": "https://en.wikipedia.org/wiki/Berkeley,_California" },
+        { "@type": "City", "name": "San Jose", "sameAs": "https://en.wikipedia.org/wiki/San_Jose,_California" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "founder": { "@id": "https://baysidewellnessandcounseling.com/#marcus" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Therapy Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "EMDR Therapy", "url": "https://baysidewellnessandcounseling.com/services/emdr" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Internal Family Systems (IFS) Therapy", "url": "https://baysidewellnessandcounseling.com/services/ifs" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cognitive Behavioral Therapy (CBT)", "url": "https://baysidewellnessandcounseling.com/services/cbt" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Teen Therapy", "url": "https://baysidewellnessandcounseling.com/services/teen" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Men's Therapy", "url": "https://baysidewellnessandcounseling.com/services/mens" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Psychodynamic Therapy", "url": "https://baysidewellnessandcounseling.com/services/psychodynamic" } }
+        ]
+      },
+      "sameAs": [
+        "https://www.psychologytoday.com/profile/1134128",
+        "https://www.marcusghiasitherapy.com",
+        "https://www.emdria.org/directory/people/marcus-ghiasi/"
+      ]
+    }
+    </script>
+
+    <!-- SCHEMA 2: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://baysidewellnessandcounseling.com/#marcus",
+      "name": "Marcus Ghiasi",
+      "jobTitle": "Licensed Marriage and Family Therapist",
+      "description": "Marcus Ghiasi is a Licensed Marriage and Family Therapist (LMFT) in Oakland, CA specializing in EMDR, IFS, and trauma-focused therapy for adults, teens, and families.",
+      "url": "https://baysidewellnessandcounseling.com/about",
+      "image": "https://baysidewellnessandcounseling.com/assets/marcus-headshot.jpg",
+      "telephone": "+1-415-857-5799",
+      "email": "hello@baysidewellnessandcounseling.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oakland",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "worksFor": { "@id": "https://baysidewellnessandcounseling.com/#organization" },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "license",
+        "name": "Licensed Marriage and Family Therapist (LMFT)",
+        "recognizedBy": { "@type": "Organization", "name": "California Board of Behavioral Sciences" }
+      },
+      "knowsAbout": ["EMDR Therapy", "Internal Family Systems", "Cognitive Behavioral Therapy", "Trauma Therapy", "Anxiety Treatment", "Depression Counseling", "Family Therapy", "Men's Mental Health", "Psychodynamic Therapy"],
+      "sameAs": [
+        "https://www.psychologytoday.com/profile/1134128",
+        "https://www.marcusghiasitherapy.com"
+      ]
+    }
+    </script>
+
+    <!-- SCHEMA 3: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://baysidewellnessandcounseling.com/#website",
+      "url": "https://baysidewellnessandcounseling.com",
+      "name": "Bayside Wellness & Counseling",
+      "description": "Licensed therapy practice offering EMDR, IFS, CBT, and more. Virtual sessions across California.",
+      "publisher": { "@id": "https://baysidewellnessandcounseling.com/#organization" },
+      "inLanguage": "en-US"
+    }
+    </script>
+
+  </head>
+  <body>
+    <div id="root"></div>
     <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
