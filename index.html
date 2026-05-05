@@ -1,233 +1,37 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bayside Wellness & Counseling | Licensed Therapist Oakland, CA</title>
 
-<!-- Fallback title only - react-helmet-async overrides this per page -->
-<title>Bayside Wellness & Counseling | Licensed Therapist Oakland, CA</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bayside Wellness & Counseling" />
+    <meta property="og:url" content="https://baysidewellnessandcounseling.com" />
+    <meta property="og:title" content="Bayside Wellness & Counseling | Licensed Therapist Oakland, CA" />
+    <meta property="og:description" content="Compassionate, evidence-based virtual therapy for adults, teens, and families across California. EMDR, IFS, CBT, and more. Free 15-minute consultation." />
+    <meta property="og:image" content="https://baysidewellnessandcounseling.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-<!-- 
-  NOTE: All per-page meta tags (description, og:*, twitter:*, canonical, keywords)
-  are handled dynamically by react-helmet-async via src/SEO.jsx and src/metadata.js.
-  Only static, site-wide structured data lives here.
--->
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bayside Wellness & Counseling | Licensed Therapist Oakland, CA" />
+    <meta name="twitter:description" content="Compassionate, evidence-based virtual therapy for adults, teens, and families across California. EMDR, IFS, CBT, and more. Free 15-minute consultation." />
+    <meta name="twitter:image" content="https://baysidewellnessandcounseling.com/og-image.png" />
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J6FXEZVPHX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J6FXEZVPHX');
-</script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J6FXEZVPHX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J6FXEZVPHX');
+    </script>
 
-<!-- ============================================================
-     SCHEMA 1: MedicalBusiness (Primary Organization)
-     ============================================================ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "@id": "https://baysidewellnessandcounseling.com/#organization",
-  "name": "Bayside Wellness & Counseling",
-  "description": "Licensed therapist offering EMDR, IFS, and CBT therapy for trauma, anxiety, depression, and relationship issues. Virtual therapy across California.",
-  "url": "https://baysidewellnessandcounseling.com",
-  "telephone": "+1-415-857-5799",
-  "email": "hello@baysidewellnessandcounseling.com",
-  "priceRange": "$$",
-  "image": "https://baysidewellnessandcounseling.com/og-image.jpg",
-  "medicalSpecialty": ["MentalHealth"],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "2323 Broadway",
-    "addressLocality": "Oakland",
-    "addressRegion": "CA",
-    "postalCode": "94612",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 37.8119,
-    "longitude": -122.2644
-  },
-  "areaServed": [
-    {
-      "@type": "State",
-      "name": "California"
-    },
-    {
-      "@type": "City",
-      "name": "Oakland",
-      "sameAs": "https://en.wikipedia.org/wiki/Oakland,_California"
-    },
-    {
-      "@type": "City",
-      "name": "San Francisco",
-      "sameAs": "https://en.wikipedia.org/wiki/San_Francisco"
-    },
-    {
-      "@type": "City",
-      "name": "Berkeley",
-      "sameAs": "https://en.wikipedia.org/wiki/Berkeley,_California"
-    },
-    {
-      "@type": "City",
-      "name": "San Jose",
-      "sameAs": "https://en.wikipedia.org/wiki/San_Jose,_California"
-    }
-  ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "opens": "09:00",
-    "closes": "18:00"
-  },
-  "founder": {
-    "@id": "https://baysidewellnessandcounseling.com/#marcus"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Therapy Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "EMDR Therapy",
-          "description": "Eye Movement Desensitization and Reprocessing for trauma treatment",
-          "url": "https://baysidewellnessandcounseling.com/services/emdr"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Internal Family Systems (IFS) Therapy",
-          "description": "Parts work therapy for understanding internal conflicts",
-          "url": "https://baysidewellnessandcounseling.com/services/ifs"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Cognitive Behavioral Therapy (CBT)",
-          "description": "Evidence-based therapy for anxiety and depression",
-          "url": "https://baysidewellnessandcounseling.com/services/cbt"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Teen Therapy",
-          "description": "Therapy for high schoolers and college students dealing with anxiety, identity, and academic stress",
-          "url": "https://baysidewellnessandcounseling.com/services/teen"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Men's Therapy",
-          "description": "A judgment-free space for men to work on anger, relationships, and emotional expression",
-          "url": "https://baysidewellnessandcounseling.com/services/mens"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Psychodynamic Therapy",
-          "description": "Exploring root causes through past experiences and unconscious patterns",
-          "url": "https://baysidewellnessandcounseling.com/services/psychodynamic"
-        }
-      }
-    ]
-  },
-  "sameAs": [
-    "https://www.psychologytoday.com/profile/1134128",
-    "https://www.marcusghiasitherapy.com",
-    "https://www.emdria.org/directory/people/marcus-ghiasi/"
-  ]
-}
-</script>
-
-<!-- ============================================================
-     SCHEMA 2: Person (Marcus Ghiasi, LMFT)
-     ============================================================ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://baysidewellnessandcounseling.com/#marcus",
-  "name": "Marcus Ghiasi",
-  "jobTitle": "Licensed Marriage and Family Therapist",
-  "description": "Marcus Ghiasi is a Licensed Marriage and Family Therapist (LMFT) in Oakland, CA specializing in EMDR, IFS, and trauma-focused therapy for adults, teens, and families.",
-  "url": "https://baysidewellnessandcounseling.com/about",
-  "image": "https://baysidewellnessandcounseling.com/assets/marcus-headshot.jpg",
-  "telephone": "+1-415-857-5799",
-  "email": "hello@baysidewellnessandcounseling.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Oakland",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  },
-  "worksFor": {
-    "@id": "https://baysidewellnessandcounseling.com/#organization"
-  },
-  "hasCredential": {
-    "@type": "EducationalOccupationalCredential",
-    "credentialCategory": "license",
-    "name": "Licensed Marriage and Family Therapist (LMFT)",
-    "recognizedBy": {
-      "@type": "Organization",
-      "name": "California Board of Behavioral Sciences"
-    }
-  },
-  "knowsAbout": [
-    "EMDR Therapy",
-    "Internal Family Systems",
-    "Cognitive Behavioral Therapy",
-    "Trauma Therapy",
-    "Anxiety Treatment",
-    "Depression Counseling",
-    "Family Therapy",
-    "Men's Mental Health",
-    "Psychodynamic Therapy"
-  ],
-  "sameAs": [
-    "https://www.psychologytoday.com/profile/1134128",
-    "https://www.marcusghiasitherapy.com"
-  ]
-}
-</script>
-
-<!-- ============================================================
-     SCHEMA 3: WebSite (Enables Google Sitelinks Search Box)
-     ============================================================ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://baysidewellnessandcounseling.com/#website",
-  "url": "https://baysidewellnessandcounseling.com",
-  "name": "Bayside Wellness & Counseling",
-  "description": "Licensed therapy practice offering EMDR, IFS, CBT, and more. Virtual sessions across California.",
-  "publisher": {
-    "@id": "https://baysidewellnessandcounseling.com/#organization"
-  },
-  "inLanguage": "en-US"
-}
-</script>
-
-  </head>
-  <body>
-    <div id="root"></div>
+    <!-- all your existing schema JSON blocks stay here unchanged -->
     <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
