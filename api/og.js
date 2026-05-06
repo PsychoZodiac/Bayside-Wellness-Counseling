@@ -7,6 +7,51 @@ const DEFAULT_DESCRIPTION =
   "Compassionate, evidence-based virtual therapy for adults, teens, and families across California. EMDR, IFS, CBT, and more. Free 15-minute consultation.";
 
 const BLOG_POSTS = {
+  "signs-you-need-therapy": {
+  title: "Signs You Need Therapy (That You're Probably Explaining Away)",
+  image: `${SITE_URL}/signs-therapy.jpeg`,
+  description: "Most people who need therapy already know it. The knowledge arrives quietly, in the margins of ordinary days. And then the explaining begins.",
+},
+"understanding-depression": {
+  title: "What Depression Actually Does to a Life",
+  image: `${SITE_URL}/understanding-depression.jpeg`,
+  description: "Depression is not sadness. This distinction matters more than most clinical descriptions acknowledge — especially for the people who most need to recognize it in themselves.",
+},
+"mens-mental-health": {
+  title: "Men and Mental Health: What Actually Gets in the Way",
+  image: `${SITE_URL}/mens-mental-health.jpeg`,
+  description: "The conversation about men and mental health has gotten louder. It has not moved the needle as much as it should. The barriers are real and worth understanding honestly.",
+},
+"attachment-styles-in-relationships": {
+  title: "Your Attachment Style Is Running Your Relationships",
+  image: `${SITE_URL}/attachment-styles.jpeg`,
+  description: "There is a version of you that shows up in intimate relationships. It has patterns, sensitivities, and ways of protecting itself. It was built long before you had any say in it.",
+},
+"setting-boundaries-in-relationships": {
+  title: "Why Your Boundaries Keep Failing",
+  image: `${SITE_URL}/boundaries.jpeg`,
+  description: "Everyone understands that boundaries are important. Most people who understand them conceptually still struggle to maintain them. The problem isn't information. It's something deeper.",
+},
+"mindfulness-for-anxiety": {
+  title: "What Mindfulness Can and Cannot Do for Anxiety",
+  image: `${SITE_URL}/mindfulness-anxiety.jpeg`,
+  description: "Mindfulness has become the default recommendation for anxiety. There is genuine research behind it. There are also real limits that rarely get discussed honestly.",
+},
+"managing-holiday-stress": {
+  title: "The Holiday Relationship Trap: Why Family Visits Are So Hard",
+  image: `${SITE_URL}/holiday-family.jpeg`,
+  description: "You walk into your parents' house and within twenty minutes you are sixteen again. This is not regression. It is neurology.",
+},
+"family-therapy-benefits": {
+  title: "How Individual Therapy Changes Your Family",
+  image: `${SITE_URL}/family-therapy.jpeg`,
+  description: "The most durable changes in family dynamics frequently come from individual work done by one person. Not because the other family members don't matter, but because that's where the leverage is.",
+},
+"emdr-trauma-therapy-guide": {
+  title: "What a Full Course of EMDR Actually Looks Like",
+  image: `${SITE_URL}/emdr-guide.jpeg`,
+  description: "Most introductions to EMDR focus on what it is. This one focuses on what it is like — what actually happens across weeks and months of treatment, phase by phase.",
+},
   "burnout-is-not-a-scheduling-problem": {
   title: "Burnout Isn't a Scheduling Problem",
   image: `${SITE_URL}/burnout.jpg`,
