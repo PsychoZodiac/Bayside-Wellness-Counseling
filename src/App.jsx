@@ -609,6 +609,8 @@ const seoPages = {
     { q: "Do you work with both men and women?", a: "Yes. I work with adults of all genders. I have a specific focus on men's therapy because men often face additional barriers to seeking help — but I work with anyone who would benefit from individual therapy." },
     { q: "What's the difference between therapy and counseling?", a: "In practice these terms are often used interchangeably. What I provide is individual psychotherapy — evidence-based clinical work on psychological patterns, not just supportive conversation or advice-giving." },
   ],
+},
+  
   "depression-therapy-san-francisco": {
   city: "San Francisco", state: "CA", slug: "depression-therapy-san-francisco",
   title: "Depression Therapy in San Francisco, CA",
@@ -764,6 +766,7 @@ const seoPages = {
     { q: "Will depression therapy affect my performance at work or school?", a: "In the short term, therapy requires some attention and energy. In the medium and long term, treating depression consistently improves performance — because you're no longer spending cognitive and emotional resources on managing a clinical state. Most clients find their functioning improves as the depression lifts." },
   ],
 },
+  
   // ===== PENINSULA/SOUTH BAY =====
  "therapy-san-jose": {
   city: "San Jose", state: "CA", slug: "therapy-san-jose",
