@@ -3,6 +3,7 @@
     { "source": "/mindfulness", "destination": "/", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/services/mens-therapy", "destination": "/services/mens", "permanent": true },
+    { "source": "/services/trauma", "destination": "/services/emdr", "permanent": true },
     { "source": "/seo", "destination": "/", "permanent": true },
     { "source": "/seo/:path*", "destination": "/:path*", "permanent": true },
     { "source": "/blog/tag/:tag*", "destination": "/blog", "permanent": true },
@@ -17,5 +18,6 @@
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
-{ "source": "/(.*)", "destination": "/api/og?path=/$1" }  ]
+    { "source": "/(.*)", "destination": "/api/og?path=/$1" }
+  ]
 }
