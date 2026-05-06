@@ -43,7 +43,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <!-- Service Detail Pages -->
   <url>
     <loc>https://baysidewellnessandcounseling.com/services/emdr</loc>
@@ -84,98 +84,8 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/cost-of-constant-exposure-desensitization</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/master-trauma-or-die-trying</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/the-5-lies-suicide-tells-us</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/ai-and-therapy</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/rupture-and-repair</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/valentines-day-and-men</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/rethinking-therapy-2026</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/beginning-again</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/low-mood-depression</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/dream-bigger-2026</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/starting-new-year-with-intention</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/beginners-guide-to-ifs</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/beginners-guide-to-emdr</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/holiday-stress-loneliness</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/burnout-is-not-a-scheduling-problem</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/why-anxiety-gets-worse-at-night</loc>
-    <lastmod>2026-04-14</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/blog/what-your-anger-is-actually-telling-you</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -186,8 +96,152 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://baysidewellnessandcounseling.com/blog/what-your-anger-is-actually-telling-you</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://baysidewellnessandcounseling.com/blog/why-anxiety-gets-worse-at-night</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/burnout-is-not-a-scheduling-problem</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/signs-you-need-therapy</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/cost-of-constant-exposure-desensitization</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/master-trauma-or-die-trying</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/understanding-depression</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/the-5-lies-suicide-tells-us</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/ai-and-therapy</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/rupture-and-repair</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/mens-mental-health</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/valentines-day-and-men</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/attachment-styles-in-relationships</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/beginning-again</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/rethinking-therapy-2026</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/setting-boundaries-in-relationships</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/low-mood-depression</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/dream-bigger-2026</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/starting-new-year-with-intention</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/mindfulness-for-anxiety</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/beginners-guide-to-ifs</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/beginners-guide-to-emdr</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/holiday-stress-loneliness</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/managing-holiday-stress</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/family-therapy-benefits</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/emdr-trauma-therapy-guide</loc>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -404,11 +458,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-  <loc>https://baysidewellnessandcounseling.com/emdr-therapy-san-francisco</loc>
-  <lastmod>2026-04-27</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
+    <loc>https://baysidewellnessandcounseling.com/emdr-therapy-san-francisco</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/emdr-therapy-oakland</loc>
     <lastmod>2026-04-02</lastmod>
@@ -523,7 +577,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
- <url>
+  <url>
     <loc>https://baysidewellnessandcounseling.com/teen-therapy-san-francisco</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
