@@ -3658,7 +3658,7 @@ const blogPosts = [
   excerpt: "Most people who struggle with anger are not struggling with too much emotion. They are struggling with too little access to the emotions underneath it.",
   date: "April 28, 2026",
   category: "Men's Mental Health",
-  image: "/anger-relationships.jpeg",
+  image: "/anger-relationships.jpg",
   content: `Most people who struggle with anger are not struggling with too much emotion. They are struggling with too little access to the emotions underneath it.
 
 Anger is fast. It is loud. It has a clear target and a clear energy. The feelings it sits on top of: hurt, fear, grief, shame. Those are slower, quieter, and far more vulnerable. For many people, anger is the only emotional channel that feels safe to use. Everything else gets routed through it.
@@ -3711,7 +3711,7 @@ Bayside Wellness and Counseling works with men and adults navigating anger, rela
   excerpt: "Most people searching for a therapist are not looking for a directory. They are looking for permission to trust their instincts, and some honest guidance on what those instincts should be evaluating.",
   date: "April 21, 2026",
   category: "Therapy Education",
-  image: "/find-a-therapist.jpeg",
+  image: "/find-a-therapist.jpg",
   content: `Most people who search for a therapist are not looking for a directory. They are looking for permission to trust their instincts, and some honest guidance on what those instincts should be evaluating.
 
 Here is that guidance.
@@ -3772,7 +3772,7 @@ If you are in California and looking for a therapist who works with anxiety, tra
   excerpt: "The day ends. The distractions stop. And suddenly the thing you have been outrunning for sixteen hours is sitting on the edge of your bed, waiting.",
   date: "April 14, 2026",
   category: "Anxiety",
-  image: "/anxiety-at-night.jpeg",
+  image: "/anxiety-at-night.jpg",
   content: `The day ends. The distractions stop. And suddenly the thing you have been outrunning for sixteen hours is sitting on the edge of your bed, waiting.
 
 Anxiety at night is not random. It is not a sign that something is uniquely wrong with you. It is a predictable consequence of how the anxious mind interacts with rest, and understanding the mechanism is the first step toward changing it.
@@ -3817,7 +3817,7 @@ A free consultation at Bayside Wellness and Counseling is available to explore w
   excerpt: "You cleared your calendar. You took the vacation. You tried the morning routine, the journaling, the early bedtimes. Monday still arrived like a debt collector.",
   date: "April 7, 2026",
   category: "Mental Health",
-  image: "/burnout.jpeg",
+  image: "/burnout.jpg",
   content: `You cleared your calendar. You took the vacation. You tried the morning routine, the journaling, the early bedtimes. Monday still arrived like a debt collector.
 
 This is what burnout actually looks like. Not the dramatic collapse. The slow erosion of the person you used to be.
