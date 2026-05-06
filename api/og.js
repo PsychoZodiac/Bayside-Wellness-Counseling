@@ -9,22 +9,22 @@ const DEFAULT_DESCRIPTION =
 const BLOG_POSTS = {
   "burnout-is-not-a-scheduling-problem": {
   title: "Burnout Isn't a Scheduling Problem",
-  image: `${SITE_URL}/burnout.jpeg`,
+  image: `${SITE_URL}/burnout.jpg`,
   description: "You cleared your calendar. You took the vacation. Monday still arrived like a debt collector. This is what burnout actually looks like.",
 },
 "why-anxiety-gets-worse-at-night": {
   title: "Why Your Anxiety Gets Louder at Night",
-  image: `${SITE_URL}/anxiety-at-night.jpeg`,
+  image: `${SITE_URL}/anxiety-at-night.jpg`,
   description: "The day ends. The distractions stop. And suddenly the thing you have been outrunning for sixteen hours is sitting on the edge of your bed, waiting.",
 },
 "how-to-find-a-therapist-who-fits": {
   title: "How to Find a Therapist Who Actually Fits",
-  image: `${SITE_URL}/find-a-therapist.jpeg`,
+  image: `${SITE_URL}/find-a-therapist.jpg`,
   description: "Most people searching for a therapist are not looking for a directory. They are looking for permission to trust their instincts.",
 },
 "what-your-anger-is-actually-telling-you": {
   title: "What Your Anger Is Actually Trying to Tell You",
-  image: `${SITE_URL}/anger-relationships.jpeg`,
+  image: `${SITE_URL}/anger-relationships.jpg`,
   description: "Most people who struggle with anger are not struggling with too much emotion. They are struggling with too little access to the emotions underneath it.",
 },
   "cost-of-constant-exposure-desensitization": {
