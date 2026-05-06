@@ -140,23 +140,6 @@ const serviceDetails = {
 // SEO Landing Pages Data
 const seoPages = {
   // ===== EXISTING PAGES =====
-  "therapy-oakland": {
-    city: "Oakland",
-    state: "CA",
-    slug: "therapy-oakland",
-    title: "Therapy in Oakland, CA",
-    metaTitle: "Oakland Therapist | LMFT | $240/session | EMDR, CBT, IFS | Free Consultation",
-    metaDescription: "Licensed Oakland therapist (LMFT). Virtual EMDR, IFS, CBT, teen therapy. $240/45min, $320/60min. Free 15-minute consultation. Serving all East Bay.",
-    h1: "Licensed Therapist in Oakland, CA | LMFT | Virtual Therapy",
-    intro: "If you're looking for a therapist in Oakland, you're in the right place. Bayside Wellness & Counseling offers virtual therapy to adults, teens, and families throughout Oakland and the greater Bay Area.",
-    localContent: "Whether you're in Temescal, Lake Merritt, Rockridge, or anywhere else in Oakland, our telehealth platform makes it easy to access quality mental health care from wherever you are. No commute, no parking hassles. Just effective therapy that fits your schedule.",
-    whyChoose: [
-      "Licensed California therapist (LMFT)",
-      "Flexible telehealth sessions across California",
-      "Evidence-based approaches tailored to your needs",
-      "Free 15-minute consultation call",
-    ],
-  },
   "emdr-therapy-san-francisco": {
     city: "San Francisco",
     state: "CA",
