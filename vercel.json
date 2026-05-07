@@ -13,7 +13,7 @@
     { "source": "/family-therapy-oakland", "destination": "/teen-therapy-oakland", "permanent": true },
     { "source": "/family-therapy-san-jose", "destination": "/teen-therapy-san-jose", "permanent": true },
     { "source": "/family-therapy-berkeley", "destination": "/teen-therapy-berkeley", "permanent": true },
-    { "source": "/family-therapy-palo-alto", "destination": "/teen-therapy-palo-alto", "permanent": true }
+    { "source": "/family-therapy-palo-alto", "destination": "/teen-therapy-palo-alto", "permanent": true },
     { "source": "/cbt", "destination": "/services/cbt", "permanent": true },
 { "source": "/emdr", "destination": "/services/emdr", "permanent": true },
   ],
