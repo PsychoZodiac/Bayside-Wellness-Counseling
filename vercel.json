@@ -1,6 +1,8 @@
 {
   "redirects": [
     { "source": "https://www.baysidewellnessandcounseling.com/:path*", "destination": "https://baysidewellnessandcounseling.com/:path*", "permanent": true },
+    { "source": "/therapy-dublin", "destination": "/therapy-oakland", "permanent": true },
+    { "source": "/therapy-milpitas", "destination": "/therapy-fremont", "permanent": true },
     { "source": "/mindfulness", "destination": "/", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/services/mens-therapy", "destination": "/services/mens", "permanent": true },
