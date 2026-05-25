@@ -3,6 +3,8 @@
     { "source": "/:path*", "has": [{ "type": "host", "value": "www.baysidewellnessandcounseling.com" }], "destination": "https://baysidewellnessandcounseling.com/:path*", "permanent": true },
     { "source": "/therapy-dublin", "destination": "/therapy-oakland", "permanent": true },
     { "source": "/therapy-milpitas", "destination": "/therapy-fremont", "permanent": true },
+    { "source": "/seo/couples-therapy-oakland", "destination": "/therapy-oakland", "permanent": true },
+{ "source": "/services/family-therapy", "destination": "/services/teen", "permanent": true }
     { "source": "/mindfulness", "destination": "/", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/services/mens-therapy", "destination": "/services/mens", "permanent": true },
