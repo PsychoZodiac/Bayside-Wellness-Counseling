@@ -207,37 +207,107 @@ const seoPages = {
     { q: "How do I know which therapy approach is right for me?", a: "You don't need to know. During the consultation we'll discuss what you're experiencing and I'll recommend what's most likely to help. The approach isn't chosen in advance — it emerges from understanding your specific situation." },
   ],
 },
-"therapy-oakland": {
-  city: "Oakland", state: "CA", slug: "therapy-oakland",
-  title: "Therapy in Oakland, CA",
-  metaTitle: "Oakland Therapist | LMFT | EMDR, CBT, IFS | Free Consultation",
-  metaDescription: "Licensed Oakland therapist (LMFT). Virtual EMDR, IFS, CBT, teen therapy. $240/45min. Free 15-minute consultation. Serving all East Bay.",
-  h1: "Licensed Therapist in Oakland, CA | LMFT | Virtual Therapy",
-  intro: "If you're looking for a therapist in Oakland, you're in the right place. Bayside Wellness & Counseling offers virtual therapy to adults, teens, and families throughout Oakland and the greater East Bay — evidence-based approaches delivered without the commute.",
-  localContent: "Whether you're in Temescal, Lake Merritt, Rockridge, or anywhere else in Oakland, our telehealth platform makes it easy to access quality mental health care from wherever you are. No commute, no parking hassles. Just effective therapy that fits your schedule.",
+{
+  slug: 'therapy-oakland',
+  city: 'Oakland',
+  metaTitle: 'Therapist in Oakland, CA | Anxiety, Trauma & Depression | Marcus Ghiasi, LMFT',
+  metaDescription: 'Licensed therapist in Oakland, CA specializing in anxiety, trauma, depression, and life transitions. Telehealth across California. Free 15-min consultation.',
+  keywords: 'therapist Oakland CA, anxiety therapy Oakland, trauma therapist Oakland, depression therapy Oakland, EMDR therapy Oakland, telehealth therapist Oakland, PTSD therapy Oakland, burnout therapy Oakland, grief therapist Oakland, online therapy Oakland CA',
+  heroTitle: 'Therapy in Oakland, CA',
+  heroSubtitle: 'Evidence-based care for anxiety, trauma, depression, and the full weight of adult life.',
+  intro: `Oakland is one of the most dynamic, high-pressure cities in the Bay Area. Whether you live in Rockridge, Temescal, Montclair, or Grand Lake, the demands of daily life here are real. Career pressure, financial stress, relationship strain, and the kind of exhaustion that builds quietly until it cannot be ignored anymore. If you have been putting off getting support, you are not alone. Most people who reach out have been carrying things longer than they should have. Therapy is where that changes.
+
+Marcus Ghiasi is a Licensed Marriage and Family Therapist (LMFT) based in Oakland, offering telehealth therapy to adults throughout California. His approach is direct, evidence-based, and grounded in modalities that actually produce results. EMDR for trauma and PTSD. IFS for understanding the parts of yourself that feel stuck or in conflict. CBT for anxiety and depression. Psychodynamic work for the deeper patterns that keep showing up in your relationships and your life. Sessions are available Wednesday through Friday via secure video.`,
+  services: [
+    {
+      title: 'Anxiety and Stress',
+      description: 'Persistent worry, overthinking, panic, and low-grade tension that never fully shuts off. EMDR and CBT are particularly effective for anxiety that has not responded to other approaches.'
+    },
+    {
+      title: 'Trauma and PTSD',
+      description: 'Childhood experiences, relationship trauma, accidents, or any event that rewired how your nervous system responds to the world. EMDR is one of the most researched trauma treatments available.'
+    },
+    {
+      title: 'Depression',
+      description: 'Flat affect, low motivation, persistent sadness, or a sense that nothing feels meaningful. Therapy addresses both the symptoms and the underlying patterns driving them.'
+    },
+    {
+      title: 'Life Transitions',
+      description: 'Career changes, relationship shifts, loss, relocation, or any period where your old map no longer fits the terrain you are navigating.'
+    },
+    {
+      title: 'Grief and Loss',
+      description: 'Losing someone, something, or a version of yourself you thought you would always have. Grief does not follow a timeline and does not need to be rushed.'
+    },
+    {
+      title: 'Burnout',
+      description: 'When work, caregiving, or sustained high performance has depleted something that rest alone is not restoring. Therapy helps identify what is driving the depletion and what actually replenishes it.'
+    },
+    {
+      title: 'Relationship Issues',
+      description: 'Patterns in relationships that keep repeating: conflict, emotional distance, difficulty with trust, or not knowing how to ask for what you need.'
+    },
+    {
+      title: 'Anger Management',
+      description: 'Anger that feels disproportionate, hard to control, or is creating problems in your relationships or at work. Therapy gets underneath what the anger is actually responding to.'
+    }
+  ],
   whyChoose: [
-    "Licensed California therapist (LMFT)",
-    "Flexible telehealth sessions across California",
-    "Evidence-based approaches tailored to your needs",
-    "Free 15-minute consultation call",
+    {
+      title: 'Telehealth Across California',
+      description: 'All sessions are via secure video. No commute, no waiting room. You access therapy from wherever you are in California, home, office, or anywhere with a private space and a reliable connection.'
+    },
+    {
+      title: 'Trauma-Informed from the Start',
+      description: 'Every session accounts for how trauma affects the nervous system, attention, and the ability to engage in therapy. You do not have to explain why certain things are hard.'
+    },
+    {
+      title: 'Multiple Evidence-Based Modalities',
+      description: 'EMDR, IFS, CBT, and psychodynamic therapy are used in combination based on what is most effective for what you are working on. The approach adapts to you, not the other way around.'
+    },
+    {
+      title: 'Direct and Structured Sessions',
+      description: 'Sessions are focused and purposeful. The work is collaborative and you always know what you are working toward and why.'
+    },
+    {
+      title: 'Adults 18 and Older',
+      description: 'Marcus works exclusively with adults. College-age clients and older. No couples therapy as a primary treatment, no children or younger teens.'
+    },
+    {
+      title: 'Superbills for Out-of-Network Reimbursement',
+      description: 'Bayside is a private-pay practice. Superbills are provided after every session for potential reimbursement through your PPO insurance plan.'
+    }
   ],
-  uniqueContent: [
-    "Oakland is a city that demands resilience from its residents — economically, socially, and culturally. The mental health consequences of living in a city under genuine pressure are real and often undertreated. Good therapy in Oakland starts by taking the actual conditions of people's lives seriously, not a sanitized version of them. The stressors are real. The patterns they generate are also real. Both are worth working on.",
-    "Oakland's diversity means the experience of living here is genuinely varied. The tech professional in the hills navigating career pressure and relationship strain. The longtime resident in the Flatlands managing economic stress and community change. The first-generation student navigating the gap between where they came from and where they're going. The parent working to break cycles they didn't choose. Therapy here adapts to the person and the actual context of their life.",
-    "Bayside Wellness & Counseling serves Oakland residents across all neighborhoods and backgrounds with the full range of evidence-based approaches. EMDR for trauma and the specific trauma presentations common in the East Bay. CBT for anxiety, depression, and the thought patterns amplifying distress. IFS for internal conflict and self-criticism. Men's therapy, teen therapy, and culturally responsive individual therapy for Oakland's diverse community.",
+  faqs: [
+    {
+      question: 'Do you work with Oakland clients in person or only via telehealth?',
+      answer: 'All sessions are via telehealth through a HIPAA-compliant video platform. You can access therapy from anywhere in Oakland or anywhere in California without commuting to an office. Most clients find telehealth just as effective as in-person sessions and considerably more convenient.'
+    },
+    {
+      question: 'What types of issues do you work with most?',
+      answer: 'The most common presenting concerns are anxiety, trauma, depression, burnout, grief, life transitions, and relationship patterns. Marcus works with adults 18 and older. He does not work with children, younger teens, or couples seeking couples therapy as the primary treatment.'
+    },
+    {
+      question: 'Do you take insurance?',
+      answer: 'Bayside Wellness and Counseling is a private-pay practice. Sessions are $240 for 45 minutes and $320 for 60 minutes. A superbill is provided after each session, which you can submit to your insurance for potential out-of-network reimbursement. Many PPO plans reimburse a significant portion of session costs.'
+    },
+    {
+      question: 'How quickly can I get started?',
+      answer: 'A free 15-minute consultation is available to answer your questions and determine whether working together makes sense. If it is a good fit, sessions can typically begin within one to two weeks. Availability is Wednesday through Friday.'
+    },
+    {
+      question: 'What makes EMDR different from regular talk therapy?',
+      answer: 'Talk therapy works through insight and understanding. EMDR works by processing how memories and experiences are stored in the nervous system, which is why it can resolve symptoms that years of talking have not touched. It is especially effective for trauma, PTSD, anxiety, and phobias.'
+    },
+    {
+      question: 'How long does therapy typically take?',
+      answer: 'It depends on what you are working on. Some people accomplish specific goals in 12 to 20 sessions. Others prefer ongoing therapy for deeper or more complex work. There is no minimum commitment. The goal is always to get you to a place where you no longer need weekly sessions.'
+    }
   ],
-  uniqueWhatToExpect: [
-    "Therapy at Bayside begins with a free consultation — a real conversation about what's going on and whether we're a good fit. If we move forward, the first full session goes deeper into your history and current situation, beginning to map the patterns that are creating the most difficulty.",
-    "All sessions are via secure telehealth. Flexible scheduling, consistent care, evidence-based approaches. The work adapts to what you're actually dealing with — no generic protocol imposed regardless of fit.",
-    "Progress is real. Most clients notice meaningful change within the first couple of months. The goal is always genuine change — not indefinite management, not just getting by, but actually moving differently through your life.",
-  ],
-  uniqueFaqs: [
-    { q: "Do you work with clients from diverse racial and cultural backgrounds?", a: "Yes. A significant portion of my practice involves clients from Oakland's diverse communities. Cultural context matters in therapy — how distress is experienced, what help-seeking means, what change looks like — and I take that seriously rather than treating it as peripheral." },
-    { q: "Can therapy help with stress that comes from real external circumstances?", a: "Yes. Therapy doesn't pretend your stressors are imaginary. It helps you identify where your responses to real pressure are amplifying your distress — and where you have more agency than anxiety or depression currently allows you to feel." },
-    { q: "I've tried therapy before and it didn't help. Why would this be different?", a: "Different therapists and different approaches produce different outcomes. If prior therapy felt like just talking without anything changing, the approach may not have been well-matched to what you were dealing with. I use evidence-based methods specifically chosen for your presenting concerns — not open-ended conversation for its own sake." },
-    { q: "How quickly can I start?", a: "After a free 15-minute consultation, most clients can schedule their first full session within a week." },
-  ],
-},
+  nearbyAreas: ['Berkeley', 'Emeryville', 'Alameda', 'Piedmont', 'San Leandro'],
+  landmarks: ['Rockridge', 'Temescal', 'Montclair', 'Grand Lake', 'Piedmont Avenue'],
+  localContext: 'Oakland adults seeking therapy often come in carrying the compound weight of high cost of living, career pressure, and the particular exhaustion of a city that demands a lot from the people who choose to stay in it. Therapy here is practical, focused, and designed to produce real change.'
+}
 "therapy-berkeley": {
   city: "Berkeley", state: "CA", slug: "therapy-berkeley",
   title: "Therapy in Berkeley, CA",
