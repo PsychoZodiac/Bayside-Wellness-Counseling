@@ -84,10 +84,10 @@ const services = [
     desc: "Psychodynamic therapy explores how your past experiences, relationships, and unconscious patterns shape how you feel and behave today. It's a deeper approach that gets at root causes rather than surface symptoms." 
   },
   { 
-    name: "Teen Therapy", 
-    slug: "teen", 
-    shortDesc: "A space built for teens",
-    desc: "Teen therapy offers high schoolers and college students a low-pressure space to work through anxiety, identity, academic stress, and social struggles. No lectures, no judgment. Just honest, skill-building work with a therapist who actually gets what it's like to be a teenager right now." 
+    name: "Young Adults Therapy", 
+    slug: "young-adults", 
+    shortDesc: "Therapy for adults navigating early adulthood",
+    desc: "The years between 18 and 30 are some of the most demanding of a person's life. College, career, identity, relationships, and independence all hitting at once with very little roadmap. Young adults therapy is a space to work through anxiety, depression, burnout, life transitions, and the particular pressure of figuring out who you are and what you want while everything around you keeps moving." 
   },
   { 
     name: "Men's Therapy", 
@@ -123,11 +123,11 @@ const serviceDetails = {
     ctaHeading: "Looking for deeper understanding?",
     ctaText: "If you're interested in exploring the 'why' behind your patterns, book a consultation to see if this approach fits."
   },
-  teen: {
-    howItWorks: "Teen therapy is individual therapy — the teen is the client. Sessions are casual, low-pressure, and built around what actually matters to them. We use a mix of skill-building, psychoeducation, and honest conversation to work through what's getting in the way. There's humor, there's directness, and there's zero expectation that you have to have it all figured out before walking in. Parents play a collaborative role. I'm open to a monthly check-in with parents to keep everyone aligned, and I occasionally offer parent coaching when family support is needed — but this stays teen-focused, not family therapy.",
-    whoThisHelps: "Teen therapy is for high schoolers and college students (roughly 14 and up) dealing with anxiety, depression, academic pressure, identity questions, social struggles, or athletic stress. I have a background coaching high school swimming, so I understand the specific weight that comes with competitive sports, team dynamics, and performance expectations. If your teen is shutting down, burning out, or just seems stuck, this is a space where they can actually talk — without feeling like they're being analyzed or managed.",
-    ctaHeading: "Is your teen ready to talk?",
-    ctaText: "No pressure, no lecture. Let's have a conversation about whether this feels like the right fit for your teen."
+"young-adults": {
+    howItWorks: "Young adults therapy is individual therapy for people 18 and older who are navigating the particular demands of early adulthood. Sessions are direct, low-pressure, and built around what is actually happening in your life. No scripts, no generic advice. The work combines skill-building, honest conversation, and evidence-based approaches including CBT, IFS, and EMDR depending on what fits best. Most clients come weekly, at least at the start, because consistency is what produces real change.",
+    whoThisHelps: "Young adults therapy is for people roughly 18 to 30 who are dealing with anxiety, depression, burnout, identity questions, relationship patterns, life transitions, or the general disorientation of early adulthood. College students, recent graduates, early career professionals, and anyone in that in-between stage where the old map no longer fits but the new one is not yet clear. If you are functioning on the outside but struggling underneath, this is a space to actually work on it.",
+    ctaHeading: "Ready to get started?",
+    ctaText: "A free 15-minute consultation is the first step. No commitment required, just a conversation to see if it is the right fit."
   },
   mens: {
     howItWorks: "Men's therapy is a space where you don't have to perform or have all the answers. We work on whatever's getting in your way: anger that's hurting your relationships, stress that's affecting your performance, difficulty expressing emotions beyond frustration, or patterns that keep repeating. Sessions are direct, practical, and focused on real change. We use a blend of approaches depending on what fits: CBT for managing anger and stress, EMDR for processing past experiences, IFS for internal conflict, and psychodynamic work for understanding patterns. No fluff, no judgment, just honest work.",
@@ -180,7 +180,7 @@ const seoPages = {
   city: "San Francisco", state: "CA", slug: "therapy-san-francisco",
   title: "Therapy in San Francisco, CA",
   metaTitle: "San Francisco Therapist | LMFT | EMDR, CBT, IFS | Free Consultation",
-  metaDescription: "Licensed SF therapist (LMFT). Virtual EMDR, IFS, CBT, teen therapy. $240/45min. Free 15-minute consultation. Serving all San Francisco neighborhoods.",
+  metaDescription: "Licensed SF therapist (LMFT). Virtual EMDR, IFS, CBT. $210/45min. Free 15-minute consultation. Serving all San Francisco neighborhoods.",
   h1: "Licensed Therapist in San Francisco, CA | LMFT | Virtual Therapy",
   intro: "Finding a therapist in San Francisco shouldn't add to your stress. Bayside Wellness & Counseling offers virtual therapy to adults and teens across all SF neighborhoods — evidence-based approaches that actually work, delivered without the commute.",
   localContent: "From the Marina to the Mission, Nob Hill to the Outer Sunset, our telehealth platform brings quality mental health care directly to you. No Muni delays, no parking nightmares. Just effective therapy that works with your SF lifestyle.",
@@ -193,7 +193,7 @@ const seoPages = {
   uniqueContent: [
     "San Francisco is one of the most mentally taxing cities in the world to live in — and one of the least honest about it. The performance of thriving is nearly universal here. The gap between how people present and how they actually feel is wider than almost anywhere. Good therapy in San Francisco starts by acknowledging that gap and working with what's actually happening, not the curated version.",
     "The specific pressures of SF life create a recognizable mental health profile. Financial stress that is constant regardless of income level in a city where even high earners feel precarious. Career demands in industries that reward total commitment and punish visible vulnerability. The social complexity of a dense, diverse city where genuine connection is harder to build than it looks. Relationship strain from schedules that leave little bandwidth for anything beyond work. Therapy here takes all of this seriously as context for whatever brings someone in.",
-    "Bayside Wellness & Counseling serves clients across all of San Francisco's neighborhoods and professional communities — tech workers, healthcare professionals, artists, educators, first responders, and everyone else navigating what it means to build a life in this city. The approach adapts to the person. EMDR for trauma and the experiences that stay stuck. CBT for anxiety, depression, and the cognitive patterns maintaining distress. IFS for deeper internal work. Psychodynamic therapy for relationship patterns and root causes. Men's therapy and teen therapy for the populations who often face the most barriers to accessing care.",
+    "Bayside Wellness & Counseling serves clients across all of San Francisco's neighborhoods and professional communities — tech workers, healthcare professionals, artists, educators, first responders, and everyone else navigating what it means to build a life in this city. The approach adapts to the person. EMDR for trauma and the experiences that stay stuck. CBT for anxiety, depression, and the cognitive patterns maintaining distress. IFS for deeper internal work. Psychodynamic therapy for relationship patterns and root causes. Men's therapy and young adult therapy for the populations who often face the most barriers to accessing care.",
   ],
   uniqueWhatToExpect: [
     "Therapy at Bayside begins with a free 15-minute consultation — a direct conversation about what you're dealing with and whether we're a good fit. No commitment, no pressure. If we move forward, the first full session focuses on understanding your situation in depth and beginning to map the patterns that are causing the most difficulty.",
@@ -345,12 +345,12 @@ Marcus Ghiasi is a Licensed Marriage and Family Therapist (LMFT) based in Oaklan
   metaTitle: "Alameda Therapist | LMFT | Virtual Therapy | East Bay | Free Consultation",
   metaDescription: "Licensed Alameda therapist (LMFT). Virtual EMDR, CBT, individual therapy. $240/45min. Serving the island and East Bay. Free consultation.",
   h1: "Licensed Therapist in Alameda, CA | LMFT | Virtual Therapy",
-  intro: "Alameda residents deserve accessible, quality mental health care. Bayside Wellness & Counseling provides virtual therapy to adults and teens on the island and beyond — no bridge traffic required.",
+  intro: "Alameda residents deserve accessible, quality mental health care. Bayside Wellness & Counseling provides virtual therapy to adults on the island and beyond — no bridge traffic required.",
   localContent: "From the West End to Bay Farm Island, our telehealth platform brings therapy to your home. No bridge traffic, no searching for parking. Just effective mental health support when you need it.",
   whyChoose: [
     "Licensed California LMFT",
     "EMDR, IFS, and CBT for trauma, anxiety, and depression",
-    "Individual therapy for adults and teens",
+    "Individual therapy for adults",
     "Free 15-minute consultation call",
   ],
   uniqueContent: [
@@ -498,7 +498,7 @@ Marcus Ghiasi is a Licensed Marriage and Family Therapist (LMFT) based in Oaklan
   city: "Fremont", state: "CA", slug: "therapy-fremont",
   title: "Therapy in Fremont, CA",
   metaTitle: "Fremont Therapist | LMFT | Virtual Therapy | Culturally Responsive | Free Consultation",
-  metaDescription: "Licensed Fremont therapist (LMFT). Virtual EMDR, CBT, teen therapy. $240/45min. Culturally responsive care. Free 15-minute consultation.",
+  metaDescription: "Licensed Fremont therapist (LMFT). Virtual EMDR, CBT, teen therapy. $210/45min. Culturally responsive care. Free 15-minute consultation.",
   h1: "Licensed Therapist in Fremont, CA | LMFT | Virtual Therapy",
   intro: "Fremont is a diverse, thriving community, and mental health support should be accessible to everyone. Bayside Wellness & Counseling provides virtual therapy to adults, teens, and families across Fremont — culturally informed, evidence-based care from wherever you are.",
   localContent: "Whether you're in Niles, Mission San Jose, or Warm Springs, telehealth makes therapy convenient. Quality mental health care that fits into your South Bay lifestyle.",
@@ -2124,164 +2124,7 @@ Marcus Ghiasi is a Licensed Marriage and Family Therapist (LMFT) based in Oaklan
     { q: "How does psychodynamic therapy differ from executive coaching?", a: "Executive coaching focuses on performance, leadership, and professional goals. Psychodynamic therapy focuses on the psychological patterns underneath those goals — the things that create problems coaching can't solve, the relational dynamics that derail capable people, the internal conflicts that no amount of strategy addresses. They serve different purposes and sometimes people benefit from both." },
   ],
 },
-
   // Teen Therapy
-"teen-therapy-san-francisco": {
-  city: "San Francisco", state: "CA", slug: "teen-therapy-san-francisco",
-  title: "Teen Therapy in San Francisco, CA",
-  metaTitle: "Teen Therapist San Francisco | High School & College Students | LMFT | Free Consultation",
-  metaDescription: "Licensed teen therapist in San Francisco (LMFT). Therapy for high schoolers and college students dealing with anxiety, depression, identity, and stress. $240/45min. Free consultation.",
-  h1: "Teen Therapist in San Francisco, CA | Counseling for Teens & Young Adults",
-  intro: "Teen therapy in San Francisco gives high schoolers and college students a space that's actually built for them — not a scaled-down version of adult therapy, but a real conversation about what's actually going on. No lectures, no agenda, no pressure to be further along than you are.",
-  localContent: "San Francisco teens navigate a specific kind of pressure. The cost of living crisis their families are managing, the social intensity of Bay Area high school culture, the particular weight of growing up in a city that is simultaneously one of the most progressive and most unequal in the country. Teen therapy here isn't generic — it's grounded in the actual context of what SF teenagers are dealing with right now.",
-  whyChoose: [
-    "Licensed LMFT specializing in teen and young adult therapy",
-    "Works with high schoolers and college students from age 14 and up",
-    "Addresses anxiety, depression, identity, social struggles, and academic stress",
-    "Free 15-minute consultation — no commitment required",
-  ],
-  uniqueContent: [
-    "San Francisco teenagers are navigating a city in tension — progressive values alongside visible inequality, high academic expectations alongside genuine social complexity, and the particular disorientation of growing up in a place that is simultaneously exciting and unstable. SF teens in therapy are often dealing with more than the standard adolescent struggles. Housing stress bleeds into family stress. The social dynamics at competitive high schools like Lowell or SOTA carry their own specific weight. Teen therapy here starts with taking that context seriously.",
-    "For SFUSD students and young people attending San Francisco's competitive private schools, therapy often addresses the specific gap between the school's stated values around inclusion and belonging and the actual social experience of being a teenager in those environments. The anxiety that comes from never quite knowing where you stand. The identity questions that come from navigating diverse, complex social environments without much adult guidance on how to do it. These are real and deserve real attention.",
-    "Teen therapy in San Francisco is fully virtual, which matters for teenagers who are already navigating complex schedules. Sessions can happen from home, which often makes it easier for teens to actually open up — they're in their own space, on their own device, without the self-consciousness that can come with a formal office setting.",
-  ],
-  uniqueWhatToExpect: [
-    "The first session with a teen is always about getting to know them on their terms. There's no intake form to fill out, no agenda to get through. We talk about what they're dealing with, what they want from therapy, and whether this feels like it could be useful. Some teens arrive relieved to have a space. Others are skeptical. Both responses are fine and neither determines how the work goes.",
-    "Teen therapy sessions are conversational and direct. We work on what's actually present — the social situation that's been keeping them up at night, the family conflict that's wearing them down, the anxiety that's been making it hard to function. Skills get introduced when they're relevant, not as homework for its own sake. Progress looks different for every teen but usually involves more capacity to manage what's hard without shutting down or blowing up.",
-    "Parents play a collaborative but background role. I'm happy to do a brief monthly check-in with parents if that's useful, but the teen is the client and confidentiality is taken seriously. Teens who know their therapist isn't reporting everything back to their parents tend to be far more honest — and honest therapy is effective therapy.",
-  ],
-  uniqueFaqs: [
-    { q: "My teen refuses to go to therapy. What do I do?", a: "Don't force it. A teen who's been pressured into therapy will spend sessions performing compliance rather than actually engaging. A better approach is to let them know it's available, remove the stigma from the conversation, and leave the door open. Sometimes the right moment is a specific crisis; sometimes it's just time. If they're willing to try one session with no commitment to continue, that's often enough of an opening." },
-    { q: "How involved will I be as a parent?", a: "Involved enough to stay informed and not involved enough to compromise your teen's privacy. I'll let you know if I have significant safety concerns. Beyond that, what happens in sessions stays in sessions — which is what makes teen therapy work." },
-    { q: "My teen is struggling academically. Is that something teen therapy addresses?", a: "Academic struggles are almost always connected to something emotional — anxiety, depression, family stress, social problems, or a learning issue that hasn't been identified. Teen therapy addresses the emotional and relational dimensions of academic difficulty. For assessment of learning differences, I can provide referrals." },
-    { q: "What age range do you work with?", a: "I work with teens from roughly age 14 through college. The sweet spot is high school age and young adults in their early college years — an age group I have specific experience and genuine interest in working with." },
-  ],
-},
-"teen-therapy-oakland": {
-  city: "Oakland", state: "CA", slug: "teen-therapy-oakland",
-  title: "Teen Therapy in Oakland, CA",
-  metaTitle: "Teen Therapist Oakland | High School & College Students | LMFT | East Bay | Free Consultation",
-  metaDescription: "Licensed teen therapist in Oakland (LMFT). Therapy for high schoolers and college students dealing with anxiety, depression, identity, and transitions. $240/45min. Free consultation.",
-  h1: "Teen Therapist in Oakland, CA | Counseling for Teens & Young Adults",
-  intro: "Teen therapy in Oakland gives high schoolers and young adults a space to work through what's actually going on — without judgment, without lectures, and without having to package their experience neatly for an adult who doesn't understand the context. Oakland teens deserve therapy that takes their real lives seriously.",
-  localContent: "Oakland teenagers are growing up in one of the most complex urban environments in California. Community violence, rapid neighborhood change, family economic stress, and the specific social dynamics of Oakland's diverse high schools create a backdrop that generic teen therapy doesn't account for. Teen therapy here starts from where Oakland teens actually are — not where a textbook says they should be.",
-  whyChoose: [
-    "Licensed LMFT with experience working with Oakland and East Bay teens",
-    "Culturally responsive approach that takes Oakland's context seriously",
-    "Addresses anxiety, depression, identity, family stress, and community-related trauma",
-    "Free 15-minute consultation — no commitment required",
-  ],
-  uniqueContent: [
-    "Oakland teenagers are navigating genuinely complex terrain. The city's history with violence and displacement isn't abstract for many young people — it's present in their neighborhoods, their families, and their daily experience. Teen therapy in Oakland has to hold this context rather than pathologize the teens who are adapting to it. The hypervigilance, the guardedness, the difficulty trusting adults — these aren't symptoms of dysfunction. They're often reasonable adaptations to real conditions, and therapy works with them accordingly.",
-    "Oakland's public schools — McClymonds, Fremont, Oakland Tech, Oakland High — serve teenagers who are often managing more complexity than most adults would know how to navigate. Family instability, economic stress, the specific social dynamics of schools in under-resourced communities, and the weight of being a young person in a city that is simultaneously celebrated and neglected. Teen therapy in Oakland acknowledges this load without using it as an excuse to lower expectations for what healing is possible.",
-    "For Oakland teens in competitive academic environments — those attending Skyline, the Oakland School for the Arts, or applying to selective colleges — the pressure looks different but isn't necessarily lighter. The specific anxiety of being a high-achieving teenager from Oakland, navigating the cultural gap between their community and the institutions they're trying to enter, is real and rarely addressed directly. This is exactly the kind of thing teen therapy can help with.",
-  ],
-  uniqueWhatToExpect: [
-    "Teen therapy in Oakland begins with establishing that this is actually a safe space — which for many Oakland teens requires more than an assurance. Trust gets built through consistency, honesty, and a therapist who doesn't flinch at the actual content of a teenager's life. The first several sessions are primarily about that foundation.",
-    "Once the foundation is in place, sessions focus on what's most pressing for the teen — which changes week to week and is treated as valid regardless of whether it matches a predetermined agenda. Skills and tools get introduced when they're genuinely relevant, not as curriculum. Progress is measured in the teen's own terms — what feels different, what's easier, what they're doing that they couldn't do before.",
-    "Virtual sessions are particularly practical for Oakland teens, many of whom have complex schedules and transportation constraints. Being able to meet from home eliminates a significant logistical barrier and often makes it easier to maintain consistent attendance.",
-  ],
-  uniqueFaqs: [
-    { q: "My teen has experienced community violence. Is that something teen therapy addresses?", a: "Yes. Exposure to community violence is a significant adverse experience that has real mental health consequences for young people. Teen therapy can address the anxiety, hypervigilance, depression, and grief that community violence produces — both as direct experience and as chronic environmental stress." },
-    { q: "My teen is resistant to therapy and doesn't think it will help. What should I tell them?", a: "Tell them they're in charge. The most important thing for resistant teens to know is that therapy isn't something that will be done to them — it's a space they control. One session, no commitment to continue, no requirement to talk about anything they don't want to. That framing tends to lower resistance significantly." },
-    { q: "Can teen therapy address the specific stress of being a first-generation college applicant?", a: "Yes. The college application process is stressful for all teenagers, and significantly more so for first-generation applicants navigating it without family roadmaps. The anxiety, the identity questions, and the pressure involved are exactly what teen therapy can help with." },
-    { q: "Do you work with teens who are struggling with their identity or sexuality?", a: "Yes. Identity exploration — including sexual and gender identity — is one of the central developmental tasks of adolescence, and one that Oakland's diverse community takes seriously. Teen therapy is a space where these questions can be explored without judgment or agenda." },
-  ],
-},
-"teen-therapy-berkeley": {
-  city: "Berkeley", state: "CA", slug: "teen-therapy-berkeley",
-  title: "Teen Therapy in Berkeley, CA",
-  metaTitle: "Teen Therapist Berkeley | High School & College Students | LMFT | UC Berkeley | Free Consultation",
-  metaDescription: "Licensed teen therapist in Berkeley (LMFT). Therapy for high schoolers and college students dealing with anxiety, depression, identity, and academic stress. $240/45min. Free consultation.",
-  h1: "Teen Therapist in Berkeley, CA | Counseling for Teens & Young Adults",
-  intro: "Teen therapy in Berkeley gives high schoolers and UC Berkeley students a space to work through the real stuff — the academic pressure, the identity questions, the social complexity, the gap between how they're presenting and how they actually feel. No performance required.",
-  localContent: "Berkeley teenagers and UC Berkeley students face a specific convergence of pressures. Academic intensity, political and social awareness that can generate its own anxiety, the particular weight of being a young person in a community with very high expectations for both achievement and consciousness. Teen therapy here meets students where they actually are — not where Berkeley culture thinks they should be.",
-  whyChoose: [
-    "Licensed LMFT with experience working with Berkeley teens and UC Berkeley students",
-    "Comfortable with the specific academic and social pressures of Berkeley's environment",
-    "Addresses anxiety, depression, identity, perfectionism, and academic stress",
-    "Free 15-minute consultation — no commitment required",
-  ],
-  uniqueContent: [
-    "Berkeley High is one of the most academically and socially complex high schools in California — a genuinely diverse school where students from very different backgrounds share the same campus and rarely share the same experience of it. Berkeley High teens in therapy are often navigating the specific social stratification, racial dynamics, and academic tracking that defines life at a large, diverse public school. Teen therapy here holds that complexity rather than reducing it to individual symptoms.",
-    "UC Berkeley students face a convergence of pressures that most college mental health services are not equipped to address adequately. The academic intensity, the social comparison with 45,000 high-achieving peers, the adjustment from being exceptional in high school to being average at a world-class university, and the particular isolation that can come from a large campus — these require more than crisis intervention. Teen therapy and young adult therapy at Berkeley addresses these experiences with the depth they deserve.",
-    "Berkeley's progressive culture means many young people here are also carrying the weight of political and social awareness in ways that can generate genuine anxiety. The teen who is deeply engaged with justice and inequality and also overwhelmed by the scale of the problems. The young adult who feels guilty about their own needs when there's so much wrong with the world. These are real experiences that teen therapy in Berkeley takes seriously.",
-  ],
-  uniqueWhatToExpect: [
-    "Berkeley teens and UC students tend to arrive at therapy with more self-awareness than average — they've often already named what they're dealing with and have some framework for understanding it. The work in early sessions is less about introducing concepts and more about creating a space where the self-awareness can actually land in the body rather than just existing in the head.",
-    "Sessions are direct and conversational. Berkeley students appreciate being treated as intelligent adults who can handle complexity — and that's exactly how teen therapy here works. We don't simplify. We go where the actual difficulty is and work with it directly, using whatever tools are most relevant — skills from CBT, concepts from IFS, or simply sustained honest conversation.",
-    "Progress for Berkeley students often shows up as a reduction in the relentlessness that has been driving them and an increased capacity to be present in their actual life rather than always preparing for the next evaluation. That sounds simple but for Berkeley teens it's often the most significant change they've experienced.",
-  ],
-  uniqueFaqs: [
-    { q: "My teen at Berkeley High is struggling with the school's social dynamics. Is this something therapy can help?", a: "Yes. The social environment at Berkeley High is genuinely complex, and the struggles that arise within it are real and worth taking seriously. Teen therapy can help young people navigate social difficulty, understand their own reactions, and build the skills to handle complex social environments more effectively." },
-    { q: "I'm a UC Berkeley student and the campus counseling waitlist is months long. Can I work with you instead?", a: "Yes. I work with UC Berkeley students and young adults via telehealth. Sessions can be scheduled around your class schedule and don't require campus access. Many students find private therapy more useful than campus services because it's more consistent, more flexible, and more focused." },
-    { q: "My teen is anxious about climate change and the state of the world. Is this within the scope of teen therapy?", a: "Yes. Eco-anxiety and the distress that comes from being a politically aware young person in a genuinely troubled world are real experiences that teen therapy addresses. The goal isn't to talk them out of caring — it's to build the resilience to care without being overwhelmed." },
-    { q: "How do you work with teens who are high-achieving but clearly struggling?", a: "Very carefully. High-achieving teens often have the most at stake in appearing fine. The first task is creating enough safety that the performance can drop — which requires patience, genuine curiosity, and a therapist who isn't impressed by the achievement and isn't alarmed by the struggle." },
-  ],
-},
-"teen-therapy-san-jose": {
-  city: "San Jose", state: "CA", slug: "teen-therapy-san-jose",
-  title: "Teen Therapy in San Jose, CA",
-  metaTitle: "Teen Therapist San Jose | High School & College Students | LMFT | Silicon Valley | Free Consultation",
-  metaDescription: "Licensed teen therapist in San Jose (LMFT). Therapy for high schoolers and college students dealing with anxiety, academic pressure, and identity. $240/45min. Free consultation.",
-  h1: "Teen Therapist in San Jose, CA | Counseling for Teens & Young Adults",
-  intro: "Teen therapy in San Jose gives high schoolers and young adults a space to work through the pressure, the uncertainty, and the weight of growing up in Silicon Valley — without having to perform competence they don't feel or pretend things are fine when they're not.",
-  localContent: "San Jose teenagers are growing up in one of the most achievement-saturated environments in the world. The pressure to excel academically, pursue the right extracurriculars, and build a profile that will gain admission to a top university starts earlier here than almost anywhere. Teen therapy addresses what that pressure actually does to young people — not the version they present to college admissions counselors but the version they live with.",
-  whyChoose: [
-    "Licensed LMFT with experience working with Silicon Valley teens",
-    "Understands the specific academic and family pressures of San Jose's culture",
-    "Addresses anxiety, depression, identity, academic stress, and family dynamics",
-    "Free 15-minute consultation — no commitment required",
-  ],
-  uniqueContent: [
-    "San Jose's high school culture is defined by academic intensity, college admissions pressure, and the specific weight of growing up in families that often carry significant immigration stories and achievement expectations. For many San Jose teens, the pressure isn't just from school — it's from the family narrative that education is the path to security, and that any deviation from that path is a failure of gratitude and effort. Teen therapy addresses this dynamic directly and with genuine cultural sensitivity.",
-    "San Jose is home to some of the most academically competitive high schools in California — Lynbrook, Monta Vista, Evergreen Valley — and the students there are often dealing with anxiety and depression at rates that their high performance conceals. The teen who is getting straight A's while barely sleeping, who is involved in five extracurriculars while feeling completely empty inside, who presents as successful while privately wondering if any of it is worth it — this is the population teen therapy in San Jose is specifically designed to serve.",
-    "For San Jose teens from immigrant families, therapy often addresses the specific tension between family expectations and personal identity — the part of them that wants to honor their family's sacrifices and the part that is developing its own values, interests, and sense of self. These are real developmental tensions that require a culturally informed therapist who can hold both sides without taking a position.",
-  ],
-  uniqueWhatToExpect: [
-    "Teen therapy in San Jose begins with meeting the teen where they actually are — which often means acknowledging that they're exhausted, that the pressure is real, and that it makes sense that they're struggling. This validation alone is sometimes the most significant thing that happens in early sessions — many San Jose teens have never had an adult acknowledge that what they're carrying is genuinely heavy.",
-    "From there, sessions focus on what's most pressing — the specific anxiety that's interfering with sleep, the family conflict that's been building, the identity question that keeps surfacing, the depression that's been quietly getting worse. Tools and skills get introduced when they're relevant. Progress looks like more capacity to manage what's hard — not elimination of difficulty but a different relationship to it.",
-    "Virtual sessions fit naturally into the schedules of San Jose teens, who are often managing demanding extracurricular commitments alongside rigorous academics. Sessions can be scheduled in windows that actually exist in a teenager's calendar rather than requiring a special trip to an office.",
-  ],
-  uniqueFaqs: [
-    { q: "My teen is getting good grades but seems miserable. Should I be concerned?", a: "Yes, and your instinct to pay attention to this is correct. Academic performance and emotional wellbeing are not the same thing, and high-achieving teens can be significantly depressed or anxious while maintaining strong grades. The performance is often what's holding the distress together rather than evidence that everything is fine." },
-    { q: "How do you work with teens from immigrant or first-generation families?", a: "With genuine cultural humility and specific understanding of the dynamics these families navigate. The tension between family expectations and personal identity, the specific pressure of being a first-generation American who carries the weight of family sacrifice — these are real and require a therapist who understands the cultural context rather than pathologizing it." },
-    { q: "My teen is struggling with anxiety about the college admissions process. Is this something teen therapy addresses?", a: "Yes. College admissions anxiety is one of the most common presenting issues for San Jose area teens. Therapy addresses both the specific anxiety and the broader relationship to achievement and self-worth that makes admissions feel existential rather than practical." },
-    { q: "What if my teen doesn't want to talk about their feelings?", a: "Most teens don't, initially. Teen therapy doesn't require emotional disclosure on demand — it works with whatever the teen is willing to bring, at the pace they set. Many teens who arrive saying they have nothing to talk about are telling me significant things by the end of the first session." },
-  ],
-},
-"teen-therapy-palo-alto": {
-  city: "Palo Alto", state: "CA", slug: "teen-therapy-palo-alto",
-  title: "Teen Therapy in Palo Alto, CA",
-  metaTitle: "Teen Therapist Palo Alto | High School & College Students | LMFT | Peninsula | Free Consultation",
-  metaDescription: "Licensed teen therapist in Palo Alto (LMFT). Therapy for high schoolers and college students dealing with anxiety, achievement pressure, and identity. $240/45min. Free consultation.",
-  h1: "Teen Therapist in Palo Alto, CA | Counseling for Teens & Young Adults",
-  intro: "Teen therapy in Palo Alto gives high schoolers and young adults a space that operates by completely different rules than the rest of their lives. No evaluation. No performance. No comparison. Just honest work on what's actually going on.",
-  localContent: "Palo Alto teenagers are growing up under some of the most documented achievement pressure in the country. The mental health consequences of that pressure — the anxiety, the depression, the perfectionism that becomes paralyzing — have been studied, reported on, and largely not solved by institutional approaches. Teen therapy here works at the individual level, with the actual teenager in front of you, on the specific things that are making their life harder than it needs to be.",
-  whyChoose: [
-    "Licensed LMFT with deep understanding of Peninsula achievement culture",
-    "Specializes in the specific pressures facing Paly, Gunn, and Peninsula students",
-    "Addresses anxiety, perfectionism, depression, achievement pressure, and identity",
-    "Free 15-minute consultation — no commitment required",
-  ],
-  uniqueContent: [
-    "Palo Alto has a well-documented mental health crisis among its teenagers, and the institutional responses — more counselors, more programs, more awareness campaigns — have not been sufficient. What actually helps individual teenagers is having a consistent relationship with an adult who is genuinely interested in them as a person rather than as a performance to be optimized or a problem to be managed. Teen therapy in Palo Alto starts there — with genuine interest in who this particular teenager actually is, underneath the resume.",
-    "Students at Paly and Gunn are navigating one of the most pressure-saturated high school environments in the country. The social comparison is relentless, the academic expectations are extraordinary, and the stakes attached to college admissions have been inflated to a degree that distorts adolescent development. Teen therapy doesn't pretend this environment is fine — it acknowledges what it actually costs teenagers to grow up in it and works with the real consequences.",
-    "For Palo Alto teens who are also athletes — particularly those in competitive club sports alongside demanding academics — therapy often addresses the specific exhaustion of never being off duty. The teen who is excellent at everything and feels nothing. The athlete who is performing at the highest level while quietly falling apart. The young person who has scheduled every moment of their life and has no idea who they are when there's nothing to achieve. These are the presentations teen therapy in Palo Alto is specifically equipped for.",
-  ],
-  uniqueWhatToExpect: [
-    "Palo Alto teens often arrive at therapy with a high degree of self-awareness and a low degree of permission to actually need anything. Early sessions focus on creating the kind of space where the performance can come down — where it's genuinely okay to not be okay, to not know, to be confused, to be struggling. For many Palo Alto teenagers this is a novel experience.",
-    "Sessions are direct and respect the intelligence of the teenagers I work with. We don't oversimplify or condescend. We work on what's actually present — the anxiety that's been interfering with sleep, the depression that's been making it hard to care about things that used to matter, the identity questions that arise when you've spent your whole life being defined by your achievements. Skills get introduced when they're genuinely relevant.",
-    "Progress for Palo Alto teens often looks like a gradual loosening of the grip — less catastrophizing about grades, more capacity to tolerate imperfection, a growing sense that their value isn't contingent on their performance. These shifts are quiet and significant and tend to compound over time into something that looks like genuine wellbeing rather than managed anxiety.",
-  ],
-  uniqueFaqs: [
-    { q: "My teenager at Paly or Gunn is struggling but won't admit it. How do I get them help?", a: "The most effective approach is usually a low-pressure introduction — let them know therapy is available, normalize it as something many of their peers are doing, and offer a single no-commitment session to see if it feels useful. Forcing it rarely works. Creating an opening does." },
-    { q: "Is therapy confidential when working with teenagers?", a: "Yes, with specific exceptions for safety. What happens in sessions doesn't get reported to parents — which is essential for teen therapy to work. I'll let parents know if I have serious safety concerns, but the content of sessions is private. Teenagers who know this are far more willing to be honest." },
-    { q: "My teen is a high-level competitive athlete dealing with performance anxiety and burnout. Can you help?", a: "Yes. I have a background coaching competitive swimming and specific experience working with the intersection of athletic performance and mental health. The anxiety, the identity entanglement with sport, the fear of injury, the burnout from years of high-level competition — these are things I work with directly." },
-    { q: "How do I know if my teenager needs therapy or just normal adolescent support?", a: "A useful rule of thumb: if what you're seeing is causing significant distress or interfering with functioning — sleep, relationships, school engagement, basic self-care — therapy is appropriate. Normal adolescence is difficult but not disabling. If it's disabling, that's worth addressing." },
-  ],
-},
-
   // Men's Therapy
   "mens-therapy-san-francisco": {
   city: "San Francisco", state: "CA", slug: "mens-therapy-san-francisco",
