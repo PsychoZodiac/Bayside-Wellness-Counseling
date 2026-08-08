@@ -10,7 +10,19 @@
     { "source": "/services/anxiety-depression", "destination": "/services", "permanent": true },
     { "source": "/seo/couples-therapy-san-francisco", "destination": "/therapy-san-francisco", "permanent": true },
     { "source": "/seo/couples-therapy-oakland", "destination": "/therapy-oakland", "permanent": true },
-    { "source": "/services/family-therapy", "destination": "/services/teen", "permanent": true },
+    { "source": "/services/teen", "destination": "/services/young-adults", "permanent": true },
+    { "source": "/services/family", "destination": "/services/young-adults", "permanent": true },
+    { "source": "/services/family-therapy", "destination": "/services/young-adults", "permanent": true },
+    { "source": "/family-therapy-san-francisco", "destination": "/therapy-san-francisco", "permanent": true },
+    { "source": "/family-therapy-oakland", "destination": "/therapy-oakland", "permanent": true },
+    { "source": "/family-therapy-san-jose", "destination": "/therapy-san-jose", "permanent": true },
+    { "source": "/family-therapy-berkeley", "destination": "/therapy-berkeley", "permanent": true },
+    { "source": "/family-therapy-palo-alto", "destination": "/therapy-palo-alto", "permanent": true },
+    { "source": "/teen-therapy-san-francisco", "destination": "/therapy-san-francisco", "permanent": true },
+    { "source": "/teen-therapy-oakland", "destination": "/therapy-oakland", "permanent": true },
+    { "source": "/teen-therapy-san-jose", "destination": "/therapy-san-jose", "permanent": true },
+    { "source": "/teen-therapy-berkeley", "destination": "/therapy-berkeley", "permanent": true },
+    { "source": "/teen-therapy-palo-alto", "destination": "/therapy-palo-alto", "permanent": true },
     { "source": "/mindfulness", "destination": "/", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/services/mens-therapy", "destination": "/services/mens", "permanent": true },
@@ -19,12 +31,6 @@
     { "source": "/seo/:path*", "destination": "/:path*", "permanent": true },
     { "source": "/blog/tag/:tag*", "destination": "/blog", "permanent": true },
     { "source": "/blog/5-lies-suicide-tells-us", "destination": "/blog/the-5-lies-suicide-tells-us", "permanent": true },
-    { "source": "/services/family", "destination": "/services/teen", "permanent": true },
-    { "source": "/family-therapy-san-francisco", "destination": "/teen-therapy-san-francisco", "permanent": true },
-    { "source": "/family-therapy-oakland", "destination": "/teen-therapy-oakland", "permanent": true },
-    { "source": "/family-therapy-san-jose", "destination": "/teen-therapy-san-jose", "permanent": true },
-    { "source": "/family-therapy-berkeley", "destination": "/teen-therapy-berkeley", "permanent": true },
-    { "source": "/family-therapy-palo-alto", "destination": "/teen-therapy-palo-alto", "permanent": true },
     { "source": "/cbt", "destination": "/services/cbt", "permanent": true },
     { "source": "/emdr", "destination": "/services/emdr", "permanent": true }
   ],
@@ -34,4 +40,5 @@
     { "source": "/api/og", "destination": "/api/og" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
+}
 }
