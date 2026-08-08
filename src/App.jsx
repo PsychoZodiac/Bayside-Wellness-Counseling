@@ -308,6 +308,7 @@ Marcus Ghiasi is a Licensed Marriage and Family Therapist (LMFT) based in Oaklan
   landmarks: ['Rockridge', 'Temescal', 'Montclair', 'Grand Lake', 'Piedmont Avenue'],
   localContext: 'Oakland adults seeking therapy often come in carrying the compound weight of high cost of living, career pressure, and the particular exhaustion of a city that demands a lot from the people who choose to stay in it. Therapy here is practical, focused, and designed to produce real change.'
 },
+{
 "therapy-berkeley": {
   city: "Berkeley", state: "CA", slug: "therapy-berkeley",
   title: "Therapy in Berkeley, CA",
