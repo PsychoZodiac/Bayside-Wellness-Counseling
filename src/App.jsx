@@ -205,10 +205,10 @@ const seoPages = {
     { q: "What kinds of issues do you work with?", a: "Anxiety, depression, trauma and PTSD, relationship patterns, anger, self-criticism, perfectionism, identity questions, life transitions, work stress, and more. If something is affecting your functioning, your relationships, or your sense of yourself, it's worth talking about." },
     { q: "Do you work with teens as well as adults?", a: "Yes. I work with teens from roughly age 14 through college, specializing in anxiety, depression, academic stress, identity, and the specific pressures facing Bay Area young people." },
     { q: "How do I know which therapy approach is right for me?", a: "You don't need to know. During the consultation we'll discuss what you're experiencing and I'll recommend what's most likely to help. The approach isn't chosen in advance — it emerges from understanding your specific situation." },
-],
+  ],
   },
   {
-  slug: 'therapy-oakland',
+    slug: 'therapy-oakland',
   city: 'Oakland',
   metaTitle: 'Therapist in Oakland, CA | Anxiety, Trauma & Depression | Marcus Ghiasi, LMFT',
   metaDescription: 'Licensed therapist in Oakland, CA specializing in anxiety, trauma, depression, and life transitions. Telehealth across California. Free 15-min consultation.',
