@@ -1510,8 +1510,7 @@ Marcus Ghiasi is a Licensed Marriage and Family Therapist (LMFT) based in Oaklan
   uniqueFaqs: [
     { q: "Does IFS therapy work for burnout?", a: "Yes. IFS works with the driven parts maintaining burnout directly -- understanding what they protect and what they need -- rather than just managing symptoms. Most clients notice meaningful shift within 12 to 20 sessions." },
     { q: "How is IFS different from mindfulness or somatic therapy?", a: "Mindfulness observes internal experience. Somatic work processes it through the body. IFS works with the specific parts producing the experience directly -- building a relationship with each part and addressing what it is protecting. The approaches are complementary but IFS provides a more structured framework for internal change." },
-    { q: "Is online therapy effective for burnout and anxiety?", a: "Yes. Research shows equivalent outcomes to in-person therapy. For Mill Valley residents,
-"therapy-novato": {
+{ q: "Is online therapy effective for burnout and anxiety?", a: "Yes. Research shows equivalent outcomes to in-person therapy. For Mill Valley residents, removing the commute is often what makes consistent weekly attendance sustainable -- which is what produces results." },"therapy-novato": {
   city: "Novato",
   state: "CA",
   slug: "therapy-novato",
