@@ -139,43 +139,6 @@ const serviceDetails = {
 
 // SEO Landing Pages Data
 const seoPages = {
-  // ===== EXISTING PAGES =====
-"emdr-therapy-san-francisco": {
-  city: "San Francisco",
-  state: "CA",
-  slug: "emdr-therapy-san-francisco",
-  title: "EMDR Therapy in San Francisco, CA",
-  metaTitle: "EMDR Therapy San Francisco | Trauma & PTSD Treatment | Marcus Ghiasi, LMFT",
-  metaDescription: "EMDR therapy in San Francisco for trauma, PTSD, anxiety, and the patterns that talk therapy has not resolved. Licensed LMFT, telehealth across California. Start with a free 15-minute consultation today.",
-  keywords: "EMDR therapy San Francisco, EMDR therapist San Francisco CA, trauma therapy San Francisco, PTSD treatment San Francisco, EMDR for anxiety San Francisco, online EMDR therapist San Francisco, telehealth EMDR California, EMDR therapy for complex trauma, does EMDR work for PTSD, how many EMDR sessions do I need, EMDR vs talk therapy, EMDR therapy for panic attacks San Francisco",
-  h1: "EMDR Therapy in San Francisco, CA | Trauma & PTSD Specialist",
-  intro: "EMDR therapy in San Francisco, CA -- for trauma, PTSD, anxiety, phobias, and the experiences that keep affecting present functioning regardless of how well they are understood. San Francisco demands a high level of performance from the people who live here, and trauma does not make that easier. It shows up not as dramatic breakdown but as the baseline tension that never fully lifts, the relationships that keep hitting the same walls, the concentration that fragments at inconvenient moments, the sense of being functional on the outside while something underneath is not right. EMDR was designed for exactly this. It works at the level where traumatic experiences are stored in the nervous system rather than the level where they are narrated -- which is why it reaches what years of talking about the same material often has not.",
-  localContent: "Marcus Ghiasi is a Licensed Marriage and Family Therapist offering EMDR therapy to San Francisco adults via telehealth. Sessions are Wednesday through Friday from anywhere in California. EMDR is effective for single-incident trauma like accidents, assaults, and medical events; complex trauma from childhood or prolonged difficult relationships; PTSD; panic attacks; phobias; performance anxiety; and the anxiety that has not responded to talk therapy or CBT alone. SF residents access sessions from home or office without commuting across the city -- which for most people is the difference between actually attending consistently and perpetually planning to. A free 15-minute consultation is the starting point.",
-  whyChoose: [
-    "EMDR is one of the most researched trauma treatments available with strong evidence for PTSD, complex trauma, anxiety, and phobias -- processing experiences at the nervous system level rather than the narrative level",
-    "EMDR often produces meaningful results faster than traditional talk therapy because it works at the neurological level where experiences are stored rather than requiring repeated verbal processing",
-    "Online EMDR therapy for San Francisco residents means no commute across the city -- sessions from home or office, Wednesday through Friday",
-    "Marcus works with adults 18 and older on the full range of trauma presentations -- single incident, complex, developmental, and relational",
-    "Private pay with superbills for PPO reimbursement -- $210 for 45 minutes, $280 for 60 minutes",
-    "Free 15-minute consultation before any commitment",
-  ],
-  uniqueContent: [
-    `EMDR therapy works for PTSD and trauma because it processes experiences at the level where they are stored in the nervous system rather than the level where they are understood. Most trauma treatments work through narrative -- talking about what happened, reframing how it is understood, developing coping strategies for when it surfaces. EMDR works differently. The bilateral stimulation activates the brain's natural processing capacity in a way that allows stored threat responses to integrate rather than remain active. The result is not that the memory disappears. It is that it no longer drives present reactions the way it did. For San Francisco residents whose anxiety, relationship patterns, or functioning have been affected by past experiences, EMDR reaches what talking about those experiences has not. <a href="/services/emdr">More on how EMDR works.</a>`,
-    `How many EMDR sessions are needed in San Francisco depends on what is being processed. Single-incident trauma -- an accident, an assault, a specific event -- often resolves meaningfully in 6 to 12 sessions. Complex trauma from childhood or prolonged difficult relationships takes longer because there are more experiences to process and the nervous system organization around them is more deeply established. Most clients notice meaningful change within 8 to 20 sessions depending on the complexity of the presentation. The timeline becomes clearer after the first full session once the scope of the work has been assessed. <a href="/services/emdr">Learn more about the EMDR process.</a>`,
-    `Online EMDR therapy in San Francisco produces equivalent outcomes to in-person delivery -- research supports this clearly. For most SF residents, the practical advantage of telehealth is significant. No commute across the city, no parking, no transition time between a demanding workday and an office appointment. Sessions happen from wherever you have a private space and a reliable connection, Wednesday through Friday. Most clients find that removing the logistical friction is what makes consistent weekly attendance actually sustainable rather than something that keeps getting rescheduled.`,
-  ],
-  uniqueWhatToExpect: [
-    "The consultation is 15 minutes -- a direct conversation about what you are dealing with, how long it has been present, and whether EMDR is the right fit for your specific situation. No forms, no obligation. If it makes sense to move forward, the first full session assesses the scope of the work, explains the EMDR process in detail, and begins building the internal resources that make trauma processing safe and effective.",
-    "EMDR sessions have a specific structure that is different from general talk therapy. Early sessions focus on history, target identification, and resourcing -- building the internal stability that makes processing safe. Processing sessions use bilateral stimulation while you hold a targeted experience in mind, following the associations that arise without directing them. The processing happens largely outside of language, which is why it reaches experiences that verbal approaches have not fully resolved.",
-    "Most clients find EMDR moves faster than they expected. Single-incident trauma often produces significant relief within 6 to 12 sessions. Complex presentations take longer but tend to move in meaningful increments rather than plateauing. Sessions are 45 or 60 minutes via secure telehealth video, Wednesday through Friday. The 60-minute format is often more effective for active processing sessions because it allows more time for complete processing cycles within a single session.",
-  ],
-  uniqueFaqs: [
-    { q: "Does EMDR therapy work for PTSD?", a: "Yes. EMDR is one of the most evidence-supported treatments for PTSD available. It processes traumatic experiences at the neurological level where they are stored, allowing them to integrate rather than remain as active threat responses. Most clients notice meaningful reduction in PTSD symptoms within 8 to 16 sessions." },
-    { q: "How many EMDR sessions will I need?", a: "Single-incident trauma typically resolves in 6 to 12 sessions. Complex trauma takes longer -- usually 12 to 20 or more depending on the scope. The timeline becomes clearer after the first full assessment session." },
-    { q: "Is EMDR better than talk therapy for trauma?", a: "For trauma specifically, EMDR typically produces faster and more lasting results than talk therapy because it works at the level where trauma is stored rather than the level where it is narrated. Talk therapy builds understanding. EMDR processes the stored experience directly." },
-    { q: "What are the session rates?", a: "Sessions are $210 for 45 minutes or $280 for 60 minutes. Superbills provided after every session for PPO out-of-network reimbursement. HSA and FSA funds accepted. Free 15-minute consultation to start." },
-  ],
-},
 
   // ===== SAN FRANCISCO =====
 "therapy-san-francisco": {
