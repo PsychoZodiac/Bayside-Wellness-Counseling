@@ -4359,9 +4359,12 @@ const seoPages = {
     { q: "Is online therapy the right choice for San Rafael residents who have already done significant therapy work?", a: "Yes -- particularly for clients whose previous insight-oriented work has produced genuine understanding without the patterns changing. IFS and EMDR work at a different level than insight-oriented approaches, and telehealth delivers both equivalently without bridge traffic as a consistency barrier." },
     { q: "Does virtual therapy provide access to IFS and EMDR that may not be locally available from all Marin County providers?", a: "Yes. Online therapy removes geographic limitation from the search for specific clinical modalities. IFS and EMDR practitioners with specific training are not uniformly distributed even in therapy-saturated Marin County." },
     { q: "Is online therapy effective for anxiety and trauma in San Rafael and Marin County?", a: "Yes. Research consistently shows equivalent outcomes to in-person therapy. Telehealth IFS and EMDR deliver the same clinical quality -- without bridge traffic as a barrier to consistent attendance." },
-    { q: "What are the session rates?", a: "Sessions are $210 for 45 minutes or $280 for 60 minutes. Superbills provided after every session for PPO out-of-network reimbursement. HSA and FSA funds accepted. Free 15-minute consultation to start." },
+   { q: "What are the session rates?", a: "Sessions are $210 for 45 minutes or $280 for 60 minutes. Superbills provided after every session for PPO out-of-network reimbursement. HSA and FSA funds accepted. Free 15-minute consultation to start." },
   ],
 },
+};
+
+const faqs = [
 
 const faqs = [
   { q: "Are you accepting new clients?", a: "Yes! I'm currently accepting new clients and would love to hear what brings you to therapy. Schedule a free consultation so we can discuss whether we're a good fit and go over current availability." },
@@ -4370,7 +4373,7 @@ const faqs = [
   { q: "Do you take insurance?", a: "I don't accept insurance directly or participate in insurance networks. However, I can provide a superbill (detailed receipt) at the end of each month that you can submit to your insurance company for potential reimbursement if you have a PPO plan, HSA, or FSA." },
   { q: "How do I know which therapy approach is right for me?", a: "You don't need to know. That's my job. During your consultation we'll discuss what you're experiencing and recommend the approach most likely to help." },
   { q: "Do you work with teens?", a: "Yes. I work with teens (high school age and up) and college students, specializing in anxiety, depression, trauma, identity, relationships, and life transitions. My focus is on emotional and relational issues rather than learning assessments or developmental disorders like ADD/ADHD." },
-];
+]:
 };
 
 const blogPosts = [
