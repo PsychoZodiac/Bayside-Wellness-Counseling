@@ -7826,7 +7826,6 @@ function BlogPostPage({ slug }) {
 // ========================================
 
 function SEOLandingPage({ slug }) {
-  const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
@@ -7934,12 +7933,10 @@ function SEOLandingPage({ slug }) {
       </section>
 
       {/* Local Content */}
-<section ref={ref} style={{
+{/* Local Content */}
+<section style={{
   background: theme.bgAlt,
   padding: "100px 40px",
-  opacity: visible ? 1 : 0,
-  transform: visible ? "none" : "translateY(30px)",
-  transition: "all 0.3s ease",
 }}>
   <div style={{ maxWidth: 900, margin: "0 auto" }}>
 
