@@ -4365,8 +4365,6 @@ const seoPages = {
 };
 
 const faqs = [
-
-const faqs = [
   { q: "Are you accepting new clients?", a: "Yes! I'm currently accepting new clients and would love to hear what brings you to therapy. Schedule a free consultation so we can discuss whether we're a good fit and go over current availability." },
   { q: "Do you offer in-person sessions?", a: "No. Bayside Wellness & Counseling is a fully virtual practice, offering telehealth sessions to clients across California. This makes quality therapy accessible wherever you are." },
   { q: "How much does therapy cost?", a: "45-minute sessions are $240 and 60-minute sessions are $320. All sessions are virtual and available to anyone in California. I can provide a superbill that you can submit to your insurance company for potential out-of-network reimbursement." },
