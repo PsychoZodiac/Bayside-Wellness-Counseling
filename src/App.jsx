@@ -4370,7 +4370,7 @@ const faqs = [
   { q: "How much does therapy cost?", a: "45-minute sessions are $210 and 60-minute sessions are $280. All sessions are virtual and available to anyone in California. I can provide a superbill that you can submit to your insurance company for potential out-of-network reimbursement." },
   { q: "Do you take insurance?", a: "I don't accept insurance directly or participate in insurance networks. However, I can provide a superbill (detailed receipt) at the end of each month that you can submit to your insurance company for potential reimbursement if you have a PPO plan, HSA, or FSA." },
   { q: "How do I know which therapy approach is right for me?", a: "You don't need to know. That's my job. During your consultation we'll discuss what you're experiencing and recommend the approach most likely to help." },
-  { q: "Do you work with teens?", a: "Yes. I work with teens (high school age and up) and college students, specializing in anxiety, depression, trauma, identity, relationships, and life transitions. My focus is on emotional and relational issues rather than learning assessments or developmental disorders like ADD/ADHD." },
+{ q: "Do you work with young adults?", a: "Yes. I work with young adults roughly 18 to 30, including college students, specializing in anxiety, depression, trauma, identity, relationships, and life transitions. My focus is on emotional and relational issues rather than learning assessments or developmental disorders like ADD/ADHD." },
 ];
 
 const blogPosts = [
@@ -5929,7 +5929,7 @@ function Footer() {
               </div>
             </Link>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", lineHeight: 1.6, margin: "0 0 12px", transition: "color 0.3s ease" }}>
-              Virtual therapy for adults, teens, and families across California.
+Virtual therapy for adults and young adults across California.
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: darkMode ? "#6A8888" : "#4A6060", margin: "0 0 6px", transition: "color 0.3s ease" }}>
               2323 Broadway, Oakland, CA 94612
@@ -6097,7 +6097,7 @@ function HomePage() {
             maxWidth: 600,
             transition: "color 0.3s ease",
           }}>
-            Compassionate, evidence-based therapy for adults, teens, and families navigating trauma, anxiety, depression, and life's hardest moments.
+Compassionate, evidence-based therapy for adults and young adults navigating trauma, anxiety, depression, and life's hardest moments.
           </p>
 
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
@@ -6433,8 +6433,8 @@ function AboutPage() {
             {[
               "Men working on anger, relationships, and emotional expression",
               "Individuals struggling with relationship patterns or conflicts (individual sessions)",
-              "Parents and teens improving communication and family dynamics",
-              "Adults dealing with trauma, anxiety, or depression",
+"Young adults navigating identity, career transitions, and the disorientation of early adulthood",
+      "Adults dealing with trauma, anxiety, or depression",
               "People struggling with self-criticism, perfectionism, or feeling stuck",
               "First-time therapy clients who are curious but unsure where to start",
             ].map((item, i) => (
