@@ -4371,7 +4371,7 @@ const faqs = [
   { q: "How do I know which therapy approach is right for me?", a: "You don't need to know. That's my job. During your consultation we'll discuss what you're experiencing and recommend the approach most likely to help." },
   { q: "Do you work with teens?", a: "Yes. I work with teens (high school age and up) and college students, specializing in anxiety, depression, trauma, identity, relationships, and life transitions. My focus is on emotional and relational issues rather than learning assessments or developmental disorders like ADD/ADHD." },
 ];
-},
+}:
 
 const blogPosts = [
   {
