@@ -80,9 +80,9 @@ export const mainPages = {
   }),
   
   services: generateMetadata({
-    title: "Therapy Services | EMDR, IFS, CBT, Teen & Men's Therapy Oakland",
-    description: "Evidence-based therapy services including EMDR for trauma, IFS for parts work, CBT for anxiety and depression, teen therapy, and men's therapy. Virtual sessions across California.",
-    keywords: ["therapy services Oakland", "EMDR therapy", "IFS therapy", "CBT therapy", "teen therapy", "men's therapy"],
+title: "Therapy Services | EMDR, IFS, CBT, Young Adults & Men's Therapy Oakland",
+    description: "Evidence-based therapy services including EMDR for trauma, IFS for parts work, CBT for anxiety and depression, young adults therapy, and men's therapy. Virtual sessions across California.",
+    keywords: ["therapy services Oakland", "EMDR therapy", "IFS therapy", "CBT therapy", "young adults therapy", "men's therapy"],
     path: "/services",
   }),
   
