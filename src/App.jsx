@@ -5748,13 +5748,15 @@ function Nav() {
             display: "flex", alignItems: "center", gap: 12, textDecoration: "none",
           }}>
             {/* Bayside Logo */}
-            <img 
+           <img 
               src={logo} 
               alt="Bayside Wellness & Counseling"
               style={{ 
                 height: 42,
                 width: "auto",
                 display: "block",
+                filter: darkMode ? "brightness(0) invert(1)" : "none",
+                transition: "filter 0.3s ease",
               }}
             />
             
