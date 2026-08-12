@@ -124,11 +124,11 @@ export const servicePages = {
     path: "/services/psychodynamic",
   }),
 
-  teen: generateMetadata({
-    title: "Teen Therapy Oakland | High School & College Students | LMFT",
-    description: "Teen therapy for high schoolers and college students (14+) dealing with anxiety, depression, identity, academic pressure, athletic stress, and social struggles. Virtual therapy across California with Marcus Ghiasi, LMFT.",
-    keywords: ["teen therapy Oakland", "therapy for teenagers", "high school therapy", "college student therapy", "teen anxiety", "teen depression", "adolescent counseling"],
-    path: "/services/teen",
+youngAdults: generateMetadata({
+    title: "Young Adults Therapy Oakland | Ages 18-30 | LMFT",
+    description: "Individual therapy for young adults ages 18 to 30 navigating anxiety, identity, career transitions, and the disorientation of early adulthood. Virtual therapy across California with Marcus Ghiasi, LMFT.",
+    keywords: ["young adults therapy Oakland", "therapy for 20 somethings", "quarter life crisis therapist", "college graduate therapy", "early career anxiety", "identity therapy young adults"],
+    path: "/services/young-adults",
   }),
   
   mens: generateMetadata({
