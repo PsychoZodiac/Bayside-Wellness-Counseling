@@ -4371,8 +4371,7 @@ const faqs = [
   { q: "Do you take insurance?", a: "I don't accept insurance directly or participate in insurance networks. However, I can provide a superbill (detailed receipt) at the end of each month that you can submit to your insurance company for potential reimbursement if you have a PPO plan, HSA, or FSA." },
   { q: "How do I know which therapy approach is right for me?", a: "You don't need to know. That's my job. During your consultation we'll discuss what you're experiencing and recommend the approach most likely to help." },
   { q: "Do you work with teens?", a: "Yes. I work with teens (high school age and up) and college students, specializing in anxiety, depression, trauma, identity, relationships, and life transitions. My focus is on emotional and relational issues rather than learning assessments or developmental disorders like ADD/ADHD." },
-]:
-};
+];
 
 const blogPosts = [
   {
