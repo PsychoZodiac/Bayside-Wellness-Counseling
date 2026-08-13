@@ -46,21 +46,7 @@ class ErrorBoundary extends React.Component {
           }}>
             We are sorry for the inconvenience. Please try refreshing the page, or return home to continue.
           </p>
-          
-            href="/"
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 13,
-              fontWeight: 500,
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: '#FFFFFF',
-              background: '#2E7D7A',
-              padding: '14px 32px',
-              borderRadius: 2,
-              textDecoration: 'none',
-            }}
-          >
+          <a href="/" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#FFFFFF', background: '#2E7D7A', padding: '14px 32px', borderRadius: 2, textDecoration: 'none' }}>
             Return Home
           </a>
         </div>
@@ -70,5 +56,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;
 
 export default ErrorBoundary;
