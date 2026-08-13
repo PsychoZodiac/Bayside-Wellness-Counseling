@@ -124,7 +124,7 @@ export const servicePages = {
     path: "/services/psychodynamic",
   }),
 
-"young-adults": generateMetadata({
+youngAdults: generateMetadata({
   title: "Young Adults Therapy Oakland | Ages 18-30 | LMFT",
     description: "Individual therapy for young adults ages 18 to 30 navigating anxiety, identity, career transitions, and the disorientation of early adulthood. Virtual therapy across California with Marcus Ghiasi, LMFT.",
     keywords: ["young adults therapy Oakland", "therapy for 20 somethings", "quarter life crisis therapist", "college graduate therapy", "early career anxiety", "identity therapy young adults"],
