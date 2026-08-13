@@ -6897,11 +6897,12 @@ function ServiceDetailPage({ slug }) {
             </p>
           </div>
 
-          <div style={{
+         <div style={{
             background: darkMode ? `${theme.accent}15` : colors.tealPale,
             padding: "40px",
             borderRadius: 4,
             border: `1px solid ${theme.accent}30`,
+            textAlign: "center",
             transition: "all 0.3s ease",
           }}>
             <h3 style={{
