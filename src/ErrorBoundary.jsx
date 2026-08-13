@@ -44,7 +44,7 @@ class ErrorBoundary extends React.Component {
             lineHeight: 1.7,
             marginBottom: 32,
           }}>
-            We're sorry for the inconvenience. Please try refreshing the page, or return home to continue.
+            We are sorry for the inconvenience. Please try refreshing the page, or return home to continue.
           </p>
           
             href="/"
