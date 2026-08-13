@@ -6783,7 +6783,7 @@ function ServiceDetailPage({ slug }) {
     );
   }
 
-  // Get metadata directly using slug - keys now match
+ // Get metadata directly using slug - keys now match
   const pageMetadata = servicePages[slug];
 
   return (
@@ -6842,15 +6842,19 @@ function ServiceDetailPage({ slug }) {
         transition: "all 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h2 style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(32px, 4vw, 48px)",
-            fontWeight: 400,
-            color: theme.text,
-            margin: "0 0 40px",
-            transition: "color 0.3s ease",
-          }}>What to Expect</h2>
-          
+          {details.intro && (
+            <p style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 19, fontWeight: 300,
+              color: theme.text,
+              lineHeight: 1.8,
+              margin: "0 0 48px",
+              transition: "color 0.3s ease",
+            }}>
+              {details.intro}
+            </p>
+          )}
+
           <div style={{ marginBottom: 48 }}>
             <h3 style={{
               fontFamily: "'DM Sans', sans-serif",
@@ -6859,7 +6863,7 @@ function ServiceDetailPage({ slug }) {
               margin: "0 0 16px",
               letterSpacing: "0.02em",
               transition: "color 0.3s ease",
-            }}>How It Works</h3>
+            }}>What This Looks Like</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 16, fontWeight: 300,
@@ -6880,7 +6884,7 @@ function ServiceDetailPage({ slug }) {
               margin: "0 0 16px",
               letterSpacing: "0.02em",
               transition: "color 0.3s ease",
-            }}>Who This Helps</h3>
+            }}>Who This Is For</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 16, fontWeight: 300,
