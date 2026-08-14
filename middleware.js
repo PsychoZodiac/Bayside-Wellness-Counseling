@@ -47,5 +47,6 @@ export default function middleware(request) {
 // Run on every page route except static assets, the api route itself,
 // and root-level static files identified by a common file extension.
 export const config = {
-  matcher: ['/((?!api/|assets/)(?!.*\\.(ico|png|jpg|jpeg|svg|gif|css|js|xml|txt|json|webp)$).*)'],
+  matcher: ['/((?!api/|assets/)(?!.*\\.(?:ico|png|jpg|jpeg|svg|gif|css|js|xml|txt|json|webp)$).*)'],
+};
 };
