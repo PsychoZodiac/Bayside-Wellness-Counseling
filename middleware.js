@@ -1,4 +1,20 @@
-import { rewrite, next } from '@vercel/functions';
+// The rewrite() and next() helpers below are inlined from
+// @vercel/functions/middleware rather than imported, to avoid pulling in
+// the full @vercel/functions package (which bundles unrelated Node-only
+// features like OIDC, database connections, and websockets that the
+// Edge Runtime rejects even when unused). Both functions just build a
+// plain Response with the header Vercel's own routing layer looks for.
+function rewrite(destination) {
+  const headers = new Headers();
+  headers.set('x-middleware-rewrite', String(destination));
+  return new Response(null, { headers });
+}
+
+function next() {
+  const headers = new Headers();
+  headers.set('x-middleware-next', '1');
+  return new Response(null, { headers });
+}
 
 // Known crawlers that need server-rendered HTML with real meta tags,
 // since they either don't execute JavaScript at all or don't wait
