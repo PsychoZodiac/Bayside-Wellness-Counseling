@@ -8744,10 +8744,14 @@ function ScrollToTop() {
 // ========================================
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    // Check localStorage for saved preference
+   const [darkMode, setDarkMode] = useState(() => {
+    // Respect an explicit past choice first
     const saved = localStorage.getItem('darkMode');
-    return saved === 'true';
+    if (saved !== null) {
+      return saved === 'true';
+    }
+    // No saved preference yet - default to the visitor's system setting
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
 
   useEffect(() => {
