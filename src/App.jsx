@@ -6747,7 +6747,7 @@ function ServicesPage() {
           justifyContent: "center",
           gap: 10,
         }}>
-          {getTopicClusterLinks(slug, pageData.city).map((link) => (
+              {getTopicClusterLinks(slug, pageData.city).map((link) => (
             
               key={link.slug}
               href={`/${link.slug}`}
@@ -6787,7 +6787,7 @@ function ServicesPage() {
           justifyContent: "center",
           gap: 12,
         }}>
-          {getNearbyCityLinks(pageData.city, slug).map((nearby) => (
+              {getNearbyCityLinks(pageData.city, slug).map((nearby) => (
             
               key={nearby.slug}
               href={`/${nearby.slug}`}
