@@ -6727,88 +6727,8 @@ function ServicesPage() {
                   transition: "color 0.3s ease",
                 }}>Learn More →</div>
               </button>
-                  ))}
+                                    ))}
     </div>
-
-    {getTopicClusterLinks(slug, pageData.city).length > 0 && (
-      <div style={{ marginTop: 56 }}>
-        <h3 style={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "clamp(24px, 3vw, 30px)",
-          fontWeight: 400,
-          color: theme.text,
-          margin: "0 0 24px",
-          textAlign: "center",
-          transition: "color 0.3s ease",
-        }}>More Ways We Can Help in {pageData.city}</h3>
-        <div style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: 10,
-        }}>
-              {getTopicClusterLinks(slug, pageData.city).map((link) => (
-            <a
-              key={link.slug}
-              href={`/${link.slug}`}
-              onClick={(e) => { e.preventDefault(); navigate(`/${link.slug}`); }}
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 12, fontWeight: 400,
-                padding: "8px 16px",
-                border: `1px solid ${theme.border}`,
-                borderRadius: 2,
-                color: theme.textMuted,
-                textDecoration: "none",
-                transition: "all 0.3s ease",
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-      </div>
-    )}
-
-    {getNearbyCityLinks(pageData.city, slug).length > 0 && (
-      <div style={{ marginTop: 80 }}>
-        <h2 style={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "clamp(32px, 4vw, 44px)",
-          fontWeight: 400,
-          color: theme.text,
-          margin: "0 0 32px",
-          textAlign: "center",
-          transition: "color 0.3s ease",
-        }}>Also Serving Nearby Areas</h2>
-        <div style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: 12,
-        }}>
-              {getNearbyCityLinks(pageData.city, slug).map((nearby) => (
-            <a
-              key={nearby.slug}
-              href={`/${nearby.slug}`}
-              onClick={(e) => { e.preventDefault(); navigate(`/${nearby.slug}`); }}
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 13, fontWeight: 400,
-                padding: "10px 20px",
-                border: `1px solid ${theme.border}`,
-                borderRadius: 2,
-                color: theme.textMuted,
-                textDecoration: "none",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Therapy in {nearby.city}
-            </a>
-          ))}
-        </div>
-      </div>
-    )}
 
   </div>
 </section>
@@ -8334,8 +8254,88 @@ function SEOLandingPage({ slug }) {
             transition: "color 0.3s ease",
           }}>Learn More →</div>
         </button>
-      ))}
+           ))}
     </div>
+
+    {getTopicClusterLinks(slug, pageData.city).length > 0 && (
+      <div style={{ marginTop: 56 }}>
+        <h3 style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: "clamp(24px, 3vw, 30px)",
+          fontWeight: 400,
+          color: theme.text,
+          margin: "0 0 24px",
+          textAlign: "center",
+          transition: "color 0.3s ease",
+        }}>More Ways We Can Help in {pageData.city}</h3>
+        <div style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: 10,
+        }}>
+          {getTopicClusterLinks(slug, pageData.city).map((link) => (
+            
+              key={link.slug}
+              href={`/${link.slug}`}
+              onClick={(e) => { e.preventDefault(); navigate(`/${link.slug}`); }}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 12, fontWeight: 400,
+                padding: "8px 16px",
+                border: `1px solid ${theme.border}`,
+                borderRadius: 2,
+                color: theme.textMuted,
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              }}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {getNearbyCityLinks(pageData.city, slug).length > 0 && (
+      <div style={{ marginTop: 80 }}>
+        <h2 style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: "clamp(32px, 4vw, 44px)",
+          fontWeight: 400,
+          color: theme.text,
+          margin: "0 0 32px",
+          textAlign: "center",
+          transition: "color 0.3s ease",
+        }}>Also Serving Nearby Areas</h2>
+        <div style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: 12,
+        }}>
+          {getNearbyCityLinks(pageData.city, slug).map((nearby) => (
+            
+              key={nearby.slug}
+              href={`/${nearby.slug}`}
+              onClick={(e) => { e.preventDefault(); navigate(`/${nearby.slug}`); }}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 13, fontWeight: 400,
+                padding: "10px 20px",
+                border: `1px solid ${theme.border}`,
+                borderRadius: 2,
+                color: theme.textMuted,
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              }}
+            >
+              Therapy in {nearby.city}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
 
   </div>
 </section>
