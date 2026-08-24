@@ -8274,9 +8274,9 @@ function SEOLandingPage({ slug }) {
           justifyContent: "center",
           gap: 10,
         }}>
-          {getTopicClusterLinks(slug, pageData.city).map((link) => (
-            <a
-              key={link.slug}
+            {getTopicClusterLinks(slug, pageData.city).map((link) => (
+            <a key={link.slug}
+              href={`/${link.slug}`}
               href={`/${link.slug}`}
               onClick={(e) => { e.preventDefault(); navigate(`/${link.slug}`); }}
               style={{
@@ -8314,9 +8314,9 @@ function SEOLandingPage({ slug }) {
           justifyContent: "center",
           gap: 12,
         }}>
-          {getNearbyCityLinks(pageData.city, slug).map((nearby) => (
-            
-              key={nearby.slug}
+            {getNearbyCityLinks(pageData.city, slug).map((nearby) => (
+            <a key={nearby.slug}
+              href={`/${nearby.slug}`}
               href={`/${nearby.slug}`}
               onClick={(e) => { e.preventDefault(); navigate(`/${nearby.slug}`); }}
               style={{
