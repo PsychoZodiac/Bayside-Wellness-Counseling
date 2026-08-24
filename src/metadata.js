@@ -44,9 +44,9 @@ export const generateMetadata = ({
 
 // MAIN PAGES METADATA
 export const mainPages = {
-  home: generateMetadata({
-    title: "Bayside Wellness & Counseling | Licensed Therapist Oakland, CA",
-    description: "EMDR, IFS, and CBT therapy for trauma, anxiety, depression, and relationship issues. Virtual therapy across California with Marcus Ghiasi, LMFT. Free 15-minute consultation.",
+    home: generateMetadata({
+    title: "Bayside Wellness & Counseling | Therapy in Oakland, CA",
+    description: "EMDR, IFS, and CBT therapy for trauma, anxiety, and depression. Virtual therapy across California with Marcus Ghiasi, LMFT. Free 15-minute consultation.",
     keywords: ["Oakland therapist", "LMFT California", "EMDR therapy", "IFS therapy", "trauma therapy", "anxiety therapy", "depression counseling", "virtual therapy California", "telehealth therapy"],
     path: "/",
   }),
