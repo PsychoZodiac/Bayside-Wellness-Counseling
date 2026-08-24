@@ -8024,13 +8024,14 @@ function SEOLandingPage({ slug }) {
         }}>{pageData.title}</h2>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           {pageData.uniqueContent.map((para, i) => (
-              <p key={i} style={{
+              <p key={i} className="seo-body-link" style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 16, fontWeight: 300,
               color: theme.textMuted,
               lineHeight: 1.9,
               margin: "0 0 24px",
               transition: "color 0.3s ease",
+              "--link-accent": theme.accent,
             }} dangerouslySetInnerHTML={{ __html: para }} />
           ))}
         </div>
@@ -8093,13 +8094,14 @@ function SEOLandingPage({ slug }) {
       <div style={{ maxWidth: 700, margin: "0 auto" }}>
         {pageData.uniqueWhatToExpect ? (
           pageData.uniqueWhatToExpect.map((para, i) => (
-              <p key={i} style={{
+              <p key={i} className="seo-body-link" style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 16, fontWeight: 300,
               color: theme.textMuted,
               lineHeight: 1.9,
               margin: "0 0 20px",
               transition: "color 0.3s ease",
+              "--link-accent": theme.accent,
             }} dangerouslySetInnerHTML={{ __html: para }} />
           ))
         ) : (
@@ -8258,7 +8260,7 @@ function SEOLandingPage({ slug }) {
     </div>
 
     {getTopicClusterLinks(slug, pageData.city).length > 0 && (
-      <div style={{ marginTop: 56 }}>
+      <div style={{ marginTop: 48 }}>
         <h3 style={{
           fontFamily: "'Cormorant Garamond', serif",
           fontSize: "clamp(24px, 3vw, 30px)",
@@ -8298,7 +8300,7 @@ function SEOLandingPage({ slug }) {
     )}
 
     {getNearbyCityLinks(pageData.city, slug).length > 0 && (
-      <div style={{ marginTop: 80 }}>
+      <div style={{ marginTop: 40 }}>
         <h2 style={{
           fontFamily: "'Cormorant Garamond', serif",
           fontSize: "clamp(32px, 4vw, 44px)",
@@ -8896,6 +8898,14 @@ export default function App() {
         }
         .contact-grid { grid-template-columns: 1fr 1fr; }
         .contact-grid > div { width: 100%; }
+        .seo-body-link a {
+          color: var(--link-accent);
+          font-weight: 500;
+          text-decoration: underline;
+          text-underline-offset: 2px;
+          transition: opacity 0.2s ease;
+        }
+        .seo-body-link a:hover { opacity: 0.7; }
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
