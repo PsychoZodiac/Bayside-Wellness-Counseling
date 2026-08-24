@@ -8275,7 +8275,7 @@ function SEOLandingPage({ slug }) {
           gap: 10,
         }}>
           {getTopicClusterLinks(slug, pageData.city).map((link) => (
-            
+            <a
               key={link.slug}
               href={`/${link.slug}`}
               onClick={(e) => { e.preventDefault(); navigate(`/${link.slug}`); }}
