@@ -144,6 +144,46 @@ const serviceDetails = {
 };
 
 // SEO Landing Pages Data
+const cityRegions = {
+  "San Francisco Area": ["San Francisco", "Daly City", "South San Francisco", "Pacifica"],
+  "East Bay Core": ["Oakland", "Berkeley", "Alameda", "Emeryville", "Piedmont", "San Leandro"],
+  "East Bay & Tri-Valley": ["Hayward", "Fremont", "Pleasanton", "Walnut Creek", "Concord", "Richmond", "Pleasant Hill"],
+  "South Bay / Silicon Valley": ["San Jose", "Mountain View", "Sunnyvale", "Palo Alto", "Los Altos"],
+  "Peninsula": ["Redwood City", "San Mateo", "San Carlos", "Burlingame", "Millbrae", "Menlo Park"],
+  "North Bay": ["San Rafael", "Sausalito", "Mill Valley", "Novato", "Marin City", "Vallejo", "Petaluma"],
+};
+
+function getNearbyCityLinks(currentCity, currentSlug) {
+  const region = Object.values(cityRegions).find(cities => cities.includes(currentCity));
+  if (!region) return [];
+  return region
+    .filter(city => city !== currentCity)
+    .map(city => {
+      const citySlug = "therapy-" + city.toLowerCase().replace(/\s+/g, "-");
+      return citySlug === currentSlug ? null : { city, slug: citySlug };
+    })
+    .filter(Boolean)
+    .filter(entry => !!seoPagesSlugSet.has(entry.slug))
+    .slice(0, 6);
+}
+
+function getTopicClusterLinks(currentSlug, currentCity) {
+  if (!currentCity) return [];
+  const citySuffix = "-" + currentCity.toLowerCase().replace(/\s+/g, "-");
+  const hubSlug = "therapy" + citySuffix;
+  const siblingSlugs = Object.keys(seoPages).filter(key =>
+    key.endsWith(citySuffix) && key !== currentSlug && key !== hubSlug
+  );
+  const links = siblingSlugs.map(slug => ({
+    slug,
+    label: seoPages[slug].title || seoPages[slug].h1 || slug,
+  }));
+  if (currentSlug !== hubSlug && seoPagesSlugSet.has(hubSlug)) {
+    links.unshift({ slug: hubSlug, label: seoPages[hubSlug].title || `Therapy in ${currentCity}` });
+  }
+  return links;
+}
+
 const seoPages = {
 
   // ===== SAN FRANCISCO =====
@@ -4370,6 +4410,8 @@ const seoPages = {
 },
 };
 
+const seoPagesSlugSet = new Set(Object.keys(seoPages));
+
 const faqs = [
   { q: "Are you accepting new clients?", a: "Yes! I'm currently accepting new clients and would love to hear what brings you to therapy. Schedule a free consultation so we can discuss whether we're a good fit and go over current availability." },
   { q: "Do you offer in-person sessions?", a: "No. Bayside Wellness & Counseling is a fully virtual practice, offering telehealth sessions to clients across California. This makes quality therapy accessible wherever you are." },
@@ -8088,8 +8130,8 @@ function SEOLandingPage({ slug }) {
       }}>Frequently Asked Questions</h2>
       <div style={{ maxWidth: 700, margin: "0 auto", display: "grid", gap: 32 }}>
         {(pageData.uniqueFaqs || [
-          { q: "How much does therapy cost?", a: "Sessions are $240 for 45 minutes or $320 for 60 minutes. I can provide a superbill for potential out-of-network reimbursement." },
-          { q: "Do you take insurance?", a: "I don't accept insurance directly, but I can provide a superbill you can submit to your insurance for potential reimbursement." },
+      { q: "How much does therapy cost?", a: "Sessions are $210 for 45 minutes or $280 for 60 minutes. I can provide a superbill for potential out-of-network reimbursement." },          
+      { q: "Do you take insurance?", a: "I don't accept insurance directly, but I can provide a superbill you can submit to your insurance for potential reimbursement." },
           { q: "Are sessions really virtual?", a: "Yes. All sessions are conducted via secure telehealth video from anywhere private in California." },
           { q: "How do I know if we're a good fit?", a: "That's what the free 15-minute consultation is for. No commitment, no pressure." },
         ]).map((faq, i) => (
