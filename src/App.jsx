@@ -6748,7 +6748,7 @@ function ServicesPage() {
           gap: 10,
         }}>
               {getTopicClusterLinks(slug, pageData.city).map((link) => (
-            
+            <a
               key={link.slug}
               href={`/${link.slug}`}
               onClick={(e) => { e.preventDefault(); navigate(`/${link.slug}`); }}
@@ -6788,7 +6788,7 @@ function ServicesPage() {
           gap: 12,
         }}>
               {getNearbyCityLinks(pageData.city, slug).map((nearby) => (
-            
+            <a
               key={nearby.slug}
               href={`/${nearby.slug}`}
               onClick={(e) => { e.preventDefault(); navigate(`/${nearby.slug}`); }}
