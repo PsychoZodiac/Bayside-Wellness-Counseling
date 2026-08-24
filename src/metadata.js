@@ -20,9 +20,10 @@ export const generateMetadata = ({
   keywords = [], 
   path = "/",
   image = defaultImage,
-  type = "website"
+  type = "website",
+  skipBrandSuffix = false
 }) => {
-  const fullTitle = title.includes("Bayside") ? title : `${title} | Bayside Wellness & Counseling`;
+  const fullTitle = (skipBrandSuffix || title.includes("Bayside")) ? title : `${title} | Bayside Wellness & Counseling`;
   const url = `${baseUrl}${path}`;
   
   return {
@@ -154,6 +155,7 @@ export const generateBlogMeta = (post) => {
 export const generateSEOPageMeta = (page) => {
   return generateMetadata({
     title: page.metaTitle || `${page.title} | Bayside Wellness & Counseling`,
+    skipBrandSuffix: true,
     description: page.metaDescription || `Virtual therapy in ${page.city}, CA with Marcus Ghiasi, LMFT. EMDR, IFS, CBT. Free 15-minute consultation.`,
     keywords: [
       `${page.city} therapist`,
