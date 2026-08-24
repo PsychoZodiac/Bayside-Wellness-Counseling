@@ -7981,14 +7981,14 @@ function SEOLandingPage({ slug }) {
         }}>{pageData.title}</h2>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           {pageData.uniqueContent.map((para, i) => (
-            <p key={i} style={{
+              <p key={i} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 16, fontWeight: 300,
               color: theme.textMuted,
               lineHeight: 1.9,
               margin: "0 0 24px",
               transition: "color 0.3s ease",
-            }}>{para}</p>
+            }} dangerouslySetInnerHTML={{ __html: para }} />
           ))}
         </div>
       </div>
@@ -8050,14 +8050,14 @@ function SEOLandingPage({ slug }) {
       <div style={{ maxWidth: 700, margin: "0 auto" }}>
         {pageData.uniqueWhatToExpect ? (
           pageData.uniqueWhatToExpect.map((para, i) => (
-            <p key={i} style={{
+              <p key={i} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 16, fontWeight: 300,
               color: theme.textMuted,
               lineHeight: 1.9,
               margin: "0 0 20px",
               transition: "color 0.3s ease",
-            }}>{para}</p>
+            }} dangerouslySetInnerHTML={{ __html: para }} />
           ))
         ) : (
           <>
