@@ -6591,8 +6591,9 @@ function AboutPage() {
         </div>
       </div>
 
-      {/* Website, Psychology Today seal, and CAMFT badge - below the full grid */}
-      <div style={{ maxWidth: 1200, margin: "40px auto 0", display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
+            {/* Website, Psychology Today seal, and CAMFT badge - aligned to match the text column above */}
+      <div style={{ maxWidth: 1200, margin: "40px auto 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
         <a href="https://www.marcusghiasitherapy.com" target="_blank" rel="noopener noreferrer" style={{
           fontFamily: "'DM Sans', sans-serif",
           fontSize: 13, fontWeight: 300,
@@ -6643,13 +6644,12 @@ function AboutPage() {
         <img
           src={camftLogo}
           alt="Member of the California Association of Marriage & Family Therapists"
-          style={{ height: 44, width: 'auto' }}
+          style={{ height: 76, width: 'auto' }}
         />
+      </div>
       </div>
     </section>
     </>
-  );
-}
 
 // ========================================
 // SERVICES HUB PAGE
