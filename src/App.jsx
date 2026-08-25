@@ -6571,8 +6571,23 @@ function AboutPage() {
                 e.target.style.background = "transparent"; 
                 e.target.style.borderColor = `${theme.accent}66`;
               }}
-                       >Psychology Today →</a>
+                                   >Psychology Today →</a>
           </div>
+        <div style={{ marginTop: 20 }}>
+          <a href="https://www.marcusghiasitherapy.com" target="_blank" rel="noopener noreferrer" style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 13, fontWeight: 300,
+            color: theme.accentMuted, textDecoration: "none",
+            letterSpacing: "0.05em",
+            borderBottom: `1px solid ${theme.accentMuted}44`,
+            paddingBottom: 2,
+            transition: "color 0.3s ease",
+          }}
+          onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
+          onMouseLeave={e => e.target.style.color = theme.accentMuted}
+          >Visit marcusghiasitherapy.com →</a>
+        </div>
+        </div>
         <div style={{ position: "relative" }}>
           <div style={{
             width: "100%", aspectRatio: "3/4",
@@ -6587,65 +6602,47 @@ function AboutPage() {
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
+
+          {/* Psychology Today seal and CAMFT badge, below the photo */}
+          <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20, flexWrap: 'wrap' }}>
+            {darkMode ? (
+              <React.Fragment key="pt-seal-dark">
+                <a href="https://www.psychologytoday.com/profile/1134128"
+                  className="sx-verified-seal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ></a>
+                <script
+                  type="text/javascript"
+                  src="https://member.psychologytoday.com/verified-seal.js"
+                  data-badge="16"
+                  data-id="1134128"
+                  data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xNi9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
+                ></script>
+              </React.Fragment>
+            ) : (
+              <React.Fragment key="pt-seal-light">
+                <a href="https://www.psychologytoday.com/profile/1134128"
+                  className="sx-verified-seal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ></a>
+                <script
+                  type="text/javascript"
+                  src="https://member.psychologytoday.com/verified-seal.js"
+                  data-badge="10"
+                  data-id="1134128"
+                  data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMC9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
+                ></script>
+              </React.Fragment>
+            )}
+            <img
+              src={camftLogo}
+              alt="Member of the California Association of Marriage & Family Therapists"
+              style={{ height: 76, width: 'auto' }}
+            />
+          </div>
         </div>
-      </div>
-
-            {/* Website, Psychology Today seal, and CAMFT badge - aligned to match the text column above */}
-      <div style={{ maxWidth: 1200, margin: "40px auto 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80 }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
-        <a href="https://www.marcusghiasitherapy.com" target="_blank" rel="noopener noreferrer" style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontSize: 13, fontWeight: 300,
-          color: theme.accentMuted, textDecoration: "none",
-          letterSpacing: "0.05em",
-          borderBottom: `1px solid ${theme.accentMuted}44`,
-          paddingBottom: 2,
-          transition: "color 0.3s ease",
-        }}
-        onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
-        onMouseLeave={e => e.target.style.color = theme.accentMuted}
-        >Visit marcusghiasitherapy.com →</a>
-
-        {/* Psychology Today Verified Seal - switches badge based on site theme */}
-        {darkMode ? (
-          <React.Fragment key="pt-seal-dark">
-            <a href="https://www.psychologytoday.com/profile/1134128"
-              className="sx-verified-seal"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-            <script
-              type="text/javascript"
-              src="https://member.psychologytoday.com/verified-seal.js"
-              data-badge="16"
-              data-id="1134128"
-              data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xNi9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
-            ></script>
-          </React.Fragment>
-        ) : (
-          <React.Fragment key="pt-seal-light">
-            <a href="https://www.psychologytoday.com/profile/1134128"
-              className="sx-verified-seal"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-            <script
-              type="text/javascript"
-              src="https://member.psychologytoday.com/verified-seal.js"
-              data-badge="10"
-              data-id="1134128"
-              data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMC9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
-            ></script>
-          </React.Fragment>
-        )}
-
-        {/* CAMFT Member Logo */}
-        <img
-          src={camftLogo}
-          alt="Member of the California Association of Marriage & Family Therapists"
-          style={{ height: 76, width: 'auto' }}
-        />
-      </div>
       </div>
     </section>
     </>
