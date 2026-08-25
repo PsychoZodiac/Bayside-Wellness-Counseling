@@ -6650,6 +6650,8 @@ function AboutPage() {
       </div>
     </section>
     </>
+  );
+}
 
 // ========================================
 // SERVICES HUB PAGE
