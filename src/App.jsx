@@ -6431,6 +6431,7 @@ function AboutPage() {
     script.setAttribute(
       'data-code',
       'aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=='
+      );
     sealRef.current.appendChild(script);
   }, [darkMode]);
 
