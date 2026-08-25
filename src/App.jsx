@@ -6603,8 +6603,8 @@ function AboutPage() {
             />
           </div>
 
-          {/* Psychology Today seal and CAMFT badge, below the photo */}
-          <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20, flexWrap: 'wrap' }}>
+                    {/* Psychology Today seal and CAMFT badge, below the photo */}
+          <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap' }}>
             {darkMode ? (
               <React.Fragment key="pt-seal-dark">
                 <a href="https://www.psychologytoday.com/profile/1134128"
