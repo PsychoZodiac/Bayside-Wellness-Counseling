@@ -6410,30 +6410,6 @@ function AboutPage() {
   const navigate = useNavigate();
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
-  const sealRef = useRef(null);
-
-  useEffect(() => {
-    if (!sealRef.current) return;
-    sealRef.current.innerHTML = '';
-
-    const anchor = document.createElement('a');
-    anchor.href = 'https://www.psychologytoday.com/profile/1134128';
-    anchor.className = 'sx-verified-seal';
-    anchor.target = '_blank';
-    anchor.rel = 'noopener noreferrer';
-    sealRef.current.appendChild(anchor);
-
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://member.psychologytoday.com/verified-seal.js';
-    script.setAttribute('data-badge', '13');
-    script.setAttribute('data-id', '1134128');
-    script.setAttribute(
-      'data-code',
-      'aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=='
-    );
-    sealRef.current.appendChild(script);
-  }, [darkMode]);
 
   return (
     <>
@@ -6629,7 +6605,19 @@ function AboutPage() {
 
                               {/* Psychology Today seal and CAMFT badge, below the photo */}
           <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap' }}>
-            <div ref={sealRef}></div>
+                        
+              href="https://www.psychologytoday.com/profile/1134128"
+              className="sx-verified-seal"
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <script
+              type="text/javascript"
+              src="https://member.psychologytoday.com/verified-seal.js"
+              data-badge="13"
+              data-id="1134128"
+              data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
+            ></script>
             <img
               src={camftLogo}
               alt="Member of the California Association of Marriage & Family Therapists"
