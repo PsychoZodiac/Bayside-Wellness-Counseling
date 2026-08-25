@@ -6605,21 +6605,20 @@ function AboutPage() {
 
                               {/* Psychology Today seal and CAMFT badge, below the photo */}
           <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap' }}>
+            <div style={{ transform: 'scale(1.4)', transformOrigin: 'left center', marginRight: 30 }}>
             <a
-                          <div style={{ transform: 'scale(1.4)', transformOrigin: 'left center', marginRight: 30 }}>
-              
-                href="https://www.psychologytoday.com/profile/1134128"
-                className="sx-verified-seal"
-                target="_blank"
-                rel="noopener noreferrer"
-              ></a>
-              <script
-                type="text/javascript"
-                src="https://member.psychologytoday.com/verified-seal.js"
-                data-badge="13"
-                data-id="1134128"
-                data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
-              ></script>
+              href="https://www.psychologytoday.com/profile/1134128"
+              className="sx-verified-seal"
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <script
+              type="text/javascript"
+              src="https://member.psychologytoday.com/verified-seal.js"
+              data-badge="13"
+              data-id="1134128"
+              data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
+            ></script>
             </div>
             <img
               src={camftLogo}
