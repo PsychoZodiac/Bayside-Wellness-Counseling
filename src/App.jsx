@@ -6426,14 +6426,11 @@ function AboutPage() {
     const script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = 'https://member.psychologytoday.com/verified-seal.js';
-    script.setAttribute('data-badge', darkMode ? '16' : '10');
+        script.setAttribute('data-badge', '13');
     script.setAttribute('data-id', '1134128');
     script.setAttribute(
       'data-code',
-      darkMode
-        ? 'aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xNi9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=='
-        : 'aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMC9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=='
-    );
+      'aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=='
     sealRef.current.appendChild(script);
   }, [darkMode]);
 
