@@ -6588,9 +6588,8 @@ function AboutPage() {
 
             {/* Psychology Today Verified Seal - switches badge based on site theme */}
             {darkMode ? (
-              <React.Fragment key="pt-seal-dark">
-                
-                  href="https://www.psychologytoday.com/profile/1134128"
+                <React.Fragment key="pt-seal-dark">
+                <a href="https://www.psychologytoday.com/profile/1134128"
                   className="sx-verified-seal"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -6604,9 +6603,8 @@ function AboutPage() {
                 ></script>
               </React.Fragment>
             ) : (
-              <React.Fragment key="pt-seal-light">
-                
-                  href="https://www.psychologytoday.com/profile/1134128"
+                <React.Fragment key="pt-seal-light">
+                <a href="https://www.psychologytoday.com/profile/1134128"
                   className="sx-verified-seal"
                   target="_blank"
                   rel="noopener noreferrer"
