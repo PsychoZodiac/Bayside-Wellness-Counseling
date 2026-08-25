@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, createContext, useContext } from "react";
+import React, { useState, useEffect, useRef, createContext, useContext } from "react";
 import { Routes, Route, Link, useNavigate, useParams, useLocation } from 'react-router-dom';
 import logo from './assets/bayside-logo.png';
 import marcusHeadshot from './assets/marcus-headshot.jpg';
@@ -6572,7 +6572,7 @@ function AboutPage() {
               }}
             >Psychology Today →</a>
           </div>
-          <div style={{ marginTop: 20 }}>
+                    <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
             <a href="https://www.marcusghiasitherapy.com" target="_blank" rel="noopener noreferrer" style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 300,
@@ -6585,6 +6585,41 @@ function AboutPage() {
             onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
             onMouseLeave={e => e.target.style.color = theme.accentMuted}
             >Visit marcusghiasitherapy.com →</a>
+
+            {/* Psychology Today Verified Seal - switches badge based on site theme */}
+            {darkMode ? (
+              <React.Fragment key="pt-seal-dark">
+                
+                  href="https://www.psychologytoday.com/profile/1134128"
+                  className="sx-verified-seal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ></a>
+                <script
+                  type="text/javascript"
+                  src="https://member.psychologytoday.com/verified-seal.js"
+                  data-badge="16"
+                  data-id="1134128"
+                  data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xNi9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
+                ></script>
+              </React.Fragment>
+            ) : (
+              <React.Fragment key="pt-seal-light">
+                
+                  href="https://www.psychologytoday.com/profile/1134128"
+                  className="sx-verified-seal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ></a>
+                <script
+                  type="text/javascript"
+                  src="https://member.psychologytoday.com/verified-seal.js"
+                  data-badge="10"
+                  data-id="1134128"
+                  data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMC9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
+                ></script>
+              </React.Fragment>
+            )}
           </div>
         </div>
         <div style={{ position: "relative" }}>
