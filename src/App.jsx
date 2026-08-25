@@ -6605,7 +6605,7 @@ function AboutPage() {
 
                               {/* Psychology Today seal and CAMFT badge, below the photo */}
           <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap' }}>
-                        
+            <a
               href="https://www.psychologytoday.com/profile/1134128"
               className="sx-verified-seal"
               target="_blank"
