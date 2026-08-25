@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, createContext, useContext } from "r
 import { Routes, Route, Link, useNavigate, useParams, useLocation } from 'react-router-dom';
 import logo from './assets/bayside-logo.png';
 import marcusHeadshot from './assets/marcus-headshot.jpg';
+import camftLogo from './assets/camft-logo.webp';
 import SEO from './SEO';
 import { mainPages, servicePages, generateBlogMeta, generateSEOPageMeta } from './metadata';
 import { Analytics } from '@vercel/analytics/react';
