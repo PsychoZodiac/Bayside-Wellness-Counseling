@@ -6573,7 +6573,6 @@ function AboutPage() {
               }}
                        >Psychology Today →</a>
           </div>
-        </div>
         <div style={{ position: "relative" }}>
           <div style={{
             width: "100%", aspectRatio: "3/4",
