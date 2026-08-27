@@ -4424,6 +4424,39 @@ const faqs = [
 
 const blogPosts = [
   {
+  slug: "when-labor-doesnt-go-according-to-plan",
+  title: "When Labor Doesn't Go According to Plan",
+  excerpt: "A birth plan isn't naive. But birth doesn't actually care what's written on the page, and the gap between the two is where a lot of the aftermath lives.",
+  date: "August 27, 2026",
+  category: "New Parenthood",
+  image: "/birth-plan.jpg",
+  content: `We had a birth plan. We'd read the books, taken the classes, talked through every preference with real care. And then we got to the hospital, and pretty much all of it went out the window.
+ 
+If you're reading this in the weeks or months after your own birth, and something similar happened to you, I want to say something plainly before anything else: that experience is real, it matters, and you don't have to pretend it went the way you pictured it just because everyone made it out okay in the end.
+ 
+The Gap Between the Plan and the Room
+ 
+A birth plan isn't naive. It's a reasonable, thoughtful attempt to bring some control into one of the most physically and emotionally intense experiences a person can go through. The problem isn't the plan. The problem is that birth doesn't actually care what's written on the page.
+ 
+What happens for a lot of people is that the room takes over. Decisions get made faster than you can process them. People you don't know are suddenly the ones guiding what happens to your body. And somewhere in the middle of all of it, the version of the experience you'd imagined quietly disappears, replaced by something messier, scarier, and far less within your control.
+ 
+That gap, between what you planned and what actually happened, is where a lot of the aftermath lives. Not just in the physical recovery, but in the mind. Some people carry it as grief. Some carry it as anger. Some carry a quiet, nagging sense that they failed at something, even when every objective fact says otherwise.
+ 
+Trusting Your Body and Mind, Even When the Story Feels Incomplete
+ 
+Here's something worth sitting with: your body did something extraordinary, even if it didn't do it the way you'd imagined. The pivot, the change of plans, the moment you or your medical team decided something different needed to happen, that wasn't a failure of your body or your judgment. It was often your body and your judgment working exactly as they should, responding to real information in real time.
+ 
+Letting go of the plan in the moment isn't the same as giving up. It's a different kind of strength, the kind that doesn't get talked about as much because it isn't as clean a story. Flexibility under that kind of pressure is not the same thing as incompetence. It's the opposite.
+ 
+What Actually Mattered
+ 
+At the end of the day, what mattered was safety, yours and your baby's, whatever that safety required in that specific moment. Not the plan. Not how closely reality matched what you'd hoped for. The plan was always a guide, never a guarantee, and needing to depart from it doesn't erase the thoughtfulness that went into making it in the first place.
+ 
+If you're still carrying something heavy from how your birth actually went, that's not something you're required to just move past because the outcome was fine. Postpartum trauma is real, even after a birth that "worked out." It deserves real attention, not just relief that everyone's healthy.
+ 
+If any of this is landing because it sounds familiar, you don't have to sort through it alone. A free 15-minute consultation is a low-pressure way to start, just a conversation about what you're carrying and whether working through it together might help.`
+  },
+  {
   slug: "what-your-anger-is-actually-telling-you",
   title: "What Your Anger Is Actually Trying to Tell You",
   excerpt: "Most people who struggle with anger are not struggling with too much emotion. They are struggling with too little access to the emotions underneath it.",
