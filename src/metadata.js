@@ -2,7 +2,7 @@
 // For all 165+ pages of Bayside Wellness & Counseling
 
 const baseUrl = "https://baysidewellnessandcounseling.com";
-const defaultImage = `${baseUrl}/og-image.jpg`;
+const defaultImage = `${baseUrl}/og-image-square.jpg`;
 
 // Base metadata used across the site
 export const baseMeta = {
