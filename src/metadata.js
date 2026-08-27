@@ -148,6 +148,7 @@ export const generateBlogMeta = (post) => {
     keywords: [post.category, "mental health", "therapy", "counseling", "Oakland therapist"],
     path: `/blog/${post.slug}`,
     type: "article",
+    image: post.image ? `${baseUrl}${post.image}` : defaultImage,
   });
 };
 
