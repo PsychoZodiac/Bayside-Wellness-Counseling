@@ -7785,7 +7785,7 @@ function BlogPostPage({ slug }) {
       "name": "Bayside Wellness & Counseling",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://baysidewellnessandcounseling.com/og-image.jpg"
+        "url": "https://baysidewellnessandcounseling.com/og-image-square.jpg"
       }
     },
     "articleSection": post.category,
