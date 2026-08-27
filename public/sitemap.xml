@@ -245,6 +245,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+    <url>
+    <loc>https://baysidewellnessandcounseling.com/blog/when-labor-doesnt-go-according-to-plan</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- SEO Landing Pages - All Bay Area Cities & Services -->
   <url>
