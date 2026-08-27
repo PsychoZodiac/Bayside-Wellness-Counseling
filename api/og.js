@@ -1,7 +1,7 @@
 export const config = { runtime: "edge" };
 
 const SITE_URL = "https://baysidewellnessandcounseling.com";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image-square.jpg`;
 const DEFAULT_TITLE = "Bayside Wellness & Counseling | Licensed Therapist Oakland, CA";
 const DEFAULT_DESCRIPTION = "Compassionate, evidence-based virtual therapy for adults and young adults across California. EMDR, IFS, CBT, and more. Free 15-minute consultation.";
 
