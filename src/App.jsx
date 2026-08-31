@@ -6183,7 +6183,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
           </p>
 
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
-            <button onClick={() => navigate("/contact")} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6194,8 +6194,8 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
             }}
             onMouseEnter={e => e.target.style.opacity = "0.9"}
             onMouseLeave={e => e.target.style.opacity = "1"}
-            >Book Free Consultation</button>
-            <button onClick={() => navigate("/about")} style={{
+            >Book Free Consultation</a>
+            <a href="/about" onClick={(e) => { e.preventDefault(); navigate("/about"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6206,7 +6206,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
             }}
             onMouseEnter={e => { e.target.style.background = darkMode ? `${theme.accent}20` : colors.tealPale; }}
             onMouseLeave={e => { e.target.style.background = "transparent"; }}
-            >Learn More</button>
+            >Learn More</a>
           </div>
         </div>
       </section>
@@ -6253,9 +6253,9 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
             gap: 32,
           }}>
             {services.map((service, i) => (
-              <button
+              <a href={`/services/${service.slug}`}
                 key={service.slug}
-                onClick={() => navigate(`/services/${service.slug}`)}
+                onClick={(e) => { e.preventDefault(); navigate(`/services/${service.slug}`); }}
                 style={{
                   background: theme.bg,
                   padding: "36px 32px",
@@ -6309,12 +6309,12 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
                   marginTop: 20,
                   transition: "color 0.3s ease",
                 }}>Learn More →</div>
-              </button>
+              </a>
             ))}
           </div>
 
           <div style={{ marginTop: 60 }}>
-            <button onClick={() => navigate("/services")} style={{
+            <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6325,7 +6325,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
             }}
             onMouseEnter={e => { e.target.style.background = darkMode ? `${theme.accent}20` : colors.tealPale; }}
             onMouseLeave={e => { e.target.style.background = "transparent"; }}
-            >View All Services</button>
+            >View All Services</a>
           </div>
         </div>
       </section>
@@ -6415,7 +6415,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
           </div>
           
           <div>
-            <button onClick={() => navigate("/contact")} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 12, fontWeight: 400,
               letterSpacing: "0.08em",
@@ -6426,7 +6426,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
             }}
             onMouseEnter={e => e.target.style.color = colors.white}
             onMouseLeave={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
-            >Or visit our contact page →</button>
+            >Or visit our contact page →</a>
           </div>
         </div>
       </section>
@@ -6559,7 +6559,7 @@ function AboutPage() {
 
           {/* Buttons Row - Work With Marcus + Psychology Today */}
           <div className="about-buttons" style={{ display: 'flex', gap: 16, alignItems: 'stretch' }}>
-            <button onClick={() => navigate("/contact")} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6575,7 +6575,7 @@ function AboutPage() {
             }}
             onMouseEnter={e => { e.target.style.background = theme.accent; }}
             onMouseLeave={e => { e.target.style.background = "transparent"; }}
-            >Work With Marcus</button>
+            >Work With Marcus</a>
 
             <a 
               href="https://www.psychologytoday.com/profile/1134128"
@@ -6728,9 +6728,9 @@ function ServicesPage() {
             gap: 40,
           }}>
             {services.map((service, i) => (
-              <button
+              <a href={`/services/${service.slug}`}
                 key={service.slug}
-                onClick={() => navigate(`/services/${service.slug}`)}
+                onClick={(e) => { e.preventDefault(); navigate(`/services/${service.slug}`); }}
                 style={{
                   background: theme.bg,
                   padding: "40px 36px",
@@ -6784,7 +6784,7 @@ function ServicesPage() {
                   textTransform: "uppercase",
                   transition: "color 0.3s ease",
                 }}>Learn More →</div>
-              </button>
+              </a>
                                     ))}
     </div>
 
@@ -6816,7 +6816,7 @@ function ServicesPage() {
           }}>
             You don't need to figure it out alone. During your free consultation, we'll discuss what you're experiencing and recommend the best path forward.
           </p>
-          <button onClick={() => navigate("/contact")} style={{
+          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6827,7 +6827,7 @@ function ServicesPage() {
           }}
           onMouseEnter={e => e.target.style.opacity = "0.9"}
           onMouseLeave={e => e.target.style.opacity = "1"}
-          >Schedule Free Consultation</button>
+          >Schedule Free Consultation</a>
         </div>
       </section>
     </>
@@ -6867,7 +6867,7 @@ function ServiceDetailPage({ slug }) {
             color: theme.text,
             marginBottom: 24
           }}>Service details coming soon</h1>
-          <button onClick={() => navigate("/services")} style={{
+          <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13,
             letterSpacing: "0.12em",
@@ -6878,7 +6878,7 @@ function ServiceDetailPage({ slug }) {
             padding: "14px 32px",
             borderRadius: 2,
             cursor: "pointer"
-          }}>← Back to Services</button>
+          }}>← Back to Services</a>
         </div>
       </div>
     );
@@ -6899,7 +6899,7 @@ function ServiceDetailPage({ slug }) {
         transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <button onClick={() => navigate("/services")} style={{
+          <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase",
             color: theme.accentMuted, background: "none", border: "none",
@@ -6909,7 +6909,7 @@ function ServiceDetailPage({ slug }) {
             transition: "color 0.3s ease",
           }}>
             ← Back to Services
-          </button>
+          </a>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
@@ -7023,7 +7023,7 @@ function ServiceDetailPage({ slug }) {
             }}>
               {details.ctaText}
             </p>
-            <button onClick={() => navigate("/contact")} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -7034,7 +7034,7 @@ function ServiceDetailPage({ slug }) {
             }}
             onMouseEnter={e => e.target.style.opacity = "0.9"}
             onMouseLeave={e => e.target.style.opacity = "1"}
-            >Book Free Consultation</button>
+            >Book Free Consultation</a>
           </div>
         </div>
       </section>
@@ -7184,7 +7184,7 @@ function FAQPage() {
             }}>
               Let's talk. Schedule a free 15-minute consultation and we can discuss anything else on your mind.
             </p>
-            <button onClick={() => navigate("/contact")} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -7195,7 +7195,7 @@ function FAQPage() {
             }}
             onMouseEnter={e => e.target.style.opacity = "0.9"}
             onMouseLeave={e => e.target.style.opacity = "1"}
-            >Schedule Consultation</button>
+            >Schedule Consultation</a>
           </div>
         </div>
       </section>
@@ -7668,9 +7668,9 @@ function BlogPage() {
       }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           {blogPosts.map((post, i) => (
-            <button
+            <a href={`/blog/${post.slug}`}
               key={post.slug}
-              onClick={() => navigate(`/blog/${post.slug}`)}
+              onClick={(e) => { e.preventDefault(); navigate(`/blog/${post.slug}`); }}
               className="blog-post-item"
               style={{
                 width: "100%",
@@ -7744,7 +7744,7 @@ function BlogPage() {
                   transition: "color 0.3s ease",
                 }}>{post.date}</div>
               </div>
-            </button>
+            </a>
           ))}
         </div>
       </section>
@@ -7841,7 +7841,7 @@ function BlogPostPage({ slug }) {
         transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          <button onClick={() => navigate("/blog")} style={{
+          <a href="/blog" onClick={(e) => { e.preventDefault(); navigate("/blog"); }} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase",
             color: theme.accentMuted, background: "none", border: "none",
@@ -7851,7 +7851,7 @@ function BlogPostPage({ slug }) {
             transition: "color 0.3s ease",
           }}>
             ← Back to Blog
-          </button>
+          </a>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
@@ -7953,7 +7953,7 @@ function BlogPostPage({ slug }) {
             }}>
               Schedule a free consultation to discuss how therapy can help you.
             </p>
-            <button onClick={() => navigate("/contact")} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -7964,7 +7964,7 @@ function BlogPostPage({ slug }) {
             }}
             onMouseEnter={e => e.target.style.opacity = "0.9"}
             onMouseLeave={e => e.target.style.opacity = "1"}
-            >Get Started</button>
+            >Get Started</a>
           </div>
         </div>
       </section>
@@ -8015,7 +8015,7 @@ function SEOLandingPage({ slug }) {
             }}>
               The page you're looking for doesn't exist.
             </p>
-            <button onClick={() => navigate("/")} style={{
+            <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8027,7 +8027,7 @@ function SEOLandingPage({ slug }) {
             }}
             onMouseEnter={e => e.target.style.opacity = "0.9"}
             onMouseLeave={e => e.target.style.opacity = "1"}
-            >Return Home</button>
+            >Return Home</a>
           </div>
         </section>
       </>
@@ -8068,7 +8068,7 @@ function SEOLandingPage({ slug }) {
             maxWidth: 700,
             transition: "color 0.3s ease",
           }}>{pageData.intro}</p>
-          <button onClick={() => navigate("/contact")} style={{
+          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8079,7 +8079,7 @@ function SEOLandingPage({ slug }) {
           }}
           onMouseEnter={e => e.target.style.opacity = "0.9"}
           onMouseLeave={e => e.target.style.opacity = "1"}
-          >Book Free Consultation</button>
+          >Book Free Consultation</a>
         </div>
       </section>
 
@@ -8278,7 +8278,7 @@ function SEOLandingPage({ slug }) {
           Getting started is simple. Click the button below to schedule a free 15-minute consultation, or use the contact form to reach out with questions. I typically respond within 1-2 business days.
         </p>
         <div style={{ textAlign: "center" }}>
-          <button onClick={() => navigate("/contact")} style={{
+          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8290,7 +8290,7 @@ function SEOLandingPage({ slug }) {
           }}
           onMouseEnter={e => e.target.style.opacity = "0.9"}
           onMouseLeave={e => e.target.style.opacity = "1"}
-          >Book Free Consultation</button>
+          >Book Free Consultation</a>
         </div>
       </div>
     </div>
@@ -8312,9 +8312,9 @@ function SEOLandingPage({ slug }) {
       gap: 24,
     }}>
       {services.map((service) => (
-        <button
+        <a href={`/services/${service.slug}`}
           key={service.slug}
-          onClick={() => navigate(`/services/${service.slug}`)}
+          onClick={(e) => { e.preventDefault(); navigate(`/services/${service.slug}`); }}
           style={{
             background: theme.bg,
             padding: "28px 24px",
@@ -8350,7 +8350,7 @@ function SEOLandingPage({ slug }) {
             textTransform: "uppercase",
             transition: "color 0.3s ease",
           }}>Learn More →</div>
-        </button>
+        </a>
            ))}
     </div>
 
@@ -8460,7 +8460,7 @@ function SEOLandingPage({ slug }) {
           }}>
             Schedule a free 15-minute consultation. No commitment, no pressure. Just a conversation about where you are and where you'd like to go.
           </p>
-          <button onClick={() => navigate("/contact")} style={{
+          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8471,7 +8471,7 @@ function SEOLandingPage({ slug }) {
           }}
           onMouseEnter={e => e.target.style.opacity = "0.9"}
           onMouseLeave={e => e.target.style.opacity = "1"}
-          >Book Free Consultation</button>
+          >Book Free Consultation</a>
         </div>
       </section>
     </>
@@ -8791,9 +8791,9 @@ function SEODirectory() {
             gap: 16,
           }}>
             {cityPages.map(slug => (
-              <button
+              <a href={`/${slug}`}
                 key={slug}
-                onClick={() => navigate(`/${slug}`)}
+                onClick={(e) => { e.preventDefault(); navigate(`/${slug}`); }}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -8810,7 +8810,7 @@ function SEODirectory() {
                 onMouseLeave={e => e.target.style.background = colors.white}
               >
                 {seoPages[slug].title}
-              </button>
+              </a>
             ))}
           </div>
         </div>
@@ -8829,9 +8829,9 @@ function SEODirectory() {
             gap: 16,
           }}>
             {servicePages.map(slug => (
-              <button
+              <a href={`/${slug}`}
                 key={slug}
-                onClick={() => navigate(`/${slug}`)}
+                onClick={(e) => { e.preventDefault(); navigate(`/${slug}`); }}
                 style={{
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
@@ -8848,7 +8848,7 @@ function SEODirectory() {
                 onMouseLeave={e => e.target.style.background = colors.white}
               >
                 {seoPages[slug].title}
-              </button>
+              </a>
             ))}
           </div>
         </div>
@@ -8868,9 +8868,9 @@ function SEODirectory() {
               gap: 16,
             }}>
               {conditionPages.map(slug => (
-                <button
+                <a href={`/${slug}`}
                   key={slug}
-                  onClick={() => navigate(`/${slug}`)}
+                  onClick={(e) => { e.preventDefault(); navigate(`/${slug}`); }}
                   style={{
                     background: colors.white,
                     border: `1px solid ${colors.ivoryDark}`,
@@ -8887,7 +8887,7 @@ function SEODirectory() {
                   onMouseLeave={e => e.target.style.background = colors.white}
                 >
                   {seoPages[slug].title}
-                </button>
+                </a>
               ))}
             </div>
           </div>
@@ -8907,7 +8907,7 @@ function SEODirectory() {
           }}>
             <strong>Total SEO Pages: {Object.keys(seoPages).length}</strong>
           </p>
-          <button onClick={() => navigate("home")} style={{
+          <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8919,7 +8919,7 @@ function SEODirectory() {
             cursor: "pointer",
           }}>
             Back to Home
-          </button>
+          </a>
         </div>
       </div>
     </section>
