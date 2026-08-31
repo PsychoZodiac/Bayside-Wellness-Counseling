@@ -5093,17 +5093,17 @@ That template is your attachment style. And understanding it is one of the most 
 
 Where Attachment Styles Come From
 
-Attachment theory was developed by John Bowlby and expanded by Mary Ainsworth through research that is now among the most replicated in developmental psychology. The core finding is straightforward: infants are biologically wired to seek proximity to caregivers for protection, and the response they receive to that proximity-seeking shapes their internal working model of relationships.
+Attachment theory was developed by <a href="https://psychology.psy.sunysb.edu/attachment/online/inge_origins%20DP1992.pdf" target="_blank" rel="noopener noreferrer">John Bowlby and expanded by Mary Ainsworth</a>, and it remains one of the most replicated bodies of research in developmental psychology. The core finding is simple to state and hard to overstate: infants are wired to seek closeness to their caregivers for protection, and how that closeness gets met shapes the internal model of relationships they carry for the rest of their lives.
 
-When caregivers respond consistently and sensitively, present when needed, not overwhelming when things are okay, infants develop what is called secure attachment. They learn that relationships are safe, that needs can be expressed directly, that other people are generally reliable, and that separation does not mean abandonment.
+When a caregiver responds consistently and sensitively, there when needed, not smothering when things are fine, a child develops what's called secure attachment. They learn something foundational: relationships are safe, needs can be voiced directly, other people can generally be counted on, and someone leaving the room doesn't mean they're gone for good.
 
-When caregiving is inconsistent, sometimes responsive, sometimes not, unpredictable in ways the infant cannot understand, the infant develops anxious attachment. The strategy becomes hypervigilance: monitor the caregiver constantly, amplify distress signals to ensure response, stay alert to any sign of potential abandonment.
+When caregiving is inconsistent, sometimes responsive, sometimes not, in ways a child has no way of predicting, anxious attachment develops instead. The child adapts by staying hypervigilant, watching the caregiver closely, amplifying distress to make sure it gets noticed, always alert for the first sign that someone might pull away.
 
-When caregiving is consistently emotionally unavailable, present physically but not relationally, the infant develops avoidant attachment. The strategy becomes self-sufficiency: suppress attachment needs, avoid dependence, learn not to expect emotional availability from others.
+When a caregiver is physically present but consistently unavailable emotionally, avoidant attachment develops. The child adapts by becoming self-sufficient, learning to mute their own needs, to avoid depending on anyone, because expecting emotional availability from others has never actually paid off.
 
-A fourth pattern, disorganized attachment, develops in the context of caregiving that is itself frightening, where the person who is supposed to be the source of safety is also a source of threat. This creates a fundamental paradox that produces chaotic relational behavior in adulthood.
+A fourth pattern, disorganized attachment, forms when the caregiving itself is frightening, when the very person a child needs for safety is also the source of the threat. That paradox has no clean resolution, and it tends to show up later as relational behavior that looks chaotic or contradictory, because it was never given a coherent strategy to organize around.
 
-These strategies are not pathologies. They are intelligent adaptations to specific relational environments. The problem is that they do not automatically update when the environment changes.
+None of these are malfunctions. Each one was a genuinely intelligent response to a specific relational environment. The problem is only that they don't automatically update once the environment does.
 
 What Anxious Attachment Looks Like in Adult Relationships
 
@@ -7787,8 +7787,13 @@ function renderBlogContent(content, theme) {
         }}>{block}</h3>
       );
     }
-    return (
-      <p key={i} style={{ margin: "0 0 24px" }}>{block}</p>
+        return (
+      <p
+        key={i}
+        className="seo-body-link"
+        style={{ margin: "0 0 24px", "--link-accent": theme.accent }}
+        dangerouslySetInnerHTML={{ __html: block }}
+      />
     );
   });
 }
