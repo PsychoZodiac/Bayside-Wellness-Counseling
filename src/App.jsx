@@ -7756,6 +7756,43 @@ function BlogPage() {
 // BLOG POST PAGE
 // ========================================
 
+// Parses blog post content (plain text, blank-line-separated) into real
+// paragraph and heading elements. A block is treated as a heading when it's
+// short, reasonably brief in word count, and has no terminal punctuation -
+// this reliably distinguishes real section titles ("What Boundaries Actually
+// Are") from short standalone sentences that happen to be brief ("You are
+// not alone!"), since genuine headings never end in . ? ! , ; or :
+function renderBlogContent(content, theme) {
+  if (!content) return null;
+  const blocks = content.split("\n\n").map(b => b.trim()).filter(Boolean);
+
+  const isHeading = (block) => {
+    if (block.length > 80) return false;
+    if (block.split(/\s+/).length > 12) return false;
+    const lastChar = block[block.length - 1];
+    if (".?!,;:".includes(lastChar)) return false;
+    return true;
+  };
+
+  return blocks.map((block, i) => {
+    if (isHeading(block)) {
+      return (
+        <h3 key={i} style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: 28, fontWeight: 500,
+          color: theme.text,
+          margin: "40px 0 16px",
+          lineHeight: 1.3,
+          transition: "color 0.3s ease",
+        }}>{block}</h3>
+      );
+    }
+    return (
+      <p key={i} style={{ margin: "0 0 24px" }}>{block}</p>
+    );
+  });
+}
+
 function BlogPostPage({ slug }) {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
@@ -7876,8 +7913,8 @@ function BlogPostPage({ slug }) {
             transition: "color 0.3s ease",
           }}>
             {post.content ? (
-              // Display full blog content if available
-              <div style={{ whiteSpace: "pre-wrap" }}>{post.content}</div>
+              // Display full blog content, parsed into real headings and paragraphs
+              renderBlogContent(post.content, theme)
             ) : (
               // Placeholder if content not yet added
               <>
