@@ -7405,10 +7405,28 @@ function ContactPage() {
               </div>
             ) : (
               <form 
+                              <form 
                 action="https://formspree.io/f/mykngokr" 
                 method="POST"
                 aria-label="Contact form"
               >
+                {/* Honeypot field - invisible to real users, catches bots that fill every field.
+                    Formspree automatically discards submissions where this is filled in. */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabIndex="-1"
+                  autoComplete="off"
+                  style={{
+                    opacity: 0,
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    height: 0,
+                    width: 0,
+                    zIndex: -1,
+                  }}
+                />
                 <div style={{ marginBottom: 16 }}>
                   <label htmlFor="contact-name" style={{
                     position: "absolute",
