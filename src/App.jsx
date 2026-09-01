@@ -6172,9 +6172,9 @@ function HomePage() {
             letterSpacing: "-0.01em",
             transition: "color 0.3s ease",
           }}>
-            Therapy that<br />
-            <em style={{ color: theme.accent, fontStyle: "italic", transition: "color 0.3s ease" }}>meets you</em><br />
-            where you are.
+            A Better />
+            <em style={{ color: theme.accent, fontStyle: "italic", transition: "color 0.3s ease" }}>Kind</em><br />
+            of Care.
           </h1>
 
           <p style={{
