@@ -6183,7 +6183,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
           </p>
 
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
-            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6195,7 +6195,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
             onMouseEnter={e => e.target.style.opacity = "0.9"}
             onMouseLeave={e => e.target.style.opacity = "1"}
             >Book Free Consultation</a>
-            <a href="/about" onClick={(e) => { e.preventDefault(); navigate("/about"); }} style={{
+            <a href="/about" onClick={(e) => { e.preventDefault(); navigate("/about"); }} style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6256,7 +6256,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
               <a href={`/services/${service.slug}`}
                 key={service.slug}
                 onClick={(e) => { e.preventDefault(); navigate(`/services/${service.slug}`); }}
-                style={{
+                style={{ textDecoration: "none",
                   background: theme.bg,
                   padding: "36px 32px",
                   borderRadius: 4,
@@ -6314,7 +6314,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
           </div>
 
           <div style={{ marginTop: 60 }}>
-            <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{
+            <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6415,7 +6415,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
           </div>
           
           <div>
-            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 12, fontWeight: 400,
               letterSpacing: "0.08em",
@@ -6559,7 +6559,7 @@ function AboutPage() {
 
           {/* Buttons Row - Work With Marcus + Psychology Today */}
           <div className="about-buttons" style={{ display: 'flex', gap: 16, alignItems: 'stretch' }}>
-            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6731,7 +6731,7 @@ function ServicesPage() {
               <a href={`/services/${service.slug}`}
                 key={service.slug}
                 onClick={(e) => { e.preventDefault(); navigate(`/services/${service.slug}`); }}
-                style={{
+                style={{ textDecoration: "none",
                   background: theme.bg,
                   padding: "40px 36px",
                   borderRadius: 4,
@@ -6816,7 +6816,7 @@ function ServicesPage() {
           }}>
             You don't need to figure it out alone. During your free consultation, we'll discuss what you're experiencing and recommend the best path forward.
           </p>
-          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -6867,7 +6867,7 @@ function ServiceDetailPage({ slug }) {
             color: theme.text,
             marginBottom: 24
           }}>Service details coming soon</h1>
-          <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{
+          <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{ textDecoration: "none",
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13,
             letterSpacing: "0.12em",
@@ -6899,7 +6899,7 @@ function ServiceDetailPage({ slug }) {
         transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{
+          <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{ textDecoration: "none",
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase",
             color: theme.accentMuted, background: "none", border: "none",
@@ -7023,7 +7023,7 @@ function ServiceDetailPage({ slug }) {
             }}>
               {details.ctaText}
             </p>
-            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -7184,7 +7184,7 @@ function FAQPage() {
             }}>
               Let's talk. Schedule a free 15-minute consultation and we can discuss anything else on your mind.
             </p>
-            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -7672,7 +7672,7 @@ function BlogPage() {
               key={post.slug}
               onClick={(e) => { e.preventDefault(); navigate(`/blog/${post.slug}`); }}
               className="blog-post-item"
-              style={{
+              style={{ textDecoration: "none",
                 width: "100%",
                 background: "none",
                 border: "none",
@@ -7846,7 +7846,7 @@ function BlogPostPage({ slug }) {
         transition: "background 0.3s ease",
       }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          <a href="/blog" onClick={(e) => { e.preventDefault(); navigate("/blog"); }} style={{
+          <a href="/blog" onClick={(e) => { e.preventDefault(); navigate("/blog"); }} style={{ textDecoration: "none",
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase",
             color: theme.accentMuted, background: "none", border: "none",
@@ -7958,7 +7958,7 @@ function BlogPostPage({ slug }) {
             }}>
               Schedule a free consultation to discuss how therapy can help you.
             </p>
-            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8020,7 +8020,7 @@ function SEOLandingPage({ slug }) {
             }}>
               The page you're looking for doesn't exist.
             </p>
-            <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} style={{
+            <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8073,7 +8073,7 @@ function SEOLandingPage({ slug }) {
             maxWidth: 700,
             transition: "color 0.3s ease",
           }}>{pageData.intro}</p>
-          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8283,7 +8283,7 @@ function SEOLandingPage({ slug }) {
           Getting started is simple. Click the button below to schedule a free 15-minute consultation, or use the contact form to reach out with questions. I typically respond within 1-2 business days.
         </p>
         <div style={{ textAlign: "center" }}>
-          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8320,7 +8320,7 @@ function SEOLandingPage({ slug }) {
         <a href={`/services/${service.slug}`}
           key={service.slug}
           onClick={(e) => { e.preventDefault(); navigate(`/services/${service.slug}`); }}
-          style={{
+          style={{ textDecoration: "none",
             background: theme.bg,
             padding: "28px 24px",
             borderRadius: 4,
@@ -8379,9 +8379,8 @@ function SEOLandingPage({ slug }) {
             {getTopicClusterLinks(slug, pageData.city).map((link) => (
             <a key={link.slug}
               href={`/${link.slug}`}
-              href={`/${link.slug}`}
               onClick={(e) => { e.preventDefault(); navigate(`/${link.slug}`); }}
-              style={{
+              style={{ textDecoration: "none",
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 12, fontWeight: 400,
                 padding: "8px 16px",
@@ -8419,9 +8418,8 @@ function SEOLandingPage({ slug }) {
             {getNearbyCityLinks(pageData.city, slug).map((nearby) => (
             <a key={nearby.slug}
               href={`/${nearby.slug}`}
-              href={`/${nearby.slug}`}
               onClick={(e) => { e.preventDefault(); navigate(`/${nearby.slug}`); }}
-              style={{
+              style={{ textDecoration: "none",
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13, fontWeight: 400,
                 padding: "10px 20px",
@@ -8465,7 +8463,7 @@ function SEOLandingPage({ slug }) {
           }}>
             Schedule a free 15-minute consultation. No commitment, no pressure. Just a conversation about where you are and where you'd like to go.
           </p>
-          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
+          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8799,7 +8797,7 @@ function SEODirectory() {
               <a href={`/${slug}`}
                 key={slug}
                 onClick={(e) => { e.preventDefault(); navigate(`/${slug}`); }}
-                style={{
+                style={{ textDecoration: "none",
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
                   padding: "16px",
@@ -8837,7 +8835,7 @@ function SEODirectory() {
               <a href={`/${slug}`}
                 key={slug}
                 onClick={(e) => { e.preventDefault(); navigate(`/${slug}`); }}
-                style={{
+                style={{ textDecoration: "none",
                   background: colors.white,
                   border: `1px solid ${colors.ivoryDark}`,
                   padding: "16px",
@@ -8876,7 +8874,7 @@ function SEODirectory() {
                 <a href={`/${slug}`}
                   key={slug}
                   onClick={(e) => { e.preventDefault(); navigate(`/${slug}`); }}
-                  style={{
+                  style={{ textDecoration: "none",
                     background: colors.white,
                     border: `1px solid ${colors.ivoryDark}`,
                     padding: "16px",
@@ -8912,7 +8910,7 @@ function SEODirectory() {
           }}>
             <strong>Total SEO Pages: {Object.keys(seoPages).length}</strong>
           </p>
-          <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} style={{
+          <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} style={{ textDecoration: "none",
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 500,
             letterSpacing: "0.12em", textTransform: "uppercase",
