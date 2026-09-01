@@ -4507,6 +4507,8 @@ Who This Is For
 
 If your anger is costing you in your relationships, your work, or your sense of who you want to be, individual therapy is worth considering. Not anger management classes. Individual therapy that goes to the source: what the anger is protecting, where it learned to be so available, and what it would mean to have more options.
 
+Anger like this often responds well to focused, direct support, which is exactly what <a href="/services/mens" target="_blank" rel="noopener noreferrer">men's therapy</a> at Bayside is built around.
+
 Bayside Wellness and Counseling works with men and adults navigating anger, relationship patterns, and the emotions that anger has been covering. A free consultation is available. Direct, practical work. No judgment about where you are starting from.`,
 },
 {
@@ -4595,7 +4597,7 @@ Nighttime anxiety most commonly presents as rumination. The looping return to th
 
 Rumination is not thinking. It is the simulation of thinking without any of thinking's resolution. The same material gets processed repeatedly, each pass adding emotional weight rather than clarity. This is why people describe lying awake for hours without having actually worked anything out.
 
-The cognitive patterns underlying rumination are addressable. CBT has a strong evidence base specifically for the thought loops that sustain nighttime anxiety, targeting probability overestimation, catastrophizing, and the belief that worrying constitutes preparation. The goal is not to stop thinking at night. It is to change what the mind does with uncertainty when the lights go out.
+The cognitive patterns underlying rumination are addressable. <a href="/services/cbt" target="_blank" rel="noopener noreferrer">CBT</a> has a strong evidence base specifically for the thought loops that sustain nighttime anxiety, targeting probability overestimation, catastrophizing, and the belief that worrying constitutes preparation. The goal is not to stop thinking at night. It is to change what the mind does with uncertainty when the lights go out.
 
 When the Body Holds What the Mind Cannot
 
@@ -5007,7 +5009,7 @@ The gap is not in effectiveness. It is in access, specifically in the internal a
 
 If you are a man who has been considering therapy and finding reasons not to start, this post is not going to tell you what to do. It is worth asking, honestly, what the actual cost of continuing as you are is. Not hypothetically. In specific terms. What is it costing your relationships, your health, your sense of yourself, your capacity to be present in your own life.
 
-Bayside Wellness and Counseling offers a direct, practical approach to men's therapy with no agenda beyond helping you work on what is actually getting in the way. A free consultation is available. The conversation starts wherever you are.`,
+Bayside Wellness and Counseling offers a direct, practical approach to <a href="/services/mens" target="_blank" rel="noopener noreferrer">men's therapy</a> with no agenda beyond helping you work on what is actually getting in the way. A free consultation is available. The conversation starts wherever you are.`,
 },
   {
     slug: "rupture-and-repair",
@@ -5049,6 +5051,8 @@ At Bayside, repair work often involves experimentation. Trying new language. Not
 
 If you find that ruptures tend to linger, repeat, or lead to distance in your relationships, support can help. Repair is learnable. And with practice, relationships can become more resilient, not more fragile.
 
+Learning to navigate rupture and repair well is often central to <a href="/services/psychodynamic" target="_blank" rel="noopener noreferrer">psychodynamic therapy</a>.
+
 If you would like support learning how to navigate rupture and repair more intentionally, you are welcome to schedule a free consultation. We can explore what patterns show up for you and whether working together feels like a good fit.`,
   },
   {
@@ -5075,6 +5079,8 @@ Not participating in Valentine's Day does not mean you are disconnected from lov
 Therapy can offer a place to unpack these expectations without judgment. It is not about learning how to perform romance correctly. It is about understanding where emotional pressure comes from and separating external expectations from internal values. That clarity often reduces anxiety and creates more room for genuine connection.
 
 At Bayside, work with men often focuses on helping them understand what they actually want from relationships, rather than what they think they should want. This can shift how holidays like Valentine's Day are experienced, whether that means engaging differently or opting out altogether.
+
+This is the kind of pattern <a href="/services/mens" target="_blank" rel="noopener noreferrer">men's therapy</a> at Bayside is specifically built to work with.
 
 If this season brings up pressure, doubt, or quiet frustration, support can help you make sense of it. If you would like to explore this work, you are welcome to schedule a free consultation. We can talk about what this time of year brings up for you and whether working together feels like a good fit.`,
   },
@@ -5141,7 +5147,7 @@ Understanding your attachment style does not fix it. But it creates something th
 
 That noticing is where the work begins.
 
-If you are interested in understanding your relational patterns more deeply and doing something about them, individual therapy at Bayside Wellness and Counseling offers exactly that kind of work. A free consultation is available to explore whether it is the right fit.`,
+If you are interested in understanding your relational patterns more deeply and doing something about them, <a href="/services/psychodynamic" target="_blank" rel="noopener noreferrer">psychodynamic therapy</a> at Bayside Wellness and Counseling offers exactly that kind of work. A free consultation is available to explore whether it is the right fit.`,
 },
   {
     slug: "rethinking-therapy-2026",
@@ -5374,7 +5380,7 @@ If you would like support as you step into the year ahead, you are welcome to re
 
 The holidays often stir up a mix of experiences. You might feel excited to be around family, hopeful to reconnect, or eager to create meaningful moments with the people you care about. Yet at the same time, another feeling may settle in. You might notice a pull toward solitude, a desire to be quiet, a heaviness in your chest, or a sadness that arrives without asking.
 
-Internal Family Systems, often called IFS, is a therapeutic approach that helps us make sense of this emotional complexity. It begins from the idea that we are not one single self, but a collection of inner experiences that show up as parts of us. Some parts want connection and closeness. Others want distance and safety. Some parts are confident and capable. Others carry pain, shame, or fear.
+Internal Family Systems, often called <a href="/services/ifs" target="_blank" rel="noopener noreferrer">IFS</a>, is a therapeutic approach that helps us make sense of this emotional complexity. It begins from the idea that we are not one single self, but a collection of inner experiences that show up as parts of us. Some parts want connection and closeness. Others want distance and safety. Some parts are confident and capable. Others carry pain, shame, or fear.
 
 These parts are not flaws. They are responses. They formed because something happened in your life that required adaptation. A part that avoids conflict may have learned that arguments were dangerous. A part that works constantly may have learned that love was earned, not given. A part that feels sad may hold the weight of something unresolved.
 
@@ -5413,7 +5419,7 @@ Do you feel stuck in the same patterns, even when you understand them logically?
 
 You are not alone!
 
-If this resonates with you, EMDR may be worth exploring.
+If this resonates with you, <a href="/services/emdr" target="_blank" rel="noopener noreferrer">EMDR</a> may be worth exploring.
 
 EMDR stands for Eye Movement Desensitization and Reprocessing. It is an evidence based therapy designed to help the brain process experiences that were too distressing, too confusing, or too painful to resolve when they happened. Unlike traditional talk therapy, where the focus is often on insight, understanding, and reflection, EMDR is highly structured. It guides you through an intentional sequence that allows the nervous system to heal at the root rather than just manage symptoms on the surface.
 
@@ -5492,7 +5498,7 @@ Anxiety is one of the most treatable conditions in mental health. Most people wh
 
 If mindfulness has helped you, keep using it. If it has not helped as much as you hoped, that is information about what your anxiety may need rather than evidence that you are doing something wrong.
 
-Bayside Wellness and Counseling works with anxiety using CBT, EMDR, and IFS, approaches with strong evidence bases for the range of anxiety presentations. A free consultation is available to explore what approach fits your specific situation.`,
+Bayside Wellness and Counseling works with anxiety using <a href="/services/cbt" target="_blank" rel="noopener noreferrer">CBT</a>, <a href="/services/emdr" target="_blank" rel="noopener noreferrer">EMDR</a>, and <a href="/services/ifs" target="_blank" rel="noopener noreferrer">IFS</a>, approaches with strong evidence bases for the range of anxiety presentations. A free consultation is available to explore what approach fits your specific situation.`,
 },
   {
     slug: "holiday-stress-loneliness",
@@ -5640,7 +5646,7 @@ If you are ready to do that work, individual therapy at Bayside Wellness and Cou
   date: "October 27, 2025",
   category: "Therapy Education",
   image: "/emdr-guide.jpeg",
-  content: `Most introductions to EMDR focus on what it is. The bilateral stimulation, the eye movements, the neurological reprocessing of traumatic memory. This information is useful. It does not prepare most people for what the actual experience of going through EMDR treatment is like over weeks and months.
+  content: `Most introductions to <a href="/services/emdr" target="_blank" rel="noopener noreferrer">EMDR</a> focus on what it is. The bilateral stimulation, the eye movements, the neurological reprocessing of traumatic memory. This information is useful. It does not prepare most people for what the actual experience of going through EMDR treatment is like over weeks and months.
 
 This post is about that experience. What happens in a full course of EMDR treatment, from first session to completion. What to expect at each phase, what is normal, and what the process actually asks of you.
 
