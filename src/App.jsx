@@ -6172,9 +6172,8 @@ function HomePage() {
             letterSpacing: "-0.01em",
             transition: "color 0.3s ease",
           }}>
-            A Better />
-            <em style={{ color: theme.accent, fontStyle: "italic", transition: "color 0.3s ease" }}>Kind</em><br />
-            of Care.
+            A Better<br />
+            <em style={{ color: theme.accent, fontStyle: "italic", transition: "color 0.3s ease" }}>Kind of Care.</em>
           </h1>
 
           <p style={{
