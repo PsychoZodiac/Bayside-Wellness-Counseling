@@ -7405,7 +7405,6 @@ function ContactPage() {
               </div>
             ) : (
               <form 
-                              <form 
                 action="https://formspree.io/f/mykngokr" 
                 method="POST"
                 aria-label="Contact form"
