@@ -7410,7 +7410,7 @@ function ContactPage() {
                 method="POST"
                 aria-label="Contact form"
               >
-                {/* Honeypot field - invisible to real users, catches bots that fill every field.
+                    {/* Honeypot field - invisible to real users, catches bots that fill every field.
                     Formspree automatically discards submissions where this is filled in. */}
                 <input
                   type="text"
@@ -7426,6 +7426,12 @@ function ContactPage() {
                     width: 0,
                     zIndex: -1,
                   }}
+                />
+                {/* Sends visitors back to this page after submitting so the on-site confirmation shows */}
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://baysidewellnessandcounseling.com/contact?success=true"
                 />
                 <div style={{ marginBottom: 16 }}>
                   <label htmlFor="contact-name" style={{
