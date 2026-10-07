@@ -7215,6 +7215,7 @@ function FAQPage() {
 function ContactPage() {
   const [ref, visible] = useScrollReveal();
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [heardFrom, setHeardFrom] = useState("");
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
 
@@ -7517,12 +7518,15 @@ function ContactPage() {
                     clip: "rect(0,0,0,0)",
                     whiteSpace: "nowrap",
                     borderWidth: 0
-                  }}>Phone (optional)</label>
+                  }}>Your Phone (required)</label>
                   <input
                     id="contact-phone"
                     type="tel"
                     name="phone"
-                    placeholder="Phone (optional)"
+                    placeholder="Your Phone *"
+                    required
+                    aria-required="true"
+                    autoComplete="tel"
                     style={{
                       width: "100%",
                       padding: "12px 16px",
@@ -7584,7 +7588,68 @@ function ContactPage() {
                     }}
                   />
                 </div>
-                
+
+                <div style={{ marginBottom: 20 }}>
+                  <label htmlFor="contact-source" style={{
+                    position: "absolute",
+                    width: 1,
+                    height: 1,
+                    padding: 0,
+                    margin: -1,
+                    overflow: "hidden",
+                    clip: "rect(0,0,0,0)",
+                    whiteSpace: "nowrap",
+                    borderWidth: 0
+                  }}>How did you hear about me? (optional)</label>
+                  <select
+                    id="contact-source"
+                    name="how_did_you_hear"
+                    value={heardFrom}
+                    onChange={(e) => setHeardFrom(e.target.value)}
+                    style={{
+                      width: "100%",
+                      padding: "12px 44px 12px 16px",
+                      backgroundColor: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
+                      backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%236B9E9A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>")`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "right 16px center",
+                      backgroundSize: "12px 8px",
+                      border: `1px solid ${theme.accent}33`,
+                      borderRadius: 2,
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: 14,
+                      color: heardFrom ? colors.white : theme.accentMuted,
+                      appearance: "none",
+                      WebkitAppearance: "none",
+                      MozAppearance: "none",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease",
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.outline = `2px solid ${colors.teal}`;
+                      e.target.style.outlineOffset = "2px";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.outline = "none";
+                    }}
+                  >
+                    <option value="" style={{ background: "#243333", color: "#FFFFFF" }}>
+                      How did you hear about me? (optional)
+                    </option>
+                    {[
+                      "Google Search",
+                      "Psychology Today",
+                      "Social Media",
+                      "Friend/Colleague",
+                      "Another Therapist/Doctor",
+                      "Other",
+                    ].map((option) => (
+                      <option key={option} value={option} style={{ background: "#243333", color: "#FFFFFF" }}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </div>
                 <button
                   type="submit"
                   style={{
@@ -7617,16 +7682,35 @@ function ContactPage() {
           </div>
         </div>
 
-        <p style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontSize: 13, color: colors.tealMuted,
-          textAlign: "center",
-        }}>
-          Or email us directly at{" "}
-          <a href="mailto:hello@baysidewellnessandcounseling.com" style={{ color: colors.tealLight }}>
-            hello@baysidewellnessandcounseling.com
-          </a>
-        </p>
+        <div style={{ textAlign: "center" }}>
+          <p style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 15, color: colors.tealMuted,
+            margin: "0 0 8px",
+          }}>
+            Prefer to call? Call or leave a voicemail at{" "}
+            <a href="tel:+14158575799" style={{ color: colors.tealLight, fontWeight: 500 }}>
+              415-857-5799
+            </a>
+          </p>
+          <p style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 12, color: colors.tealMuted,
+            margin: "0 0 16px",
+          }}>
+            Please keep voicemails brief: your name, phone number, and best time to reach you. Referring providers are welcome to call as well.
+          </p>
+          <p style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 13, color: colors.tealMuted,
+            margin: 0,
+          }}>
+            Or email us directly at{" "}
+            <a href="mailto:hello@baysidewellnessandcounseling.com" style={{ color: colors.tealLight }}>
+              hello@baysidewellnessandcounseling.com
+            </a>
+          </p>
+        </div>
       </div>
     </section>
     </>
