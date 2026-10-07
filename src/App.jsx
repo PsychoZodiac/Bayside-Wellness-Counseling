@@ -7216,9 +7216,35 @@ function ContactPage() {
   const [ref, visible] = useScrollReveal();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [heardFrom, setHeardFrom] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
 
+    // Sends the form to Formspree in the background so visitors stay on this site
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (submitting) return;
+    const form = e.currentTarget;
+    setSubmitting(true);
+    setFormError("");
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (response.ok) {
+        setFormSubmitted(true);
+      } else {
+        setFormError("Something went wrong sending your message. Please try again, or call 415-857-5799.");
+      }
+    } catch (err) {
+      setFormError("Something went wrong sending your message. Please try again, or call 415-857-5799.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
   // For Formspree, we'll use traditional form submission
   // The success message will be handled by checking the URL
   useEffect(() => {
@@ -7405,10 +7431,11 @@ function ContactPage() {
                 }}>✓ Message sent! We'll be in touch soon.</p>
               </div>
             ) : (
-              <form 
+                <form 
                 action="https://formspree.io/f/mykngokr" 
                 method="POST"
                 aria-label="Contact form"
+                onSubmit={handleSubmit}
               >
                     {/* Honeypot field - invisible to real users, catches bots that fill every field.
                     Formspree automatically discards submissions where this is filled in. */}
@@ -7426,12 +7453,6 @@ function ContactPage() {
                     width: 0,
                     zIndex: -1,
                   }}
-                />
-                {/* Sends visitors back to this page after submitting so the on-site confirmation shows */}
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="https://baysidewellnessandcounseling.com/contact?success=true"
                 />
                 <div style={{ marginBottom: 16 }}>
                   <label htmlFor="contact-name" style={{
@@ -7656,8 +7677,18 @@ function ContactPage() {
                     ))}
                   </select>
                 </div>
+                  {formError && (
+                  <p role="alert" style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 13,
+                    color: "#FF8A8A",
+                    margin: "0 0 16px",
+                    lineHeight: 1.6,
+                  }}>{formError}</p>
+                )}
                 <button
                   type="submit"
+                  disabled={submitting}
                   style={{
                     width: "100%",
                     fontFamily: "'DM Sans', sans-serif",
@@ -7681,7 +7712,7 @@ function ContactPage() {
                     e.target.style.outline = "none";
                   }}
                 >
-                  Send Message
+                  {submitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
