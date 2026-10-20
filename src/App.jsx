@@ -7937,8 +7937,8 @@ function BlogPage() {
 // not alone!"), since genuine headings never end in . ? ! , ; or :
 function renderBlogContent(content, theme) {
   if (!content) return null;
-  const blocks = content.split("\n\n").map(b => b.trim()).filter(Boolean);
-
+  const blocks = content.split(/\n\s*\n/).map(b => b.trim()).filter(Boolean);
+  
   const isHeading = (block) => {
     if (block.length > 80) return false;
     if (block.split(/\s+/).length > 12) return false;
