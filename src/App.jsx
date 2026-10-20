@@ -7970,6 +7970,37 @@ function renderBlogContent(content, theme) {
     );
   });
 }
+// Related page shown at the end of each blog post, keyed by post slug
+const blogRelatedLinks = {
+  "what-your-anger-is-actually-telling-you": { text: "If anger is costing you in your relationships or at work, here is how I approach it in individual therapy.", label: "Men's therapy in Oakland", to: "/mens-therapy-oakland" },
+  "how-to-find-a-therapist-who-fits": { text: "Curious whether we would be a good fit? Read about my practice and book a free 15-minute consultation.", label: "Therapy in Oakland", to: "/therapy-oakland" },
+  "why-anxiety-gets-worse-at-night": { text: "If anxiety keeps you up at night, CBT and EMDR can work on both the thought patterns and the experiences underneath.", label: "Anxiety therapy in Oakland", to: "/anxiety-therapy-oakland" },
+  "burnout-is-not-a-scheduling-problem": { text: "Burnout that rest does not fix usually has deeper roots. Here is how I work with it.", label: "Therapy in San Francisco", to: "/therapy-san-francisco" },
+  "signs-you-need-therapy": { text: "If any of this sounded familiar, you can start with a free 15-minute consultation.", label: "Therapy in Oakland", to: "/therapy-oakland" },
+  "cost-of-constant-exposure-desensitization": { text: "If you feel more numb than you used to, trauma-focused therapy can help.", label: "Trauma therapy in Oakland", to: "/trauma-therapy-oakland" },
+  "master-trauma-or-die-trying": { text: "If you are always the one holding everyone else together, EMDR and IFS can help with what you carry.", label: "Trauma therapy in San Francisco", to: "/trauma-therapy-san-francisco" },
+  "understanding-depression": { text: "Depression responds well to treatment. Here is what working together looks like.", label: "Depression therapy in Oakland", to: "/depression-therapy-oakland" },
+  "the-5-lies-suicide-tells-us": { text: "If you or someone you know is struggling right now, support is available at any hour.", label: "Crisis resources", to: "/crisis-resources" },
+  "ai-and-therapy": { text: "Want to know how I actually work with clients?", label: "About Marcus", to: "/about" },
+  "rupture-and-repair": { text: "If conflict in your close relationships keeps repeating, individual therapy can help you understand the pattern.", label: "Therapy in Berkeley", to: "/therapy-berkeley" },
+  "mens-mental-health": { text: "If you have been thinking about therapy and putting it off, here is how I work with men.", label: "Men's therapy in San Francisco", to: "/mens-therapy-san-francisco" },
+  "valentines-day-and-men": { text: "If relationship pressure is weighing on you, this is the kind of work men's therapy focuses on.", label: "Men's therapy in Berkeley", to: "/mens-therapy-berkeley" },
+  "attachment-styles-in-relationships": { text: "Relationship patterns can change. Psychodynamic therapy looks at where they started.", label: "Psychodynamic therapy", to: "/services/psychodynamic" },
+  "beginning-again": { text: "If you are ready to start something new, a free consultation is an easy first step.", label: "Therapy in Oakland", to: "/therapy-oakland" },
+  "rethinking-therapy-2026": { text: "See the approaches I use and how to choose between them.", label: "Services", to: "/services" },
+  "setting-boundaries-in-relationships": { text: "People-pleasing and weak boundaries often come from internal parts that learned to keep the peace. IFS works with those parts directly.", label: "IFS therapy in San Francisco", to: "/ifs-therapy-san-francisco" },
+  "low-mood-depression": { text: "If low mood has been heavy for weeks, it is worth getting support.", label: "Depression therapy in San Francisco", to: "/depression-therapy-san-francisco" },
+  "dream-bigger-2026": { text: "If you are working out what you want next, here is how I work with young adults.", label: "Young adults therapy in San Francisco", to: "/young-adults-therapy-san-francisco" },
+  "starting-new-year-with-intention": { text: "If you want support with the year ahead, start with a free consultation.", label: "Therapy in Oakland", to: "/therapy-oakland" },
+  "mindfulness-for-anxiety": { text: "If mindfulness has not been enough for your anxiety, CBT and EMDR work at a different level.", label: "Anxiety therapy in Berkeley", to: "/anxiety-therapy-berkeley" },
+  "beginners-guide-to-ifs": { text: "Interested in parts work? Here is how IFS therapy works in practice.", label: "IFS therapy in Oakland", to: "/ifs-therapy-oakland" },
+  "beginners-guide-to-emdr": { text: "Curious about EMDR? Here is what the process looks like and who it helps.", label: "EMDR therapy in Oakland", to: "/emdr-therapy-oakland" },
+  "holiday-stress-loneliness": { text: "If this season is heavier than you expected, sessions are available online from anywhere in California.", label: "Online therapy in Oakland", to: "/online-therapy-oakland" },
+  "managing-holiday-stress": { text: "If family visits leave you drained, individual therapy can change how you show up in them.", label: "Online therapy in San Francisco", to: "/online-therapy-san-francisco" },
+  "family-therapy-benefits": { text: "I work with adults one-on-one, and change in one person often shifts the whole family system.", label: "Therapy in San Jose", to: "/therapy-san-jose" },
+  "emdr-trauma-therapy-guide": { text: "Want to know if EMDR fits what you are carrying?", label: "EMDR therapy in San Francisco", to: "/emdr-therapy-san-francisco" },
+  "when-labor-doesnt-go-according-to-plan": { text: "If a hard birth is still sitting with you, EMDR and trauma-focused therapy can help.", label: "Trauma therapy in Berkeley", to: "/trauma-therapy-berkeley" },
+};
 
 function BlogPostPage({ slug }) {
   const [ref, visible] = useScrollReveal();
