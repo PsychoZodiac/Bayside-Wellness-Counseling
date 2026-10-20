@@ -8137,6 +8137,33 @@ function BlogPostPage({ slug }) {
             )}
           </div>
 
+          {blogRelatedLinks[slug] && (
+            <div style={{
+              marginTop: 56,
+              padding: "24px 28px",
+              background: theme.bg,
+              borderLeft: `3px solid ${theme.accent}`,
+              borderRadius: 2,
+              transition: "all 0.3s ease",
+            }}>
+              <p style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 16, fontWeight: 300,
+                color: theme.textMuted,
+                lineHeight: 1.8,
+                margin: 0,
+                transition: "color 0.3s ease",
+              }}>
+                {blogRelatedLinks[slug].text}{" "}
+                <Link to={blogRelatedLinks[slug].to} style={{
+                  color: theme.accent,
+                  fontWeight: 500,
+                  textDecoration: "underline",
+                  textUnderlineOffset: 2,
+                }}>{blogRelatedLinks[slug].label} →</Link>
+              </p>
+            </div>
+          )}
           <div style={{
             background: theme.bg,
             padding: "40px",
