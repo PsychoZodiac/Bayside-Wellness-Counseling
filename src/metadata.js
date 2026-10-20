@@ -148,7 +148,8 @@ export const generateBlogMeta = (post) => {
     keywords: [post.category, "mental health", "therapy", "counseling", "Oakland therapist"],
     path: `/blog/${post.slug}`,
     type: "article",
-    image: post.image ? `${baseUrl}${post.image}` : defaultImage,
+    // Posts hosted on Squarespace already have full URLs; local images need the site address added
+    image: post.image ? (post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`) : defaultImage,
   });
 };
 
