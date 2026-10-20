@@ -6081,7 +6081,37 @@ Virtual therapy for adults and young adults across California.
             </div>
           </div>
         </div>
-        
+
+        <div style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "8px 24px",
+          marginBottom: 28,
+        }}>
+          {[
+            { label: "Therapy in Oakland", path: "/therapy-oakland" },
+            { label: "Therapy in San Francisco", path: "/therapy-san-francisco" },
+            { label: "Therapy in Berkeley", path: "/therapy-berkeley" },
+            { label: "Therapy in San Jose", path: "/therapy-san-jose" },
+            { label: "Therapy in Palo Alto", path: "/therapy-palo-alto" },
+            { label: "EMDR Therapy Oakland", path: "/emdr-therapy-oakland" },
+            { label: "IFS Therapy Oakland", path: "/ifs-therapy-oakland" },
+            { label: "Anxiety Therapy Oakland", path: "/anxiety-therapy-oakland" },
+            { label: "Trauma Therapy Oakland", path: "/trauma-therapy-oakland" },
+          ].map(link => (
+            <Link key={link.path} to={link.path} onClick={() => window.scrollTo(0, 0)} style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 12,
+              color: darkMode ? "#8A9E9E" : "#6A8080",
+              textDecoration: "none",
+              transition: "color 0.3s ease",
+            }}
+            onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
+            onMouseLeave={e => e.target.style.color = darkMode ? "#8A9E9E" : "#6A8080"}
+            >{link.label}</Link>
+          ))}
+        </div>
         <div style={{
           borderTop: `1px solid ${theme.accent}22`,
           paddingTop: 20,
