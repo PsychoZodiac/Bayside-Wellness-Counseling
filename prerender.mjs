@@ -30,9 +30,11 @@ function buildPage(routePath, appHtml, helmet) {
   // Remove the default static <title> tag, replace with the real per-page one
   html = html.replace(/<title>.*?<\/title>/s, helmet.title.toString());
 
-  // Remove the default Open Graph block, replace with per-page Helmet meta
+  // Remove the default Open Graph block, replace with per-page Helmet meta.
+  // The lookahead matches any comment that starts with "Google Analytics" so
+  // renaming that comment in index.html cannot break this step.
   html = html.replace(
-    /<!-- Open Graph -->[\s\S]*?<!-- Twitter -->[\s\S]*?(?=<!-- Google Analytics -->)/,
+    /<!-- Open Graph -->[\s\S]*?<!-- Twitter -->[\s\S]*?(?=<!-- Google Analytics)/,
     ''
   );
 
