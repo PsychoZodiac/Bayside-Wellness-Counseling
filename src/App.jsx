@@ -8017,7 +8017,7 @@ function BlogPostPage({ slug }) {
     "@type": "Article",
     "headline": post.title,
     "description": post.excerpt,
-    "image": post.image,
+    "image": post.image.startsWith("http") ? post.image : `https://baysidewellnessandcounseling.com${post.image}`,
     "datePublished": new Date(post.date).toISOString(),
     "dateModified": new Date(post.date).toISOString(),
     "author": {
