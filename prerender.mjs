@@ -16,13 +16,14 @@ const { render } = await import('./dist-ssr/entry-server.js');
 
 const template = fs.readFileSync('dist/index.html', 'utf-8');
 
-// Extract routes directly from the sitemap - this is already the site's
-// real source of truth for which URLs exist, so this script can never
-// silently drift out of sync with it.
-const sitemapXml = fs.readFileSync('dist/sitemap.xml', 'utf-8');
-const locMatches = [...sitemapXml.matchAll(/<loc>https:\/\/baysidewellnessandcounseling\.com\/([^<]*)<\/loc>/g)];
-const routes = locMatches.map(m => m[1]);
-if (!routes.includes('')) routes.unshift(''); // ensure homepage is included
+// Routes come from prerender-routes.txt (one path per line, no leading slash),
+// not from the sitemap. The sitemap lists only the pages submitted to Google,
+// while this list covers every page that should be prerendered at build time.
+const routes = fs.readFileSync('prerender-routes.txt', 'utf-8')
+  .split('\n')
+  .map(line => line.trim().replace(/^\/+/, ''))
+  .filter(line => line && !line.startsWith('#'));
+routes.unshift(''); // the homepage
 
 function buildPage(routePath, appHtml, helmet) {
   let html = template;
