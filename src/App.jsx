@@ -8029,6 +8029,14 @@ const blogRelatedLinks = {
   "when-labor-doesnt-go-according-to-plan": { text: "If a hard birth is still sitting with you, EMDR and trauma-focused therapy can help.", label: "Trauma therapy in Berkeley", to: "/trauma-therapy-berkeley" },
 };
 
+function articleDateToISOString(value) {
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const parts = /^([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})$/.exec(value);
+  const month = months.indexOf(parts?.[1]);
+  if (!parts || month < 0) throw new Error(`Invalid article date: ${value}`);
+  return new Date(Date.UTC(Number(parts[3]), month, Number(parts[2]))).toISOString();
+}
+
 function BlogPostPage({ slug }) {
   const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
@@ -8045,8 +8053,8 @@ function BlogPostPage({ slug }) {
     "headline": post.title,
     "description": post.excerpt,
     "image": post.image.startsWith("http") ? post.image : `https://baysidewellnessandcounseling.com${post.image}`,
-    "datePublished": new Date(post.date).toISOString(),
-    "dateModified": new Date(post.date).toISOString(),
+    "datePublished": articleDateToISOString(post.date),
+    "dateModified": articleDateToISOString(post.date),
     "author": {
       "@type": "Person",
       "name": "Marcus Ghiasi",
@@ -9223,26 +9231,36 @@ function ScrollToTop() {
 // ========================================
 
 export default function App() {
-   const [darkMode, setDarkMode] = useState(() => {
-    // Respect an explicit past choice first
-    const saved = localStorage.getItem('darkMode');
-    if (saved !== null) {
-      return saved === 'true';
-    }
-    // No saved preference yet - default to the visitor's system setting
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
+  // Match the prerendered light theme for the first client render.
+  const [darkMode, setDarkMode] = useState(false);
+  const [themeReady, setThemeReady] = useState(false);
 
   useEffect(() => {
-    // Save preference to localStorage
-    localStorage.setItem('darkMode', darkMode);
-  }, [darkMode]);
+    let preferred = !!window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+    try {
+      const saved = window.localStorage.getItem('darkMode');
+      if (saved === 'true' || saved === 'false') preferred = saved === 'true';
+    } catch {
+      // Storage restrictions must not prevent the app from opening.
+    }
+    setDarkMode(preferred);
+    setThemeReady(true);
+  }, []);
 
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+  useEffect(() => {
+    if (!themeReady) return;
+    try {
+      window.localStorage.setItem('darkMode', String(darkMode));
+    } catch {
+      // The theme remains usable even when a preference cannot be saved.
+    }
+  }, [darkMode, themeReady]);
+
+  const toggleDarkMode = () => setDarkMode((current) => !current);
 
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         ${fonts}
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
@@ -9331,7 +9349,7 @@ export default function App() {
           outline: 2px solid #4DBDB7 !important;
           outline-offset: 2px !important;
         }
-      `}</style>
+      ` }} />
       
       <Nav />
       <ScrollToTop />
