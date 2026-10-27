@@ -5794,7 +5794,8 @@ function Nav() {
   // Dark background pages need solid nav background
   const currentPath = location.pathname;
   const darkPages = ["/about", "/contact"];
-  const isDarkPage = darkPages.includes(currentPath) || currentPath.startsWith("/blog/");
+  const isDarkPage = darkPages.includes(currentPath)
+    || blogPosts.some((post) => currentPath === `/blog/${post.slug}`);
   const needsSolidBg = scrolled || isDarkPage;
   
   const theme = getTheme(darkMode);
@@ -6897,7 +6898,7 @@ function ServiceDetailPage({ slug }) {
   const service = services.find(s => s.slug === slug);
   const details = serviceDetails[slug];
 
-  if (!service) return <div>Service not found</div>;
+  if (!service) return <NotFoundPage />;
   
   // Add safety check for details
   if (!details) {
@@ -8044,7 +8045,7 @@ function BlogPostPage({ slug }) {
   const theme = getTheme(darkMode);
   const post = blogPosts.find(p => p.slug === slug);
 
-  if (!post) return <div>Post not found</div>;
+  if (!post) return <NotFoundPage />;
 
   // Article Schema for AI search
   const articleSchema = {
@@ -8247,17 +8248,12 @@ function BlogPostPage({ slug }) {
 // SEO LANDING PAGE
 // ========================================
 
-function SEOLandingPage({ slug }) {
-  const navigate = useNavigate();
+function NotFoundPage() {
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
-  const pageData = seoPages[slug];
-
-  // If page doesn't exist, show proper 404
-  if (!pageData) {
     return (
       <>
-        <SEO metadata={mainPages.home} />
+        <SEO metadata={mainPages.notFound} noindex />
         <section style={{
           background: theme.bg,
           padding: "160px 40px",
@@ -8286,7 +8282,7 @@ function SEOLandingPage({ slug }) {
             }}>
               The page you're looking for doesn't exist.
             </p>
-            <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} style={{ textDecoration: "none",
+            <a href="/" style={{ textDecoration: "none",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 500,
               letterSpacing: "0.12em", textTransform: "uppercase",
@@ -8303,7 +8299,15 @@ function SEOLandingPage({ slug }) {
         </section>
       </>
     );
-  }
+}
+
+function SEOLandingPage({ slug }) {
+  const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
+  const theme = getTheme(darkMode);
+  const pageData = seoPages[slug];
+
+  if (!pageData) return <NotFoundPage />;
 
   return (
     <>
@@ -9364,8 +9368,9 @@ export default function App() {
           <Route path="/blog/:slug" element={<BlogPostWrapper />} />
           <Route path="/crisis-resources" element={<CrisisResourcesPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          {/* SEO landing pages - catch-all at end */}
+          {/* Local pages and missing-page fallback */}
           <Route path="/:slug" element={<SEOLandingWrapper />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
