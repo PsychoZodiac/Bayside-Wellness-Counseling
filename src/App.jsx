@@ -5738,11 +5738,23 @@ function useScrollReveal() {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
+    const target = ref.current;
+    if (!target || typeof IntersectionObserver === "undefined" ||
+        window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      setVisible(true);
+      return;
+    }
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.15 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      // Reveal tall sections as soon as they enter the viewport.
+      { threshold: 0 }
     );
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(target);
     return () => observer.disconnect();
   }, []);
   return [ref, visible];
@@ -6018,6 +6030,11 @@ function Footer() {
             </Link>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", lineHeight: 1.6, margin: "0 0 12px", transition: "color 0.3s ease" }}>
 Virtual therapy for adults and young adults across California.
+            </p>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#C0D0D0", lineHeight: 1.7, margin: "0 0 12px" }}>
+              Marcus Ghiasi, LMFT<br />
+              Licensed Marriage and Family Therapist<br />
+              California license #158475
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: darkMode ? "#6A8888" : "#4A6060", margin: "0 0 6px", transition: "color 0.3s ease" }}>
               2323 Broadway, Oakland, CA 94612
@@ -6422,7 +6439,6 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
                 transition: "all 0.3s ease",
                 boxShadow: darkMode ? "0 2px 8px rgba(77,189,183,0.3)" : "0 2px 8px rgba(46, 125, 122, 0.2)",
                 whiteSpace: "nowrap",
-                transition: "all 0.3s ease",
               }}
               onMouseEnter={(e) => { 
                 e.target.style.opacity = "0.9";
@@ -6450,7 +6466,7 @@ Compassionate, evidence-based therapy for adults and young adults navigating tra
           </div>
           
           <div>
-            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
+            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 12, fontWeight: 400,
               letterSpacing: "0.08em",
@@ -6501,9 +6517,9 @@ function AboutPage() {
             transition: "color 0.3s ease",
           }}>
             <span style={{ width: 32, height: 1, background: theme.accentMuted, display: "inline-block", transition: "background 0.3s ease" }} />
-            About & Team
+            About Marcus
           </div>
-          <h2 style={{
+          <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(36px, 4vw, 56px)",
             fontWeight: 300, lineHeight: 1.15,
@@ -6511,7 +6527,7 @@ function AboutPage() {
           }}>
             Healing happens<br />
             <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight, fontStyle: "italic", transition: "color 0.3s ease" }}>on multiple levels.</em>
-          </h2>
+          </h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
@@ -7151,6 +7167,10 @@ function FAQPage() {
               transition: "border-color 0.3s ease",
             }}>
               <button
+                type="button"
+                id={`faq-question-${i}`}
+                aria-expanded={openIndex === i}
+                aria-controls={`faq-answer-${i}`}
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 style={{
                   width: "100%",
@@ -7182,15 +7202,13 @@ function FAQPage() {
                   transform: openIndex === i ? "rotate(45deg)" : "none",
                 }}>+</span>
               </button>
-              {openIndex === i && (
-                <p style={{
+                <p id={`faq-answer-${i}`} aria-labelledby={`faq-question-${i}`} hidden={openIndex !== i} style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15, fontWeight: 300,
                   color: theme.textMuted, lineHeight: 1.8,
                   margin: 0,
                   transition: "color 0.3s ease",
                 }}>{faq.a}</p>
-              )}
             </div>
           ))}
 
@@ -7247,46 +7265,52 @@ function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [heardFrom, setHeardFrom] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const submissionInProgress = useRef(false);
   const [formError, setFormError] = useState("");
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
 
-    // Sends the form to Formspree in the background so visitors stay on this site
+  // Sends the form to Formspree in the background so visitors stay on this site.
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (submitting) return;
+    if (submissionInProgress.current || formSubmitted) return;
     const form = e.currentTarget;
+    const payload = new FormData(form);
+    if (payload.get('_gotcha')) return;
+    const name = String(payload.get('name') || '').trim();
+    const message = String(payload.get('message') || '').trim();
+    if (!name || !message) {
+      setFormError("Please enter your name and a brief message before sending.");
+      return;
+    }
+    payload.set('name', name);
+    payload.set('email', String(payload.get('email') || '').trim());
+    payload.set('message', message);
+    submissionInProgress.current = true;
     setSubmitting(true);
     setFormError("");
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 20000);
     try {
       const response = await fetch(form.action, {
         method: "POST",
-        body: new FormData(form),
+        body: payload,
         headers: { Accept: "application/json" },
+        signal: controller.signal,
       });
       if (response.ok) {
         setFormSubmitted(true);
       } else {
-        setFormError("Something went wrong sending your message. Please try again, or call 415-857-5799.");
+        setFormError("Your message wasn't accepted. Your text is still here. Please try again, or call 415-857-5799.");
       }
-    } catch (err) {
-      setFormError("Something went wrong sending your message. Please try again, or call 415-857-5799.");
+    } catch {
+      setFormError("We couldn't confirm that your message was received. Your text is still here. Please try again, or call 415-857-5799.");
     } finally {
+      clearTimeout(timeoutId);
+      submissionInProgress.current = false;
       setSubmitting(false);
     }
   };
-  // For Formspree, we'll use traditional form submission
-  // The success message will be handled by checking the URL
-  useEffect(() => {
-    // Check if we're returning from a successful Formspree submission
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === 'true') {
-      setFormSubmitted(true);
-      setTimeout(() => setFormSubmitted(false), 5000);
-      // Clean up URL
-      window.history.replaceState({}, '', window.location.pathname);
-    }
-  }, []);
 
   return (
     <>
@@ -7307,7 +7331,7 @@ function ContactPage() {
             color: theme.accentMuted, marginBottom: 24,
             transition: "color 0.3s ease",
           }}>Get Started</div>
-          <h2 style={{
+          <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(40px, 5vw, 64px)",
             fontWeight: 300, lineHeight: 1.15,
@@ -7315,7 +7339,7 @@ function ContactPage() {
           }}>
             Ready to take<br />
             <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight, transition: "color 0.3s ease" }}>the first step?</em>
-          </h2>
+          </h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 16, fontWeight: 300,
@@ -7442,7 +7466,7 @@ function ContactPage() {
 
             {formSubmitted ? (
               <div 
-                role="alert"
+                role="status"
                 aria-live="polite"
                 style={{
                   background: darkMode ? `${theme.accent}20` : colors.tealPale,
@@ -7465,6 +7489,7 @@ function ContactPage() {
                 action="https://formspree.io/f/mykngokr" 
                 method="POST"
                 aria-label="Contact form"
+                aria-busy={submitting}
                 onSubmit={handleSubmit}
               >
                     {/* Honeypot field - invisible to real users, catches bots that fill every field.
@@ -7500,6 +7525,7 @@ function ContactPage() {
                     id="contact-name"
                     type="text"
                     name="name"
+                    autoComplete="name"
                     placeholder="Your Name *"
                     required
                     aria-required="true"
@@ -7540,6 +7566,7 @@ function ContactPage() {
                     id="contact-email"
                     type="email"
                     name="email"
+                    autoComplete="email"
                     placeholder="Your Email *"
                     required
                     aria-required="true"
@@ -8618,7 +8645,6 @@ function SEOLandingPage({ slug }) {
                 border: `1px solid ${theme.border}`,
                 borderRadius: 2,
                 color: theme.textMuted,
-                textDecoration: "none",
                 transition: "all 0.3s ease",
               }}
             >
@@ -8657,7 +8683,6 @@ function SEOLandingPage({ slug }) {
                 border: `1px solid ${theme.border}`,
                 borderRadius: 2,
                 color: theme.textMuted,
-                textDecoration: "none",
                 transition: "all 0.3s ease",
               }}
             >
