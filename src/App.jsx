@@ -5140,8 +5140,8 @@ const seoPages = {
     ],
     "uniqueFaqs": [
       {
-        "q": "Is the contact form monitored for urgent help?",
-        "a": "Do not use a routine inquiry form for urgent or emergency care. The crisis-resources page explains where to seek immediate support."
+        "q": "Is routine booking or phone contact suitable for urgent help?",
+        "a": "Do not wait for a routine appointment or callback for urgent or emergency care. The crisis-resources page explains where to seek immediate support."
       },
       {
         "q": "Are these in-person appointments in Walnut Creek?",
@@ -7342,555 +7342,46 @@ function FAQPage() {
 // ========================================
 
 function ContactPage() {
-  const [ref, visible] = useScrollReveal();
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [heardFrom, setHeardFrom] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const submissionInProgress = useRef(false);
-  const [formError, setFormError] = useState("");
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
-
-  // Sends the form to Formspree in the background so visitors stay on this site.
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (submissionInProgress.current || formSubmitted) return;
-    const form = e.currentTarget;
-    const payload = new FormData(form);
-    if (payload.get('_gotcha')) return;
-    const name = String(payload.get('name') || '').trim();
-    const message = String(payload.get('message') || '').trim();
-    if (!name || !message) {
-      setFormError("Please enter your name and a brief message before sending.");
-      return;
-    }
-    payload.set('name', name);
-    payload.set('email', String(payload.get('email') || '').trim());
-    payload.set('message', message);
-    submissionInProgress.current = true;
-    setSubmitting(true);
-    setFormError("");
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 20000);
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: payload,
-        headers: { Accept: "application/json" },
-        signal: controller.signal,
-      });
-      if (response.ok) {
-        setFormSubmitted(true);
-      } else {
-        setFormError("Your message wasn't accepted. Your text is still here. Please try again, or call 415-857-5799.");
-      }
-    } catch {
-      setFormError("We couldn't confirm that your message was received. Your text is still here. Please try again, or call 415-857-5799.");
-    } finally {
-      clearTimeout(timeoutId);
-      submissionInProgress.current = false;
-      setSubmitting(false);
-    }
-  };
+  const bookingUrl = "https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1";
+  const bodyStyle = { fontFamily: "'DM Sans', sans-serif", fontSize: 16, lineHeight: 1.8, color: theme.textMuted };
+  const cardStyle = { background: theme.bgAlt, border: `1px solid ${theme.border}`, borderRadius: 4, padding: "clamp(24px, 5vw, 40px)" };
 
   return (
     <>
       <SEO metadata={mainPages.contact} />
-      <section ref={ref} style={{
-      background: darkMode ? colors.darkBgLight : colors.charcoal,
-      padding: "160px 40px 120px",
-      minHeight: "100vh",
-      opacity: visible ? 1 : 0,
-      transform: visible ? "none" : "translateY(30px)",
-      transition: "all 0.3s ease",
-    }}>
-      <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-        <div style={{ textAlign: "center", marginBottom: 60 }}>
-          <div style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: theme.accentMuted, marginBottom: 24,
-            transition: "color 0.3s ease",
-          }}>Get Started</div>
-          <h1 style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(40px, 5vw, 64px)",
-            fontWeight: 300, lineHeight: 1.15,
-            color: colors.white, margin: "0 0 24px",
-          }}>
-            Ready to take<br />
-            <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight, transition: "color 0.3s ease" }}>the first step?</em>
-          </h1>
-          <p style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 16, fontWeight: 300,
-            color: darkMode ? colors.darkTextMuted : "#A8B8B8", lineHeight: 1.8,
-            margin: "0 auto", maxWidth: 520,
-            transition: "color 0.3s ease",
-          }}>
-            Schedule a free 15-minute consultation with Marcus or send a brief inquiry about fit and availability. Individual sessions are virtual for adults physically in California.
-          </p>
-        </div>
+      <section style={{ background: theme.bg, color: theme.text, padding: "160px 24px 100px", minHeight: "80vh", transition: "background 0.3s ease" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+          <div style={{ maxWidth: 740, margin: "0 auto 48px", textAlign: "center" }}>
+            <p style={{ ...bodyStyle, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accent, marginBottom: 20 }}>Get Started</p>
+            <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(44px, 6vw, 68px)", fontWeight: 300, lineHeight: 1.15, marginBottom: 24 }}>Let’s talk about what you need.</h1>
+            <p style={bodyStyle}>Schedule a free 15-minute consultation with Marcus Ghiasi, LMFT, or call with a question about fit and availability. Individual therapy sessions are virtual for adults physically in California.</p>
+          </div>
 
-        <div style={{
-          display: "grid",
-          gap: 40,
-          marginBottom: 40,
-        }} className="contact-grid">
-          {/* Jane App Booking */}
-          <div style={{
-            background: darkMode ? "rgba(77,189,183,0.08)" : "rgba(255,255,255,0.05)",
-            border: `1px solid ${theme.accent}44`,
-            borderRadius: 4, 
-            padding: "clamp(24px, 5vw, 40px)",
-            transition: "all 0.3s ease",
-          }}>
-            <h3 style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: 28, fontWeight: 500,
-              color: colors.white,
-              margin: "0 0 16px",
-            }}>Book Online</h3>
-            <p style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 14, fontWeight: 300,
-              color: darkMode ? colors.darkTextMuted : "#A8B8B8",
-              lineHeight: 1.7,
-              margin: "0 0 32px",
-              transition: "color 0.3s ease",
-            }}>
-              Schedule your free 15-minute consultation directly through our calendar.
-            </p>
-            
-            <div style={{ 
-              background: theme.bgAlt,
-              border: `2px solid ${theme.accent}`,
-              borderRadius: 2, 
-              padding: "clamp(32px, 8vw, 56px) clamp(24px, 6vw, 48px)",
-              textAlign: "center",
-              boxShadow: darkMode ? "0 4px 16px rgba(0,0,0,0.3)" : "0 4px 16px rgba(0,0,0,0.08)",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              transition: "all 0.3s ease",
-            }}>
-              <a
-                href="https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-block",
-                  padding: "16px clamp(20px, 5vw, 48px)",
-                  background: theme.accent,
-                  color: darkMode ? theme.bg : colors.white,
-                  textDecoration: "none",
-                  borderRadius: 2,
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: "clamp(11px, 2.8vw, 13px)",
-                  fontWeight: 500,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  transition: "all 0.3s ease",
-                  boxShadow: darkMode ? "0 2px 8px rgba(77,189,183,0.3)" : "0 2px 8px rgba(46, 125, 122, 0.2)",
-                  whiteSpace: "nowrap",
-                }}
-                onMouseEnter={(e) => { 
-                  e.target.style.opacity = "0.9";
-                  e.target.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => { 
-                  e.target.style.opacity = "1";
-                  e.target.style.transform = "translateY(0)";
-                }}
-              >
-                See Available Times →
-              </a>
-              <p style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 11,
-                color: theme.accentMuted,
-                marginTop: 24,
-                lineHeight: 1.6,
-                letterSpacing: "0.03em",
-                transition: "color 0.3s ease",
-              }}>
-                Real-time availability • Opens in new tab
-              </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: 24 }}>
+            <div style={cardStyle}>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 34, fontWeight: 400, marginBottom: 16 }}>Book a free consultation</h2>
+              <p style={{ ...bodyStyle, marginBottom: 24 }}>Choose an available time through Jane, the practice’s booking platform. The consultation is a chance to discuss your concerns, ask questions, and consider whether working together is a fit.</p>
+              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "16px 24px", borderRadius: 2, fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 500, background: theme.accent, color: darkMode ? theme.bg : colors.white, textDecoration: "none", textAlign: "center" }}>See Available Times →</a>
+              <p style={{ ...bodyStyle, fontSize: 13, marginTop: 16 }}>Opens Jane in a new tab. No commitment to ongoing therapy.</p>
+            </div>
+
+            <div style={cardStyle}>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 34, fontWeight: 400, marginBottom: 16 }}>Prefer to call?</h2>
+              <p style={{ ...bodyStyle, marginBottom: 20 }}>You can call with a brief question about availability or the practice. If you leave a voicemail, include your name, callback number, and a good time to reach you.</p>
+              <a href="tel:+14158575799" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 24, color: theme.accent, textDecoration: "underline" }}>415-857-5799</a>
+              <p style={{ ...bodyStyle, fontSize: 14, marginTop: 20 }}>Please keep voicemail details brief. A detailed personal or clinical history can wait until you speak with Marcus.</p>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div style={{
-            background: darkMode ? "rgba(77,189,183,0.08)" : "rgba(255,255,255,0.05)",
-            border: `1px solid ${theme.accent}44`,
-            borderRadius: 4, 
-            padding: "clamp(24px, 5vw, 40px)",
-            transition: "all 0.3s ease",
-          }}>
-            <h3 style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: 28, fontWeight: 500,
-              color: colors.white,
-              margin: "0 0 16px",
-            }}>Send a Message</h3>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: colors.white, lineHeight: 1.7, margin: "0 0 24px" }}>
-              Please share only a brief inquiry; detailed clinical history can wait for a session. This form is not monitored for urgent or emergency support. <a href="/crisis-resources" style={{ color: "inherit", textDecoration: "underline" }}>Find immediate support resources.</a>
-            </p>
-            <p style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 14, fontWeight: 300,
-              color: darkMode ? colors.darkTextMuted : "#A8B8B8",
-              lineHeight: 1.7,
-              margin: "0 0 32px",
-              transition: "color 0.3s ease",
-            }}>
-              Have questions? Reach out and we'll get back to you within 1-2 business days.
-            </p>
-
-            {formSubmitted ? (
-              <div 
-                role="status"
-                aria-live="polite"
-                style={{
-                  background: darkMode ? `${theme.accent}20` : colors.tealPale,
-                  border: `1px solid ${theme.accent}`,
-                  borderRadius: 4,
-                  padding: "20px",
-                  textAlign: "center",
-                  transition: "all 0.3s ease",
-                }}>
-                <p style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 15,
-                  color: theme.accent,
-                  margin: 0,
-                  transition: "color 0.3s ease",
-                }}>✓ Message sent! We'll be in touch soon.</p>
-              </div>
-            ) : (
-                <form 
-                action="https://formspree.io/f/mykngokr" 
-                method="POST"
-                aria-label="Contact form"
-                aria-busy={submitting}
-                onSubmit={handleSubmit}
-              >
-                    {/* Honeypot field - invisible to real users, catches bots that fill every field.
-                    Formspree automatically discards submissions where this is filled in. */}
-                <input
-                  type="text"
-                  name="_gotcha"
-                  tabIndex="-1"
-                  autoComplete="off"
-                  style={{
-                    opacity: 0,
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    height: 0,
-                    width: 0,
-                    zIndex: -1,
-                  }}
-                />
-                <div style={{ marginBottom: 16 }}>
-                  <label htmlFor="contact-name" style={{
-                    position: "absolute",
-                    width: 1,
-                    height: 1,
-                    padding: 0,
-                    margin: -1,
-                    overflow: "hidden",
-                    clip: "rect(0,0,0,0)",
-                    whiteSpace: "nowrap",
-                    borderWidth: 0
-                  }}>Your Name (required)</label>
-                  <input
-                    id="contact-name"
-                    type="text"
-                    name="name"
-                    autoComplete="name"
-                    placeholder="Your Name *"
-                    required
-                    aria-required="true"
-                    style={{
-                      width: "100%",
-                      padding: "12px 16px",
-                      background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
-                      border: `1px solid ${theme.accent}33`,
-                      borderRadius: 2,
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 14,
-                      color: colors.white,
-                      transition: "all 0.3s ease",
-                    }}
-                    onFocus={(e) => {
-                      e.target.style.outline = `2px solid ${colors.teal}`;
-                      e.target.style.outlineOffset = "2px";
-                    }}
-                    onBlur={(e) => {
-                      e.target.style.outline = "none";
-                    }}
-                  />
-                </div>
-                
-                <div style={{ marginBottom: 16 }}>
-                  <label htmlFor="contact-email" style={{
-                    position: "absolute",
-                    width: 1,
-                    height: 1,
-                    padding: 0,
-                    margin: -1,
-                    overflow: "hidden",
-                    clip: "rect(0,0,0,0)",
-                    whiteSpace: "nowrap",
-                    borderWidth: 0
-                  }}>Your Email (required)</label>
-                  <input
-                    id="contact-email"
-                    type="email"
-                    name="email"
-                    autoComplete="email"
-                    placeholder="Your Email *"
-                    required
-                    aria-required="true"
-                    style={{
-                      width: "100%",
-                      padding: "12px 16px",
-                      background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
-                      border: `1px solid ${theme.accent}33`,
-                      borderRadius: 2,
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 14,
-                      color: colors.white,
-                      transition: "all 0.3s ease",
-                    }}
-                    onFocus={(e) => {
-                      e.target.style.outline = `2px solid ${colors.teal}`;
-                      e.target.style.outlineOffset = "2px";
-                    }}
-                    onBlur={(e) => {
-                      e.target.style.outline = "none";
-                    }}
-                  />
-                </div>
-                
-                <div style={{ marginBottom: 16 }}>
-                  <label htmlFor="contact-phone" style={{
-                    position: "absolute",
-                    width: 1,
-                    height: 1,
-                    padding: 0,
-                    margin: -1,
-                    overflow: "hidden",
-                    clip: "rect(0,0,0,0)",
-                    whiteSpace: "nowrap",
-                    borderWidth: 0
-                  }}>Your Phone (required)</label>
-                  <input
-                    id="contact-phone"
-                    type="tel"
-                    name="phone"
-                    placeholder="Your Phone *"
-                    required
-                    aria-required="true"
-                    autoComplete="tel"
-                    style={{
-                      width: "100%",
-                      padding: "12px 16px",
-                      background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
-                      border: `1px solid ${theme.accent}33`,
-                      borderRadius: 2,
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 14,
-                      color: colors.white,
-                      transition: "all 0.3s ease",
-                    }}
-                    onFocus={(e) => {
-                      e.target.style.outline = `2px solid ${colors.teal}`;
-                      e.target.style.outlineOffset = "2px";
-                    }}
-                    onBlur={(e) => {
-                      e.target.style.outline = "none";
-                    }}
-                  />
-                </div>
-                
-                <div style={{ marginBottom: 20 }}>
-                  <label htmlFor="contact-message" style={{
-                    position: "absolute",
-                    width: 1,
-                    height: 1,
-                    padding: 0,
-                    margin: -1,
-                    overflow: "hidden",
-                    clip: "rect(0,0,0,0)",
-                    whiteSpace: "nowrap",
-                    borderWidth: 0
-                  }}>Your Message (required)</label>
-                  <textarea
-                    id="contact-message"
-                    name="message"
-                    placeholder="Brief inquiry about fit or availability *"
-                    required
-                    aria-required="true"
-                    rows="4"
-                    style={{
-                      width: "100%",
-                      padding: "12px 16px",
-                      background: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
-                      border: `1px solid ${theme.accent}33`,
-                      borderRadius: 2,
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 14,
-                      color: colors.white,
-                      resize: "vertical",
-                      transition: "all 0.3s ease",
-                    }}
-                    onFocus={(e) => {
-                      e.target.style.outline = `2px solid ${colors.teal}`;
-                      e.target.style.outlineOffset = "2px";
-                    }}
-                    onBlur={(e) => {
-                      e.target.style.outline = "none";
-                    }}
-                  />
-                </div>
-
-                <div style={{ marginBottom: 20 }}>
-                  <label htmlFor="contact-source" style={{
-                    position: "absolute",
-                    width: 1,
-                    height: 1,
-                    padding: 0,
-                    margin: -1,
-                    overflow: "hidden",
-                    clip: "rect(0,0,0,0)",
-                    whiteSpace: "nowrap",
-                    borderWidth: 0
-                  }}>How did you hear about me? (optional)</label>
-                  <select
-                    id="contact-source"
-                    name="how_did_you_hear"
-                    value={heardFrom}
-                    onChange={(e) => setHeardFrom(e.target.value)}
-                    style={{
-                      width: "100%",
-                      padding: "12px 44px 12px 16px",
-                      backgroundColor: darkMode ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.08)",
-                      backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%236B9E9A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>")`,
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "right 16px center",
-                      backgroundSize: "12px 8px",
-                      border: `1px solid ${theme.accent}33`,
-                      borderRadius: 2,
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 14,
-                      color: heardFrom ? colors.white : theme.accentMuted,
-                      appearance: "none",
-                      WebkitAppearance: "none",
-                      MozAppearance: "none",
-                      cursor: "pointer",
-                      transition: "all 0.3s ease",
-                    }}
-                    onFocus={(e) => {
-                      e.target.style.outline = `2px solid ${colors.teal}`;
-                      e.target.style.outlineOffset = "2px";
-                    }}
-                    onBlur={(e) => {
-                      e.target.style.outline = "none";
-                    }}
-                  >
-                    <option value="" style={{ background: "#243333", color: "#FFFFFF" }}>
-                      How did you hear about me? (optional)
-                    </option>
-                    {[
-                      "Google Search",
-                      "Psychology Today",
-                      "Social Media",
-                      "Friend/Colleague",
-                      "Another Therapist/Doctor",
-                      "Other",
-                    ].map((option) => (
-                      <option key={option} value={option} style={{ background: "#243333", color: "#FFFFFF" }}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                  {formError && (
-                  <p role="alert" style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 13,
-                    color: "#FF8A8A",
-                    margin: "0 0 16px",
-                    lineHeight: 1.6,
-                  }}>{formError}</p>
-                )}
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  style={{
-                    width: "100%",
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 13, fontWeight: 500,
-                    letterSpacing: "0.12em", textTransform: "uppercase",
-                    color: darkMode ? theme.bg : colors.white,
-                    background: theme.accent,
-                    border: "none",
-                    padding: "14px 32px",
-                    borderRadius: 2,
-                    cursor: "pointer",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={e => e.target.style.opacity = "0.9"}
-                  onMouseLeave={e => e.target.style.opacity = "1"}
-                  onFocus={(e) => {
-                    e.target.style.outline = `2px solid ${colors.teal}`;
-                    e.target.style.outlineOffset = "2px";
-                  }}
-                  onBlur={(e) => {
-                    e.target.style.outline = "none";
-                  }}
-                >
-                  {submitting ? "Sending..." : "Send Message"}
-                </button>
-              </form>
-            )}
+          <div style={{ ...cardStyle, marginTop: 32 }}>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 30, fontWeight: 400, marginBottom: 12 }}>What happens next?</h2>
+            <p style={bodyStyle}>During the consultation, we can discuss what brings you to therapy, the approach, scheduling, and fees. Sessions are $210 for 45 minutes or $280 for 60 minutes. Bayside is a private-pay practice; a superbill is available for possible out-of-network reimbursement, depending on your plan.</p>
           </div>
+          <p style={{ ...bodyStyle, fontSize: 14, marginTop: 28, textAlign: "center" }}>Bayside does not provide emergency response through routine calls or booking. If you need immediate support, visit the <a href="/crisis-resources" style={{ color: theme.accent, textDecoration: "underline" }}>crisis resources page</a>.</p>
         </div>
-
-        <div style={{ textAlign: "center" }}>
-          <p style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 15, color: colors.tealMuted,
-            margin: "0 0 8px",
-          }}>
-            Prefer to call? Call or leave a voicemail at{" "}
-            <a href="tel:+14158575799" style={{ color: colors.tealLight, fontWeight: 500 }}>
-              415-857-5799
-            </a>
-          </p>
-          <p style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 12, color: colors.tealMuted,
-            margin: "0 0 16px",
-          }}>
-            Please keep voicemails brief: your name, phone number, and best time to reach you. Referring providers are welcome to call as well.
-          </p>
-          <p style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 13, color: colors.tealMuted,
-            margin: 0,
-          }}>
-            Or email us directly at{" "}
-            <a href="mailto:hello@baysidewellnessandcounseling.com" style={{ color: colors.tealLight }}>
-              hello@baysidewellnessandcounseling.com
-            </a>
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 }
@@ -8634,7 +8125,7 @@ function SEOLandingPage({ slug }) {
           textAlign: "center",
           transition: "color 0.3s ease",
         }}>
-          Getting started is simple. Click the button below to schedule a free 15-minute consultation, or use the contact form to reach out with questions. I typically respond within 1-2 business days.
+          Start with a free 15-minute consultation through the booking calendar, or call 415-857-5799 with a brief question about fit and availability. The contact page has both options.
         </p>
         <div style={{ textAlign: "center" }}>
           <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
@@ -8849,7 +8340,7 @@ function CrisisResourcesPage() {
     { title: "Relationship abuse and safety support", description: "The National Domestic Violence Hotline provides support and safety-planning information. If your device or browsing may be monitored, consider whether it is safe to open a resource.", links: [
       { label: "National Domestic Violence Hotline", href: "https://www.thehotline.org/" },
     ] },
-    { title: "Finding ongoing care", description: "For non-emergency support, NIMH explains ways to find mental health care. Routine appointments and practice inquiry forms are not immediate crisis services.", links: [
+    { title: "Finding ongoing care", description: "For non-emergency support, NIMH explains ways to find mental health care. Routine appointments and callbacks are not immediate crisis services.", links: [
       { label: "NIMH: help for mental illnesses", href: "https://www.nimh.nih.gov/health/find-help" },
     ] },
   ];
@@ -8860,7 +8351,7 @@ function CrisisResourcesPage() {
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(40px, 6vw, 64px)", fontWeight: 300 }}>Immediate Support & Crisis Resources</h1>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 17, lineHeight: 1.8 }}>If you are in immediate danger or have a medical emergency, call <a href="tel:911" style={{ color: theme.accent }}>911</a> or go to the nearest emergency department. Do not wait for a reply from Bayside.</p>
-          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, lineHeight: 1.8, color: theme.textMuted }}>Bayside is an outpatient individual therapy practice. The contact form, email, and booking calendar are not monitored for emergency response.</p>
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, lineHeight: 1.8, color: theme.textMuted }}>Bayside is an outpatient individual therapy practice. Routine calls and the booking calendar are not monitored for emergency response.</p>
           <div style={{ display: "grid", gap: 24, marginTop: 32 }}>
             {resources.map((resource) => (
               <div key={resource.title} style={{ background: theme.bgAlt, border: `1px solid ${theme.border}`, borderRadius: 4, padding: 28 }}>
