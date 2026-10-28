@@ -5998,23 +5998,18 @@ function Nav() {
           aria-pressed={darkMode}
           className="dark-mode-toggle"
           style={{
-            display: "flex", alignItems: "center", justifyContent: "center",
-            width: 36, height: 36, flexShrink: 0,
-            color: theme.textMuted, background: "transparent",
-            border: `1px solid ${theme.border}`, borderRadius: "50%",
-            cursor: "pointer", padding: 0,
+            position: "relative", width: 24, height: 40, flexShrink: 0,
+            background: darkMode ? theme.accent : "#E0E0E0",
+            borderRadius: 24, border: "none", cursor: "pointer",
+            transition: "background 0.3s ease", padding: 0,
           }}
         >
-          {darkMode ? (
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
-            </svg>
-          ) : (
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M20.8 13.1A9 9 0 0 1 10.9 3.2 9 9 0 1 0 20.8 13.1Z" />
-            </svg>
-          )}
+          <div aria-hidden="true" style={{
+            position: "absolute", top: darkMode ? 19 : 3,
+            left: "50%", transform: "translateX(-50%)",
+            width: 18, height: 18, background: "white", borderRadius: "50%",
+            transition: "top 0.3s ease", boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
+          }} />
         </button>
         {/* Mobile menu button */}
         <button onClick={() => setMenuOpen(!menuOpen)} style={{
@@ -8622,7 +8617,6 @@ export default function App() {
           .site-nav-brand > a > div > div:first-child { font-size: 18px !important; }
           .site-nav-brand > a > div > div:last-child { font-size: 8px !important; letter-spacing: 0.14em !important; }
           .site-nav-utilities { gap: 10px !important; }
-          .site-nav-utilities .dark-mode-toggle { width: 32px !important; height: 32px !important; }
           .site-nav .mobile-menu-btn { flex-shrink: 0; }
           section > div { grid-template-columns: 1fr !important; }
           .contact-grid { 
