@@ -5915,7 +5915,7 @@ function Nav() {
       <div className="site-nav-inner" style={{
         maxWidth: 1280, margin: "0 auto",
         display: "flex", alignItems: "center", justifyContent: "space-between",
-        gap: 32, minHeight: 80,
+        gap: 24, minHeight: 88,
       }}>
         <div className="site-nav-brand" style={{ display: "flex", alignItems: "center", gap: 16, flexShrink: 0 }}>
           <Link to="/" onClick={() => window.scrollTo(0, 0)} style={{ 
@@ -5941,41 +5941,11 @@ function Nav() {
           </div>
         </Link>
 
-        {/* Dark Mode Toggle */}
-        <button
-          onClick={toggleDarkMode}
-          aria-label="Toggle dark mode"
-          className="dark-mode-toggle"
-          style={{
-            position: "relative",
-            width: 24,
-            height: 40,
-            background: darkMode ? theme.accent : "#E0E0E0",
-            borderRadius: 24,
-            border: "none",
-            cursor: "pointer",
-            transition: "background 0.3s ease",
-            padding: 0,
-          }}
-        >
-          <div style={{
-            position: "absolute",
-            top: darkMode ? 19 : 3,
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: 18,
-            height: 18,
-            background: "white",
-            borderRadius: "50%",
-            transition: "top 0.3s ease",
-            boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
-          }} />
-        </button>
         </div>
 
         {/* Desktop nav */}
-        <div style={{ display: "flex", alignItems: "center", gap: 32, flexShrink: 0 }} className="desktop-nav">
-          <div className="site-nav-links" style={{ display: "flex", alignItems: "center", gap: 24 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 28, flex: 1, minWidth: 0, marginLeft: 36 }} className="desktop-nav">
+          <div className="site-nav-links" style={{ display: "flex", alignItems: "center", gap: 24, margin: "0 auto" }}>
           {navLinks.map(link => (
             <Link key={link.name} to={link.path} onClick={() => window.scrollTo(0, 0)} style={{
               background: "none", border: "none", cursor: "pointer",
@@ -5995,12 +5965,12 @@ function Nav() {
             >{link.name}</Link>
           ))}
           </div>
-          <div className="site-nav-actions" style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
+          <div className="site-nav-actions" style={{ display: "flex", alignItems: "center", gap: 20, flexShrink: 0 }}>
           <a href={clientPortalUrl} target="_blank" rel="noopener noreferrer" aria-label="Client Portal (opens Jane in a new tab)" style={{
             fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500,
             letterSpacing: "0.02em", whiteSpace: "nowrap", flexShrink: 0,
-            color: theme.accent, border: `1px solid ${theme.accent}`, borderRadius: 2,
-            padding: "12px 16px", textDecoration: "none", lineHeight: 1.2,
+            color: theme.textMuted,
+            padding: "12px 4px", textDecoration: "none", lineHeight: 1.2,
           }}>Client Portal</a>
           <button onClick={() => handleNavigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
@@ -6021,12 +5991,38 @@ function Nav() {
           </div>
         </div>
 
+        <div className="site-nav-utilities" style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
+        <button
+          onClick={toggleDarkMode}
+          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          aria-pressed={darkMode}
+          className="dark-mode-toggle"
+          style={{
+            display: "flex", alignItems: "center", justifyContent: "center",
+            width: 36, height: 36, flexShrink: 0,
+            color: theme.textMuted, background: "transparent",
+            border: `1px solid ${theme.border}`, borderRadius: "50%",
+            cursor: "pointer", padding: 0,
+          }}
+        >
+          {darkMode ? (
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+          ) : (
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M20.8 13.1A9 9 0 0 1 10.9 3.2 9 9 0 1 0 20.8 13.1Z" />
+            </svg>
+          )}
+        </button>
         {/* Mobile menu button */}
         <button onClick={() => setMenuOpen(!menuOpen)} style={{
           display: "none", background: "none", border: "none",
           cursor: "pointer", color: theme.text, fontSize: 24,
           transition: "color 0.3s ease",
         }} className="mobile-menu-btn" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation">☰</button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -8606,6 +8602,11 @@ export default function App() {
           transition: opacity 0.2s ease;
         }
         .seo-body-link a:hover { opacity: 0.7; }
+        @media (max-width: 360px) {
+          .site-nav-brand > a { gap: 6px !important; }
+          .site-nav-brand img { width: 26px !important; height: 26px !important; }
+          .site-nav-brand > a > div > div:last-child { font-size: 7px !important; }
+        }
         @media (max-width: 1240px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
@@ -8620,7 +8621,8 @@ export default function App() {
           .site-nav-brand img { height: 30px !important; width: 30px !important; object-fit: contain; }
           .site-nav-brand > a > div > div:first-child { font-size: 18px !important; }
           .site-nav-brand > a > div > div:last-child { font-size: 8px !important; letter-spacing: 0.14em !important; }
-          .site-nav-brand .dark-mode-toggle { margin-right: 0 !important; flex-shrink: 0; }
+          .site-nav-utilities { gap: 10px !important; }
+          .site-nav-utilities .dark-mode-toggle { width: 32px !important; height: 32px !important; }
           .site-nav .mobile-menu-btn { flex-shrink: 0; }
           section > div { grid-template-columns: 1fr !important; }
           .contact-grid { 
