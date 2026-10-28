@@ -5950,8 +5950,8 @@ function Nav() {
             <Link key={link.name} to={link.path} onClick={() => window.scrollTo(0, 0)} style={{
               background: "none", border: "none", cursor: "pointer",
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 13, fontWeight: 400,
-              letterSpacing: "0.06em",
+              fontSize: 15, fontWeight: 500,
+              letterSpacing: "0.04em",
               color: currentPath === link.path ? theme.accent : theme.textMuted,
               textTransform: "uppercase",
               transition: "color 0.3s ease",
