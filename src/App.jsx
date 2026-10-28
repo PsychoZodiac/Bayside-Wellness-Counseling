@@ -55,6 +55,8 @@ const fonts = `
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
 `;
 
+const clientPortalUrl = "https://baysidewellnessandcounseling.janeapp.com/login";
+
 // ========================================
 // DATA
 // ========================================
@@ -5972,7 +5974,7 @@ function Nav() {
         </div>
 
         {/* Desktop nav */}
-        <div style={{ display: "flex", alignItems: "center", gap: 40 }} className="desktop-nav">
+        <div style={{ display: "flex", alignItems: "center", gap: 20 }} className="desktop-nav">
           {navLinks.map(link => (
             <Link key={link.name} to={link.path} onClick={() => window.scrollTo(0, 0)} style={{
               background: "none", border: "none", cursor: "pointer",
@@ -5991,6 +5993,12 @@ function Nav() {
             onMouseLeave={e => e.target.style.color = currentPath === link.path ? theme.accent : theme.textMuted}
             >{link.name}</Link>
           ))}
+          <a href={clientPortalUrl} target="_blank" rel="noopener noreferrer" aria-label="Client Portal (opens Jane in a new tab)" style={{
+            fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 500,
+            letterSpacing: "0.08em", textTransform: "uppercase", whiteSpace: "nowrap",
+            color: theme.accent, border: `1px solid ${theme.accent}`, borderRadius: 2,
+            padding: "10px 14px", textDecoration: "none",
+          }}>Client Portal</a>
           <button onClick={() => handleNavigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, fontWeight: 500,
@@ -6014,12 +6022,12 @@ function Nav() {
           display: "none", background: "none", border: "none",
           cursor: "pointer", color: theme.text, fontSize: 24,
           transition: "color 0.3s ease",
-        }} className="mobile-menu-btn">☰</button>
+        }} className="mobile-menu-btn" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation">☰</button>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div style={{
+        <div id="mobile-navigation" style={{
           background: theme.bg, borderTop: `1px solid ${theme.border}`,
           padding: "20px 40px 30px",
           transition: "all 0.3s ease",
@@ -6040,6 +6048,12 @@ function Nav() {
               {link.name}
             </Link>
           ))}
+          <a href={clientPortalUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} aria-label="Client Portal (opens Jane in a new tab)" style={{
+            display: "block", padding: "14px 0", width: "100%",
+            fontFamily: "'DM Sans', sans-serif", fontSize: 14,
+            letterSpacing: "0.1em", textTransform: "uppercase",
+            color: theme.accent, textDecoration: "none", borderBottom: `1px solid ${theme.border}`,
+          }}>Client Portal</a>
           <button onClick={() => handleNavigate("/contact")}
             style={{
               display: "block", padding: "12px 0", width: "100%",
@@ -6155,6 +6169,12 @@ Virtual therapy for adults and young adults across California.
                 >{link.name}</Link>
               </div>
             ))}
+            <a href={clientPortalUrl} target="_blank" rel="noopener noreferrer" aria-label="Client Portal (opens Jane in a new tab)" style={{
+              display: "inline-block", marginTop: 8, padding: "10px 12px",
+              fontFamily: "'DM Sans', sans-serif", fontSize: 12,
+              color: colors.white, border: `1px solid ${theme.accentMuted}`,
+              borderRadius: 2, textDecoration: "none",
+            }}>Client Portal →</a>
           </div>
           
           <div>
@@ -8642,6 +8662,10 @@ export default function App() {
           transition: opacity 0.2s ease;
         }
         .seo-body-link a:hover { opacity: 0.7; }
+        @media (min-width: 769px) and (max-width: 1200px) {
+          .desktop-nav { display: none !important; }
+          .mobile-menu-btn { display: block !important; }
+        }
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
