@@ -6169,16 +6169,17 @@ Virtual therapy for adults and young adults across California.
                 >{link.name}</Link>
               </div>
             ))}
+
+          </div>
+          
+          <div>
+            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accentMuted, marginBottom: 16, transition: "color 0.3s ease" }}>Resources</div>
             <a href={clientPortalUrl} target="_blank" rel="noopener noreferrer" aria-label="Client Portal (opens Jane in a new tab)" style={{
               display: "inline-block", marginTop: 8, padding: "10px 12px",
               fontFamily: "'DM Sans', sans-serif", fontSize: 12,
               color: colors.white, border: `1px solid ${theme.accentMuted}`,
               borderRadius: 2, textDecoration: "none",
             }}>Client Portal →</a>
-          </div>
-          
-          <div>
-            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accentMuted, marginBottom: 16, transition: "color 0.3s ease" }}>Resources</div>
             <div style={{ marginBottom: 8 }}>
               <Link to="/crisis-resources" onClick={() => window.scrollTo(0, 0)} style={{ 
                 background: "none", border: "none", cursor: "pointer", padding: 0,
