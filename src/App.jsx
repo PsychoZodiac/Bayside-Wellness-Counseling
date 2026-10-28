@@ -5904,30 +5904,30 @@ function Nav() {
         Skip to main content
       </a>
       
-      <nav style={{
+      <nav className="site-nav" style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
         background: needsSolidBg ? (darkMode ? "rgba(26,36,36,0.96)" : "rgba(250,247,244,0.96)") : "transparent",
         backdropFilter: needsSolidBg ? "blur(12px)" : "none",
         borderBottom: needsSolidBg ? `1px solid ${theme.border}` : "none",
         transition: "all 0.3s ease",
-        padding: "0 40px",
+        padding: "0 clamp(20px, 3vw, 48px)",
     }}>
-      <div style={{
-        maxWidth: 1200, margin: "0 auto",
+      <div className="site-nav-inner" style={{
+        maxWidth: 1280, margin: "0 auto",
         display: "flex", alignItems: "center", justifyContent: "space-between",
-        height: 72,
+        gap: 32, minHeight: 80,
       }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+        <div className="site-nav-brand" style={{ display: "flex", alignItems: "center", gap: 16, flexShrink: 0 }}>
           <Link to="/" onClick={() => window.scrollTo(0, 0)} style={{ 
             background: "none", border: "none", cursor: "pointer", padding: 0,
-            display: "flex", alignItems: "center", gap: 12, textDecoration: "none",
+            display: "flex", alignItems: "center", gap: 10, textDecoration: "none", whiteSpace: "nowrap",
           }}>
             {/* Bayside Logo */}
            <img 
               src={logo} 
               alt="Bayside Wellness & Counseling"
               style={{ 
-                height: 42,
+                height: 36,
                 width: "auto",
                 display: "block",
                 filter: darkMode ? "brightness(0) invert(1)" : "none",
@@ -5974,39 +5974,42 @@ function Nav() {
         </div>
 
         {/* Desktop nav */}
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }} className="desktop-nav">
+        <div style={{ display: "flex", alignItems: "center", gap: 32, flexShrink: 0 }} className="desktop-nav">
+          <div className="site-nav-links" style={{ display: "flex", alignItems: "center", gap: 24 }}>
           {navLinks.map(link => (
             <Link key={link.name} to={link.path} onClick={() => window.scrollTo(0, 0)} style={{
               background: "none", border: "none", cursor: "pointer",
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13, fontWeight: 400,
-              letterSpacing: "0.12em",
+              letterSpacing: "0.06em",
               color: currentPath === link.path ? theme.accent : theme.textMuted,
               textTransform: "uppercase",
               transition: "color 0.3s ease",
               borderBottom: currentPath === link.path ? `2px solid ${theme.accent}` : "2px solid transparent",
               paddingBottom: 4,
               textDecoration: "none",
-              display: "inline-block",
+              display: "inline-block", whiteSpace: "nowrap", flexShrink: 0,
             }}
             onMouseEnter={e => e.target.style.color = theme.accent}
             onMouseLeave={e => e.target.style.color = currentPath === link.path ? theme.accent : theme.textMuted}
             >{link.name}</Link>
           ))}
+          </div>
+          <div className="site-nav-actions" style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
           <a href={clientPortalUrl} target="_blank" rel="noopener noreferrer" aria-label="Client Portal (opens Jane in a new tab)" style={{
-            fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 500,
-            letterSpacing: "0.08em", textTransform: "uppercase", whiteSpace: "nowrap",
+            fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500,
+            letterSpacing: "0.02em", whiteSpace: "nowrap", flexShrink: 0,
             color: theme.accent, border: `1px solid ${theme.accent}`, borderRadius: 2,
-            padding: "10px 14px", textDecoration: "none",
+            padding: "12px 16px", textDecoration: "none", lineHeight: 1.2,
           }}>Client Portal</a>
           <button onClick={() => handleNavigate("/contact")} style={{
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: 12, fontWeight: 500,
-            letterSpacing: "0.12em",
+            fontSize: 13, fontWeight: 500,
+            letterSpacing: "0.06em",
             color: darkMode ? theme.bg : colors.white,
             textTransform: "uppercase",
             background: theme.accent,
-            padding: "10px 22px",
+            padding: "12px 18px", whiteSpace: "nowrap", flexShrink: 0, lineHeight: 1.2,
             borderRadius: 2,
             border: "none",
             cursor: "pointer",
@@ -6014,7 +6017,8 @@ function Nav() {
           }}
           onMouseEnter={e => e.target.style.background = colors.tealLight}
           onMouseLeave={e => e.target.style.background = colors.teal}
-          >Book Free Consult</button>
+          >Free Consultation</button>
+          </div>
         </div>
 
         {/* Mobile menu button */}
@@ -6079,160 +6083,99 @@ function Nav() {
 
 function Footer() {
   const { darkMode } = useDarkMode();
-  const theme = getTheme(darkMode);
-  
+  const background = darkMode ? "#182525" : "#223333";
+  const ink = "#EFF4F1";
+  const muted = "#B4C7C3";
+  const accent = "#8BC9C0";
+  const line = "rgba(180,199,195,0.18)";
+  const footerLink = { display: "block", width: "fit-content", padding: "5px 0", color: muted, textDecoration: "none", fontSize: 14, lineHeight: 1.6 };
+  const heading = { fontSize: 11, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase", color: accent, margin: "4px 0 18px" };
+  const locations = [
+    { label: "Therapy in Oakland", path: "/therapy-oakland" },
+    { label: "Therapy in San Francisco", path: "/therapy-san-francisco" },
+    { label: "Therapy in Berkeley", path: "/therapy-berkeley" },
+    { label: "Therapy in San Jose", path: "/therapy-san-jose" },
+    { label: "Therapy in Palo Alto", path: "/therapy-palo-alto" },
+    { label: "EMDR Therapy Oakland", path: "/emdr-therapy-oakland" },
+    { label: "IFS Therapy Oakland", path: "/ifs-therapy-oakland" },
+    { label: "Anxiety Therapy Oakland", path: "/anxiety-therapy-oakland" },
+    { label: "Trauma Therapy Oakland", path: "/trauma-therapy-oakland" },
+  ];
+
   return (
-    <footer style={{
-      background: darkMode ? colors.darkBgLight : "#1E2A2A",
-      padding: "40px 40px 30px",
-      borderTop: `1px solid ${theme.accent}22`,
-      transition: "all 0.3s ease",
-    }}>
-      <div style={{ maxWidth: 1400, margin: "0 auto" }}>
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1.5fr 2fr 1fr 1fr",
-          gap: 60, marginBottom: 32,
-          alignItems: "start",
-        }}>
-          <div>
-            <Link to="/" onClick={() => window.scrollTo(0, 0)} style={{ 
-              background: "none", border: "none", cursor: "pointer", padding: 0, textAlign: "left",
-              display: "flex", alignItems: "center", gap: 10, marginBottom: 12, textDecoration: "none",
-            }}>
-              <img 
-                src={logo} 
-                alt="Bayside Wellness & Counseling"
-                style={{ 
-                  height: 36,
-                  width: "auto",
-                  display: "block",
-                  filter: "brightness(0) invert(1)",
-                }}
-              />
+    <footer className="site-footer" style={{ background, color: ink, fontFamily: "'DM Sans', sans-serif", padding: "56px clamp(24px, 4vw, 64px) 24px", borderTop: `1px solid ${line}` }}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        .site-footer a { transition: color 0.2s ease; }
+        .site-footer a:hover { color: #FFFFFF !important; text-decoration: underline !important; text-underline-offset: 4px; }
+        .footer-main { display: grid; grid-template-columns: 1.4fr 1fr 0.7fr 0.9fr; gap: 48px; align-items: start; }
+        .footer-main > * { min-width: 0; }
+        .footer-location-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 24px; }
+        .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        @media (max-width: 1000px) {
+          .footer-main { grid-template-columns: 1.2fr 1fr; gap: 36px 48px; }
+        }
+        @media (max-width: 600px) {
+          .site-footer { padding-top: 36px !important; }
+          .footer-main { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+          .footer-brand { grid-column: 1 / -1; }
+          .footer-services { grid-column: 1 / -1; }
+          .footer-service-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; }
+          .footer-location-links { grid-template-columns: 1fr; }
+          .footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
+        }
+      ` }} />
+      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+        <div className="footer-main">
+          <div className="footer-brand">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} style={{ display: "inline-flex", alignItems: "center", gap: 12, color: ink, textDecoration: "none", marginBottom: 18 }}>
+              <img src={logo} alt="Bayside Wellness & Counseling" style={{ height: 36, width: "auto", filter: "brightness(0) invert(1)", flexShrink: 0 }} />
               <div>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", color: colors.white, fontSize: 18, fontWeight: 600, letterSpacing: "0.08em" }}>BAYSIDE</div>
-                <div style={{ fontFamily: "'DM Sans', sans-serif", color: theme.accentMuted, fontSize: 10, letterSpacing: "0.2em", transition: "color 0.3s ease" }}>WELLNESS & COUNSELING</div>
+                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, fontWeight: 600, letterSpacing: "0.08em", lineHeight: 1.1 }}>BAYSIDE</div>
+                <div style={{ fontSize: 9, letterSpacing: "0.19em", color: accent, marginTop: 4 }}>WELLNESS & COUNSELING</div>
               </div>
             </Link>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", lineHeight: 1.6, margin: "0 0 12px", transition: "color 0.3s ease" }}>
-Virtual therapy for adults and young adults across California.
-            </p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#C0D0D0", lineHeight: 1.7, margin: "0 0 12px" }}>
-              Marcus Ghiasi, LMFT<br />
-              Licensed Marriage and Family Therapist<br />
-              California license #158475
-            </p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: darkMode ? "#6A8888" : "#4A6060", margin: "0 0 6px", transition: "color 0.3s ease" }}>
-              2323 Broadway, Oakland, CA 94612
-            </p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: darkMode ? "#6A8888" : "#4A6060", margin: 0, transition: "color 0.3s ease" }}>
-              <a href="tel:415-857-5799" style={{ color: darkMode ? "#6A8888" : "#4A6060", textDecoration: "none", transition: "color 0.3s ease" }}>
-                415-857-5799
-              </a>
-            </p>
+            <p style={{ color: muted, fontSize: 14, lineHeight: 1.8, maxWidth: 300, margin: "0 0 18px" }}>Virtual individual therapy for adults and young adults across California.</p>
+            <p style={{ fontSize: 13, lineHeight: 1.8, margin: "0 0 14px", color: ink }}>Marcus Ghiasi, LMFT<br />Licensed Marriage and Family Therapist<br />California license #158475</p>
+            <a href="tel:+14158575799" style={{ ...footerLink, color: ink }}>415-857-5799</a>
           </div>
-          
-          {/* Services in 2 columns */}
-          <div>
-            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accentMuted, marginBottom: 16, transition: "color 0.3s ease" }}>Services</div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 24px" }}>
-              {services.map(s => (
-                <Link key={s.slug} to={`/services/${s.slug}`} onClick={() => window.scrollTo(0, 0)} style={{ 
-                  background: "none", border: "none", cursor: "pointer", padding: 0,
-                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
-                  transition: "color 0.3s ease",
-                }}
-                onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
-                onMouseLeave={e => e.target.style.color = darkMode ? "#8A9E9E" : "#6A8080"}
-                >{s.name}</Link>
-              ))}
+
+          <div className="footer-services">
+            <h2 style={heading}>Services</h2>
+            <div className="footer-service-links">
+              {services.map((service) => <Link key={service.slug} to={`/services/${service.slug}`} onClick={() => window.scrollTo(0, 0)} style={footerLink}>{service.name}</Link>)}
             </div>
           </div>
-          
+
           <div>
-            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accentMuted, marginBottom: 16, transition: "color 0.3s ease" }}>Practice</div>
+            <h2 style={heading}>Practice</h2>
             {[
               { name: "About Marcus", path: "/about" },
               { name: "FAQ", path: "/faq" },
               { name: "Blog", path: "/blog" },
               { name: "Contact", path: "/contact" },
-            ].map(link => (
-              <div key={link.name} style={{ marginBottom: 8 }}>
-                <Link to={link.path} onClick={() => window.scrollTo(0, 0)} style={{ 
-                  background: "none", border: "none", cursor: "pointer", padding: 0,
-                  fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
-                  transition: "color 0.3s ease",
-                }}
-                onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
-                onMouseLeave={e => e.target.style.color = darkMode ? "#8A9E9E" : "#6A8080"}
-                >{link.name}</Link>
-              </div>
-            ))}
-
+            ].map((item) => <Link key={item.path} to={item.path} onClick={() => window.scrollTo(0, 0)} style={footerLink}>{item.name}</Link>)}
           </div>
-          
-          <div>
-            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accentMuted, marginBottom: 16, transition: "color 0.3s ease" }}>Resources</div>
-            <a href={clientPortalUrl} target="_blank" rel="noopener noreferrer" aria-label="Client Portal (opens Jane in a new tab)" style={{
-              display: "inline-block", marginTop: 8, padding: "10px 12px",
-              fontFamily: "'DM Sans', sans-serif", fontSize: 12,
-              color: colors.white, border: `1px solid ${theme.accentMuted}`,
-              borderRadius: 2, textDecoration: "none",
-            }}>Client Portal →</a>
-            <div style={{ marginBottom: 8 }}>
-              <Link to="/crisis-resources" onClick={() => window.scrollTo(0, 0)} style={{ 
-                background: "none", border: "none", cursor: "pointer", padding: 0,
-                fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: darkMode ? "#8A9E9E" : "#6A8080", textAlign: "left", textDecoration: "none", display: "block",
-                transition: "color 0.3s ease",
-              }}
-                onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
-                onMouseLeave={e => e.target.style.color = darkMode ? "#8A9E9E" : "#6A8080"}
-              >Crisis Resources</Link>
-            </div>
+
+          <div className="footer-resources">
+            <h2 style={heading}>Resources</h2>
+            <a href={clientPortalUrl} target="_blank" rel="noopener noreferrer" aria-label="Client Portal (opens Jane in a new tab)" style={{ ...footerLink, color: ink }}>Client Portal ↗</a>
+            <Link to="/crisis-resources" onClick={() => window.scrollTo(0, 0)} style={footerLink}>Crisis Resources</Link>
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)} style={footerLink}>Free Consultation</Link>
           </div>
         </div>
 
-        <div style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: "8px 24px",
-          marginBottom: 28,
-        }}>
-          {[
-            { label: "Therapy in Oakland", path: "/therapy-oakland" },
-            { label: "Therapy in San Francisco", path: "/therapy-san-francisco" },
-            { label: "Therapy in Berkeley", path: "/therapy-berkeley" },
-            { label: "Therapy in San Jose", path: "/therapy-san-jose" },
-            { label: "Therapy in Palo Alto", path: "/therapy-palo-alto" },
-            { label: "EMDR Therapy Oakland", path: "/emdr-therapy-oakland" },
-            { label: "IFS Therapy Oakland", path: "/ifs-therapy-oakland" },
-            { label: "Anxiety Therapy Oakland", path: "/anxiety-therapy-oakland" },
-            { label: "Trauma Therapy Oakland", path: "/trauma-therapy-oakland" },
-          ].map(link => (
-            <Link key={link.path} to={link.path} onClick={() => window.scrollTo(0, 0)} style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 12,
-              color: darkMode ? "#8A9E9E" : "#6A8080",
-              textDecoration: "none",
-              transition: "color 0.3s ease",
-            }}
-            onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
-            onMouseLeave={e => e.target.style.color = darkMode ? "#8A9E9E" : "#6A8080"}
-            >{link.label}</Link>
-          ))}
+        <details style={{ borderTop: `1px solid ${line}`, borderBottom: `1px solid ${line}`, marginTop: 36, padding: "18px 0", color: muted }}>
+          <summary style={{ cursor: "pointer", fontSize: 13, lineHeight: 1.6, color: ink }}>Serving California · Explore locations and services</summary>
+          <div className="footer-location-links" style={{ paddingTop: 16 }}>
+            {locations.map((item) => <Link key={item.path} to={item.path} onClick={() => window.scrollTo(0, 0)} style={footerLink}>{item.label}</Link>)}
+          </div>
+        </details>
+
+        <div className="footer-bottom" style={{ paddingTop: 22, color: muted, fontSize: 12, lineHeight: 1.7 }}>
+          <p style={{ margin: 0 }}>© 2026 Bayside Wellness & Counseling</p>
+          <p style={{ margin: 0 }}>Oakland-based · Virtual sessions throughout California</p>
         </div>
-        <div style={{
-          borderTop: `1px solid ${theme.accent}22`,
-          paddingTop: 20,
-          textAlign: "center",
-          transition: "border-color 0.3s ease",
-        }}>
-          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: darkMode ? "#6A8888" : "#4A6060", margin: 0, transition: "color 0.3s ease" }}>
-            © 2026 Bayside Wellness & Counseling · All rights reserved
-          </p>
-        </div>
+        <p style={{ margin: "10px 0 0", fontSize: 11, color: muted, lineHeight: 1.7 }}>Mailing address: 2323 Broadway, Oakland, CA 94612 · All rights reserved</p>
       </div>
     </footer>
   );
@@ -8663,15 +8606,23 @@ export default function App() {
           transition: opacity 0.2s ease;
         }
         .seo-body-link a:hover { opacity: 0.7; }
-        @media (min-width: 769px) and (max-width: 1200px) {
+        @media (max-width: 1240px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
         }
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
+          .site-nav { padding: 0 18px !important; }
+          .site-nav-inner { gap: 12px !important; min-height: 72px !important; }
+          .site-nav-brand { gap: 10px !important; }
+          .site-nav-brand > a { gap: 8px !important; }
+          .site-nav-brand img { height: 30px !important; width: 30px !important; object-fit: contain; }
+          .site-nav-brand > a > div > div:first-child { font-size: 18px !important; }
+          .site-nav-brand > a > div > div:last-child { font-size: 8px !important; letter-spacing: 0.14em !important; }
+          .site-nav-brand .dark-mode-toggle { margin-right: 0 !important; flex-shrink: 0; }
+          .site-nav .mobile-menu-btn { flex-shrink: 0; }
           section > div { grid-template-columns: 1fr !important; }
-          footer > div > div:first-child { grid-template-columns: 1fr !important; }
           .contact-grid { 
             grid-template-columns: 1fr !important;
             display: flex !important;
