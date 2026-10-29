@@ -69,8 +69,8 @@ export const generateMetadata = ({
 
 export const mainPages = {
   home: generateMetadata({
-    title: "Bayside Wellness & Counseling | Therapy in Oakland, CA",
-    description: "Virtual individual therapy for adults and young adults in California with Marcus Ghiasi, LMFT. Oakland-based practice. Free 15-minute consultation.",
+    title: "Oakland-Based Online Therapy | Bayside Wellness & Counseling",
+    description: "Virtual individual therapy for adults across California. Support for anxiety, trauma, depression, and relationships. Book a free 15-minute consultation.",
     keywords: ["Oakland therapist", "LMFT California", "EMDR therapy", "IFS therapy", "trauma therapy", "anxiety therapy", "depression counseling", "virtual therapy California", "telehealth therapy"],
     path: "/",
   }),
