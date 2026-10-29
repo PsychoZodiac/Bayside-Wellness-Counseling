@@ -72,7 +72,7 @@ const services = [
     "name": "IFS Therapy (Parts Work)",
     "slug": "ifs",
     "shortDesc": "Understanding internal conflict",
-    "desc": "IFS uses the language of parts to explore conflicting feelings, self-criticism, and protective habits. At Bayside, it is used in individual therapy, not sessions involving your family members."
+    "desc": "IFS-informed parts work explores conflicting feelings, self-criticism, and protective habits within individual therapy for adults."
   },
   {
     "name": "Cognitive Behavioral Therapy",
@@ -103,47 +103,397 @@ const services = [
 // Detailed content for individual service pages
 const serviceDetails = {
   "emdr": {
-    "intro": "A reminder of an accident, loss, or frightening experience can bring back distress even when you know the event is over. In therapy, we can explore the reminders, their effect on daily life, and whether memory-focused work is an appropriate next step.",
-    "howItWorks": "EMDR involves assessment, preparation, and work with selected memories using bilateral stimulation, such as guided eye movements. Processing does not have to begin in the first session. We discuss your history, ways to manage distress, and whether this approach fits your needs. There is no fixed number of sessions or promised outcome. We can review what is changing, what remains difficult, and whether to adjust the approach, frequency, or plan for care.",
-    "whoThisHelps": "A structured approach to working with distressing memories and the reactions connected to them. A consultation can help clarify fit, including whether another approach or provider would better meet your needs.",
-    "ctaHeading": "Ready to move forward?",
-    "ctaText": "Ask about this approach in a free 15-minute consultation with Marcus Ghiasi, LMFT. Virtual individual sessions are available to adults physically in California."
+    "slug": "emdr",
+    "name": "EMDR Therapy",
+    "seoTitle": "Online EMDR Therapy | Oakland-Based Bayside",
+    "metaDescription": "Virtual EMDR therapy with Marcus Ghiasi, LMFT. Oakland-based care for adults across California, with preparation, collaborative pacing, and a free consultation.",
+    "h1": "EMDR therapy for adults in California.",
+    "dek": "Work with difficult experiences at a pace you can participate in.",
+    "intro": "An experience may be over while reminders of it still interrupt your life. You might avoid a place, become tense during an ordinary interaction, or find that a memory brings back distress you did not expect. EMDR offers a structured way to work with trauma-related memories and reactions when assessment indicates that the approach is appropriate.",
+    "sections": [
+      [
+        "What is EMDR?",
+        "Eye Movement Desensitization and Reprocessing, or EMDR, is a trauma-focused psychotherapy used to treat PTSD. During memory processing, attention to aspects of an experience is combined with bilateral stimulation, which can involve guided eye movements or other alternating stimulation. The work also includes assessment, preparation, and review; processing is one part of the approach."
+      ],
+      [
+        "When it may be worth discussing",
+        "You can ask about EMDR if distressing memories, reminders, avoidance, or trauma-related reactions are affecting daily life. An accident, frightening event, or painful experience may be part of that conversation. The effect on you matters, and a consultation can begin without a detailed account of what happened. A fuller assessment helps determine whether EMDR, another approach, or a different type of care fits your needs."
+      ],
+      [
+        "What treatment can involve",
+        "<strong>Assessment and a shared focus.</strong> We discuss your concerns, history, current circumstances, and what you want help with. Any proposed focus should make sense to you.\n\n<strong>Preparation.</strong> Before processing, we discuss ways to manage distress, how to communicate a need to pause, and how sessions will close. Preparation is part of treatment.\n\n<strong>Processing and review.</strong> When appropriate, the work turns toward a selected memory or experience. We review your responses and goals over time, including whether the plan or pace needs adjusting."
+      ],
+      [
+        "Virtual EMDR at Bayside",
+        "Marcus Ghiasi, LMFT, completed EMDR Basic Training through the EMDR Institute in 2024. He provides individual sessions online to adults physically located in California. Before memory-focused work, discuss the practical setup, privacy, how to reconnect if video drops, and the support available after an appointment. The consultation is an opportunity to ask about the method and whether an assessment makes sense."
+      ]
+    ],
+    "faqs": [
+      [
+        "Will I need to describe every detail?",
+        "You can ask how much detail is needed at each stage. EMDR does not generally require a full spoken account of every aspect of an experience, although talking about relevant history and responses remains part of assessment and care."
+      ],
+      [
+        "Do we begin processing immediately?",
+        "Not automatically. The early work includes understanding your concerns and considering preparation, current circumstances, and readiness. Ask Marcus what he recommends and why."
+      ],
+      [
+        "How long will treatment take?",
+        "Length depends on your concerns, goals, and response. We discuss what progress would look like and revisit the plan as the work develops. Bring questions about your priorities and practical constraints so they can be considered from the beginning."
+      ]
+    ],
+    "cta": "Ask about EMDR in a free 15-minute consultation. You can discuss your concerns, the virtual format, and whether to schedule a full appointment.",
+    "related": [
+      [
+        "Meet Marcus and review his training",
+        "/about"
+      ],
+      [
+        "A beginner’s guide to EMDR",
+        "/blog/beginners-guide-to-emdr"
+      ],
+      [
+        "What a course of EMDR can involve",
+        "/blog/emdr-trauma-therapy-guide"
+      ]
+    ],
+    "sources": [
+      [
+        "VA National Center for PTSD: EMDR for PTSD",
+        "https://www.ptsd.va.gov/understand_tx/emdr.asp"
+      ],
+      [
+        "VA National Center for PTSD: EMDR treatment process",
+        "https://www.ptsd.va.gov/professional/treat/txessentials/emdr_pro.asp"
+      ]
+    ]
   },
   "ifs": {
-    "intro": "Self-criticism can sound like a plan for improvement while leaving you more anxious or discouraged. Parts work can explore what the critical voice is trying to prevent, how it affects you, and other ways to respond to mistakes.",
-    "howItWorks": "Internal Family Systems uses the language of parts to explore different feelings, needs, and ways of coping. You might notice a part that pushes hard and another that wants to withdraw. We can approach both with curiosity without treating them as separate people or assuming the model explains every experience. There is no fixed number of sessions or promised outcome. We can review what is changing, what remains difficult, and whether to adjust the approach, frequency, or plan for care.",
-    "whoThisHelps": "Individual parts work for understanding inner conflict, self-criticism, and protective habits. A consultation can help clarify fit, including whether another approach or provider would better meet your needs.",
-    "ctaHeading": "Curious about parts work?",
-    "ctaText": "Ask about this approach in a free 15-minute consultation with Marcus Ghiasi, LMFT. Virtual individual sessions are available to adults physically in California."
+    "slug": "ifs",
+    "name": "IFS-Informed Therapy",
+    "seoTitle": "IFS-Informed Therapy & Parts Work | Bayside",
+    "metaDescription": "Explore IFS-informed therapy for self-criticism and inner conflict with Marcus Ghiasi, LMFT. Virtual individual sessions for adults across California.",
+    "h1": "IFS-informed therapy and parts work.",
+    "dek": "Make room to understand the different feelings pulling you in different directions.",
+    "intro": "You might want to set a boundary and then feel guilty for doing it. Part of you may push to achieve more while another part wants to stop. These experiences can be frustrating, especially when criticizing yourself becomes another part of the cycle. IFS-informed parts work offers a way to explore conflicting feelings and responses with curiosity.",
+    "sections": [
+      [
+        "What “parts work” means",
+        "Internal Family Systems, or IFS, is a therapeutic framework that uses the language of parts to describe different inner experiences. A person might notice a critical voice, an urge to withdraw, or a strong need to keep others happy. This is one way of exploring experience; it does not require believing that you are literally separate people."
+      ],
+      [
+        "What we can explore",
+        "Parts work can make room for questions about self-criticism, perfectionism, people-pleasing, emotional distance, and uncertainty about what you need. Instead of choosing which reaction is the real you, we can explore what each response is concerned about and what happens when it takes over. The focus remains on how these patterns affect your life and choices."
+      ],
+      [
+        "An example of the work",
+        "Imagine agreeing to another responsibility and then feeling resentful. One response may worry that saying no will disappoint someone. Another may be exhausted by being available. In a session, we could explore both experiences, notice what makes the conversation difficult, and consider a boundary that fits your circumstances."
+      ],
+      [
+        "An IFS-informed approach at Bayside",
+        "Marcus uses IFS-informed parts work within individual therapy. It may be combined with cognitive behavioral or psychodynamic perspectives, depending on your concerns and preferences. You do not need to use parts language if it feels unnatural. We can discuss the ideas in everyday terms and keep the focus on what is useful to you.\n\nA session might involve noticing a familiar reaction, describing the conflict around it, and exploring another way to respond. Understanding and practical choices can develop together."
+      ]
+    ],
+    "faqs": [
+      [
+        "Is this the same as family therapy?",
+        "No. The word “family” is part of the model’s name. Bayside’s listed services are individual therapy for adults; you do not bring family members to these sessions."
+      ],
+      [
+        "Do I need to know about IFS first?",
+        "No. Marcus can introduce the relevant ideas and explain why they may be helpful. You can ask questions, use your own language, or discuss another approach."
+      ],
+      [
+        "Will we have to assume every reaction comes from childhood?",
+        "No. Earlier experiences may be relevant, but current relationships, circumstances, and needs deserve attention too. A framework should help open questions rather than provide a fixed explanation for everything."
+      ]
+    ],
+    "cta": "Bring your questions about parts work to a free 15-minute consultation. You do not need to choose a therapy model before reaching out.",
+    "related": [
+      [
+        "Meet Marcus and learn about his approach",
+        "/about"
+      ],
+      [
+        "An introduction to IFS",
+        "/blog/beginners-guide-to-ifs"
+      ],
+      [
+        "Setting boundaries when saying no is difficult",
+        "/blog/setting-boundaries-in-relationships"
+      ]
+    ],
+    "sources": [
+      [
+        "IFS Institute: Overview of the model",
+        "https://ifs-institute.com/resources/articles/internal-family-systems-model-outline"
+      ]
+    ]
   },
   "cbt": {
-    "intro": "An unanswered message or a small mistake can quickly become evidence that something terrible will happen. We can separate what is known from what is feared and practice responding to uncertainty without endless reassurance.",
-    "howItWorks": "Cognitive Behavioral Therapy looks at the interaction between a situation, your interpretation, your feelings, and what you do next. Sessions may include tracking patterns, testing predictions, and planning manageable steps between appointments. The aim is a more workable response, not forced positive thinking. There is no fixed number of sessions or promised outcome. We can review what is changing, what remains difficult, and whether to adjust the approach, frequency, or plan for care.",
-    "whoThisHelps": "Practical work with thoughts, emotions, and behaviors that keep anxiety or low mood going. A consultation can help clarify fit, including whether another approach or provider would better meet your needs.",
-    "ctaHeading": "Want a practical approach?",
-    "ctaText": "Ask about this approach in a free 15-minute consultation with Marcus Ghiasi, LMFT. Virtual individual sessions are available to adults physically in California."
+    "slug": "cbt",
+    "name": "Cognitive Behavioral Therapy",
+    "seoTitle": "Online CBT for Anxiety & Depression | Bayside",
+    "metaDescription": "CBT-informed individual therapy for anxiety, depression, worry, and avoidance. Work with Oakland-based Marcus Ghiasi, LMFT, online across California.",
+    "h1": "Cognitive Behavioral Therapy for anxiety and low mood.",
+    "dek": "Look closely at the pattern. Practice a different response.",
+    "intro": "An unanswered message can lead to repeated checking. A difficult task can become something you avoid until the pressure grows. Cognitive Behavioral Therapy, or CBT, offers a practical framework for examining how thoughts, feelings, and actions influence each other—and where a different response may be possible.",
+    "sections": [
+      [
+        "What we pay attention to",
+        "The work starts with situations that matter to you. What happened? What did you predict or assume? What did you feel, and what did you do next? Looking at this sequence can make a broad concern such as anxiety or low mood more specific and workable. Actual circumstances and stressors remain part of the picture."
+      ],
+      [
+        "What CBT can look like in a session",
+        "You and Marcus may examine a recent example, consider the evidence for a prediction, and identify a step to try outside the session. If you avoid asking a question because you expect criticism, for instance, the work could include examining that expectation and planning a manageable way to ask. We can then review what happened and what you learned."
+      ],
+      [
+        "Practice that fits your life",
+        "Practice between appointments may involve noticing a recurring pattern, trying an activity you have put off, or responding differently to uncertainty. You and Marcus can agree on something relevant and realistic. If a plan is difficult to use, that gives us information about the plan, the barriers, or the support you need."
+      ],
+      [
+        "How this fits into therapy at Bayside",
+        "Marcus draws on CBT alongside other approaches when appropriate. Practical work can sit alongside exploration of relationships, self-criticism, and the experiences connected to a concern. We discuss the reason for a recommendation and how it relates to your goals.\n\nCBT may be worth discussing when worry, avoidance, repeated reassurance, or withdrawal are narrowing your choices. A consultation helps clarify what you need; assessment guides the treatment plan."
+      ]
+    ],
+    "faqs": [
+      [
+        "Is CBT about replacing negative thoughts with positive ones?",
+        "The focus is on examining interpretations and responses more carefully. An alternative thought should be credible and useful, rather than something you feel pressured to believe."
+      ],
+      [
+        "Will every session involve worksheets?",
+        "Tools can be discussed according to your goals and preferences. The important question is whether a way of noticing, practicing, or reviewing a pattern helps you use the work in daily life."
+      ],
+      [
+        "What if I understand the pattern but still repeat it?",
+        "That is something to explore rather than a reason to blame yourself. We can look at the conditions around the pattern, the difficulty of the planned step, and whether the approach needs adjusting."
+      ]
+    ],
+    "cta": "Ask how practical, structured work could fit your concerns in a free 15-minute consultation with Marcus.",
+    "related": [
+      [
+        "Meet Marcus",
+        "/about"
+      ],
+      [
+        "Why anxiety can get worse at night",
+        "/blog/why-anxiety-gets-worse-at-night"
+      ],
+      [
+        "Learn about therapy for young adults",
+        "/services/young-adults"
+      ]
+    ],
+    "sources": [
+      [
+        "NHS: Cognitive behavioural therapy",
+        "https://www.nhs.uk/tests-and-treatments/cognitive-behavioural-therapy-cbt/"
+      ]
+    ]
   },
   "psychodynamic": {
-    "intro": "Different relationships may leave you with a similar feeling: overlooked, responsible for everyone, or afraid to ask for more. We can examine the pattern without assuming every difficulty has the same cause.",
-    "howItWorks": "Psychodynamic work makes room for themes that recur across relationships and over time. We can notice what feels difficult to say, how you respond to closeness or conflict, and how earlier expectations influence present choices. Understanding is connected to what you want to do differently now. There is no fixed number of sessions or promised outcome. We can review what is changing, what remains difficult, and whether to adjust the approach, frequency, or plan for care.",
-    "whoThisHelps": "Exploring recurring relationship patterns, emotional conflicts, and the meaning of earlier experiences. A consultation can help clarify fit, including whether another approach or provider would better meet your needs.",
-    "ctaHeading": "Looking for deeper understanding?",
-    "ctaText": "Ask about this approach in a free 15-minute consultation with Marcus Ghiasi, LMFT. Virtual individual sessions are available to adults physically in California."
+    "slug": "psychodynamic",
+    "name": "Psychodynamic Therapy",
+    "seoTitle": "Online Psychodynamic Therapy | Oakland-Based Bayside",
+    "metaDescription": "Explore recurring emotional and relationship patterns through psychodynamic-informed therapy with Marcus Ghiasi, LMFT. Virtual sessions across California.",
+    "h1": "Psychodynamic therapy for patterns that keep returning.",
+    "dek": "Explore how familiar expectations shape what happens now.",
+    "intro": "Different relationships may leave you with a similar feeling: responsible for everyone, afraid to ask for more, or expecting to be let down. Psychodynamic perspectives can help us examine how these patterns develop, what brings them into the present, and what you want to do differently.",
+    "sections": [
+      [
+        "The questions behind a recurring pattern",
+        "Some ways of relating become familiar before we have words for them. You might minimize a need, anticipate criticism, or pull away when closeness becomes uncomfortable. Therapy gives us time to look at specific interactions and the meanings you attach to them. Earlier experiences can be relevant alongside what is happening in your life today."
+      ],
+      [
+        "What sessions can involve",
+        "You can bring a recent disagreement, a decision, a feeling that is difficult to explain, or something that happened between sessions. Marcus may help you notice a repeated theme, consider an expectation you had not questioned, or stay with a feeling long enough to understand it more clearly. There is room to consider several explanations and to disagree with an interpretation."
+      ],
+      [
+        "Connecting understanding with a different choice",
+        "Recognizing a pattern does not automatically tell you how to change it. We can connect reflection with a present decision: expressing a preference, noticing the urge to withdraw, or asking for clarification before assuming rejection. We can review what happened and what remains difficult. The aim is to make the understanding relevant to your life."
+      ],
+      [
+        "Psychodynamic perspectives at Bayside",
+        "Marcus integrates psychodynamic perspectives into individual therapy and may draw on other approaches when they fit your concerns. You do not need a complete account of your childhood to begin. We can start with what you notice now and explore the history as it becomes relevant.\n\nThis work may interest adults who want to understand recurring relationship difficulties, self-criticism, emotional conflict, or patterns that have continued despite efforts to change them."
+      ]
+    ],
+    "faqs": [
+      [
+        "Will therapy focus entirely on the past?",
+        "Present relationships, current stress, and the changes you want matter throughout the work. We consider earlier experiences when they help clarify what is happening now."
+      ],
+      [
+        "What if I do not know what to talk about?",
+        "You can begin with that uncertainty. A recent moment, a reaction, or something that feels hard to name can provide a starting point."
+      ],
+      [
+        "Can we discuss practical goals?",
+        "Yes. We can talk about what you want to be different and revisit whether the work is helping. Reflection and practical steps do not have to be separate."
+      ]
+    ],
+    "cta": "Use a free 15-minute consultation to ask about the approach and describe a pattern you would like help understanding.",
+    "related": [
+      [
+        "Meet Marcus and explore his background",
+        "/about"
+      ],
+      [
+        "Understanding attachment patterns",
+        "/blog/attachment-styles-in-relationships"
+      ],
+      [
+        "IFS-informed parts work",
+        "/services/ifs"
+      ]
+    ],
+    "sources": [
+      [
+        "NHS: Psychodynamic psychotherapy within talking-therapy options",
+        "https://www.nhs.uk/mental-health/conditions/depression-in-adults/treatment/"
+      ]
+    ]
   },
   "young-adults": {
-    "intro": "Finishing school or entering work can leave you without familiar structure. We can separate decisions that need attention now from questions that can remain open, then identify steps that fit your circumstances.",
-    "howItWorks": "We can work on current decisions while also exploring the anxiety, expectations, and relationship habits that make them harder. The approach may draw on CBT, IFS, psychodynamic work, or EMDR when appropriate. You do not need to have your career, identity, or goals settled before starting. There is no fixed number of sessions or promised outcome. We can review what is changing, what remains difficult, and whether to adjust the approach, frequency, or plan for care.",
-    "whoThisHelps": "Individual therapy for adults roughly ages 18 to 30 navigating identity, relationships, and transitions. A consultation can help clarify fit, including whether another approach or provider would better meet your needs.",
-    "ctaHeading": "Ready to get started?",
-    "ctaText": "Ask about this approach in a free 15-minute consultation with Marcus Ghiasi, LMFT. Virtual individual sessions are available to adults physically in California."
+    "slug": "young-adults",
+    "name": "Therapy for Young Adults",
+    "seoTitle": "Online Therapy for Young Adults | Oakland-Based Bayside",
+    "metaDescription": "Therapy for young adults navigating anxiety, identity, college, relationships, and career changes. Virtual sessions with Marcus Ghiasi, LMFT, across California.",
+    "h1": "Therapy for young adults finding their direction.",
+    "dek": "Support for the decisions, relationships, and uncertainty of early adulthood.",
+    "intro": "School, work, relationships, and independence can change at the same time. You may be making important decisions while still figuring out what matters to you, or comparing your progress with people whose lives look more settled. Therapy offers a place to sort through the pressure and decide what needs attention now.",
+    "sections": [
+      [
+        "What we can work on",
+        "Bayside works with young adults, generally ages 18 to 30, on anxiety, low mood, self-criticism, identity, loneliness, relationships, and life transitions. You might be adjusting to college, leaving school, beginning work, changing direction, or negotiating a different relationship with family. You do not need to be a student or have a settled plan for your life."
+      ],
+      [
+        "Room for the decision and what makes it difficult",
+        "A career decision may involve practical constraints alongside fear of disappointing someone. Reaching out to a friend may be complicated by social anxiety or a recent loss. We can give attention to both the immediate situation and the patterns that make it harder, without assuming there is one correct timetable for adulthood."
+      ],
+      [
+        "What working together can look like",
+        "We begin with the concerns affecting you most and discuss what you hope will change. Sessions can combine a current decision or practical step with exploration of relationships, expectations, and identity. Marcus may draw on CBT, IFS-informed parts work, psychodynamic perspectives, or EMDR when assessment indicates it may be appropriate. He explains the reasons for an approach so you can participate in the plan."
+      ],
+      [
+        "Your circumstances belong in the conversation",
+        "School schedules, work demands, finances, family responsibilities, culture, and available support can affect what is workable. We can discuss those circumstances rather than assume a suggestion will fit simply because it sounds useful.\n\nMarcus’s earlier clinical roles included work with high school students and transitional-aged youth through Community Youth Center of San Francisco and 3rd Street Youth Center & Clinic. Bayside’s current services are individual therapy for adults age 18 and older."
+      ]
+    ],
+    "faqs": [
+      [
+        "Do I need to attend college?",
+        "No. This service includes adult students and people working, looking for work, changing direction, or navigating other transitions."
+      ],
+      [
+        "Is Bayside a university counseling service?",
+        "No. Bayside is an independent, private-pay practice. You can consider it alongside campus resources and ask questions about the type of support you need."
+      ],
+      [
+        "Can therapy include concerns about family or a partner?",
+        "Yes. Individual sessions can focus on your experience, choices, boundaries, and relationship patterns. These are not joint family or couples appointments."
+      ],
+      [
+        "What if I do not know exactly why I want therapy?",
+        "You can describe what has felt difficult or different lately. The consultation can help you ask questions and consider whether a full appointment makes sense."
+      ]
+    ],
+    "cta": "You do not need to settle the bigger questions before reaching out. Start with a free 15-minute consultation about your concerns and practical options.",
+    "related": [
+      [
+        "Meet Marcus and review his experience",
+        "/about"
+      ],
+      [
+        "Individual therapy for adult students in Berkeley",
+        "/college-student-therapy-berkeley"
+      ],
+      [
+        "How to find a therapist who fits",
+        "/blog/how-to-find-a-therapist-who-fits"
+      ]
+    ],
+    "sources": [
+      [
+        "NIMH: Psychotherapy and choosing care",
+        "https://www.nimh.nih.gov/health/topics/psychotherapies"
+      ]
+    ]
   },
   "mens": {
-    "intro": "You may regret how a conversation ended without knowing how to change it next time. We can identify warning signs, practice pauses, and examine what you need to take responsibility for after conflict.",
-    "howItWorks": "Sessions can connect immediate concerns with the ways you have learned to handle pressure, conflict, or vulnerability. CBT, parts work, and reflective conversation may be useful depending on what you bring. There is no expectation that all men share the same experience or want the same style of therapy. There is no fixed number of sessions or promised outcome. We can review what is changing, what remains difficult, and whether to adjust the approach, frequency, or plan for care.",
-    "whoThisHelps": "Individual counseling for men working on anger, relationships, stress, and emotional expression. A consultation can help clarify fit, including whether another approach or provider would better meet your needs.",
-    "ctaHeading": "Ready to do the work?",
-    "ctaText": "Ask about this approach in a free 15-minute consultation with Marcus Ghiasi, LMFT. Virtual individual sessions are available to adults physically in California."
+    "slug": "mens",
+    "name": "Therapy for Men",
+    "seoTitle": "Online Therapy for Men | Oakland-Based Bayside",
+    "metaDescription": "Individual therapy for men working on anxiety, anger, relationships, low mood, and life changes. Meet Marcus Ghiasi, LMFT, online across California.",
+    "h1": "Individual therapy for men in California.",
+    "dek": "A place to work on what is happening—and how you want to respond.",
+    "intro": "You might be considering therapy after an argument, a relationship ending, growing distance from people you care about, or pressure that has become harder to manage. You may have a clear concern or only a sense that something needs attention. Either can be a starting point.",
+    "sections": [
+      [
+        "What you can bring to therapy",
+        "Men come to therapy with different histories, identities, and preferences. At Bayside, the work can address anxiety, depression, trauma-related concerns, grief, anger, relationship difficulties, and life transitions. There is room to discuss emotional expression, but you do not have to arrive knowing how to describe every feeling."
+      ],
+      [
+        "Make the work specific",
+        "We can start with an interaction or situation you want to understand. What happened before it? What did you assume, feel, or do? What was the effect on you and the other person? Looking closely can help identify where a different choice might be possible.\n\nIf conflict is a concern, the work may include recognizing earlier warning signs, expressing a need more directly, or planning how to return to a difficult conversation. Understanding a reaction can sit alongside taking responsibility for behavior."
+      ],
+      [
+        "An approach you can ask questions about",
+        "Marcus combines practical work with exploration of the patterns connected to it. Depending on your concerns, he may draw on CBT, IFS-informed parts work, psychodynamic perspectives, or EMDR when appropriate after assessment. You can discuss whether you prefer more structure, more room to explore, or a combination. There is no single way men need to participate in therapy."
+      ],
+      [
+        "Relationships, identity, and changing roles",
+        "Work, partnership, parenthood, caregiving, separation, and loss can change what you expect of yourself. Culture, family messages, sexuality, and gender can also be relevant. We can make room for those influences without assuming they explain your experience.\n\nBayside provides LGBTQ+ and BIPOC-affirming individual care. The focus is on the concerns and choices you want help with."
+      ]
+    ],
+    "faqs": [
+      [
+        "Do I need a specific diagnosis to ask about therapy?",
+        "No. You can begin with a concern about your reactions, relationships, mood, or daily life. An assessment helps clarify what kind of care may be useful."
+      ],
+      [
+        "Is therapy for anger the same as an anger-management program?",
+        "This page describes individual psychotherapy. If you need a court-approved class, documentation, or a particular program, confirm those requirements and ask about an appropriate provider before booking."
+      ],
+      [
+        "Can my partner attend?",
+        "Bayside’s current services are individual appointments for adults. Relationship concerns can be explored individually; ask about a referral if you are seeking joint couples sessions."
+      ],
+      [
+        "What if therapy has not felt useful before?",
+        "We can discuss what you tried, what helped, and what you would want to be different. Those experiences can inform the next plan rather than requiring you to start without context."
+      ]
+    ],
+    "cta": "Use a free 15-minute consultation to describe what is bringing you in and ask how working with Marcus might fit your needs.",
+    "related": [
+      [
+        "Meet Marcus",
+        "/about"
+      ],
+      [
+        "Understanding anger and accountability",
+        "/blog/what-your-anger-is-actually-telling-you"
+      ],
+      [
+        "Men and mental health",
+        "/blog/mens-mental-health"
+      ]
+    ],
+    "sources": [
+      [
+        "NIMH: Psychotherapy and choosing care",
+        "https://www.nimh.nih.gov/health/topics/psychotherapies"
+      ]
+    ]
   }
+};
+
+const servicePracticalDetails = {
+  "heading": "Practical details",
+  "text": "All services described here are virtual individual therapy for adults age 18 and older. Bayside is based in Oakland; you must be physically in California for appointments. Sessions are $210 for 45 minutes or $280 for 60 minutes. Bayside is private pay and does not bill insurance directly. A superbill is available for possible out-of-network reimbursement, depending on your plan.",
+  "ctaLabel": "Book a Free 15-Minute Consultation",
+  "ctaUrl": "https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1",
+  "ctaNote": "Choose an available time through the booking calendar. The consultation is an introductory conversation about fit, questions, fees, and availability; it does not commit you to ongoing sessions."
 };
 
 const cityRegions = {
@@ -6599,7 +6949,7 @@ function ServicesPage() {
                   marginBottom: 12,
                   lineHeight: 1.2,
                   transition: "color 0.3s ease",
-                }}>{service.name}</div>
+                }}>{service.slug === "ifs" ? "IFS-Informed Therapy (Parts Work)" : service.name}</div>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 13, fontWeight: 500,
@@ -6680,212 +7030,151 @@ function ServicesPage() {
 // ========================================
 
 function ServiceDetailPage({ slug }) {
-  const [ref, visible] = useScrollReveal();
-  const navigate = useNavigate();
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
-  const service = services.find(s => s.slug === slug);
   const details = serviceDetails[slug];
+  const service = services.find(item => item.slug === slug);
+  if (!service || !details) return <NotFoundPage />;
 
-  if (!service) return <NotFoundPage />;
-  
-  // Add safety check for details
-  if (!details) {
-    return (
-      <div style={{ 
-        background: theme.bg, 
-        padding: "160px 40px", 
-        textAlign: "center",
-        minHeight: "60vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center"
-      }}>
-        <div>
-          <h1 style={{ 
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: 48,
-            color: theme.text,
-            marginBottom: 24
-          }}>Service details coming soon</h1>
-          <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{ textDecoration: "none",
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 13,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: theme.accent,
-            background: "transparent",
-            border: `1px solid ${theme.accent}`,
-            padding: "14px 32px",
-            borderRadius: 2,
-            cursor: "pointer"
-          }}>← Back to Services</a>
-        </div>
-      </div>
-    );
-  }
+  const faqLabel = {
+    emdr: "EMDR therapy", ifs: "IFS-informed therapy", cbt: "CBT",
+    psychodynamic: "psychodynamic therapy", "young-adults": "therapy for young adults", mens: "therapy for men",
+  }[slug];
 
- // Get metadata directly using slug - keys now match
-  const pageMetadata = servicePages[slug];
+  const renderParagraphs = (text) => text.split("\n\n").map((paragraph, index) => (
+    <p key={index}>{paragraph.split(/<strong>(.*?)<\/strong>/g).map((part, partIndex) =>
+      partIndex % 2 === 1 ? <strong key={partIndex}>{part}</strong> : part
+    )}</p>
+  ));
+  const ConsultationLink = () => (
+    <a className="service-consultation" href={servicePracticalDetails.ctaUrl} target="_blank" rel="noopener noreferrer" aria-label="Book a free 15-minute consultation (opens Jane in a new tab)">
+      {servicePracticalDetails.ctaLabel} <span aria-hidden="true">↗</span>
+    </a>
+  );
 
   return (
-    <>
-      <SEO metadata={pageMetadata} />
-      <section style={{
-        background: theme.bg,
-        padding: "160px 40px 80px",
-        minHeight: "60vh",
-        display: "flex",
-        alignItems: "center",
-        transition: "background 0.3s ease",
-      }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <a href="/services" onClick={(e) => { e.preventDefault(); navigate("/services"); }} style={{ textDecoration: "none",
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase",
-            color: theme.accentMuted, background: "none", border: "none",
-            cursor: "pointer", padding: 0,
-            display: "inline-flex", alignItems: "center", gap: 8,
-            marginBottom: 32,
-            transition: "color 0.3s ease",
-          }}>
-            ← Back to Services
-          </a>
-          <div style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 12, letterSpacing: "0.25em", textTransform: "uppercase",
-            color: theme.accent, marginBottom: 24,
-            fontWeight: 500,
-            transition: "color 0.3s ease",
-          }}>{service.shortDesc}</div>
-          <h1 style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(48px, 6vw, 72px)",
-            fontWeight: 300, lineHeight: 1.1,
-            color: theme.text, margin: "0 0 32px",
-            transition: "color 0.3s ease",
-          }}>{service.name}</h1>
-          <p style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 19, fontWeight: 300,
-            color: theme.textMuted, lineHeight: 1.8,
-            margin: 0,
-            maxWidth: 740,
-            transition: "color 0.3s ease",
-          }}>{service.desc}</p>
+    <div className="bayside-service" data-service={slug} style={{
+      "--service-bg": theme.bg, "--service-alt": theme.bgAlt,
+      "--service-text": theme.text, "--service-muted": theme.textMuted,
+      "--service-accent": theme.accent, "--service-border": theme.border,
+      "--service-soft": theme.bgLighter, "--service-button-text": darkMode ? theme.bg : colors.white,
+    }}>
+      <SEO metadata={servicePages[slug]} />
+      <style dangerouslySetInnerHTML={{ __html: `
+        .bayside-service { color: var(--service-text); background: var(--service-bg); font-family: 'DM Sans', sans-serif; }
+        .bayside-service section { padding: 66px 32px; }
+        .bayside-service .service-inner { max-width: 900px; margin: 0 auto; }
+        .bayside-service .service-hero { padding-top: 136px; padding-bottom: 60px; }
+        .bayside-service .service-back { display: inline-block; margin-bottom: 28px; font-size: 12px; color: var(--service-muted); text-decoration: none; }
+        .bayside-service .service-eyebrow { color: var(--service-accent); font-size: 11px; line-height: 1.7; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 18px; }
+        .bayside-service h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5vw, 64px); line-height: 1.1; font-weight: 400; letter-spacing: -.015em; margin: 0 0 22px; max-width: 880px; }
+        .bayside-service .service-dek { color: var(--service-text); font-size: 20px; line-height: 1.6; margin: 0 0 22px; }
+        .bayside-service p { color: var(--service-muted); font-size: 16px; line-height: 1.85; margin: 0 0 20px; }
+        .bayside-service .service-intro { max-width: 800px; font-size: 17px; }
+        .bayside-service a { text-underline-offset: 5px; }
+        .bayside-service .service-provider { font-size: 13px; line-height: 1.8; margin: 25px 0 22px; }
+        .bayside-service .service-provider a { color: var(--service-accent); }
+        .bayside-service .service-consultation { display: inline-flex; justify-content: center; align-items: center; gap: 10px; max-width: 100%; padding: 16px 24px; background: var(--service-accent); color: var(--service-button-text); border: 1px solid var(--service-accent); border-radius: 2px; font-size: 14px; line-height: 1.5; font-weight: 500; text-decoration: none; text-align: center; transition: opacity .2s ease; }
+        .bayside-service .service-consultation:hover { opacity: .88; }
+        .bayside-service .service-content { background: var(--service-alt); }
+        .bayside-service .service-content .service-inner { max-width: 820px; }
+        .bayside-service .service-copy-section { padding: 0; margin: 0 0 42px; }
+        .bayside-service h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 3.2vw, 40px); font-weight: 400; line-height: 1.2; margin: 0 0 20px; color: var(--service-text); }
+        .bayside-service strong { color: var(--service-text); font-weight: 500; }
+        .bayside-service .service-faqs { padding: 34px 0 0; margin-top: 10px; border-top: 1px solid var(--service-border); }
+        .bayside-service details { border-bottom: 1px solid var(--service-border); }
+        .bayside-service summary { cursor: pointer; padding: 19px 0; color: var(--service-text); font-size: 16px; font-weight: 500; line-height: 1.6; }
+        .bayside-service summary::marker { color: var(--service-accent); }
+        .bayside-service details p { padding: 0 22px; margin: 0 0 22px; }
+        .bayside-service .service-practical { padding: 30px; background: var(--service-bg); border: 1px solid var(--service-border); border-radius: 4px; margin: 44px 0 0; }
+        .bayside-service .service-practical h2 { font-family: 'DM Sans', sans-serif; font-size: 20px; line-height: 1.4; font-weight: 500; }
+        .bayside-service .service-practical a { color: var(--service-accent); font-size: 14px; line-height: 1.65; }
+        .bayside-service .service-related { padding: 0; background: var(--service-bg); }
+        .bayside-service .service-related-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; padding-top: 42px; }
+        .bayside-service .service-related h2 { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 500; line-height: 1.5; margin-bottom: 14px; }
+        .bayside-service .service-related ul { list-style: none; padding: 0; margin: 0; }
+        .bayside-service .service-related li { margin-bottom: 14px; }
+        .bayside-service .service-related a { color: var(--service-accent); font-size: 14px; line-height: 1.7; }
+        .bayside-service .service-next { text-align: center; }
+        .bayside-service .service-next .service-inner { max-width: 720px; }
+        .bayside-service .service-booking-note { font-size: 13px; line-height: 1.8; margin-top: 20px; }
+        .bayside-service a:focus-visible, .bayside-service summary:focus-visible { outline: 2px solid var(--service-accent); outline-offset: 5px; }
+        @media (max-width: 680px) {
+          .bayside-service section { padding: 50px 24px; }
+          .bayside-service .service-hero { padding-top: 116px; padding-bottom: 46px; }
+          .bayside-service .service-copy-section { padding: 0; margin-bottom: 32px; }
+          .bayside-service .service-eyebrow { font-size: 10px; letter-spacing: .08em; }
+          .bayside-service h1 { font-size: clamp(34px, 9vw, 44px); overflow-wrap: break-word; }
+          .bayside-service .service-dek { font-size: 18px; }
+          .bayside-service .service-intro { font-size: 16px; }
+          .bayside-service .service-consultation { font-size: 13px; padding: 15px 18px; }
+          .bayside-service .service-faqs { padding: 28px 0 0; }
+          .bayside-service .service-practical { padding: 24px 20px; }
+          .bayside-service .service-related { padding: 0 24px; }
+          .bayside-service .service-related-grid { grid-template-columns: 1fr; gap: 24px; }
+          .bayside-service details p { padding: 0; }
+        }
+        @media (prefers-reduced-motion: reduce) { .bayside-service .service-consultation { transition: none; } }
+      ` }} />
+
+      <section className="service-hero" aria-labelledby="service-heading">
+        <div className="service-inner">
+          <Link className="service-back" to="/services" onClick={() => window.scrollTo(0, 0)}><span aria-hidden="true">←</span> All therapy services</Link>
+          <p className="service-eyebrow">Oakland-based · Virtual individual therapy across California</p>
+          <h1 id="service-heading">{details.h1}</h1>
+          <p className="service-dek">{details.dek}</p>
+          <p className="service-intro">{details.intro}</p>
+          <p className="service-provider">Individual sessions with <Link to="/about" onClick={() => window.scrollTo(0, 0)}>Marcus Ghiasi, LMFT</Link> · California license #158475</p>
+          <ConsultationLink />
         </div>
       </section>
 
-      <section ref={ref} style={{
-        background: theme.bgAlt,
-        padding: "100px 40px",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "none" : "translateY(30px)",
-        transition: "all 0.3s ease",
-      }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          {details.intro && (
-            <p style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 19, fontWeight: 300,
-              color: theme.text,
-              lineHeight: 1.8,
-              margin: "0 0 48px",
-              transition: "color 0.3s ease",
-            }}>
-              {details.intro}
-            </p>
-          )}
+      <section className="service-content" aria-label={`${details.name} information and questions`}>
+        <div className="service-inner">
+          {details.sections.map(([heading, text], index) => (
+            <section className="service-copy-section" key={heading} aria-labelledby={`service-section-${index}`}>
+              <h2 id={`service-section-${index}`}>{heading}</h2>
+              {renderParagraphs(text)}
+            </section>
+          ))}
 
-          <div style={{ marginBottom: 48 }}>
-            <h3 style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 18, fontWeight: 500,
-              color: theme.text,
-              margin: "0 0 16px",
-              letterSpacing: "0.02em",
-              transition: "color 0.3s ease",
-            }}>What This Looks Like</h3>
-            <p style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 16, fontWeight: 300,
-              color: theme.textMuted,
-              lineHeight: 1.8,
-              margin: 0,
-              transition: "color 0.3s ease",
-            }}>
-              {details.howItWorks}
-            </p>
-          </div>
+          <section className="service-faqs" aria-labelledby="service-faqs-heading">
+            <h2 id="service-faqs-heading">Questions about {faqLabel}</h2>
+            {details.faqs.map(([question, answer]) => (
+              <details key={question}><summary>{question}</summary><p>{answer}</p></details>
+            ))}
+          </section>
 
-          <div style={{ marginBottom: 48 }}>
-            <h3 style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 18, fontWeight: 500,
-              color: theme.text,
-              margin: "0 0 16px",
-              letterSpacing: "0.02em",
-              transition: "color 0.3s ease",
-            }}>Who This Is For</h3>
-            <p style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 16, fontWeight: 300,
-              color: theme.textMuted,
-              lineHeight: 1.8,
-              margin: 0,
-              transition: "color 0.3s ease",
-            }}>
-              {details.whoThisHelps}
-            </p>
-          </div>
-          <div style={{ marginBottom: 40, fontFamily: "'DM Sans', sans-serif", color: theme.textMuted, fontSize: 15, lineHeight: 1.8 }}>
-            <p>Virtual individual sessions with Marcus Ghiasi, LMFT, California license #158475. Sessions are $210 for 45 minutes or $280 for 60 minutes. A superbill is available for possible out-of-network reimbursement; coverage depends on your plan.</p>
-            <a href={slug === "emdr" ? "https://www.ptsd.va.gov/understand_tx/emdr.asp" : "https://www.nimh.nih.gov/health/topics/psychotherapies"} target="_blank" rel="noopener noreferrer" style={{ color: theme.accent, textDecoration: "underline" }}>
-              {slug === "emdr" ? "Read the VA overview of EMDR for PTSD" : "Read NIMH guidance on psychotherapy and choosing care"}
-            </a>
-          </div>
-
-         <div style={{
-            background: darkMode ? `${theme.accent}15` : colors.tealPale,
-            padding: "40px",
-            borderRadius: 4,
-            border: `1px solid ${theme.accent}30`,
-            textAlign: "center",
-            transition: "all 0.3s ease",
-          }}>
-            <h3 style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: 28, fontWeight: 500,
-              color: theme.text,
-              margin: "0 0 16px",
-              transition: "color 0.3s ease",
-            }}>{details.ctaHeading}</h3>
-            <p style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 15, fontWeight: 300,
-              color: theme.textMuted,
-              lineHeight: 1.7,
-              margin: "0 0 28px",
-              transition: "color 0.3s ease",
-            }}>
-              {details.ctaText}
-            </p>
-            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 13, fontWeight: 500,
-              letterSpacing: "0.12em", textTransform: "uppercase",
-              color: darkMode ? theme.bg : colors.white, border: "none", cursor: "pointer",
-              background: theme.accent,
-              padding: "14px 32px", borderRadius: 2,
-              transition: "all 0.3s ease",
-            }}
-            onMouseEnter={e => e.target.style.opacity = "0.9"}
-            onMouseLeave={e => e.target.style.opacity = "1"}
-            >Book Free Consultation</a>
-          </div>
+          <aside className="service-practical" aria-labelledby="service-practical-heading">
+            <h2 id="service-practical-heading">{servicePracticalDetails.heading}</h2>
+            <p>{servicePracticalDetails.text}</p>
+            <Link to="/faq" onClick={() => window.scrollTo(0, 0)}>More about fees, insurance and starting therapy <span aria-hidden="true">→</span></Link>
+          </aside>
         </div>
       </section>
-    </>
+
+      <section className="service-related" aria-label="Related pages and further reading">
+        <div className="service-inner"><div className="service-related-grid">
+          <div>
+            <h2>Explore further</h2>
+            <ul>{details.related.map(([label, path]) => <li key={path}><Link to={path} onClick={() => window.scrollTo(0, 0)}>{label} <span aria-hidden="true">→</span></Link></li>)}</ul>
+          </div>
+          <div>
+            <h2>Further reading</h2>
+            <ul>{details.sources.map(([label, url]) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer">{label} <span aria-hidden="true">↗</span></a></li>)}</ul>
+          </div>
+        </div></div>
+      </section>
+
+      <section className="service-next" aria-labelledby="service-next-heading">
+        <div className="service-inner">
+          <h2 id="service-next-heading">Start with a conversation.</h2>
+          <p>{details.cta}</p>
+          <ConsultationLink />
+          <p className="service-booking-note">{servicePracticalDetails.ctaNote}</p>
+        </div>
+      </section>
+    </div>
   );
 }
 
