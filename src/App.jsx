@@ -6180,6 +6180,24 @@ function HomePage() {
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
   const bookingUrl = "https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1";
+  const verificationRef = useRef(null);
+
+  // React does not execute scripts inserted through JSX. Mount the supplied
+  // Psychology Today badge script after hydration, and clean up on navigation.
+  useEffect(() => {
+    const container = verificationRef.current;
+    if (!container) return;
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://member.psychologytoday.com/verified-seal.js";
+    script.async = true;
+    script.setAttribute("data-badge", "14");
+    script.setAttribute("data-id", "1134128");
+    script.setAttribute("data-code", "aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xNC9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw==");
+    container.appendChild(script);
+    return () => script.remove();
+  }, []);
+
   const concerns = [
     { title: "Anxiety and self-criticism", text: "Overthinking decisions, replaying conversations, avoiding situations, or finding that your expectations leave little room to rest." },
     { title: "Trauma and difficult experiences", text: "Distressing memories, reminders, or reactions that continue to affect your daily life and relationships." },
@@ -6243,7 +6261,9 @@ function HomePage() {
         .bayside-home .home-founder-name { font-size: 22px; color: var(--home-text); margin-bottom: 4px; }
         .bayside-home .home-credentials { font-size: 13px; margin-bottom: 24px; }
         .bayside-home .home-founder-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin-top: 24px; }
-        .bayside-home .home-founder-links .home-license { font-size: 12px; color: var(--home-muted); }
+        .bayside-home .home-psychology-verification { display: inline-flex; align-items: center; max-width: 100%; }
+        .bayside-home .home-psychology-verification a { display: inline-block; max-width: 100%; color: var(--home-accent); font-size: 14px; }
+        .bayside-home .home-psychology-verification img { max-width: 100%; height: auto; }
         .bayside-home .home-details-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px; margin: 36px 0 26px; }
         .bayside-home .home-detail { border-top: 1px solid var(--home-border); padding-top: 24px; }
         .bayside-home .home-rates { color: var(--home-text); font-size: 18px; }
@@ -6310,7 +6330,7 @@ function HomePage() {
             <p className="home-credentials">Founder &amp; Therapist · California license #158475</p>
             <p>Marcus founded Bayside Wellness &amp; Counseling as a place for thoughtful, individualized care. A Bay Area native and second-generation Persian American, he works with adults navigating anxiety, trauma-related concerns, low mood, and relationship patterns, with a particular focus on men and young adults.</p>
             <p>Therapy at Bayside is currently provided by Marcus. Learn about his background and approach to see whether working together feels right for you.</p>
-            <div className="home-founder-links"><Link className="home-text-link" to="/about" onClick={() => window.scrollTo(0, 0)}>Meet Marcus <span aria-hidden="true">→</span></Link><a className="home-license" href="https://search.dca.ca.gov/" target="_blank" rel="noopener noreferrer" aria-label="Verify California license 158475 (opens in a new tab)">Verify California License <span aria-hidden="true">↗</span></a></div>
+            <div className="home-founder-links"><Link className="home-text-link" to="/about" onClick={() => window.scrollTo(0, 0)}>Meet Marcus <span aria-hidden="true">→</span></Link><span className="home-psychology-verification" ref={verificationRef}><a href="https://www.psychologytoday.com/profile/1134128" className="sx-verified-seal" target="_blank" rel="noopener noreferrer" aria-label="View Marcus Ghiasi on Psychology Today (opens in a new tab)">Psychology Today</a></span></div>
           </div>
         </div></div>
       </section>
