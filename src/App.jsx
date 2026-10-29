@@ -6314,7 +6314,7 @@ function HomePage() {
           <p className="home-section-intro">At Bayside, you and your therapist work together to give therapy a clear focus while leaving room for what emerges.</p>
           <div className="home-step-grid">{steps.map((item, index) => <div key={item.title}><span className="home-step-number" aria-hidden="true">0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></div>)}</div>
           <div className="home-methods">
-            <p>Care may draw on <Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link>, <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>Internal Family Systems</Link>, <Link to="/services/cbt" onClick={() => window.scrollTo(0, 0)}>Cognitive Behavioral Therapy</Link>, and <Link to="/services/psychodynamic" onClick={() => window.scrollTo(0, 0)}>psychodynamic therapy</Link>. You do not need to choose a method before reaching out.</p>
+            <p>Care may draw on <Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link>, <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS-informed parts work</Link>, <Link to="/services/cbt" onClick={() => window.scrollTo(0, 0)}>Cognitive Behavioral Therapy</Link>, and <Link to="/services/psychodynamic" onClick={() => window.scrollTo(0, 0)}>psychodynamic therapy</Link>. You do not need to choose a method before reaching out.</p>
             <Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Our Therapy Approaches <span aria-hidden="true">→</span></Link>
           </div>
         </div>
@@ -6365,232 +6365,145 @@ function HomePage() {
 // ========================================
 
 function AboutPage() {
-  const [ref, visible] = useScrollReveal();
-  const navigate = useNavigate();
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
+  const bookingUrl = "https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1";
 
   return (
-    <>
-      <SEO metadata={mainPages.about} />
-      <section ref={ref} style={{
-      background: darkMode ? colors.darkBgLight : colors.charcoal,
-      padding: "160px 40px 120px",
-      minHeight: "100vh",
-      opacity: visible ? 1 : 0,
-      transform: visible ? "none" : "translateY(30px)",
-      transition: "all 0.3s ease",
+    <div className="bayside-about" style={{
+      "--about-bg": theme.bg, "--about-alt": theme.bgAlt, "--about-text": theme.text,
+      "--about-muted": theme.textMuted, "--about-accent": theme.accent,
+      "--about-border": theme.border, "--about-soft": theme.bgLighter,
+      "--about-button-text": darkMode ? theme.bg : colors.white,
     }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
-        <div>
-          <div style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 12, fontWeight: 500,
-            letterSpacing: "0.25em", textTransform: "uppercase",
-            color: theme.accentMuted, marginBottom: 24,
-            display: "flex", alignItems: "center", gap: 12,
-            transition: "color 0.3s ease",
-          }}>
-            <span style={{ width: 32, height: 1, background: theme.accentMuted, display: "inline-block", transition: "background 0.3s ease" }} />
-            About Marcus
+      <SEO metadata={mainPages.about} />
+      <style dangerouslySetInnerHTML={{ __html: `
+        .bayside-about { background: var(--about-bg); color: var(--about-text); font-family: 'DM Sans', sans-serif; }
+        .bayside-about section { padding: 76px 32px; }
+        .bayside-about .about-inner { max-width: 1120px; margin: 0 auto; }
+        .bayside-about .about-introduction { padding-top: 148px; }
+        .bayside-about .about-intro-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr); gap: 72px; align-items: center; }
+        .bayside-about .about-intro-grid > * { min-width: 0; }
+        .bayside-about .about-eyebrow { color: var(--about-accent); font-size: 11px; line-height: 1.6; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; font-weight: 500; }
+        .bayside-about h1, .bayside-about h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+        .bayside-about h1 { font-size: clamp(40px, 4.7vw, 62px); line-height: 1.1; letter-spacing: -.015em; margin: 0 0 16px; }
+        .bayside-about h2 { font-size: clamp(32px, 3.2vw, 44px); line-height: 1.15; margin: 0 0 24px; }
+        .bayside-about p { color: var(--about-muted); font-size: 16px; line-height: 1.85; margin: 0 0 20px; }
+        .bayside-about .about-role { color: var(--about-accent); font-size: 14px; margin-bottom: 25px; }
+        .bayside-about .about-credentials { background: var(--about-alt); border: 1px solid var(--about-border); border-radius: 4px; padding: 25px 28px; margin-top: 28px; }
+        .bayside-about .about-credentials h2 { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 500; line-height: 1.4; margin-bottom: 18px; }
+        .bayside-about .about-credentials dl { margin: 0; }
+        .bayside-about .about-credential-row { display: grid; grid-template-columns: 105px minmax(0, 1fr); gap: 16px; padding: 13px 0; border-top: 1px solid var(--about-border); }
+        .bayside-about .about-credential-row:first-child { border-top: 0; padding-top: 0; }
+        .bayside-about dt { font-size: 12px; line-height: 1.7; color: var(--about-muted); }
+        .bayside-about dd { font-size: 14px; line-height: 1.65; color: var(--about-text); margin: 0; }
+        .bayside-about dd span { display: block; color: var(--about-muted); }
+        .bayside-about .about-portrait { margin: 0; max-width: 360px; width: 100%; justify-self: center; }
+        .bayside-about .about-portrait-photo { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; background: var(--about-soft); border-radius: 60px 3px 60px 3px; }
+        .bayside-about .about-profile-links { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 18px 24px; margin-top: 24px; }
+        .bayside-about .about-profile-links a { color: var(--about-accent); font-size: 14px; text-underline-offset: 5px; }
+        .bayside-about .about-camft { display: block; height: 60px; width: 128px; max-width: 128px; padding: 8px; object-fit: contain; background: #223333; border-radius: 3px; }
+        .bayside-about .about-background { background: var(--about-alt); }
+        .bayside-about .about-background .about-inner { max-width: 850px; }
+        .bayside-about .about-scope-note { border-left: 2px solid var(--about-accent); padding-left: 20px; font-size: 14px; margin-top: 26px; }
+        .bayside-about .about-approach-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 64px; }
+        .bayside-about .about-approach-grid > * { min-width: 0; }
+        .bayside-about .about-approach-grid a { color: var(--about-accent); text-underline-offset: 5px; }
+        .bayside-about .about-approach-grid .about-services-link { display: inline-block; font-size: 14px; font-weight: 500; margin-top: 4px; }
+        .bayside-about .about-affirming { padding: 28px; border: 1px solid var(--about-border); border-radius: 4px; align-self: start; }
+        .bayside-about .about-affirming h2 { font-size: clamp(30px, 2.8vw, 38px); }
+        .bayside-about .about-affirming p:last-child { margin-bottom: 0; }
+        .bayside-about .about-next { background: var(--about-alt); text-align: center; border-top: 1px solid var(--about-border); }
+        .bayside-about .about-next .about-inner { max-width: 700px; }
+        .bayside-about .about-consultation { display: inline-flex; align-items: center; justify-content: center; gap: 10px; max-width: 100%; background: var(--about-accent); color: var(--about-button-text); border-radius: 2px; border: 1px solid var(--about-accent); padding: 17px 26px; font-size: 14px; font-weight: 500; line-height: 1.5; text-decoration: none; margin-top: 10px; transition: opacity .2s ease; }
+        .bayside-about .about-consultation:hover { opacity: .88; }
+        .bayside-about .about-booking-note { font-size: 12px; margin: 18px 0 0; }
+        .bayside-about a:focus-visible { outline: 2px solid var(--about-accent); outline-offset: 5px; }
+        @media (max-width: 950px) {
+          .bayside-about .about-intro-grid { gap: 36px; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
+          .bayside-about .about-approach-grid { gap: 36px; }
+          .bayside-about .about-credentials { padding: 22px; }
+        }
+        @media (max-width: 760px) {
+          .bayside-about section { padding: 56px 24px; }
+          .bayside-about .about-introduction { padding-top: 120px; }
+          .bayside-about .about-intro-grid, .bayside-about .about-approach-grid { grid-template-columns: 1fr; gap: 36px; }
+          .bayside-about .about-portrait { max-width: 300px; }
+          .bayside-about .about-credential-row { grid-template-columns: 90px minmax(0, 1fr); gap: 12px; }
+          .bayside-about .about-consultation { padding: 15px 18px; font-size: 13px; }
+        }
+        @media (max-width: 380px) {
+          .bayside-about .about-credentials { padding: 20px 16px; }
+          .bayside-about .about-credential-row { grid-template-columns: 1fr; gap: 3px; }
+          .bayside-about .about-affirming { padding: 22px; }
+        }
+        @media (prefers-reduced-motion: reduce) { .bayside-about .about-consultation { transition: none; } }
+      ` }} />
+
+      <section className="about-introduction" aria-labelledby="about-heading">
+        <div className="about-inner"><div className="about-intro-grid">
+          <div>
+            <p className="about-eyebrow">Meet Bayside’s founder</p>
+            <h1 id="about-heading">Marcus Ghiasi, LMFT</h1>
+            <p className="about-role">Founder &amp; Therapist at Bayside Wellness &amp; Counseling</p>
+            <p>I’m Marcus Ghiasi, a Licensed Marriage and Family Therapist, Bay Area native, and second-generation Persian American. I founded Bayside Wellness &amp; Counseling in January 2026 to create a place for thoughtful care, healing, and meaningful change.</p>
+            <p>I work individually with adults navigating anxiety, trauma-related concerns, depression, relationship difficulties, and life transitions, with a particular focus on men and young adults. Sessions are virtual and available to clients physically located in California.</p>
+
+            <aside className="about-credentials" aria-labelledby="about-credentials-heading">
+              <h2 id="about-credentials-heading">Education &amp; credentials</h2>
+              <dl>
+                <div className="about-credential-row"><dt>License</dt><dd>Licensed Marriage and Family Therapist<span>California · #158475</span></dd></div>
+                <div className="about-credential-row"><dt>Education</dt><dd>MA in Counseling Psychology<span>University of San Francisco · 2021</span></dd></div>
+                <div className="about-credential-row"><dt>EMDR training</dt><dd>EMDR Basic Training<span>EMDR Institute · Completed 2024</span></dd></div>
+              </dl>
+            </aside>
           </div>
-          <h1 style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(36px, 4vw, 56px)",
-            fontWeight: 300, lineHeight: 1.15,
-            color: colors.white, margin: "0 0 32px",
-          }}>
-            Marcus Ghiasi, LMFT<br />
-            <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight, fontStyle: "italic", transition: "color 0.3s ease" }}>A collaborative approach.</em>
-          </h1>
-          <p style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 16, fontWeight: 300,
-            lineHeight: 1.9, color: darkMode ? colors.darkTextMuted : "#A8B8B8",
-            margin: "0 0 24px",
-            transition: "color 0.3s ease",
-          }}>
-            I'm Marcus Ghiasi, a California Licensed Marriage and Family Therapist, license #158475, and the founder of Bayside Wellness & Counseling. I am a Bay Area native and second-generation Persian American. Curiosity, creativity, and connection shape how I approach the work, while your experience determines what we explore together.
-          </p>
-          <p style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 16, fontWeight: 300,
-            lineHeight: 1.9, color: darkMode ? colors.darkTextMuted : "#A8B8B8",
-            margin: "0 0 24px",
-            transition: "color 0.3s ease",
-          }}>
-            I work individually with adults, including young adults, on anxiety, low mood, trauma-related concerns, anger, and relationship patterns. We can connect practical changes with a better understanding of what makes them difficult. I explain my recommendations and welcome questions about the approach, pace, and fit.
-          </p>
-          <p style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 16, fontWeight: 300,
-            lineHeight: 1.9, color: darkMode ? colors.darkTextMuted : "#A8B8B8",
-            margin: "0 0 40px",
-          }}>
-            You can bring uncertainty, hesitation, or a previous experience of therapy that did not help. You do not need to prove readiness or find the perfect words. My role is to work with you on a plan, listen to feedback, and revisit it when something needs to change.
-          </p>
+          <figure className="about-portrait">
+            <img className="about-portrait-photo" src={marcusHeadshot} alt="Marcus Ghiasi, LMFT, founder and therapist at Bayside Wellness & Counseling" width="600" height="800" />
+            <figcaption className="about-profile-links">
+              <a href="https://www.psychologytoday.com/profile/1134128" target="_blank" rel="noopener noreferrer" aria-label="View Marcus Ghiasi on Psychology Today (opens in a new tab)">Psychology Today <span aria-hidden="true">↗</span></a>
+              <img className="about-camft" src={camftLogo} alt="Member of the California Association of Marriage & Family Therapists" width="120" height="56" loading="lazy" />
+            </figcaption>
+          </figure>
+        </div></div>
+      </section>
 
-          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, margin: "0 0 32px" }}><a href="https://search.dca.ca.gov/" target="_blank" rel="noopener noreferrer" style={{ color: theme.accent }}>Verify California license #158475 through the Department of Consumer Affairs</a></p>
-
-          {/* Who I work with */}
-          <div style={{ marginBottom: 40 }}>
-            <div style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-              color: theme.accentMuted, marginBottom: 16,
-              transition: "color 0.3s ease",
-            }}>I work with</div>
-            {[
-              "Men working on anger, relationships, and emotional expression",
-              "Individuals struggling with relationship patterns or conflicts (individual sessions)",
-"Young adults navigating identity, career transitions, and the disorientation of early adulthood",
-      "Adults dealing with trauma, anxiety, or depression",
-              "People struggling with self-criticism, perfectionism, or feeling stuck",
-              "First-time therapy clients who are curious but unsure where to start",
-            ].map((item, i) => (
-              <div key={i} style={{
-                display: "flex", gap: 12, alignItems: "flex-start",
-                marginBottom: 10,
-              }}>
-                <span style={{ color: theme.accent, marginTop: 4, flexShrink: 0, transition: "color 0.3s ease" }}>—</span>
-                <span style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 14, fontWeight: 300,
-                  color: darkMode ? colors.darkTextMuted : "#A8B8B8", lineHeight: 1.7,
-                  transition: "color 0.3s ease",
-                }}>{item}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Affirming statement */}
-          <div style={{
-            background: darkMode ? "rgba(77, 189, 183, 0.12)" : "rgba(61, 158, 154, 0.08)",
-            border: `1px solid ${theme.accent}33`,
-            borderRadius: 2,
-            padding: "20px 24px",
-            marginBottom: 32,
-            transition: "all 0.3s ease",
-          }}>
-            <p style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 14, fontWeight: 400,
-              color: darkMode ? colors.darkTeal : colors.tealLight,
-              lineHeight: 1.7,
-              margin: 0,
-              letterSpacing: "0.02em",
-              transition: "color 0.3s ease",
-            }}>
-              Bayside Wellness & Counseling is LGBTQ+ and BIPOC affirming. All identities, experiences, and backgrounds are welcomed here.
-            </p>
-          </div>
-
-          {/* Buttons Row - Work With Marcus + Psychology Today */}
-          <div className="about-buttons" style={{ display: 'flex', gap: 16, alignItems: 'stretch' }}>
-            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} style={{ textDecoration: "none",
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 13, fontWeight: 500,
-              letterSpacing: "0.12em", textTransform: "uppercase",
-              color: colors.white, background: "transparent",
-              border: `1px solid ${theme.accent}`, cursor: "pointer",
-              padding: "14px 32px", borderRadius: 2,
-              transition: "all 0.3s ease",
-              flex: 1,
-              minHeight: 48,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-            onMouseEnter={e => { e.target.style.background = theme.accent; }}
-            onMouseLeave={e => { e.target.style.background = "transparent"; }}
-            >Work With Marcus</a>
-
-            <a 
-              href="https://www.psychologytoday.com/profile/1134128"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 13, fontWeight: 500,
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                color: theme.accent, background: "transparent",
-                border: `1px solid ${theme.accent}66`, cursor: "pointer",
-                padding: "14px 32px", borderRadius: 2,
-                transition: "all 0.3s ease",
-                flex: 1,
-                minHeight: 48,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textDecoration: 'none',
-              }}
-              onMouseEnter={e => { 
-                e.target.style.background = darkMode ? 'rgba(77, 189, 183, 0.15)' : 'rgba(61, 158, 154, 0.1)'; 
-                e.target.style.borderColor = theme.accent;
-              }}
-              onMouseLeave={e => { 
-                e.target.style.background = "transparent"; 
-                e.target.style.borderColor = `${theme.accent}66`;
-              }}
-                                   >Psychology Today →</a>
-          </div>
-        <div style={{ marginTop: 20 }}>
-          <a href="https://www.marcusghiasitherapy.com" target="_blank" rel="noopener noreferrer" style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 13, fontWeight: 300,
-            color: theme.accentMuted, textDecoration: "none",
-            letterSpacing: "0.05em",
-            borderBottom: `1px solid ${theme.accentMuted}44`,
-            paddingBottom: 2,
-            transition: "color 0.3s ease",
-          }}
-          onMouseEnter={e => e.target.style.color = darkMode ? colors.darkTeal : colors.tealLight}
-          onMouseLeave={e => e.target.style.color = theme.accentMuted}
-          >Visit marcusghiasitherapy.com →</a>
+      <section className="about-background" aria-labelledby="about-background-heading">
+        <div className="about-inner">
+          <p className="about-eyebrow">Professional background</p>
+          <h2 id="about-background-heading">Experience across different settings and stages of life.</h2>
+          <p>My background in mental health began with a year of volunteering at San Francisco Suicide Prevention in 2015–2016. Since then, my work has spanned community mental health, residential treatment, supportive housing, youth services, healthcare, and private practice.</p>
+          <p>At Progress Foundation, I worked as a relief counselor and residential counselor, providing counseling, crisis intervention, and coordinated support. At Episcopal Community Services, I supported formerly homeless adults with mental health needs, housing stability, and connections to community resources.</p>
+          <p>During and after my graduate training, I provided psychotherapy through Community Youth Center of San Francisco and 3rd Street Youth Center &amp; Clinic. My subsequent roles included Family Therapist at Dignity Health and Psychotherapist at Calm Again Counseling before founding Bayside.</p>
+          <p className="about-scope-note">These earlier roles included work with adolescents and families. Bayside’s current services are individual psychotherapy for adults age 18 and older.</p>
         </div>
-        </div>
-        <div style={{ position: "relative" }}>
-          <div style={{
-            width: "100%", aspectRatio: "3/4",
-            background: darkMode ? colors.darkBgLighter : colors.tealPale,
-            borderRadius: "80px 2px 80px 2px",
-            overflow: "hidden",
-            transition: "background 0.3s ease",
-          }}>
-            <img
-              src={marcusHeadshot}
-              alt="Marcus Ghiasi, LMFT - Licensed Marriage and Family Therapist"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </div>
+      </section>
 
-                              {/* Psychology Today seal and CAMFT badge, below the photo */}
-          <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap' }}>
-            <div style={{ transform: 'scale(1.4)', transformOrigin: 'left center', marginRight: 30 }}>
-            <a
-              href="https://www.psychologytoday.com/profile/1134128"
-              className="sx-verified-seal"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-            <script
-              type="text/javascript"
-              src="https://member.psychologytoday.com/verified-seal.js"
-              data-badge="13"
-              data-id="1134128"
-              data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzExMzQxMjg/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
-            ></script>
-            </div>
-            <img
-              src={camftLogo}
-              alt="Member of the California Association of Marriage & Family Therapists"
-              style={{ height: 76, width: 'auto' }}
-            />
+      <section className="about-approach" aria-labelledby="about-approach-heading">
+        <div className="about-inner"><div className="about-approach-grid">
+          <div>
+            <h2 id="about-approach-heading">How we can work together.</h2>
+            <p>My approach draws on <Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link>, <Link to="/services/cbt" onClick={() => window.scrollTo(0, 0)}>Cognitive Behavioral Therapy</Link>, <Link to="/services/psychodynamic" onClick={() => window.scrollTo(0, 0)}>psychodynamic perspectives</Link>, and <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS-informed parts work</Link>. We begin with your concerns, history, and goals, then discuss which approaches may be useful and why.</p>
+            <p>Some sessions may focus on a practical change in daily life. Others may explore a recurring relationship pattern, conflicting feelings, or the effects of a difficult experience. You can ask questions, express preferences, and tell me when something does not feel helpful.</p>
+            <Link className="about-services-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Therapy Services <span aria-hidden="true">→</span></Link>
           </div>
+          <div className="about-affirming">
+            <h2>Making room for your experience.</h2>
+            <p>Culture, family expectations, identity, and belonging can shape what brings someone to therapy. I welcome exploring those influences without assuming what they mean for you.</p>
+            <p>Bayside is LGBTQ+ and BIPOC affirming. The work makes room for your background and circumstances alongside the changes you want to pursue.</p>
+          </div>
+        </div></div>
+      </section>
+
+      <section className="about-next" aria-labelledby="about-next-heading">
+        <div className="about-inner">
+          <h2 id="about-next-heading">Start with a conversation.</h2>
+          <p>A free 15-minute consultation gives us time to discuss your needs, answer questions, and consider whether working together is a good fit.</p>
+          <a className="about-consultation" href={bookingUrl} target="_blank" rel="noopener noreferrer" aria-label="Book a free 15-minute consultation (opens Jane in a new tab)">Book a Free 15-Minute Consultation <span aria-hidden="true">↗</span></a>
+          <p className="about-booking-note">Choose an available time through our booking calendar. Opens in a new tab.</p>
         </div>
-      </div>
-    </section>
-    </>
+      </section>
+    </div>
   );
 }
 
