@@ -33,12 +33,18 @@ export function SEO({ metadata, noindex = false }) {
       <meta property="og:title" content={ogTitle} />
       <meta property="og:description" content={ogDescription} />
       <meta property="og:image" content={ogImage} />
+      {page.imageAlt && <meta property="og:image:alt" content={page.imageAlt} />}
+      {page.imageWidth && <meta property="og:image:width" content={String(page.imageWidth)} />}
+      {page.imageHeight && <meta property="og:image:height" content={String(page.imageHeight)} />}
+      {page.publishedTime && <meta property="article:published_time" content={page.publishedTime} />}
+      {page.modifiedTime && <meta property="article:modified_time" content={page.modifiedTime} />}
       <meta property="og:site_name" content="Bayside Wellness & Counseling" />
 
       <meta name="twitter:card" content={page.twitterCard || 'summary_large_image'} />
       <meta name="twitter:title" content={page.twitterTitle || ogTitle} />
       <meta name="twitter:description" content={page.twitterDescription || ogDescription} />
       <meta name="twitter:image" content={page.twitterImage || ogImage} />
+      {page.imageAlt && <meta name="twitter:image:alt" content={page.imageAlt} />}
 
       <meta name="robots" content={robots} />
       <meta name="googlebot" content={robots} />
