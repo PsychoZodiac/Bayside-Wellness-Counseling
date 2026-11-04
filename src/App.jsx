@@ -5885,15 +5885,13 @@ const blogPosts = [
   "date": "November 4, 2026",
   "publishedAt": "2026-11-04",
   "category": "New Parenthood",
-  "image": "/blog/support-your-partner-after-birth-kelly-sikkema.jpg",
-  "imageAlt": "Two parents smiling down at their newborn baby beside a window.",
-  "imageWidth": 1365,
-  "imageHeight": 2048,
-  "imageFit": "contain",
-  "heroAspectRatio": "1365 / 2048",
-  "heroMaxWidth": 560,
-  "photographer": "Kelly Sikkema",
-  "photoCreditUrl": "https://unsplash.com/photos/WvVyudMd1Es",
+  "image": "/blog/support-your-partner-after-birth-taylor-gray.jpg",
+  "imageAlt": "Two parents leaning close to their baby as the baby holds a parent’s finger.",
+  "imageWidth": 2048,
+  "imageHeight": 1365,
+  "imageFit": "cover",
+  "heroAspectRatio": "2048 / 1365",
+  "heroMaxWidth": 900,
   "keywords": [
     "support your partner after birth",
     "non-birthing partner",
@@ -7805,7 +7803,6 @@ function BlogPostPage({ slug }) {
               }}
             />
           </div>
-          {post.photographer && <p style={{ margin: "12px 0 0", fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: theme.textMuted }}>Photo by <a href={post.photoCreditUrl} target="_blank" rel="noopener noreferrer" style={{ color: theme.accent }}>{post.photographer} on Unsplash</a></p>}
         </div>
       </section>
 
