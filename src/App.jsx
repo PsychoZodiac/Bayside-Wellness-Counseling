@@ -5877,6 +5877,35 @@ const faqs = [
 
 const blogPosts = [
   {
+  "slug": "support-your-partner-after-having-a-baby",
+  "title": "5 Ways to Support Your Partner After Having a Baby",
+  "seoTitle": "How to Support Your Partner After Birth | Bayside",
+  "metaDescription": "Five practical ways to support your partner after birth, share the mental load, and make room for your own adjustment as a non-birthing parent.",
+  "excerpt": "Practical ways to share responsibilities, protect rest, and stay connected after having a baby, while making room for your own adjustment as a parent.",
+  "date": "November 4, 2026",
+  "publishedAt": "2026-11-04",
+  "category": "New Parenthood",
+  "image": "/blog/support-your-partner-after-birth-kelly-sikkema.jpg",
+  "imageAlt": "Two parents smiling down at their newborn baby beside a window.",
+  "imageWidth": 1365,
+  "imageHeight": 2048,
+  "imageFit": "contain",
+  "heroAspectRatio": "1365 / 2048",
+  "heroMaxWidth": 560,
+  "photographer": "Kelly Sikkema",
+  "photoCreditUrl": "https://unsplash.com/photos/WvVyudMd1Es",
+  "keywords": [
+    "support your partner after birth",
+    "non-birthing partner",
+    "new parent stress",
+    "mental load",
+    "therapy for new parents",
+    "individual therapy California"
+  ],
+  "contentFormat": "html",
+  "content": "<p>You can love your partner, love your baby, and still have no idea what would actually help at 3 a.m.</p>\n<p>Becoming a father has made the transition into parenthood personal for me. It has also made me more interested in the ordinary decisions that shape how supported people feel: who notices the empty fridge, who makes the appointment, and who gets to rest without first organizing everything.</p>\n<p>If you are the non-birthing partner, your experience matters. So does the fact that pregnancy, birth, and physical recovery ask something different of the person who gave birth. Supporting your partner after having a baby starts with taking both realities seriously.</p>\n<h2>1. Own a responsibility from start to finish</h2>\n<p>“Tell me what to do” can sound helpful while leaving your partner responsible for noticing, planning, and following up.</p>\n<p>Pick a responsibility you can manage completely. For example, owning meals might mean checking what is available, shopping, preparing food, and cleaning up. Owning appointments could mean scheduling, keeping track of questions, and arranging transportation.</p>\n<p>Talk about the division of work rather than assuming you already know what feels fair. Your partner may have preferences you have not considered. The goal is a workable agreement, not proving that you can read their mind.</p>\n<h2>2. Ask what kind of support would help</h2>\n<p>Sometimes your partner wants a solution. Sometimes they want to finish a sentence without having to defend why they are upset.</p>\n<p>Try: “Do you want me to listen, help think it through, or take something off your plate?”</p>\n<p>If they describe feeling lonely, overwhelmed, or unlike themselves, resist turning the conversation into a list of everything you have done. You can discuss your own efforts and needs too, but first make room to understand what they are telling you.</p>\n<h2>3. Make rest a shared plan</h2>\n<p>“You should get some sleep” does not create an opportunity to sleep.</p>\n<p>Discuss what protected rest could actually look like given feeding needs, work, recovery, and the support available to you. Perhaps you handle diaper changes and settling during an agreed stretch, or arrange for someone trusted to bring food and help with household tasks.</p>\n<p>Check whether the plan is working. A schedule that looked fair before the baby arrived may need to change. If feeding or recovery makes rest difficult, ask the relevant healthcare professional for help adapting the plan.</p>\n<h2>4. Stay interested in your partner as a person</h2>\n<p>Not every conversation has to be about feeding, laundry, or the next appointment.</p>\n<p>Ask what they miss, what has surprised them, or what they wish you understood. Make room for answers that are complicated. Gratitude and resentment can coexist. Loving a baby does not mean loving every part of early parenthood.</p>\n<p>Connection does not have to mean sex, an elaborate date, or a long conversation. Ask what feels welcome rather than assuming affection or intimacy should look the way it did before birth.</p>\n<h2>5. Take your own adjustment seriously</h2>\n<p>Being supportive does not require pretending you are fine. You may be struggling with responsibility, identity, work pressure, money worries, or a fear that you are getting everything wrong.</p>\n<p>Find support that gives those feelings somewhere to go. That could include a friend, a parent group, or individual therapy. Your partner can care about you without being your only source of support during their own recovery.</p>\n<h2>When new parent stress needs more support</h2>\n<p>If either of you is persistently anxious, low, overwhelmed, or struggling to function, bring it up with a healthcare professional rather than assuming you simply need to try harder. ACOG recommends seeking help when postpartum anxiety or depression symptoms develop; treatment and referral options are available.<sup><a href=\"#source-1\" aria-label=\"Source 1\">[1]</a></sup></p>\n<p>At Bayside Wellness &amp; Counseling, I offer individual therapy for adults adjusting to parenthood, including fathers and other non-birthing parents. We can explore stress, relationship patterns, and the expectations you bring to your new role. This is individual support, rather than couples therapy or medical postpartum care.</p>\n<p><a href=\"https://baysidewellnessandcounseling.janeapp.com/#/staff_member/1/treatment/1\">Schedule a free 15-minute consultation</a> to talk about fit. Sessions are virtual for adults physically located in California. You can also learn about <a href=\"https://baysidewellnessandcounseling.com/about\">my background and approach</a>.</p><div class=\"bayside-article-sources\"><h2>Sources and further reading</h2><ol><li id=\"source-1\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.acog.org/womens-health/faqs/postpartum-depression\">ACOG: Postpartum Depression</a></li></ol><p>General education, not individualized medical advice or a substitute for assessment and care.</p></div>"
+},
+  {
     "slug": "when-labor-doesnt-go-according-to-plan",
     "title": "When Labor Doesn't Go According to Plan",
     "excerpt": "A birth plan isn't naive. But birth doesn't actually care what's written on the page, and the gap between the two is where a lot of the aftermath lives.",
@@ -7449,7 +7478,7 @@ function BlogPage() {
           {blogPosts.map((post, i) => (
             <a href={`/blog/${post.slug}`}
               key={post.slug}
-              onClick={(e) => { e.preventDefault(); navigate(`/blog/${post.slug}`); }}
+              onClick={(e) => { if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; e.preventDefault(); navigate(`/blog/${post.slug}`); }}
               className="blog-post-item"
               style={{ textDecoration: "none",
                 width: "100%",
@@ -7477,11 +7506,17 @@ function BlogPage() {
               }}>
                 <img 
                   src={post.image} 
-                  alt={post.title}
+                  alt={post.imageAlt || post.title}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  width={post.imageWidth || 240}
+                  height={post.imageHeight || 150}
                   style={{
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover",
+                    objectFit: post.imageFit || "cover",
+                    objectPosition: "center",
+                    display: "block",
                     transition: "transform 0.3s ease",
                   }}
                   onMouseEnter={e => e.target.style.transform = "scale(1.05)"}
@@ -7616,8 +7651,43 @@ function articleDateToISOString(value) {
   return new Date(Date.UTC(Number(parts[3]), month, Number(parts[2]))).toISOString();
 }
 
+function BlogShareLinks({ post, theme }) {
+  const [copyStatus, setCopyStatus] = useState("");
+  const [showCopyField, setShowCopyField] = useState(false);
+  const url = `https://baysidewellnessandcounseling.com/blog/${post.slug}`;
+  const encodedUrl = encodeURIComponent(url);
+  const encodedTitle = encodeURIComponent(post.title);
+  const links = [
+    ["Facebook", `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`],
+    ["LinkedIn", `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`],
+    ["X", `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`],
+    ["Email", `mailto:?subject=${encodedTitle}&body=${encodeURIComponent(`${post.title}\n\n${url}`)}`],
+  ];
+  const copyLink = async () => {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
+      await navigator.clipboard.writeText(url);
+      setCopyStatus("Link copied.");
+      setShowCopyField(false);
+    } catch {
+      setShowCopyField(true);
+      setCopyStatus("Select and copy the link below.");
+    }
+  };
+  return (
+    <aside className="bayside-blog-share" aria-label="Share this article" style={{ marginTop: 48, paddingTop: 24, borderTop: `1px solid ${theme.border}`, color: theme.textMuted, fontFamily: "'DM Sans', sans-serif" }}>
+      <p style={{ margin: "0 0 12px", fontSize: 14 }}>Share this article</p>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 18px", alignItems: "center" }}>
+        {links.map(([label, href]) => <a key={label} href={href} target={label === "Email" ? undefined : "_blank"} rel={label === "Email" ? undefined : "noopener noreferrer"} aria-label={`Share ${post.title} by ${label}`} style={{ color: theme.accent, fontSize: 14, textUnderlineOffset: 3 }}>{label}</a>)}
+        <button type="button" onClick={copyLink} style={{ color: theme.accent, font: "inherit", fontSize: 14, background: "transparent", border: `1px solid ${theme.border}`, padding: "8px 12px", borderRadius: 3, cursor: "pointer" }}>Copy link</button>
+      </div>
+      <p role="status" aria-live="polite" style={{ margin: "10px 0 0", fontSize: 13 }}>{copyStatus}</p>
+      {showCopyField && <input aria-label="Article link to copy" readOnly value={url} onFocus={(event) => event.currentTarget.select()} style={{ width: "100%", boxSizing: "border-box", marginTop: 8, padding: 10, color: theme.text, background: theme.bg, border: `1px solid ${theme.border}` }} />}
+    </aside>
+  );
+}
+
 function BlogPostPage({ slug }) {
-  const [ref, visible] = useScrollReveal();
   const navigate = useNavigate();
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
@@ -7630,15 +7700,17 @@ function BlogPostPage({ slug }) {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
-    "description": post.excerpt,
-    "image": post.image.startsWith("http") ? post.image : `https://baysidewellnessandcounseling.com${post.image}`,
-    "datePublished": articleDateToISOString(post.date),
-    "dateModified": articleDateToISOString(post.updatedDate || post.date),
+    "description": post.metaDescription || post.excerpt,
+    "image": new URL(post.socialImage || post.image, "https://baysidewellnessandcounseling.com/").href,
+    "datePublished": post.publishedAt || articleDateToISOString(post.date),
+    "dateModified": post.updatedAt || (post.updatedDate ? articleDateToISOString(post.updatedDate) : post.publishedAt || articleDateToISOString(post.date)),
     "author": {
       "@type": "Person",
+      "@id": "https://baysidewellnessandcounseling.com/#marcus",
       "name": "Marcus Ghiasi",
+      "url": "https://baysidewellnessandcounseling.com/about",
       "jobTitle": "Licensed Marriage and Family Therapist",
-      "credential": "LMFT"
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "California LMFT #158475", "credentialCategory": "license" }
     },
     "publisher": {
       "@type": "Organization",
@@ -7648,6 +7720,7 @@ function BlogPostPage({ slug }) {
         "url": "https://baysidewellnessandcounseling.com/og-image-square.jpg"
       }
     },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://baysidewellnessandcounseling.com/blog/${slug}` },
     "articleSection": post.category,
     "url": `https://baysidewellnessandcounseling.com/blog/${slug}`
   };
@@ -7655,8 +7728,17 @@ function BlogPostPage({ slug }) {
   return (
     <>
       <SEO metadata={generateBlogMeta(post)} />
+      <style>{`
+        .bayside-blog-rich { overflow-wrap: anywhere; }
+        .bayside-blog-rich p { margin: 0 0 24px; }
+        .bayside-blog-rich h2 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 500; line-height: 1.3; margin: 40px 0 16px; color: ${theme.text}; }
+        .bayside-blog-rich a { color: ${theme.accent}; text-decoration: underline; text-underline-offset: 3px; }
+        .bayside-blog-rich li { margin: 0 0 12px; }
+        .bayside-article-sources { border-top: 1px solid ${theme.border}; margin-top: 36px; font-size: 14px; }
+        .bayside-blog-share a:focus-visible, .bayside-blog-share button:focus-visible { outline: 2px solid ${theme.accent}; outline-offset: 4px; }
+      `}</style>
       {/* Article Schema for AI Search */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }} />
       
       <section style={{
         background: theme.bg,
@@ -7699,10 +7781,10 @@ function BlogPostPage({ slug }) {
         padding: "0 40px 60px",
         transition: "background 0.3s ease",
       }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+        <div style={{ maxWidth: post.heroMaxWidth || 900, margin: "0 auto" }}>
           <div style={{
             width: "100%",
-            aspectRatio: "16/9",
+            aspectRatio: post.heroAspectRatio || "16/9",
             borderRadius: 4,
             overflow: "hidden",
             background: theme.border,
@@ -7710,22 +7792,27 @@ function BlogPostPage({ slug }) {
           }}>
             <img 
               src={post.image} 
-              alt={post.title}
+              alt={post.imageAlt || post.title}
+              width={post.imageWidth}
+              height={post.imageHeight}
+              decoding="async"
+              loading="eager"
               style={{
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: post.imageFit || "cover",
+                display: "block",
               }}
             />
           </div>
+          {post.photographer && <p style={{ margin: "12px 0 0", fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: theme.textMuted }}>Photo by <a href={post.photoCreditUrl} target="_blank" rel="noopener noreferrer" style={{ color: theme.accent }}>{post.photographer} on Unsplash</a></p>}
         </div>
       </section>
 
-      <section ref={ref} style={{
+      <section style={{
         background: theme.bgAlt,
         padding: "0 40px 120px",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "none" : "translateY(30px)",
+        opacity: 1,
         transition: "all 0.3s ease",
       }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
@@ -7738,7 +7825,9 @@ function BlogPostPage({ slug }) {
           }}>
             {post.content ? (
               // Display full blog content, parsed into real headings and paragraphs
-              renderBlogContent(post.content, theme)
+              post.contentFormat === "html"
+                ? <div className="bayside-blog-rich" dangerouslySetInnerHTML={{ __html: post.content }} />
+                : renderBlogContent(post.content, theme)
             ) : (
               // Placeholder if content not yet added
               <>
@@ -7751,6 +7840,8 @@ function BlogPostPage({ slug }) {
               </>
             )}
           </div>
+
+          <BlogShareLinks key={post.slug} post={post} theme={theme} />
 
           {blogRelatedLinks[slug] && (
             <div style={{
