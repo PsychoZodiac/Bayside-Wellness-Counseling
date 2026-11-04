@@ -1,5 +1,4 @@
-# Pages that get prerendered at build time, one path per line (no leading slash).
-# This is separate from public/sitemap.xml, which lists only the pages submitted to Google.
+# Pages prerendered at build time. Homepage is added automatically.
 about
 services
 contact
@@ -155,3 +154,4 @@ online-therapy-sunnyvale
 online-therapy-daly-city
 online-therapy-alameda
 online-therapy-san-rafael
+blog/support-your-partner-after-having-a-baby
