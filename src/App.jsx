@@ -6905,29 +6905,29 @@ function HomePage() {
   const concerns = [
   {
     "title": "Trauma and difficult experiences",
-    "text": "A recent event or an experience from years ago can still affect sleep, trust, and daily life. We start with what you need now.",
+    "text": "Support when a recent event or an older experience still affects sleep, trust, or daily life.",
     "path": "/services/trauma"
   },
   {
     "title": "Burnout and work stress",
-    "text": "Exhaustion, constant pressure, or difficulty switching off. Support for tech workers, healthcare professionals, and adults in demanding roles.",
+    "text": "Exhaustion, constant pressure, or difficulty switching off, including the demands of tech and healthcare work.",
     "path": "/services/burnout"
   },
   {
     "title": "Grief and loss",
-    "text": "Space after a death, a relationship ending, or another significant loss, including feelings that are difficult to explain.",
+    "text": "Space after a death, a relationship ending, or another significant loss, without a timetable for moving on.",
     "path": "/services/grief"
   },
   {
     "title": "Therapy for men",
-    "text": "Work on anger, anxiety, emotional expression, relationship patterns, or the pressures of work and parenthood.",
+    "text": "Work on anger, anxiety, relationships, emotional expression, and the pressures of work or parenthood.",
     "path": "/services/mens"
   }
 ];
   const steps = [
-    { title: "Understand what is happening.", text: "Explore your concerns, the circumstances around them, and what you have already tried." },
-    { title: "Choose a direction together.", text: "Discuss what you want to change and how the recommended approach connects to those goals." },
-    { title: "Keep the work useful.", text: "Make room for practical steps, deeper exploration, and honest conversations about what is helping or needs adjusting." },
+    { title: "Understand your concerns.", text: "Discuss what brings you here and what you want to change." },
+    { title: "Choose a direction.", text: "Agree on a focus and an approach that fits your circumstances." },
+    { title: "Review what helps.", text: "Connect sessions with daily life and adjust the work together." },
   ];
 
   const ConsultationLink = () => (
@@ -7005,15 +7005,44 @@ function HomePage() {
           .bayside-home .home-primary { max-width: 100%; font-size: 13px; padding: 15px 18px; }
           .bayside-home .home-trust { max-width: 260px; margin-left: auto; margin-right: auto; }
         }
+
+        /* Balanced homepage composition; reading copy remains left aligned. */
+        .bayside-home .home-concerns > .home-inner,
+        .bayside-home .home-approach > .home-inner,
+        .bayside-home .home-practical > .home-inner { max-width: 1040px; }
+        .bayside-home .home-concerns h2,
+        .bayside-home .home-approach h2,
+        .bayside-home .home-practical h2 { max-width: 760px; margin-left: auto; margin-right: auto; text-align: center; }
+        .bayside-home .home-section-intro { max-width: 620px; margin-left: auto; margin-right: auto; text-align: center; }
+        .bayside-home .home-concern-grid { gap: 28px 48px; }
+        .bayside-home .home-concerns > .home-inner > .home-text-link,
+        .bayside-home .home-practical > .home-inner > .home-text-link { display: table; margin-left: auto; margin-right: auto; text-align: center; }
+        .bayside-home .home-step-grid > div { min-width: 0; border-top: 1px solid var(--home-border); padding-top: 22px; }
+        .bayside-home .home-methods { max-width: 760px; margin: 0 auto; text-align: center; }
+        .bayside-home .home-founder-grid { max-width: 1040px; margin: 0 auto; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 64px; }
+        .bayside-home .home-founder-grid > * { min-width: 0; }
+        .bayside-home .home-founder-grid > div { max-width: 560px; }
+        .bayside-home .home-details-grid { gap: 32px; }
+        @media (max-width: 900px) {
+          .bayside-home .home-founder-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 36px; }
+        }
+        @media (max-width: 680px) {
+          .bayside-home .home-concern-grid { gap: 24px; }
+          .bayside-home .home-founder-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+          .bayside-home .home-founder-grid > div { max-width: 100%; }
+          .bayside-home .home-step-grid, .bayside-home .home-details-grid { gap: 24px; }
+          .bayside-home .home-hero .home-eyebrow { max-width: 32ch; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        }
+
         @media (prefers-reduced-motion: reduce) { .bayside-home .home-primary { transition: none; } }
       ` }} />
 
       <section className="home-hero" aria-labelledby="home-heading">
         <div className="home-inner">
-          <p className="home-eyebrow">Oakland-based · Virtual therapy across California</p>
+          <p className="home-eyebrow">Oakland-based · Online therapy for the Bay Area</p>
           <h1 id="home-heading"><span>A place for healing.</span><span><em>Room for change.</em></span></h1>
-          <p className="home-summary">Individual therapy for adults navigating trauma, burnout, grief, anxiety, and relationship challenges. EMDR, IFS therapy and parts work, and therapy for men.</p>
-          <p className="home-intro">You do not need to have everything figured out before starting. Bayside Wellness &amp; Counseling offers space to understand what you’re experiencing, work through what feels difficult, and take steps toward changes that matter to you.</p>
+          <p className="home-summary">Individual therapy for adults navigating trauma, burnout, grief, anxiety, and relationship challenges.</p>
+          <p className="home-intro">EMDR, IFS therapy and parts work, and therapy for men. Start with a free 15-minute consultation.</p>
           <div className="home-hero-actions"><ConsultationLink /><Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Therapy Services</Link></div>
           <p className="home-trust">Adults 18+ · Online appointments · California licensed</p>
         </div>
@@ -7022,7 +7051,7 @@ function HomePage() {
       <section className="home-concerns" aria-labelledby="home-concerns-heading">
         <div className="home-inner">
           <h2 id="home-concerns-heading">Start with what brings you here.</h2>
-          <p className="home-section-intro">Therapy can begin with a specific concern or a pattern you want to understand.</p>
+          <p className="home-section-intro">Explore the support that fits what you are experiencing.</p>
           <div className="home-concern-grid">{concerns.map(item => <div className="home-concern" key={item.title}><h3><Link style={{ color: "inherit", textDecoration: "none" }} to={item.path}>{item.title}</Link></h3><p>{item.text}</p></div>)}</div>
           <Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Find Support for Your Concerns <span aria-hidden="true">→</span></Link>
         </div>
@@ -7030,11 +7059,11 @@ function HomePage() {
 
       <section className="home-approach" aria-labelledby="home-approach-heading">
         <div className="home-inner">
-          <h2 id="home-approach-heading">Care that connects understanding with action.</h2>
-          <p className="home-section-intro">At Bayside, you and your therapist work together to give therapy a clear focus while leaving room for what emerges.</p>
-          <div className="home-step-grid">{steps.map((item, index) => <div key={item.title}><span className="home-step-number" aria-hidden="true">0{index + 1}</span><h3><Link style={{ color: "inherit", textDecoration: "none" }} to={item.path}>{item.title}</Link></h3><p>{item.text}</p></div>)}</div>
+          <h2 id="home-approach-heading">Therapy with a clear focus.</h2>
+          <p className="home-section-intro">Your concerns and goals guide the work.</p>
+          <div className="home-step-grid">{steps.map((item, index) => <div key={item.title}><span className="home-step-number" aria-hidden="true">0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></div>)}</div>
           <div className="home-methods">
-            <p><Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link> and <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS therapy and parts work</Link> are central to care at Bayside. Sessions can also include practical tools and exploration of relationship patterns. We explain the approach and choose a direction together; you do not need to know therapy terminology before reaching out.</p>
+            <p>Sessions may include <Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link>, <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS therapy and parts work</Link>, and practical tools. We discuss which approaches fit your goals and why.</p>
             <Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Our Services <span aria-hidden="true">→</span></Link>
           </div>
         </div>
@@ -7048,8 +7077,8 @@ function HomePage() {
             <h2 id="home-founder-heading">Meet Bayside’s founder.</h2>
             <p className="home-founder-name">Marcus Ghiasi, LMFT</p>
             <p className="home-credentials">Founder &amp; Therapist · California license #158475</p>
-            <p>Marcus founded Bayside Wellness &amp; Counseling as a place for thoughtful, individualized care. A Bay Area native and second-generation Persian American, he works with adults navigating trauma, burnout, grief, anxiety, and relationship patterns, with a particular focus on men. His work includes support for healthcare professionals and people in tech.</p>
-            <p>Therapy at Bayside is currently provided by Marcus. Learn about his background and approach to see whether working together feels right for you.</p>
+            <p>A Bay Area native and second-generation Persian American, Marcus works with men and adults navigating trauma, burnout, grief, and relationship challenges. His clients include healthcare professionals and people in tech.</p>
+            <p>Marcus completed his MA in Counseling Psychology at the University of San Francisco in 2021 and EMDR Basic Training through the EMDR Institute in 2024.</p><p>Marcus currently provides all therapy at Bayside. Explore his background and training before reaching out.</p>
             <div className="home-founder-links"><Link className="home-text-link" to="/about" onClick={() => window.scrollTo(0, 0)}>Meet Marcus <span aria-hidden="true">→</span></Link><span className="home-psychology-verification" ref={verificationRef}><a href="https://www.psychologytoday.com/profile/1134128" className="sx-verified-seal" target="_blank" rel="noopener noreferrer" aria-label="View Marcus Ghiasi on Psychology Today (opens in a new tab)">Psychology Today</a></span></div>
           </div>
         </div></div>
@@ -7059,21 +7088,21 @@ function HomePage() {
         <div className="home-inner">
           <h2 id="home-practical-heading">Know what to expect before you begin.</h2>
           <div className="home-details-grid">
-            <div className="home-detail"><h3>Virtual individual therapy</h3><p>Attend from a private, suitable setting. Clients must be physically in California for each appointment.</p></div>
+            <div className="home-detail"><h3>Virtual individual therapy</h3><p>Virtual appointments are available throughout California. You must be physically in the state for each session.</p></div>
             <div className="home-detail"><h3>Session fees</h3><p className="home-rates">$210 for 45 minutes<br />$280 for 60 minutes</p></div>
-            <div className="home-detail"><h3>Private-pay care</h3><p>Bayside does not bill insurance directly. A superbill is available for possible out-of-network reimbursement; coverage depends on your plan.</p></div>
+            <div className="home-detail"><h3>Private-pay care</h3><p>Bayside does not bill insurance directly. Superbills are available for possible out-of-network reimbursement, depending on your plan.</p></div>
           </div>
-          <Link className="home-text-link" to="/faq" onClick={() => window.scrollTo(0, 0)}>Questions About Fees, Insurance, or Getting Started? <span aria-hidden="true">→</span></Link>
+          <Link className="home-text-link" to="/faq" onClick={() => window.scrollTo(0, 0)}>More About Fees & Getting Started <span aria-hidden="true">→</span></Link>
         </div>
       </section>
 
       <section className="home-next" aria-labelledby="home-next-heading">
         <div className="home-inner">
-          <h2 id="home-next-heading">Your next step can be a conversation.</h2>
-          <p>A free 15-minute consultation gives you time to share what brings you to therapy, ask questions, and discuss availability, fees, and whether Bayside fits your needs.</p>
-          <p>You do not need to prepare a detailed personal history or commit to ongoing sessions during the call.</p>
+          <h2 id="home-next-heading">Start with a conversation.</h2>
+          <p>Share what brings you here, ask questions, and discuss fit, fees, and availability.</p>
+          <p>No detailed personal history is needed, and there is no obligation to book ongoing sessions.</p>
           <ConsultationLink />
-          <p className="home-booking-note">Choose an available time through our booking calendar. Opens in a new tab.</p>
+          <p className="home-booking-note">Choose a time in our booking calendar. Opens in a new tab.</p>
         </div>
       </section>
     </div>
@@ -9208,6 +9237,23 @@ export default function App() {
           #main-content [id^="faq-question-"] h3 { font-size: 18px !important; }
           #main-content .service-intro, #main-content .service-copy-section { max-width: 100%; }
           #main-content .services-grid > a { width: 100%; min-width: 0; }
+        }
+
+
+        /* Natural kerning and restrained tracking; the brand wordmark is excluded. */
+        body, button, input, textarea, select { font-kerning: normal; }
+        #main-content p, #main-content li { letter-spacing: normal !important; }
+        #main-content h1, #main-content h2 { letter-spacing: -.01em !important; }
+        #main-content h3, #main-content h4 { letter-spacing: normal !important; }
+        #main-content [class$="-eyebrow"] { letter-spacing: .06em !important; }
+        #main-content button, #main-content a[style*="text-transform:uppercase"],
+        #main-content .home-primary, #main-content .service-consultation { letter-spacing: .02em !important; }
+        .site-nav-links > a, .services-disclosure-trigger, .site-nav-actions > a, .site-nav-actions > button { letter-spacing: .025em !important; }
+        #mobile-navigation > a, #mobile-navigation > button { letter-spacing: .035em !important; }
+        .services-disclosure-links a { letter-spacing: normal; }
+        @media (max-width: 680px) {
+          #main-content h1, #main-content h2 { letter-spacing: normal !important; }
+          #main-content [class$="-eyebrow"] { letter-spacing: .04em !important; }
         }
 
         /* Accessibility: Focus indicators for keyboard navigation */
