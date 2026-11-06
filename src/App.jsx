@@ -6610,8 +6610,13 @@ function Nav() {
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
         background: needsSolidBg ? (darkMode ? "rgba(26,36,36,0.96)" : "rgba(250,247,244,0.96)") : "transparent",
         backdropFilter: needsSolidBg ? "blur(12px)" : "none",
-        borderBottom: needsSolidBg ? `1px solid ${theme.border}` : "none",
-        transition: "all 0.3s ease",
+        borderBottom: scrolled
+          ? (darkMode ? "1px solid rgba(168,192,192,0.18)" : "1px solid rgba(44,58,58,0.14)")
+          : (needsSolidBg ? `1px solid ${theme.border}` : "none"),
+        boxShadow: scrolled
+          ? (darkMode ? "0 4px 16px rgba(0,0,0,0.18)" : "0 4px 16px rgba(44,58,58,0.06)")
+          : "none",
+        transition: "background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease",
         padding: "0 clamp(20px, 3vw, 48px)",
     }}>
       <div className="site-nav-inner" style={{
