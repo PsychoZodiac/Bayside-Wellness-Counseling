@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://baysidewellnessandcounseling.com/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/about</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/services</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -68,13 +68,13 @@
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/services/cbt</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/services/psychodynamic</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -942,6 +942,18 @@
   </url>
   <url>
     <loc>https://baysidewellnessandcounseling.com/blog/parenting-without-perfection-emotional-connection</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/services/trauma</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/services/burnout</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://baysidewellnessandcounseling.com/services/grief</loc>
     <lastmod>2026-11-06</lastmod>
   </url>
 </urlset>
