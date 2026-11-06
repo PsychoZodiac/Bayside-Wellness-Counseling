@@ -100,8 +100,8 @@ export const mainPages = {
   }),
   services: generateMetadata({
     title: "Trauma, Burnout, Grief & Men's Therapy | Bayside",
-    description: "Explore trauma, burnout, grief, and men's therapy, with EMDR and IFS-informed care. Virtual individual sessions for adults across California.",
-    keywords: ["therapy services Oakland", "trauma therapy", "burnout therapy", "grief counseling", "EMDR therapy", "IFS-informed therapy", "men's therapy"],
+    description: "Explore trauma, burnout, grief, and men's therapy, with EMDR and IFS therapy and parts work. Virtual individual sessions for adults across California.",
+    keywords: ["therapy services Oakland", "trauma therapy", "burnout therapy", "grief counseling", "EMDR therapy", "IFS therapy", "men's therapy"],
     path: "/services",
   }),
   crisisResources: generateMetadata({
@@ -157,8 +157,8 @@ export const servicePages = {
     path: "/services/emdr",
   }),
   ifs: generateMetadata({
-    title: "IFS-Informed Therapy & Parts Work | Bayside",
-    description: "Explore IFS-informed therapy for self-criticism and inner conflict with Marcus Ghiasi, LMFT. Virtual individual sessions for adults across California.",
+    title: "IFS Therapy & Parts Work | Bayside",
+    description: "Explore IFS therapy for self-criticism and inner conflict with Marcus Ghiasi, LMFT. Virtual individual sessions for adults across California.",
     keywords: ["IFS therapy Oakland", "Internal Family Systems", "parts work therapy", "IFS therapist", "self-compassion therapy"],
     path: "/services/ifs",
   }),
