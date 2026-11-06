@@ -7257,7 +7257,7 @@ function ServicesPage() {
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
-            fontWeight: 300, lineHeight: 1.1,
+            fontWeight: 400, lineHeight: 1.1,
             color: theme.text, margin: "0 0 32px",
             transition: "color 0.3s ease",
           }}>
@@ -7266,7 +7266,7 @@ function ServicesPage() {
           </h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: 17, fontWeight: 300,
+            fontSize: 17, fontWeight: 400,
             color: theme.textMuted, lineHeight: 1.8,
             margin: "0 auto",
             maxWidth: 640,
@@ -7312,14 +7312,14 @@ function ServicesPage() {
                   e.currentTarget.style.borderColor = theme.border;
                 }}
               >
-                <div style={{
+                <h3 className="service-card-title" style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 32, fontWeight: 500,
                   color: theme.text,
                   marginBottom: 12,
                   lineHeight: 1.2,
                   transition: "color 0.3s ease",
-                }}>{service.slug === "ifs" ? "IFS Therapy & Parts Work" : service.name}</div>
+                }}>{service.slug === "ifs" ? "IFS Therapy & Parts Work" : service.name}</h3>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 13, fontWeight: 500,
@@ -7331,7 +7331,7 @@ function ServicesPage() {
                 }}>{service.shortDesc}</div>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 15, fontWeight: 300,
+                  fontSize: 15, fontWeight: 400,
                   color: theme.textMuted,
                   lineHeight: 1.8,
                   margin: "0 0 24px",
@@ -7371,7 +7371,7 @@ function ServicesPage() {
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(36px, 4vw, 56px)",
-            fontWeight: 300, lineHeight: 1.15,
+            fontWeight: 400, lineHeight: 1.15,
             color: colors.white, margin: "0 0 24px",
           }}>
             Not sure where<br />
@@ -7379,7 +7379,7 @@ function ServicesPage() {
           </h2>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: 16, fontWeight: 300,
+            fontSize: 16, fontWeight: 400,
             color: darkMode ? colors.darkTextMuted : "#A8B8B8", lineHeight: 1.8,
             margin: "0 0 40px", maxWidth: 560, marginLeft: "auto", marginRight: "auto",
             transition: "color 0.3s ease",
@@ -7607,7 +7607,7 @@ function FAQPage() {
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
-            fontWeight: 300, lineHeight: 1.1,
+            fontWeight: 400, lineHeight: 1.1,
             color: theme.text, margin: "0 0 32px",
             transition: "color 0.3s ease",
           }}>
@@ -7669,7 +7669,7 @@ function FAQPage() {
               </button>
                 <p id={`faq-answer-${i}`} aria-labelledby={`faq-question-${i}`} hidden={openIndex !== i} style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 15, fontWeight: 300,
+                  fontSize: 15, fontWeight: 400,
                   color: theme.textMuted, lineHeight: 1.8,
                   margin: 0,
                   transition: "color 0.3s ease",
@@ -7694,7 +7694,7 @@ function FAQPage() {
             }}>Have more questions?</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 15, fontWeight: 300,
+              fontSize: 15, fontWeight: 400,
               color: theme.textMuted,
               lineHeight: 1.7,
               margin: "0 0 28px",
@@ -7739,7 +7739,7 @@ function ContactPage() {
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <div style={{ maxWidth: 740, margin: "0 auto 48px", textAlign: "center" }}>
             <p style={{ ...bodyStyle, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: theme.accent, marginBottom: 20 }}>Get Started</p>
-            <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(44px, 6vw, 68px)", fontWeight: 300, lineHeight: 1.15, marginBottom: 24 }}>Let’s talk about what you need.</h1>
+            <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(44px, 6vw, 68px)", fontWeight: 400, lineHeight: 1.15, marginBottom: 24 }}>Let’s talk about what you need.</h1>
             <p style={bodyStyle}>Schedule a free 15-minute consultation with Marcus Ghiasi, LMFT, or call with a question about fit and availability. Individual therapy sessions are virtual for adults physically in California.</p>
           </div>
 
@@ -7800,7 +7800,7 @@ function BlogPage() {
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
-            fontWeight: 300, lineHeight: 1.1,
+            fontWeight: 400, lineHeight: 1.1,
             color: theme.text, margin: "0 0 32px",
             transition: "color 0.3s ease",
           }}>
@@ -7809,7 +7809,7 @@ function BlogPage() {
           </h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: 17, fontWeight: 300,
+            fontSize: 17, fontWeight: 400,
             color: theme.textMuted, lineHeight: 1.8,
             margin: "0 auto",
             maxWidth: 640,
@@ -7896,7 +7896,7 @@ function BlogPage() {
                 >{post.title}</h2>
                 <p style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 15, fontWeight: 300,
+                  fontSize: 15, fontWeight: 400,
                   color: theme.textMuted,
                   lineHeight: 1.7,
                   margin: "0 0 12px",
@@ -8168,7 +8168,7 @@ function BlogPostPage({ slug }) {
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: 17, fontWeight: 300,
+            fontSize: 17, fontWeight: 400,
             color: theme.textMuted,
             lineHeight: 1.9,
             transition: "color 0.3s ease",
@@ -8204,7 +8204,7 @@ function BlogPostPage({ slug }) {
             }}>
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: 16, fontWeight: 300,
+                fontSize: 16, fontWeight: 400,
                 color: theme.textMuted,
                 lineHeight: 1.8,
                 margin: 0,
@@ -8237,7 +8237,7 @@ function BlogPostPage({ slug }) {
             }}>Want to learn more?</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 15, fontWeight: 300,
+              fontSize: 15, fontWeight: 400,
               color: theme.textMuted,
               lineHeight: 1.7,
               margin: "0 0 28px",
@@ -8287,7 +8287,7 @@ function NotFoundPage() {
             <h1 style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(48px, 6vw, 72px)",
-              fontWeight: 300,
+              fontWeight: 400,
               color: theme.text,
               margin: "0 0 24px",
               transition: "color 0.3s ease",
@@ -8351,13 +8351,13 @@ function SEOLandingPage({ slug }) {
           <h1 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(48px, 6vw, 72px)",
-            fontWeight: 300, lineHeight: 1.1,
+            fontWeight: 400, lineHeight: 1.1,
             color: theme.text, margin: "0 0 32px",
             transition: "color 0.3s ease",
           }}>{pageData.h1}</h1>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: 19, fontWeight: 300,
+            fontSize: 19, fontWeight: 400,
             color: theme.textMuted, lineHeight: 1.8,
             margin: "0 auto 40px",
             maxWidth: 700,
@@ -8389,7 +8389,7 @@ function SEOLandingPage({ slug }) {
     {/* Intro local content */}
     <p style={{
       fontFamily: "'DM Sans', sans-serif",
-      fontSize: 17, fontWeight: 300,
+      fontSize: 17, fontWeight: 400,
       color: theme.textMuted,
       lineHeight: 1.9,
       margin: "0 0 80px",
@@ -8416,7 +8416,7 @@ function SEOLandingPage({ slug }) {
           {pageData.uniqueContent.map((para, i) => (
               <p key={i} className="seo-body-link" style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 16, fontWeight: 300,
+              fontSize: 16, fontWeight: 400,
               color: theme.textMuted,
               lineHeight: 1.9,
               margin: "0 0 24px",
@@ -8486,7 +8486,7 @@ function SEOLandingPage({ slug }) {
           pageData.uniqueWhatToExpect.map((para, i) => (
               <p key={i} className="seo-body-link" style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 16, fontWeight: 300,
+              fontSize: 16, fontWeight: 400,
               color: theme.textMuted,
               lineHeight: 1.9,
               margin: "0 0 20px",
@@ -8496,13 +8496,13 @@ function SEOLandingPage({ slug }) {
           ))
         ) : (
           <>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 300, color: theme.textMuted, lineHeight: 1.9, margin: "0 0 20px", transition: "color 0.3s ease" }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 400, color: theme.textMuted, lineHeight: 1.9, margin: "0 0 20px", transition: "color 0.3s ease" }}>
               Starting therapy can feel uncertain. Here's what the process actually looks like: We'll begin with a free 15-minute consultation to discuss what brings you to therapy and whether we're a good fit. No commitment, no pressure.
             </p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 300, color: theme.textMuted, lineHeight: 1.9, margin: "0 0 20px", transition: "color 0.3s ease" }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 400, color: theme.textMuted, lineHeight: 1.9, margin: "0 0 20px", transition: "color 0.3s ease" }}>
               If you decide to move forward, we'll schedule your first full session. In that first meeting, we'll dive deeper into what you're experiencing, your goals for therapy, and which approach might work best.
             </p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 300, color: theme.textMuted, lineHeight: 1.9, margin: 0, transition: "color 0.3s ease" }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 400, color: theme.textMuted, lineHeight: 1.9, margin: 0, transition: "color 0.3s ease" }}>
               Sessions are 45 or 60 minutes and can be scheduled weekly or biweekly. All sessions are virtual via secure telehealth.
             </p>
           </>
@@ -8538,7 +8538,7 @@ function SEOLandingPage({ slug }) {
             }}>{faq.q}</h3>
             <p style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 15, fontWeight: 300,
+              fontSize: 15, fontWeight: 400,
               color: theme.textMuted,
               lineHeight: 1.8,
               margin: 0,
@@ -8563,7 +8563,7 @@ function SEOLandingPage({ slug }) {
       <div style={{ maxWidth: 700, margin: "0 auto 40px" }}>
         <p style={{
           fontFamily: "'DM Sans', sans-serif",
-          fontSize: 16, fontWeight: 300,
+          fontSize: 16, fontWeight: 400,
           color: theme.textMuted,
           lineHeight: 1.9,
           margin: "0 0 20px",
@@ -8630,13 +8630,13 @@ function SEOLandingPage({ slug }) {
             e.currentTarget.style.borderColor = theme.border;
           }}
         >
-          <div style={{
+          <h3 className="service-card-title" style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 24, fontWeight: 500,
             color: theme.text,
             marginBottom: 8,
             transition: "color 0.3s ease",
-          }}>{service.name}</div>
+          }}>{service.name}</h3>
           <div style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 12, fontWeight: 500,
@@ -8737,14 +8737,14 @@ function SEOLandingPage({ slug }) {
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(40px, 5vw, 64px)",
-            fontWeight: 300, lineHeight: 1.15,
+            fontWeight: 400, lineHeight: 1.15,
             color: colors.white, margin: "0 0 24px",
           }}>
             Ready to get started?
           </h2>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: 16, fontWeight: 300,
+            fontSize: 16, fontWeight: 400,
             color: darkMode ? colors.darkTextMuted : "#A8B8B8", lineHeight: 1.8,
             margin: "0 0 40px", maxWidth: 520, marginLeft: "auto", marginRight: "auto",
             transition: "color 0.3s ease",
@@ -8794,7 +8794,7 @@ function CrisisResourcesPage() {
       <SEO metadata={mainPages.crisisResources} />
       <section style={{ background: theme.bg, color: theme.text, padding: "160px 24px 100px", minHeight: "75vh" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(40px, 6vw, 64px)", fontWeight: 300 }}>Immediate Support & Crisis Resources</h1>
+          <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(40px, 6vw, 64px)", fontWeight: 400 }}>Immediate Support & Crisis Resources</h1>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 17, lineHeight: 1.8 }}>If you are in immediate danger or have a medical emergency, call <a href="tel:911" style={{ color: theme.accent }}>911</a> or go to the nearest emergency department. Do not wait for a reply from Bayside.</p>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, lineHeight: 1.8, color: theme.textMuted }}>Bayside is an outpatient individual therapy practice. Routine calls and the booking calendar are not monitored for emergency response.</p>
           <div style={{ display: "grid", gap: 24, marginTop: 32 }}>
@@ -8834,7 +8834,7 @@ function SEODirectory() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <h1 style={{
           fontFamily: "'Cormorant Garamond', serif",
-          fontSize: 48, fontWeight: 300,
+          fontSize: 48, fontWeight: 400,
           color: colors.charcoal,
           margin: "0 0 16px",
           textAlign: "center",
@@ -9156,6 +9156,60 @@ export default function App() {
           }
         }
         
+
+        /* Typography: two families with consistent roles and stronger reading weights. */
+        body { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 400; }
+        #main-content { font-family: 'DM Sans', sans-serif; font-weight: 400; }
+        #main-content h1, #main-content h2 {
+          font-family: 'Cormorant Garamond', serif !important;
+          font-weight: 500 !important;
+          line-height: 1.18;
+        }
+        #main-content h3, #main-content h4 {
+          font-family: 'DM Sans', sans-serif !important;
+          font-weight: 600 !important;
+          letter-spacing: normal !important;
+          line-height: 1.4 !important;
+        }
+        #main-content h1 em, #main-content h2 em { font-style: normal; }
+        #main-content .home-hero h1 em { font-style: italic; }
+        #main-content p:not(.home-eyebrow):not(.about-eyebrow):not(.service-eyebrow):not(.service-provider):not(.home-credentials):not(.home-trust):not(.home-booking-note):not(.service-booking-note):not(.home-rates):not(.home-summary):not(.service-dek) {
+          font-family: 'DM Sans', sans-serif !important;
+          font-size: 17px !important;
+          font-weight: 400 !important;
+          line-height: 1.7 !important;
+        }
+        #main-content .home-summary, #main-content .service-dek { font-weight: 400 !important; line-height: 1.6 !important; }
+        #main-content .service-card-title, #main-content .blog-post-item h2 {
+          font-family: 'DM Sans', sans-serif !important;
+          font-size: clamp(22px, 2.1vw, 26px) !important;
+          font-weight: 500 !important;
+          line-height: 1.35 !important;
+          letter-spacing: normal !important;
+        }
+        #main-content .service-practical h2, #main-content .service-related h2, #main-content .about-credentials h2 {
+          font-family: 'DM Sans', sans-serif !important;
+          font-weight: 600 !important;
+          line-height: 1.4 !important;
+        }
+        #main-content [id^="faq-question-"] h3 { font-size: 20px !important; }
+        #main-content .service-faqs summary { font-family: 'DM Sans', sans-serif; font-weight: 500; }
+        #main-content .service-copy-section { max-width: 72ch; }
+        #main-content .service-intro { max-width: 68ch; }
+        #main-content .bayside-blog-rich > p, #main-content .bayside-blog-rich > ul, #main-content .bayside-blog-rich > ol {
+          font-size: 18px !important; line-height: 1.75 !important; font-weight: 400 !important;
+        }
+        #main-content .bayside-article-sources { font-size: 14px; line-height: 1.65; }
+        #main-content [class$="-eyebrow"] { letter-spacing: .08em !important; }
+        #main-content button, #main-content a[style*="text-transform:uppercase"] { letter-spacing: .04em !important; }
+        @media (max-width: 680px) {
+          #main-content .bayside-blog-rich > p, #main-content .bayside-blog-rich > ul, #main-content .bayside-blog-rich > ol { font-size: 17px !important; }
+          #main-content .service-card-title, #main-content .blog-post-item h2 { font-size: 23px !important; }
+          #main-content [id^="faq-question-"] h3 { font-size: 18px !important; }
+          #main-content .service-intro, #main-content .service-copy-section { max-width: 100%; }
+          #main-content .services-grid > a { width: 100%; min-width: 0; }
+        }
+
         /* Accessibility: Focus indicators for keyboard navigation */
         a:focus-visible,
         button:focus-visible,
