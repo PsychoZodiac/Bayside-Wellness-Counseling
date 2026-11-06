@@ -63,17 +63,45 @@ const clientPortalUrl = "https://baysidewellnessandcounseling.janeapp.com/login"
 
 const services = [
   {
+    "name": "Trauma Therapy",
+    "slug": "trauma",
+    "shortDesc": "Recent events and experiences from years ago",
+    "desc": "Individual therapy for adults affected by frightening events, painful memories, or recurring trauma-related reactions. We begin with your current needs and discuss whether EMDR or another approach fits."
+  },
+  {
+    "name": "Burnout & Work Stress",
+    "slug": "burnout",
+    "shortDesc": "When work leaves little room for you",
+    "desc": "Support for adults dealing with exhaustion, work pressure, and difficulty switching off, including tech workers, healthcare professionals, and people in demanding frontline roles."
+  },
+  {
+    "name": "Grief & Loss Therapy",
+    "slug": "grief",
+    "shortDesc": "Room for what changed and what you miss",
+    "desc": "Support after a death, the end of a relationship, or another significant loss. Sessions make space for grief and the practical changes around it without imposing a deadline for feeling better."
+  },
+  {
+    "name": "Men's Therapy",
+    "slug": "mens",
+    "shortDesc": "Anger, relationships, pressure, and change",
+    "desc": "Individual therapy for men navigating emotional expression, relationship patterns, anxiety, work stress, or becoming a parent. There is room to talk honestly and work toward changes that matter to you."
+  },
+  {
     "name": "EMDR Therapy",
     "slug": "emdr",
-    "shortDesc": "Working with distressing memories",
+    "shortDesc": "A structured approach to trauma-related memories",
     "desc": "EMDR is a structured therapy used in treatment of PTSD. It involves assessment and preparation before work with selected memories. We discuss whether trauma-focused treatment is appropriate for your symptoms and circumstances."
   },
   {
-    "name": "IFS Therapy (Parts Work)",
+    "name": "IFS-Informed Therapy",
     "slug": "ifs",
-    "shortDesc": "Understanding internal conflict",
-    "desc": "IFS-informed parts work explores conflicting feelings, self-criticism, and protective habits within individual therapy for adults."
-  },
+    "shortDesc": "Parts work for self-criticism and inner conflict",
+    "desc": "Explore the part of you that pushes harder, the part that wants to withdraw, or the part that fears letting others down. IFS-informed work helps make these conflicts part of an understandable conversation."
+  }
+];
+
+// Supporting pages remain available at their established URLs.
+const supportingServices = [
   {
     "name": "Cognitive Behavioral Therapy",
     "slug": "cbt",
@@ -91,14 +119,9 @@ const services = [
     "slug": "young-adults",
     "shortDesc": "Support during early adulthood",
     "desc": "Individual therapy for adults roughly ages 18 to 30 navigating school, work, relationships, identity, and independence. You do not need a settled plan for your life before seeking support."
-  },
-  {
-    "name": "Men's Therapy",
-    "slug": "mens",
-    "shortDesc": "Room for honest conversation",
-    "desc": "Individual therapy for men working on anger, relationships, work stress, or emotional expression. Sessions can combine practical skills and reflection without assuming there is one way men should feel or communicate."
   }
 ];
+const allServices = [...services, ...supportingServices];
 
 // Detailed content for individual service pages
 const serviceDetails = {
@@ -236,7 +259,7 @@ const serviceDetails = {
     "seoTitle": "Online CBT for Anxiety & Depression | Bayside",
     "metaDescription": "CBT-informed individual therapy for anxiety, depression, worry, and avoidance. Work with Oakland-based Marcus Ghiasi, LMFT, online across California.",
     "h1": "Cognitive Behavioral Therapy for anxiety and low mood.",
-    "dek": "Look closely at the pattern. Practice a different response.",
+    "dek": "Practical tools integrated into therapy when they fit your goals.",
     "intro": "An unanswered message can lead to repeated checking. A difficult task can become something you avoid until the pressure grows. Cognitive Behavioral Therapy, or CBT, offers a practical framework for examining how thoughts, feelings, and actions influence each other—and where a different response may be possible.",
     "sections": [
       [
@@ -294,12 +317,12 @@ const serviceDetails = {
   },
   "psychodynamic": {
     "slug": "psychodynamic",
-    "name": "Psychodynamic Therapy",
-    "seoTitle": "Online Psychodynamic Therapy | Oakland-Based Bayside",
+    "name": "Psychodynamic-Informed Perspectives",
+    "seoTitle": "Psychodynamic-Informed Therapy | Bayside",
     "metaDescription": "Explore recurring emotional and relationship patterns through psychodynamic-informed therapy with Marcus Ghiasi, LMFT. Virtual sessions across California.",
-    "h1": "Psychodynamic therapy for patterns that keep returning.",
-    "dek": "Explore how familiar expectations shape what happens now.",
-    "intro": "Different relationships may leave you with a similar feeling: responsible for everyone, afraid to ask for more, or expecting to be let down. Psychodynamic perspectives can help us examine how these patterns develop, what brings them into the present, and what you want to do differently.",
+    "h1": "Understanding recurring relationship patterns.",
+    "dek": "Psychodynamic-informed perspectives within individual therapy.",
+    "intro": "You may find a familiar expectation returning across different relationships: being responsible for everyone, hesitating to ask for more, or expecting to be let down. Marcus may draw on psychodynamic perspectives to explore these patterns within an integrative approach. This is a supporting perspective at Bayside, rather than a separately credentialed specialty or a formal psychoanalytic treatment program.",
     "sections": [
       [
         "The questions behind a recurring pattern",
@@ -483,6 +506,192 @@ const serviceDetails = {
       [
         "NIMH: Psychotherapy and choosing care",
         "https://www.nimh.nih.gov/health/topics/psychotherapies"
+      ]
+    ]
+  },
+  "trauma": {
+    "slug": "trauma",
+    "name": "Trauma Therapy",
+    "seoTitle": "Trauma Therapy Online in California | Bayside",
+    "metaDescription": "Therapy for adults affected by recent or past trauma. Oakland-based Marcus Ghiasi, LMFT, offers virtual sessions across California. Free consultation.",
+    "h1": "Trauma therapy for what still affects you.",
+    "dek": "Support after a recent event or an experience from years ago.",
+    "intro": "You may know that an experience is over and still find yourself bracing for it. A reminder can interrupt sleep, make closeness feel difficult, or leave you on edge during an ordinary day. At Bayside, trauma therapy starts with how life is going now and what you want help with. You do not need to arrive with a diagnosis or a complete account of what happened.",
+    "sections": [
+      [
+        "Recent experiences and older memories",
+        "A frightening incident, accident, loss, or repeated exposure to distress can leave reactions that are difficult to make sense of. Earlier experiences can also become more noticeable during a relationship change, parenthood, or a demanding period at work. We can discuss what happened when you are ready, along with avoidance, shame, self-blame, and the situations that feel harder now."
+      ],
+      [
+        "Support does not have to begin with retelling",
+        "Early sessions focus on your concerns, current safety, available support, and what helps you stay present. You can ask questions about the plan and tell Marcus when something feels too much. Not everyone who experiences trauma develops PTSD, and a consultation is not a diagnosis. Assessment helps clarify the kind of support that may be appropriate."
+      ],
+      [
+        "How EMDR and parts work may fit",
+        "EMDR is one option for trauma-focused treatment when assessment indicates it is appropriate. It includes preparation before memory processing. Marcus completed EMDR Basic Training through the EMDR Institute in 2024. IFS-informed parts work may help explore conflicting responses, such as wanting connection while feeling a strong need to protect yourself. Neither approach is automatically prescribed because an experience was traumatic."
+      ],
+      [
+        "Working toward a more manageable present",
+        "Your goals might include responding differently to reminders, sleeping more consistently, asking for support, or feeling more able to participate in relationships. We review how sessions are affecting you and whether the pace or approach needs to change. Virtual sessions also require a private setting, a plan for interrupted video, and discussion of whether online care fits your circumstances."
+      ]
+    ],
+    "faqs": [
+      [
+        "Is it too late to work on something that happened years ago?",
+        "You can seek support for experiences from any point in your life. We consider how they affect you now and what you want to change, without assuming that time alone should have resolved them."
+      ],
+      [
+        "Will I have to do EMDR?",
+        "No. We discuss the options, your preferences, and the reasons for a recommendation. You can ask about other approaches or decide not to proceed with a proposed method."
+      ],
+      [
+        "Can I get support soon after an event?",
+        "Yes, you can ask about an assessment after a recent event. The initial focus may be present needs and support rather than immediate memory processing. Bayside provides scheduled outpatient therapy, not emergency response."
+      ]
+    ],
+    "cta": "Use a free 15-minute consultation to ask about trauma therapy. You can describe your concerns without sharing the details of the event.",
+    "related": [
+      [
+        "Learn about EMDR",
+        "/services/emdr"
+      ],
+      [
+        "IFS-informed therapy",
+        "/services/ifs"
+      ],
+      [
+        "Meet Marcus and review his training",
+        "/about"
+      ]
+    ],
+    "sources": [
+      [
+        "NIMH: Traumatic events and PTSD",
+        "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+      ]
+    ]
+  },
+  "burnout": {
+    "slug": "burnout",
+    "name": "Burnout & Work Stress",
+    "seoTitle": "Burnout & Work Stress Therapy in California | Bayside",
+    "metaDescription": "Virtual therapy for burnout and work stress in California. Support for tech workers, healthcare professionals, and adults in demanding roles. Free consultation.",
+    "h1": "Therapy for burnout and work stress.",
+    "dek": "When getting through the workday takes more than you have left.",
+    "intro": "You might finish a shift or close your laptop and find that work has not really ended. You replay decisions, feel irritable with people you care about, or spend your time off trying to recover enough to start again. Therapy offers a place to look at what the job asks of you, what is happening outside work, and what needs to change.",
+    "sections": [
+      [
+        "Different jobs, different pressures",
+        "For tech workers, uncertainty can involve layoffs, changing expectations, constant availability, or the sense that another achievement will finally bring stability. Healthcare workers and first responders may face demanding shifts, responsibility for others, and exposure to distressing events. We start with your actual role and circumstances rather than assume your job title tells the whole story."
+      ],
+      [
+        "The practical limits belong in the conversation",
+        "Work stress does not disappear because someone suggests better boundaries. Money, caregiving, workplace culture, staffing, and the consequences of saying no can all matter. You may be financially stable and still feel intensely worried about losing that stability. We can examine those fears without dismissing them or assuming that leaving a job is available to you."
+      ],
+      [
+        "How we can work together",
+        "Sessions can address self-criticism, overwork, difficulty resting, resentment, or anxiety about performance and security. IFS-informed parts work may help explore the drive to keep pushing and the wish to stop. We can also work on specific conversations, decisions, and manageable changes between sessions. EMDR may be discussed when particular distressing experiences warrant trauma-focused assessment; it is not a default treatment for work stress."
+      ],
+      [
+        "Recovery involves your environment as well as your responses",
+        "The World Health Organization describes burnout in relation to chronic workplace stress and does not classify it as a medical condition. Exhaustion and disconnection can also overlap with other concerns. We look beyond a label and discuss whether additional medical or mental health assessment would be useful. Therapy can support decisions and coping; it cannot by itself change an unsafe workplace or guarantee a return to productivity."
+      ]
+    ],
+    "faqs": [
+      [
+        "Do I have to quit my job?",
+        "No. Therapy can help you consider what is workable, whether that means changes within a role, a difficult conversation, time away when available, or a longer-term decision. You remain part of those choices."
+      ],
+      [
+        "Can I work with you if I am still performing well?",
+        "Yes. Keeping up with responsibilities does not tell us how much the situation is affecting you. You do not need to wait for a professional setback to ask for support."
+      ],
+      [
+        "Is this an employment or fitness-for-duty evaluation?",
+        "No. This page describes individual psychotherapy, not employer evaluations, occupational clearance, or a specialized first-responder assessment program. We discuss fit and referral options when another service is needed."
+      ]
+    ],
+    "cta": "A free 15-minute consultation is a chance to describe what work has been like and ask whether individual therapy at Bayside fits your needs.",
+    "related": [
+      [
+        "IFS-informed parts work",
+        "/services/ifs"
+      ],
+      [
+        "Trauma therapy",
+        "/services/trauma"
+      ],
+      [
+        "Burnout is not a scheduling problem",
+        "/blog/burnout-is-not-a-scheduling-problem"
+      ]
+    ],
+    "sources": [
+      [
+        "WHO: Burnout as an occupational phenomenon",
+        "https://www.who.int/standards/classifications/frequently-asked-questions/burn-out-an-occupational-phenomenon"
+      ]
+    ]
+  },
+  "grief": {
+    "slug": "grief",
+    "name": "Grief & Loss Therapy",
+    "seoTitle": "Grief & Loss Therapy Online in California | Bayside",
+    "metaDescription": "Individual grief and loss therapy for adults across California. Support after bereavement, relationship loss, and life changes with Marcus Ghiasi, LMFT.",
+    "h1": "Grief therapy with room for your experience.",
+    "dek": "Support for living with loss, without a timetable for moving on.",
+    "intro": "A loss can change ordinary moments as much as the major ones. You may reach for your phone to call someone, dread a date on the calendar, or feel caught between wanting company and wanting to be left alone. Therapy offers time to talk about what you miss, what remains unresolved, and how life has changed around the loss.",
+    "sections": [
+      [
+        "The loss does not have to look a certain way",
+        "Grief may follow a death, the end of a relationship, estrangement, or a significant change in health, work, or the future you expected. Some losses are public and recognized. Others are hard to explain or receive little acknowledgment. We can make room for the meaning of the loss to you, including mixed feelings about a person or relationship."
+      ],
+      [
+        "There is no required way to feel",
+        "Sadness may sit alongside anger, guilt, numbness, relief, or moments of enjoyment. You do not have to produce a particular feeling in session or move neatly through a sequence of stages. We can talk about what feels difficult without treating grief itself as something you are doing wrong. If symptoms are persistent or substantially disrupt daily life, assessment can help clarify additional support."
+      ],
+      [
+        "What sessions can involve",
+        "You can talk about the person, relationship, or life you miss, or begin with the demands of getting through the week. Sessions may explore family expectations, changes in identity, loneliness, anniversaries, or ways to ask for help. IFS-informed parts work can help give attention to conflicting responses, such as needing rest while feeling guilty about slowing down. The approach is shaped around your circumstances."
+      ],
+      [
+        "When grief and distressing memories overlap",
+        "A loss can include frightening memories as well as grief. If particular images or reminders feel intrusive, we can discuss whether trauma-focused assessment and EMDR might be useful. That is different from assuming grief should be processed away. The goal is to support your life and choices while respecting the relationship or meaning that continues to matter."
+      ]
+    ],
+    "faqs": [
+      [
+        "Do I have to wait until grief becomes severe?",
+        "No. You can ask for support after a loss without waiting for a crisis or a diagnosis. A consultation can help clarify what you need and whether Bayside is a fit."
+      ],
+      [
+        "What if the loss happened a long time ago?",
+        "Older losses may become more noticeable around anniversaries, family changes, or a new stage of life. We can begin with what is present now, rather than assume you should already be over it."
+      ],
+      [
+        "Is this a grief group or family therapy?",
+        "No. Bayside currently offers individual psychotherapy for adults age 18 and older. Sessions are virtual, and you must be physically in California for each appointment."
+      ]
+    ],
+    "cta": "You are welcome to use a free 15-minute consultation to ask about grief and loss therapy. You do not need a polished explanation of what you are feeling.",
+    "related": [
+      [
+        "Meet Marcus",
+        "/about"
+      ],
+      [
+        "Trauma therapy",
+        "/services/trauma"
+      ],
+      [
+        "Fees and starting therapy",
+        "/faq"
+      ]
+    ],
+    "sources": [
+      [
+        "NHS: Grief after bereavement or loss",
+        "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/"
       ]
     ]
   }
@@ -6242,6 +6451,79 @@ function useScrollReveal() {
 // NAVIGATION
 // ========================================
 
+const headerServices = [
+  { name: "Trauma Therapy", slug: "trauma" },
+  { name: "EMDR Therapy", slug: "emdr" },
+  { name: "IFS-Informed Therapy", slug: "ifs" },
+  { name: "Men's Therapy", slug: "mens" },
+  { name: "Burnout & Work Stress", slug: "burnout" },
+  { name: "Grief & Loss Therapy", slug: "grief" },
+];
+
+function ServicesDropdown({ mobile = false, theme, currentPath, onNavigate }) {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef(null);
+  const triggerRef = useRef(null);
+  const panelRef = useRef(null);
+  const panelId = mobile ? "mobile-services-links" : "desktop-services-links";
+  const active = currentPath === "/services" || currentPath.startsWith("/services/");
+
+  useEffect(() => { setOpen(false); }, [currentPath]);
+  useEffect(() => {
+    if (!open) return;
+    const closeOutside = (event) => {
+      if (!rootRef.current?.contains(event.target)) setOpen(false);
+    };
+    document.addEventListener("pointerdown", closeOutside);
+    return () => document.removeEventListener("pointerdown", closeOutside);
+  }, [open]);
+
+  const focusLink = (last = false) => {
+    setOpen(true);
+    window.requestAnimationFrame(() => {
+      const links = panelRef.current?.querySelectorAll("a");
+      if (links?.length) links[last ? links.length - 1 : 0].focus();
+    });
+  };
+  const handleKeys = (event) => {
+    if (event.key === "Escape" && open) {
+      event.preventDefault(); event.stopPropagation(); setOpen(false); triggerRef.current?.focus();
+    } else if ((event.key === "ArrowDown" || event.key === "ArrowUp") && event.target === triggerRef.current) {
+      event.preventDefault(); focusLink(event.key === "ArrowUp");
+    } else if (open && ["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+      const links = Array.from(panelRef.current?.querySelectorAll("a") || []);
+      const index = links.indexOf(document.activeElement);
+      if (index < 0) return;
+      event.preventDefault();
+      const next = event.key === "Home" ? 0 : event.key === "End" ? links.length - 1 :
+        (index + (event.key === "ArrowDown" ? 1 : -1) + links.length) % links.length;
+      links[next]?.focus();
+    }
+  };
+
+  return (
+    <div ref={rootRef} className={`services-disclosure${mobile ? " services-disclosure-mobile" : ""}`} onKeyDown={handleKeys}
+      onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }}
+      style={{ "--dropdown-bg": theme.bg, "--dropdown-text": theme.text, "--dropdown-muted": theme.textMuted,
+        "--dropdown-border": theme.border, "--dropdown-accent": theme.accent, "--dropdown-alt": theme.bgAlt }}>
+      <button ref={triggerRef} type="button" className="services-disclosure-trigger" aria-expanded={open} aria-controls={panelId}
+        onClick={() => setOpen(value => !value)} style={{ color: active ? theme.accent : (mobile ? theme.text : theme.textMuted),
+          borderBottomColor: mobile ? theme.border : active ? theme.accent : "transparent" }}>
+        Services <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" style={{ transform: open ? "rotate(180deg)" : "none" }}>
+          <path d="m2.5 4.5 3.5 3.5 3.5-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      <ul ref={panelRef} id={panelId} hidden={!open} className="services-disclosure-links">
+        {headerServices.map(service => {
+          const path = `/services/${service.slug}`;
+          return <li key={service.slug}><Link to={path} aria-current={currentPath === path ? "page" : undefined}
+            onClick={(event) => { event.preventDefault(); setOpen(false); onNavigate(path); }}>{service.name}</Link></li>;
+        })}
+      </ul>
+    </div>
+  );
+}
+
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -6308,6 +6590,22 @@ function Nav() {
         Skip to main content
       </a>
       
+      <style>{`
+        .services-disclosure { position: relative; flex-shrink: 0; }
+        .services-disclosure-trigger { display: inline-flex; align-items: center; gap: 6px; padding: 0 0 4px; background: none; border: 0; border-bottom: 2px solid transparent; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; letter-spacing: .04em; line-height: normal; text-transform: uppercase; white-space: nowrap; cursor: pointer; }
+        .services-disclosure-trigger:hover { color: var(--dropdown-accent) !important; }
+        .services-disclosure-trigger svg { flex-shrink: 0; transition: transform .15s ease; }
+        .services-disclosure-links { position: absolute; top: calc(100% + 16px); left: -18px; width: 276px; max-height: calc(100dvh - 130px); overflow-y: auto; list-style: none; padding: 8px; margin: 0; border: 1px solid var(--dropdown-border); border-radius: 4px; background: var(--dropdown-bg); box-shadow: 0 12px 32px rgba(0,0,0,.14); }
+        .services-disclosure-links[hidden] { display: none; }
+        .services-disclosure-links li { margin: 0; padding: 0; }
+        .services-disclosure-links a { display: block; padding: 12px 14px; border-radius: 2px; color: var(--dropdown-text); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.5; text-decoration: none; }
+        .services-disclosure-links a:hover, .services-disclosure-links a[aria-current="page"] { background: var(--dropdown-alt); color: var(--dropdown-accent); }
+        .services-disclosure-trigger:focus-visible, .services-disclosure-links a:focus-visible { outline: 2px solid var(--dropdown-accent); outline-offset: 3px; }
+        .services-disclosure-mobile .services-disclosure-trigger { display: flex; justify-content: space-between; width: 100%; padding: 12px 0; border-bottom-width: 1px; font-size: 14px; font-weight: 400; letter-spacing: .1em; text-align: left; }
+        .services-disclosure-mobile .services-disclosure-links { position: static; width: auto; max-height: none; overflow: visible; margin: 0; padding: 8px 0 12px 12px; border: 0; border-bottom: 1px solid var(--dropdown-border); border-radius: 0; box-shadow: none; }
+        #mobile-navigation { max-height: calc(100dvh - 88px); overflow-y: auto; overscroll-behavior: contain; }
+        @media (prefers-reduced-motion: reduce) { .services-disclosure-trigger svg { transition: none; } }
+      `}</style>
       <nav className="site-nav" style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
         background: needsSolidBg ? (darkMode ? "rgba(26,36,36,0.96)" : "rgba(250,247,244,0.96)") : "transparent",
@@ -6351,6 +6649,7 @@ function Nav() {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 28, flex: 1, minWidth: 0, marginLeft: 36 }} className="desktop-nav">
           <div className="site-nav-links" style={{ display: "flex", alignItems: "center", gap: 24, margin: "0 auto" }}>
           {navLinks.map(link => (
+            link.path === "/services" ? <ServicesDropdown key={link.name} theme={theme} currentPath={currentPath} onNavigate={handleNavigate} /> :
             <Link key={link.name} to={link.path} onClick={() => window.scrollTo(0, 0)} style={{
               background: "none", border: "none", cursor: "pointer",
               fontFamily: "'DM Sans', sans-serif",
@@ -6432,6 +6731,7 @@ function Nav() {
           transition: "all 0.3s ease",
         }}>
           {navLinks.map(link => (
+            link.path === "/services" ? <ServicesDropdown key={link.name} mobile theme={theme} currentPath={currentPath} onNavigate={handleNavigate} /> :
             <Link key={link.name} to={link.path} onClick={() => handleNavigate(link.path)}
               style={{
                 display: "block", padding: "12px 0", width: "100%",
@@ -6603,11 +6903,27 @@ function HomePage() {
   }, []);
 
   const concerns = [
-    { title: "Anxiety and self-criticism", text: "Overthinking decisions, replaying conversations, avoiding situations, or finding that your expectations leave little room to rest." },
-    { title: "Trauma and difficult experiences", text: "Distressing memories, reminders, or reactions that continue to affect your daily life and relationships." },
-    { title: "Depression and disconnection", text: "Feeling low, losing interest, or struggling to find energy and connection in things that once mattered." },
-    { title: "Relationships and life changes", text: "Recurring conflict, difficulty expressing your needs, or uncertainty during changes in work, school, family, and identity." },
-  ];
+  {
+    "title": "Trauma and difficult experiences",
+    "text": "A recent event or an experience from years ago can still affect sleep, trust, and daily life. We start with what you need now.",
+    "path": "/services/trauma"
+  },
+  {
+    "title": "Burnout and work stress",
+    "text": "Exhaustion, constant pressure, or difficulty switching off. Support for tech workers, healthcare professionals, and adults in demanding roles.",
+    "path": "/services/burnout"
+  },
+  {
+    "title": "Grief and loss",
+    "text": "Space after a death, a relationship ending, or another significant loss, including feelings that are difficult to explain.",
+    "path": "/services/grief"
+  },
+  {
+    "title": "Therapy for men",
+    "text": "Work on anger, anxiety, emotional expression, relationship patterns, or the pressures of work and parenthood.",
+    "path": "/services/mens"
+  }
+];
   const steps = [
     { title: "Understand what is happening.", text: "Explore your concerns, the circumstances around them, and what you have already tried." },
     { title: "Choose a direction together.", text: "Discuss what you want to change and how the recommended approach connects to those goals." },
@@ -6696,7 +7012,7 @@ function HomePage() {
         <div className="home-inner">
           <p className="home-eyebrow">Oakland-based · Virtual therapy across California</p>
           <h1 id="home-heading"><span>A place for healing.</span><span><em>Room for change.</em></span></h1>
-          <p className="home-summary">Individual therapy for adults navigating anxiety, trauma, depression, relationship challenges, and life transitions.</p>
+          <p className="home-summary">Individual therapy for adults navigating trauma, burnout, grief, anxiety, and relationship challenges. EMDR, IFS-informed care, and therapy for men.</p>
           <p className="home-intro">You do not need to have everything figured out before starting. Bayside Wellness &amp; Counseling offers space to understand what you’re experiencing, work through what feels difficult, and take steps toward changes that matter to you.</p>
           <div className="home-hero-actions"><ConsultationLink /><Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Therapy Services</Link></div>
           <p className="home-trust">Adults 18+ · Online appointments · California licensed</p>
@@ -6707,7 +7023,7 @@ function HomePage() {
         <div className="home-inner">
           <h2 id="home-concerns-heading">Start with what brings you here.</h2>
           <p className="home-section-intro">Therapy can begin with a specific concern or a pattern you want to understand.</p>
-          <div className="home-concern-grid">{concerns.map(item => <div className="home-concern" key={item.title}><h3>{item.title}</h3><p>{item.text}</p></div>)}</div>
+          <div className="home-concern-grid">{concerns.map(item => <div className="home-concern" key={item.title}><h3><Link style={{ color: "inherit", textDecoration: "none" }} to={item.path}>{item.title}</Link></h3><p>{item.text}</p></div>)}</div>
           <Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Find Support for Your Concerns <span aria-hidden="true">→</span></Link>
         </div>
       </section>
@@ -6716,10 +7032,10 @@ function HomePage() {
         <div className="home-inner">
           <h2 id="home-approach-heading">Care that connects understanding with action.</h2>
           <p className="home-section-intro">At Bayside, you and your therapist work together to give therapy a clear focus while leaving room for what emerges.</p>
-          <div className="home-step-grid">{steps.map((item, index) => <div key={item.title}><span className="home-step-number" aria-hidden="true">0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></div>)}</div>
+          <div className="home-step-grid">{steps.map((item, index) => <div key={item.title}><span className="home-step-number" aria-hidden="true">0{index + 1}</span><h3><Link style={{ color: "inherit", textDecoration: "none" }} to={item.path}>{item.title}</Link></h3><p>{item.text}</p></div>)}</div>
           <div className="home-methods">
-            <p>Care may draw on <Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link>, <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS-informed parts work</Link>, <Link to="/services/cbt" onClick={() => window.scrollTo(0, 0)}>Cognitive Behavioral Therapy</Link>, and <Link to="/services/psychodynamic" onClick={() => window.scrollTo(0, 0)}>psychodynamic therapy</Link>. You do not need to choose a method before reaching out.</p>
-            <Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Our Therapy Approaches <span aria-hidden="true">→</span></Link>
+            <p><Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link> and <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS-informed parts work</Link> are central to care at Bayside. Sessions can also include practical tools and exploration of relationship patterns. We explain the approach and choose a direction together; you do not need to know therapy terminology before reaching out.</p>
+            <Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Our Services <span aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
@@ -6732,7 +7048,7 @@ function HomePage() {
             <h2 id="home-founder-heading">Meet Bayside’s founder.</h2>
             <p className="home-founder-name">Marcus Ghiasi, LMFT</p>
             <p className="home-credentials">Founder &amp; Therapist · California license #158475</p>
-            <p>Marcus founded Bayside Wellness &amp; Counseling as a place for thoughtful, individualized care. A Bay Area native and second-generation Persian American, he works with adults navigating anxiety, trauma-related concerns, low mood, and relationship patterns, with a particular focus on men and young adults.</p>
+            <p>Marcus founded Bayside Wellness &amp; Counseling as a place for thoughtful, individualized care. A Bay Area native and second-generation Persian American, he works with adults navigating trauma, burnout, grief, anxiety, and relationship patterns, with a particular focus on men. His work includes support for healthcare professionals and people in tech.</p>
             <p>Therapy at Bayside is currently provided by Marcus. Learn about his background and approach to see whether working together feels right for you.</p>
             <div className="home-founder-links"><Link className="home-text-link" to="/about" onClick={() => window.scrollTo(0, 0)}>Meet Marcus <span aria-hidden="true">→</span></Link><span className="home-psychology-verification" ref={verificationRef}><a href="https://www.psychologytoday.com/profile/1134128" className="sx-verified-seal" target="_blank" rel="noopener noreferrer" aria-label="View Marcus Ghiasi on Psychology Today (opens in a new tab)">Psychology Today</a></span></div>
           </div>
@@ -6851,7 +7167,7 @@ function AboutPage() {
             <h1 id="about-heading">Marcus Ghiasi, LMFT</h1>
             <p className="about-role">Founder &amp; Therapist at Bayside Wellness &amp; Counseling</p>
             <p>I’m Marcus Ghiasi, a Licensed Marriage and Family Therapist, Bay Area native, and second-generation Persian American. I founded Bayside Wellness &amp; Counseling in January 2026 to create a place for thoughtful care, healing, and meaningful change.</p>
-            <p>I work individually with adults navigating anxiety, trauma-related concerns, depression, relationship difficulties, and life transitions, with a particular focus on men and young adults. Sessions are virtual and available to clients physically located in California.</p>
+            <p>I work individually with adults navigating trauma, burnout, grief, anxiety, depression, and relationship difficulties, with a particular focus on men. My work includes healthcare professionals, tech workers, and adults dealing with pressure around work and financial security. Sessions are virtual and available to clients physically located in California.</p>
 
             <aside className="about-credentials" aria-labelledby="about-credentials-heading">
               <h2 id="about-credentials-heading">Education &amp; credentials</h2>
@@ -6887,7 +7203,7 @@ function AboutPage() {
         <div className="about-inner"><div className="about-approach-grid">
           <div>
             <h2 id="about-approach-heading">How we can work together.</h2>
-            <p>My approach draws on <Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link>, <Link to="/services/cbt" onClick={() => window.scrollTo(0, 0)}>Cognitive Behavioral Therapy</Link>, <Link to="/services/psychodynamic" onClick={() => window.scrollTo(0, 0)}>psychodynamic perspectives</Link>, and <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS-informed parts work</Link>. We begin with your concerns, history, and goals, then discuss which approaches may be useful and why.</p>
+            <p><Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link> and <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS-informed parts work</Link> are central to my approach. I also integrate practical CBT tools and psychodynamic perspectives when they fit the work. We begin with your concerns, history, and goals, then discuss an approach and why it may be useful. I completed EMDR Basic Training through the EMDR Institute in 2024; my parts work is IFS-informed.</p>
             <p>Some sessions may focus on a practical change in daily life. Others may explore a recurring relationship pattern, conflicting feelings, or the effects of a difficult experience. You can ask questions, express preferences, and tell me when something does not feel helpful.</p>
             <Link className="about-services-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Therapy Services <span aria-hidden="true">→</span></Link>
           </div>
@@ -6956,7 +7272,7 @@ function ServicesPage() {
             maxWidth: 640,
             transition: "color 0.3s ease",
           }}>
-            Explore the approaches below, then ask about fit in a free consultation. Each offers a different way to work; a recommendation depends on your concerns, history, preferences, and clinical needs. All listed services are virtual individual therapy for adults in California.
+            Start with what you want help with: trauma, burnout, grief, or the pressures and relationship patterns that bring many men to therapy. EMDR and IFS-informed parts work are central approaches at Bayside. You do not need to choose a method before reaching out. All services are virtual individual therapy for adults in California.
           </p>
         </div>
       </section>
@@ -7036,6 +7352,15 @@ function ServicesPage() {
   </div>
 </section>
 
+      <section aria-labelledby="supporting-approaches-heading" style={{ background: theme.bg, color: theme.text, padding: "56px 24px" }}>
+        <div style={{ maxWidth: 820, margin: "0 auto", fontFamily: "'DM Sans', sans-serif", lineHeight: 1.85 }}>
+          <h2 id="supporting-approaches-heading" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 36, fontWeight: 400 }}>A focus for therapy. An approach chosen together.</h2>
+          <p style={{ color: theme.textMuted }}>EMDR and IFS-informed work describe how sessions may help. Trauma, grief, burnout, anxiety, low mood, and relationship concerns describe what we can work on. These can overlap, and we discuss a plan that fits your circumstances.</p>
+          <p style={{ color: theme.textMuted }}>Marcus also integrates <Link style={{ color: theme.accent }} to="/services/cbt">CBT tools</Link> and <Link style={{ color: theme.accent }} to="/services/psychodynamic">psychodynamic-informed perspectives</Link> when useful. They are supporting approaches rather than the practice's main specialties.</p>
+          <p style={{ color: theme.textMuted }}>Adults at different stages of life are welcome, including <Link style={{ color: theme.accent }} to="/services/young-adults">young adults</Link>. You do not have to be a student or work in a particular profession. A free consultation is a chance to discuss fit.</p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section style={{
         background: darkMode ? colors.darkBgLight : colors.charcoal,
@@ -7049,8 +7374,8 @@ function ServicesPage() {
             fontWeight: 300, lineHeight: 1.15,
             color: colors.white, margin: "0 0 24px",
           }}>
-            Not sure which approach<br />
-            <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight, transition: "color 0.3s ease" }}>is right for you?</em>
+            Not sure where<br />
+            <em style={{ color: darkMode ? colors.darkTeal : colors.tealLight, transition: "color 0.3s ease" }}>to begin?</em>
           </h2>
           <p style={{
             fontFamily: "'DM Sans', sans-serif",
@@ -7087,12 +7412,13 @@ function ServiceDetailPage({ slug }) {
   const { darkMode } = useDarkMode();
   const theme = getTheme(darkMode);
   const details = serviceDetails[slug];
-  const service = services.find(item => item.slug === slug);
+  const service = allServices.find(item => item.slug === slug);
   if (!service || !details) return <NotFoundPage />;
 
   const faqLabel = {
     emdr: "EMDR therapy", ifs: "IFS-informed therapy", cbt: "CBT",
-    psychodynamic: "psychodynamic therapy", "young-adults": "therapy for young adults", mens: "therapy for men",
+    psychodynamic: "psychodynamic-informed work", "young-adults": "therapy for young adults", mens: "therapy for men",
+    trauma: "trauma therapy", burnout: "burnout and work stress", grief: "grief and loss therapy",
   }[slug];
 
   const renderParagraphs = (text) => text.split("\n\n").map((paragraph, index) => (
