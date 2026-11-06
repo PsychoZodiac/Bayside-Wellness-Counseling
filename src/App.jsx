@@ -93,10 +93,10 @@ const services = [
     "desc": "EMDR is a structured therapy used in treatment of PTSD. It involves assessment and preparation before work with selected memories. We discuss whether trauma-focused treatment is appropriate for your symptoms and circumstances."
   },
   {
-    "name": "IFS-Informed Therapy",
+    "name": "IFS Therapy & Parts Work",
     "slug": "ifs",
     "shortDesc": "Parts work for self-criticism and inner conflict",
-    "desc": "Explore the part of you that pushes harder, the part that wants to withdraw, or the part that fears letting others down. IFS-informed work helps make these conflicts part of an understandable conversation."
+    "desc": "Explore the part of you that pushes harder, the part that wants to withdraw, or the part that fears letting others down. IFS therapy and parts work helps make these conflicts part of an understandable conversation."
   }
 ];
 
@@ -193,12 +193,12 @@ const serviceDetails = {
   },
   "ifs": {
     "slug": "ifs",
-    "name": "IFS-Informed Therapy",
-    "seoTitle": "IFS-Informed Therapy & Parts Work | Bayside",
-    "metaDescription": "Explore IFS-informed therapy for self-criticism and inner conflict with Marcus Ghiasi, LMFT. Virtual individual sessions for adults across California.",
-    "h1": "IFS-informed therapy and parts work.",
+    "name": "IFS Therapy & Parts Work",
+    "seoTitle": "IFS Therapy & Parts Work | Bayside",
+    "metaDescription": "Explore IFS therapy for self-criticism and inner conflict with Marcus Ghiasi, LMFT. Virtual individual sessions for adults across California.",
+    "h1": "IFS therapy and parts work.",
     "dek": "Make room to understand the different feelings pulling you in different directions.",
-    "intro": "You might want to set a boundary and then feel guilty for doing it. Part of you may push to achieve more while another part wants to stop. These experiences can be frustrating, especially when criticizing yourself becomes another part of the cycle. IFS-informed parts work offers a way to explore conflicting feelings and responses with curiosity.",
+    "intro": "You might want to set a boundary and then feel guilty for doing it. Part of you may push to achieve more while another part wants to stop. These experiences can be frustrating, especially when criticizing yourself becomes another part of the cycle. IFS therapy and parts work offers a way to explore conflicting feelings and responses with curiosity.",
     "sections": [
       [
         "What “parts work” means",
@@ -213,8 +213,8 @@ const serviceDetails = {
         "Imagine agreeing to another responsibility and then feeling resentful. One response may worry that saying no will disappoint someone. Another may be exhausted by being available. In a session, we could explore both experiences, notice what makes the conversation difficult, and consider a boundary that fits your circumstances."
       ],
       [
-        "An IFS-informed approach at Bayside",
-        "Marcus uses IFS-informed parts work within individual therapy. It may be combined with cognitive behavioral or psychodynamic perspectives, depending on your concerns and preferences. You do not need to use parts language if it feels unnatural. We can discuss the ideas in everyday terms and keep the focus on what is useful to you.\n\nA session might involve noticing a familiar reaction, describing the conflict around it, and exploring another way to respond. Understanding and practical choices can develop together."
+        "IFS therapy and parts work at Bayside",
+        "Marcus uses IFS therapy and parts work within individual therapy. It may be combined with cognitive behavioral or psychodynamic perspectives, depending on your concerns and preferences. You do not need to use parts language if it feels unnatural. We can discuss the ideas in everyday terms and keep the focus on what is useful to you.\n\nA session might involve noticing a familiar reaction, describing the conflict around it, and exploring another way to respond. Understanding and practical choices can develop together."
       ]
     ],
     "faqs": [
@@ -366,7 +366,7 @@ const serviceDetails = {
         "/blog/attachment-styles-in-relationships"
       ],
       [
-        "IFS-informed parts work",
+        "IFS therapy and parts work",
         "/services/ifs"
       ]
     ],
@@ -396,7 +396,7 @@ const serviceDetails = {
       ],
       [
         "What working together can look like",
-        "We begin with the concerns affecting you most and discuss what you hope will change. Sessions can combine a current decision or practical step with exploration of relationships, expectations, and identity. Marcus may draw on CBT, IFS-informed parts work, psychodynamic perspectives, or EMDR when assessment indicates it may be appropriate. He explains the reasons for an approach so you can participate in the plan."
+        "We begin with the concerns affecting you most and discuss what you hope will change. Sessions can combine a current decision or practical step with exploration of relationships, expectations, and identity. Marcus may draw on CBT, IFS therapy and parts work, psychodynamic perspectives, or EMDR when assessment indicates it may be appropriate. He explains the reasons for an approach so you can participate in the plan."
       ],
       [
         "Your circumstances belong in the conversation",
@@ -462,7 +462,7 @@ const serviceDetails = {
       ],
       [
         "An approach you can ask questions about",
-        "Marcus combines practical work with exploration of the patterns connected to it. Depending on your concerns, he may draw on CBT, IFS-informed parts work, psychodynamic perspectives, or EMDR when appropriate after assessment. You can discuss whether you prefer more structure, more room to explore, or a combination. There is no single way men need to participate in therapy."
+        "Marcus combines practical work with exploration of the patterns connected to it. Depending on your concerns, he may draw on CBT, IFS therapy and parts work, psychodynamic perspectives, or EMDR when appropriate after assessment. You can discuss whether you prefer more structure, more room to explore, or a combination. There is no single way men need to participate in therapy."
       ],
       [
         "Relationships, identity, and changing roles",
@@ -528,7 +528,7 @@ const serviceDetails = {
       ],
       [
         "How EMDR and parts work may fit",
-        "EMDR is one option for trauma-focused treatment when assessment indicates it is appropriate. It includes preparation before memory processing. Marcus completed EMDR Basic Training through the EMDR Institute in 2024. IFS-informed parts work may help explore conflicting responses, such as wanting connection while feeling a strong need to protect yourself. Neither approach is automatically prescribed because an experience was traumatic."
+        "EMDR is one option for trauma-focused treatment when assessment indicates it is appropriate. It includes preparation before memory processing. Marcus completed EMDR Basic Training through the EMDR Institute in 2024. IFS therapy and parts work may help explore conflicting responses, such as wanting connection while feeling a strong need to protect yourself. Neither approach is automatically prescribed because an experience was traumatic."
       ],
       [
         "Working toward a more manageable present",
@@ -556,7 +556,7 @@ const serviceDetails = {
         "/services/emdr"
       ],
       [
-        "IFS-informed therapy",
+        "IFS therapy",
         "/services/ifs"
       ],
       [
@@ -590,7 +590,7 @@ const serviceDetails = {
       ],
       [
         "How we can work together",
-        "Sessions can address self-criticism, overwork, difficulty resting, resentment, or anxiety about performance and security. IFS-informed parts work may help explore the drive to keep pushing and the wish to stop. We can also work on specific conversations, decisions, and manageable changes between sessions. EMDR may be discussed when particular distressing experiences warrant trauma-focused assessment; it is not a default treatment for work stress."
+        "Sessions can address self-criticism, overwork, difficulty resting, resentment, or anxiety about performance and security. IFS therapy and parts work may help explore the drive to keep pushing and the wish to stop. We can also work on specific conversations, decisions, and manageable changes between sessions. EMDR may be discussed when particular distressing experiences warrant trauma-focused assessment; it is not a default treatment for work stress."
       ],
       [
         "Recovery involves your environment as well as your responses",
@@ -614,7 +614,7 @@ const serviceDetails = {
     "cta": "A free 15-minute consultation is a chance to describe what work has been like and ask whether individual therapy at Bayside fits your needs.",
     "related": [
       [
-        "IFS-informed parts work",
+        "IFS therapy and parts work",
         "/services/ifs"
       ],
       [
@@ -652,7 +652,7 @@ const serviceDetails = {
       ],
       [
         "What sessions can involve",
-        "You can talk about the person, relationship, or life you miss, or begin with the demands of getting through the week. Sessions may explore family expectations, changes in identity, loneliness, anniversaries, or ways to ask for help. IFS-informed parts work can help give attention to conflicting responses, such as needing rest while feeling guilty about slowing down. The approach is shaped around your circumstances."
+        "You can talk about the person, relationship, or life you miss, or begin with the demands of getting through the week. Sessions may explore family expectations, changes in identity, loneliness, anniversaries, or ways to ask for help. IFS therapy and parts work can help give attention to conflicting responses, such as needing rest while feeling guilty about slowing down. The approach is shaped around your circumstances."
       ],
       [
         "When grief and distressing memories overlap",
@@ -6454,7 +6454,7 @@ function useScrollReveal() {
 const headerServices = [
   { name: "Trauma Therapy", slug: "trauma" },
   { name: "EMDR Therapy", slug: "emdr" },
-  { name: "IFS-Informed Therapy", slug: "ifs" },
+  { name: "IFS Therapy & Parts Work", slug: "ifs" },
   { name: "Men's Therapy", slug: "mens" },
   { name: "Burnout & Work Stress", slug: "burnout" },
   { name: "Grief & Loss Therapy", slug: "grief" },
@@ -7012,7 +7012,7 @@ function HomePage() {
         <div className="home-inner">
           <p className="home-eyebrow">Oakland-based · Virtual therapy across California</p>
           <h1 id="home-heading"><span>A place for healing.</span><span><em>Room for change.</em></span></h1>
-          <p className="home-summary">Individual therapy for adults navigating trauma, burnout, grief, anxiety, and relationship challenges. EMDR, IFS-informed care, and therapy for men.</p>
+          <p className="home-summary">Individual therapy for adults navigating trauma, burnout, grief, anxiety, and relationship challenges. EMDR, IFS therapy and parts work, and therapy for men.</p>
           <p className="home-intro">You do not need to have everything figured out before starting. Bayside Wellness &amp; Counseling offers space to understand what you’re experiencing, work through what feels difficult, and take steps toward changes that matter to you.</p>
           <div className="home-hero-actions"><ConsultationLink /><Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Therapy Services</Link></div>
           <p className="home-trust">Adults 18+ · Online appointments · California licensed</p>
@@ -7034,7 +7034,7 @@ function HomePage() {
           <p className="home-section-intro">At Bayside, you and your therapist work together to give therapy a clear focus while leaving room for what emerges.</p>
           <div className="home-step-grid">{steps.map((item, index) => <div key={item.title}><span className="home-step-number" aria-hidden="true">0{index + 1}</span><h3><Link style={{ color: "inherit", textDecoration: "none" }} to={item.path}>{item.title}</Link></h3><p>{item.text}</p></div>)}</div>
           <div className="home-methods">
-            <p><Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link> and <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS-informed parts work</Link> are central to care at Bayside. Sessions can also include practical tools and exploration of relationship patterns. We explain the approach and choose a direction together; you do not need to know therapy terminology before reaching out.</p>
+            <p><Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link> and <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS therapy and parts work</Link> are central to care at Bayside. Sessions can also include practical tools and exploration of relationship patterns. We explain the approach and choose a direction together; you do not need to know therapy terminology before reaching out.</p>
             <Link className="home-text-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Our Services <span aria-hidden="true">→</span></Link>
           </div>
         </div>
@@ -7203,7 +7203,7 @@ function AboutPage() {
         <div className="about-inner"><div className="about-approach-grid">
           <div>
             <h2 id="about-approach-heading">How we can work together.</h2>
-            <p><Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link> and <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS-informed parts work</Link> are central to my approach. I also integrate practical CBT tools and psychodynamic perspectives when they fit the work. We begin with your concerns, history, and goals, then discuss an approach and why it may be useful. I completed EMDR Basic Training through the EMDR Institute in 2024; my parts work is IFS-informed.</p>
+            <p><Link to="/services/emdr" onClick={() => window.scrollTo(0, 0)}>EMDR</Link> and <Link to="/services/ifs" onClick={() => window.scrollTo(0, 0)}>IFS therapy and parts work</Link> are central to my approach. I also integrate practical CBT tools and psychodynamic perspectives when they fit the work. We begin with your concerns, history, and goals, then discuss an approach and why it may be useful. I completed EMDR Basic Training through the EMDR Institute in 2024; I integrate IFS therapy and parts work.</p>
             <p>Some sessions may focus on a practical change in daily life. Others may explore a recurring relationship pattern, conflicting feelings, or the effects of a difficult experience. You can ask questions, express preferences, and tell me when something does not feel helpful.</p>
             <Link className="about-services-link" to="/services" onClick={() => window.scrollTo(0, 0)}>Explore Therapy Services <span aria-hidden="true">→</span></Link>
           </div>
@@ -7272,7 +7272,7 @@ function ServicesPage() {
             maxWidth: 640,
             transition: "color 0.3s ease",
           }}>
-            Start with what you want help with: trauma, burnout, grief, or the pressures and relationship patterns that bring many men to therapy. EMDR and IFS-informed parts work are central approaches at Bayside. You do not need to choose a method before reaching out. All services are virtual individual therapy for adults in California.
+            Start with what you want help with: trauma, burnout, grief, or the pressures and relationship patterns that bring many men to therapy. EMDR and IFS therapy and parts work are central approaches at Bayside. You do not need to choose a method before reaching out. All services are virtual individual therapy for adults in California.
           </p>
         </div>
       </section>
@@ -7319,7 +7319,7 @@ function ServicesPage() {
                   marginBottom: 12,
                   lineHeight: 1.2,
                   transition: "color 0.3s ease",
-                }}>{service.slug === "ifs" ? "IFS-Informed Therapy (Parts Work)" : service.name}</div>
+                }}>{service.slug === "ifs" ? "IFS Therapy & Parts Work" : service.name}</div>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 13, fontWeight: 500,
@@ -7355,7 +7355,7 @@ function ServicesPage() {
       <section aria-labelledby="supporting-approaches-heading" style={{ background: theme.bg, color: theme.text, padding: "56px 24px" }}>
         <div style={{ maxWidth: 820, margin: "0 auto", fontFamily: "'DM Sans', sans-serif", lineHeight: 1.85 }}>
           <h2 id="supporting-approaches-heading" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 36, fontWeight: 400 }}>A focus for therapy. An approach chosen together.</h2>
-          <p style={{ color: theme.textMuted }}>EMDR and IFS-informed work describe how sessions may help. Trauma, grief, burnout, anxiety, low mood, and relationship concerns describe what we can work on. These can overlap, and we discuss a plan that fits your circumstances.</p>
+          <p style={{ color: theme.textMuted }}>EMDR and IFS therapy and parts work describe how sessions may help. Trauma, grief, burnout, anxiety, low mood, and relationship concerns describe what we can work on. These can overlap, and we discuss a plan that fits your circumstances.</p>
           <p style={{ color: theme.textMuted }}>Marcus also integrates <Link style={{ color: theme.accent }} to="/services/cbt">CBT tools</Link> and <Link style={{ color: theme.accent }} to="/services/psychodynamic">psychodynamic-informed perspectives</Link> when useful. They are supporting approaches rather than the practice's main specialties.</p>
           <p style={{ color: theme.textMuted }}>Adults at different stages of life are welcome, including <Link style={{ color: theme.accent }} to="/services/young-adults">young adults</Link>. You do not have to be a student or work in a particular profession. A free consultation is a chance to discuss fit.</p>
         </div>
@@ -7416,7 +7416,7 @@ function ServiceDetailPage({ slug }) {
   if (!service || !details) return <NotFoundPage />;
 
   const faqLabel = {
-    emdr: "EMDR therapy", ifs: "IFS-informed therapy", cbt: "CBT",
+    emdr: "EMDR therapy", ifs: "IFS therapy", cbt: "CBT",
     psychodynamic: "psychodynamic-informed work", "young-adults": "therapy for young adults", mens: "therapy for men",
     trauma: "trauma therapy", burnout: "burnout and work stress", grief: "grief and loss therapy",
   }[slug];
