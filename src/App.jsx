@@ -6639,7 +6639,7 @@ function Nav() {
             
             <div style={{ fontFamily: "'Cormorant Garamond', serif", color: theme.text, transition: "color 0.3s ease" }}>
               <div style={{ fontSize: 20, fontWeight: 600, letterSpacing: "0.08em", lineHeight: 1 }}>BAYSIDE</div>
-            <div style={{ fontSize: 11, fontWeight: 300, letterSpacing: "0.2em", color: theme.accentMuted, transition: "color 0.3s ease" }}>WELLNESS & COUNSELING</div>
+            <div style={{ fontSize: 11, fontWeight: 400, letterSpacing: "0.2em", color: theme.textMuted, transition: "color 0.3s ease" }}>WELLNESS & COUNSELING</div>
           </div>
         </Link>
 
@@ -6956,15 +6956,15 @@ function HomePage() {
         .bayside-home .home-text-link { color: var(--home-accent); font-size: 14px; font-weight: 500; line-height: 1.6; text-decoration: underline; display: inline-block; }
         .bayside-home .home-primary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 17px 26px; background: var(--home-accent); color: var(--home-button-text); border: 1px solid var(--home-accent); border-radius: 2px; font-size: 14px; font-weight: 500; line-height: 1.5; text-align: center; text-decoration: none; transition: opacity .2s ease; }
         .bayside-home .home-primary:hover { opacity: .88; }
-        .bayside-home .home-hero { position: relative; overflow: hidden; padding-top: 164px; padding-bottom: 86px; background: radial-gradient(ellipse at 85% 10%, ${darkMode ? colors.darkBgLighter : colors.tealPale} 0%, transparent 60%); }
+        .bayside-home .home-hero { position: relative; overflow: hidden; padding-top: 140px; padding-bottom: 58px; background: radial-gradient(ellipse at 85% 10%, ${darkMode ? colors.darkBgLighter : colors.tealPale} 0%, transparent 60%); }
         .bayside-home .home-hero .home-inner { max-width: 900px; text-align: center; }
         .bayside-home h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 5.6vw, 76px); font-weight: 400; line-height: 1.06; letter-spacing: -.02em; margin: 0 0 28px; }
         .bayside-home h1 span { display: block; }
         .bayside-home h1 em { color: var(--home-accent); font-weight: 400; }
         .bayside-home .home-summary { max-width: 730px; margin: 0 auto 18px; font-size: 19px; line-height: 1.6; color: var(--home-text); }
-        .bayside-home .home-intro { max-width: 650px; margin: 0 auto 30px; }
+        .bayside-home .home-intro { max-width: 650px; margin: 0 auto 24px; }
         .bayside-home .home-hero-actions { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px 28px; }
-        .bayside-home .home-trust { margin: 24px 0 0; font-size: 12px; line-height: 1.7; color: var(--home-muted); }
+        .bayside-home .home-trust { margin: 20px 0 0; font-size: 12px; line-height: 1.7; color: var(--home-muted); }
         .bayside-home .home-section-intro { max-width: 650px; margin-bottom: 36px; }
         .bayside-home .home-concerns { background: var(--home-alt); }
         .bayside-home .home-concern-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 48px; margin-bottom: 30px; }
@@ -6997,7 +6997,7 @@ function HomePage() {
         }
         @media (max-width: 680px) {
           .bayside-home section { padding: 58px 24px; }
-          .bayside-home .home-hero { padding-top: 126px; padding-bottom: 60px; }
+          .bayside-home .home-hero { padding-top: 112px; padding-bottom: 44px; }
           .bayside-home .home-eyebrow { font-size: 10px; letter-spacing: .1em; }
           .bayside-home .home-summary { font-size: 17px; }
           .bayside-home .home-concern-grid, .bayside-home .home-step-grid, .bayside-home .home-founder-grid, .bayside-home .home-details-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -7077,7 +7077,7 @@ function HomePage() {
             <h2 id="home-founder-heading">Meet Bayside’s founder.</h2>
             <p className="home-founder-name">Marcus Ghiasi, LMFT</p>
             <p className="home-credentials">Founder &amp; Therapist · California license #158475</p>
-            <p>A Bay Area native and second-generation Persian American, Marcus works with men and adults navigating trauma, burnout, grief, and relationship challenges. His clients include healthcare professionals and people in tech.</p>
+            <p>A Bay Area native and second-generation Persian American, Marcus works with adults navigating trauma, burnout, grief, and relationship challenges. He has a particular focus on men and works with healthcare professionals and people in tech.</p>
             <p>Marcus completed his MA in Counseling Psychology at the University of San Francisco in 2021 and EMDR Basic Training through the EMDR Institute in 2024.</p><p>Marcus currently provides all therapy at Bayside. Explore his background and training before reaching out.</p>
             <div className="home-founder-links"><Link className="home-text-link" to="/about" onClick={() => window.scrollTo(0, 0)}>Meet Marcus <span aria-hidden="true">→</span></Link><span className="home-psychology-verification" ref={verificationRef}><a href="https://www.psychologytoday.com/profile/1134128" className="sx-verified-seal" target="_blank" rel="noopener noreferrer" aria-label="View Marcus Ghiasi on Psychology Today (opens in a new tab)">Psychology Today</a></span></div>
           </div>
