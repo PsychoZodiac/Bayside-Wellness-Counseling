@@ -70,7 +70,7 @@ export const generateMetadata = ({
 export const mainPages = {
   home: generateMetadata({
     title: "Oakland-Based Online Therapy | Bayside Wellness & Counseling",
-    description: "Virtual individual therapy for adults across California. Support for anxiety, trauma, depression, and relationships. Book a free 15-minute consultation.",
+    description: "Virtual individual therapy for adults across California. Support for trauma, burnout, grief, anxiety, and relationships. Book a free 15-minute consultation.",
     keywords: ["Oakland therapist", "LMFT California", "EMDR therapy", "IFS therapy", "trauma therapy", "anxiety therapy", "depression counseling", "virtual therapy California", "telehealth therapy"],
     path: "/",
   }),
@@ -99,9 +99,9 @@ export const mainPages = {
     path: "/blog",
   }),
   services: generateMetadata({
-    title: "Individual Therapy Services",
-    description: "Explore EMDR, IFS, CBT, psychodynamic work, and individual therapy for young adults and men. Virtual sessions with Marcus Ghiasi, LMFT, in California.",
-    keywords: ["therapy services Oakland", "EMDR therapy", "IFS therapy", "CBT therapy", "young adults therapy", "men's therapy"],
+    title: "Trauma, Burnout, Grief & Men's Therapy | Bayside",
+    description: "Explore trauma, burnout, grief, and men's therapy, with EMDR and IFS-informed care. Virtual individual sessions for adults across California.",
+    keywords: ["therapy services Oakland", "trauma therapy", "burnout therapy", "grief counseling", "EMDR therapy", "IFS-informed therapy", "men's therapy"],
     path: "/services",
   }),
   crisisResources: generateMetadata({
@@ -120,6 +120,36 @@ export const mainPages = {
 };
 
 export const servicePages = {
+  trauma: generateMetadata({
+    "title": "Trauma Therapy Online in California | Bayside",
+    "description": "Therapy for adults affected by recent or past trauma. Oakland-based Marcus Ghiasi, LMFT, offers virtual sessions across California. Free consultation.",
+    "keywords": [
+        "Trauma Therapy California",
+        "Trauma Therapy Oakland",
+        "virtual individual therapy"
+    ],
+    "path": "/services/trauma"
+}),
+  burnout: generateMetadata({
+    "title": "Burnout & Work Stress Therapy in California | Bayside",
+    "description": "Virtual therapy for burnout and work stress in California. Support for tech workers, healthcare professionals, and adults in demanding roles. Free consultation.",
+    "keywords": [
+        "Burnout & Work Stress California",
+        "Burnout & Work Stress Oakland",
+        "virtual individual therapy"
+    ],
+    "path": "/services/burnout"
+}),
+  grief: generateMetadata({
+    "title": "Grief & Loss Therapy Online in California | Bayside",
+    "description": "Individual grief and loss therapy for adults across California. Support after bereavement, relationship loss, and life changes with Marcus Ghiasi, LMFT.",
+    "keywords": [
+        "Grief & Loss Therapy California",
+        "Grief & Loss Therapy Oakland",
+        "virtual individual therapy"
+    ],
+    "path": "/services/grief"
+}),
   emdr: generateMetadata({
     title: "Online EMDR Therapy | Oakland-Based Bayside",
     description: "Virtual EMDR therapy with Marcus Ghiasi, LMFT. Oakland-based care for adults across California, with preparation, collaborative pacing, and a free consultation.",
@@ -139,7 +169,7 @@ export const servicePages = {
     path: "/services/cbt",
   }),
   psychodynamic: generateMetadata({
-    title: "Online Psychodynamic Therapy | Oakland-Based Bayside",
+    title: "Psychodynamic-Informed Therapy | Bayside",
     description: "Explore recurring emotional and relationship patterns through psychodynamic-informed therapy with Marcus Ghiasi, LMFT. Virtual sessions across California.",
     keywords: ["psychodynamic therapy Oakland", "insight therapy", "depth psychology", "relationship patterns", "unconscious patterns"],
     path: "/services/psychodynamic",
