@@ -69,8 +69,8 @@ export const generateMetadata = ({
 
 export const mainPages = {
   home: generateMetadata({
-    title: "Oakland-Based Online Therapy | Bayside Wellness & Counseling",
-    description: "Virtual individual therapy for adults across California. Support for trauma, burnout, grief, anxiety, and relationships. Book a free 15-minute consultation.",
+    title: "Online Therapy in Oakland & the Bay Area | Bayside",
+    description: "Oakland-based online therapy for adults in the Bay Area. EMDR, IFS therapy, trauma, burnout, grief, and men's therapy. Free 15-minute consultation.",
     keywords: ["Oakland therapist", "LMFT California", "EMDR therapy", "IFS therapy", "trauma therapy", "anxiety therapy", "depression counseling", "virtual therapy California", "telehealth therapy"],
     path: "/",
   }),
