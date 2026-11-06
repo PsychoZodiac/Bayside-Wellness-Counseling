@@ -133,11 +133,6 @@
       "permanent": true
     },
     {
-      "source": "/services/trauma",
-      "destination": "/services/emdr",
-      "permanent": true
-    },
-    {
       "source": "/seo",
       "destination": "/",
       "permanent": true
